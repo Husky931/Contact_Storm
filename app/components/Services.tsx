@@ -38,7 +38,7 @@ export default function Services() {
         <section className="bg-background py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center">
-                    <p className="text-brand-red text-xs font-semibold tracking-[0.4em] uppercase">
+                    <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
                         Agency Services
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
@@ -67,7 +67,7 @@ export default function Services() {
                                 </p>
                                 <a
                                     href="#"
-                                    className="text-brand-red mt-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase"
+                                    className="text-primary-red mt-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase"
                                 >
                                     Read More
                                     <span className="text-base">+</span>
@@ -79,7 +79,7 @@ export default function Services() {
                 <div className="mt-10 flex justify-center">
                     <a
                         href="#"
-                        className="bg-brand-red rounded px-8 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
+                        className="bg-primary-red rounded px-8 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
                     >
                         View All Services
                     </a>

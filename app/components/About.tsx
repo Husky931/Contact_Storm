@@ -42,7 +42,7 @@ export default function About() {
                         About Us
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        A Development agency based in Europe with global
+                        Development agency based in Shanghai with global
                         delivery teams
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
