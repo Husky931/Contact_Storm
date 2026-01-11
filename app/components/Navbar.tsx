@@ -2,11 +2,11 @@ export default function Navbar() {
     return (
         <>
             <div className="bg-[var(--brand-navy)] text-white">
-                <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-2 text-xs uppercase tracking-[0.2em] sm:flex-row sm:items-center sm:justify-between">
+                <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-2 text-xs tracking-[0.2em] uppercase sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex flex-wrap items-center gap-3 text-white/80">
                         <span>Call us: +01 2323 7328 90</span>
                         <span className="hidden h-3 w-px bg-white/20 sm:block" />
-                        <span>Email: hello@eversource.com</span>
+                        <span>Email: hello@PixaVentures.com</span>
                     </div>
                     <div className="flex items-center gap-3">
                         {["f", "t", "in"].map((label) => (
@@ -38,28 +38,34 @@ export default function Navbar() {
                         </div>
                         <div>
                             <p className="font-heading text-xl font-semibold text-slate-900">
-                                Eversource
+                                PixaVentures
                             </p>
-                            <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
-                                Digital Studio
+                            <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
+                                Development agency
                             </p>
                         </div>
                     </div>
                     <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-700">
-                        {["Home", "About", "Services", "Work", "Insights", "Studio", "Contact"].map(
-                            (item) => (
-                                <a
-                                    key={item}
-                                    href="#"
-                                    className="transition hover:text-[var(--brand-red)]"
-                                >
-                                    {item}
-                                </a>
-                            )
-                        )}
+                        {[
+                            "Home",
+                            "About",
+                            "Services",
+                            "Work",
+                            "Insights",
+                            "Studio",
+                            "Contact"
+                        ].map((item) => (
+                            <a
+                                key={item}
+                                href="#"
+                                className="transition hover:text-[var(--brand-red)]"
+                            >
+                                {item}
+                            </a>
+                        ))}
                         <a
                             href="#"
-                            className="rounded-full bg-[var(--brand-red)] px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white"
+                            className="rounded-full bg-[var(--brand-red)] px-5 py-2 text-xs font-semibold tracking-[0.2em] text-white uppercase"
                         >
                             Start a Project
                         </a>

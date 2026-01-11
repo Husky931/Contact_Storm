@@ -17,18 +17,23 @@ export default function Footer() {
                             </svg>
                         </div>
                         <div>
-                            <p className="font-heading text-xl font-semibold">Eversource</p>
-                            <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-                                Digital Studio
+                            <p className="font-heading text-xl font-semibold">
+                                PixaVentures
+                            </p>
+                            <p className="text-xs tracking-[0.3em] text-white/70 uppercase">
+                                Development agency
                             </p>
                         </div>
                     </div>
                     <p className="mt-4 text-sm text-white/70">
-                        Building digital products through strategy, design, and engineering.
+                        Building digital products through strategy, design, and
+                        engineering.
                     </p>
                 </div>
                 <div className="space-y-3 text-sm text-white/70">
-                    <p className="font-semibold uppercase tracking-[0.3em] text-white">Company</p>
+                    <p className="font-semibold tracking-[0.3em] text-white uppercase">
+                        Company
+                    </p>
                     <a href="#" className="block">
                         About
                     </a>
@@ -43,14 +48,18 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className="space-y-3 text-sm text-white/70">
-                    <p className="font-semibold uppercase tracking-[0.3em] text-white">Newsletter</p>
-                    <p>Sign up to receive product insights and studio updates.</p>
+                    <p className="font-semibold tracking-[0.3em] text-white uppercase">
+                        Newsletter
+                    </p>
+                    <p>
+                        Sign up to receive product insights and studio updates.
+                    </p>
                     <div className="mt-4 flex overflow-hidden rounded bg-white">
                         <input
                             className="w-full px-4 py-2 text-sm text-slate-700"
                             placeholder="Email address"
                         />
-                        <button className="bg-[var(--brand-red)] px-4 text-xs font-semibold uppercase tracking-[0.3em] text-white">
+                        <button className="bg-[var(--brand-red)] px-4 text-xs font-semibold tracking-[0.3em] text-white uppercase">
                             Join
                         </button>
                     </div>
@@ -67,8 +76,8 @@ export default function Footer() {
                 </div>
             </div>
             <div className="border-t border-white/10">
-                <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-4 text-xs uppercase tracking-[0.3em] text-white/50 sm:flex-row">
-                    <span>Copyright 2024 Eversource Digital</span>
+                <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-4 text-xs tracking-[0.3em] text-white/50 uppercase sm:flex-row">
+                    <span>Copyright 2024 PixaVentures Digital</span>
                     <span>All Rights Reserved</span>
                 </div>
             </div>

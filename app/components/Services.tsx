@@ -4,33 +4,33 @@ const services = [
     {
         title: "Product Discovery",
         text: "User research, positioning, and validation that de-risks launches.",
-        image: "/images/service-1.jpg",
+        image: "/images/service-1.jpg"
     },
     {
         title: "Experience Design",
         text: "Wireframes, UI systems, and interaction design that feel premium.",
-        image: "/images/service-2.jpg",
+        image: "/images/service-2.jpg"
     },
     {
         title: "Web Development",
         text: "High-performing websites, portals, and dashboards built to scale.",
-        image: "/images/service-3.jpg",
+        image: "/images/service-3.jpg"
     },
     {
         title: "Platform Engineering",
         text: "Cloud architecture, CI/CD, and infrastructure automation.",
-        image: "/images/service-4.jpg",
+        image: "/images/service-4.jpg"
     },
     {
         title: "Growth Optimization",
         text: "Experimentation, analytics, and conversion-focused improvements.",
-        image: "/images/service-5.jpg",
+        image: "/images/service-5.jpg"
     },
     {
         title: "Digital Strategy",
         text: "Multi-channel planning that connects product, brand, and GTM.",
-        image: "/images/service-6.jpg",
-    },
+        image: "/images/service-6.jpg"
+    }
 ]
 
 export default function Services() {
@@ -38,14 +38,19 @@ export default function Services() {
         <section className="bg-[var(--background)] py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center">
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--brand-red)]">
-                        Studio Services
+                    <p className="text-xs font-semibold tracking-[0.4em] text-[var(--brand-red)] uppercase">
+                        Agency Services
                     </p>
-                    <h2 className="font-heading mt-4 text-3xl text-slate-900">Studio Services</h2>
+                    <h2 className="font-heading mt-4 text-3xl text-slate-900">
+                        Agency Services
+                    </h2>
                 </div>
                 <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {services.map((service) => (
-                        <div key={service.title} className="overflow-hidden rounded bg-white shadow">
+                        <div
+                            key={service.title}
+                            className="overflow-hidden rounded bg-white shadow"
+                        >
                             <Image
                                 src={service.image}
                                 alt={service.title}
@@ -57,10 +62,12 @@ export default function Services() {
                                 <h3 className="font-heading text-xl text-slate-900">
                                     {service.title}
                                 </h3>
-                                <p className="mt-3 text-sm text-slate-600">{service.text}</p>
+                                <p className="mt-3 text-sm text-slate-600">
+                                    {service.text}
+                                </p>
                                 <a
                                     href="#"
-                                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--brand-red)]"
+                                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] text-[var(--brand-red)] uppercase"
                                 >
                                     Read More
                                     <span className="text-base">+</span>
@@ -72,7 +79,7 @@ export default function Services() {
                 <div className="mt-10 flex justify-center">
                     <a
                         href="#"
-                        className="rounded bg-[var(--brand-red)] px-8 py-3 text-xs font-semibold uppercase tracking-[0.3em] text-white"
+                        className="rounded bg-[var(--brand-red)] px-8 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
                     >
                         View All Services
                     </a>
