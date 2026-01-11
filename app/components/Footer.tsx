@@ -1,10 +1,10 @@
 export default function Footer() {
     return (
-        <footer className="bg-[var(--brand-navy)] text-white">
+        <footer className="bg-brand-navy text-white">
             <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
                 <div>
                     <div className="flex items-center gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded bg-[var(--brand-red)] text-white">
+                        <div className="bg-brand-red flex h-12 w-12 items-center justify-center rounded text-white">
                             <svg
                                 viewBox="0 0 24 24"
                                 className="h-6 w-6"
@@ -59,7 +59,7 @@ export default function Footer() {
                             className="w-full px-4 py-2 text-sm text-slate-700"
                             placeholder="Email address"
                         />
-                        <button className="bg-[var(--brand-red)] px-4 text-xs font-semibold tracking-[0.3em] text-white uppercase">
+                        <button className="bg-brand-red px-4 text-xs font-semibold tracking-[0.3em] text-white uppercase">
                             Join
                         </button>
                     </div>
