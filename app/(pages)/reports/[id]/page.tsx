@@ -1,6 +1,7 @@
 import { getSeoReportById } from "@/db/queries"
 import { notFound } from "next/navigation"
 import Link from "next/link"
+import MarkdownContent from "@/components/MarkdownContent"
 
 interface PageProps {
     params: Promise<{ id: string }>
@@ -264,15 +265,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
                         <h2 className="mb-4 text-xl font-semibold">
                             Full Report
                         </h2>
-                        <div
-                            className="prose max-w-none"
-                            dangerouslySetInnerHTML={{
-                                __html: report.markdownReport.replace(
-                                    /\n/g,
-                                    "<br />"
-                                )
-                            }}
-                        />
+                        <MarkdownContent content={report.markdownReport} />
                     </div>
                 )}
 
