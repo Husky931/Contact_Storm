@@ -30,12 +30,6 @@ export const domains = pgTable("domains", {
     contactPhone: text("contact_phone")
 })
 
-export const domainsDomainIdx = index("idx_domain").on(domains.domain)
-export const domainsSubmittedIdx = index("idx_submitted").on(domains.submitted)
-export const domainsMessageTypeIdx = index("idx_message_type").on(
-    domains.messageType
-)
-
 export const domainSearchTerms = pgTable("domain_search_terms", {
     id: serial("id").primaryKey(),
     domain: text("domain")
@@ -46,13 +40,6 @@ export const domainSearchTerms = pgTable("domain_search_terms", {
         .notNull()
         .defaultNow()
 })
-
-export const domainSearchTermsUnique = uniqueIndex(
-    "unique_domain_search_term"
-).on(domainSearchTerms.domain, domainSearchTerms.searchTerm)
-export const domainSearchTermsDomainIdx = index("idx_search_term_domain").on(
-    domainSearchTerms.domain
-)
 
 export const seoReports = pgTable("seo_reports", {
     id: serial("id").primaryKey(),
@@ -205,16 +192,6 @@ export const seoReports = pgTable("seo_reports", {
     hasTableOfContents: boolean("has_table_of_contents"),
     analyzerErrors: jsonb("analyzer_errors")
 })
-
-export const seoReportsDomainIdx = index("idx_seo_report_domain").on(
-    seoReports.domain
-)
-export const seoReportsAnalyzedAtIdx = index("idx_seo_report_analyzed_at").on(
-    seoReports.analyzedAt
-)
-export const seoReportsOverallScoreIdx = index(
-    "idx_seo_report_overall_score"
-).on(seoReports.overallScore)
 
 export const domainsRelations = relations(domains, ({ many }) => ({
     searchTerms: many(domainSearchTerms),
