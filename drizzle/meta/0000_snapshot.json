@@ -1,0 +1,1202 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.domain_search_terms": {
+      "name": "domain_search_terms",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "domain": {
+          "name": "domain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "search_term": {
+          "name": "search_term",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "first_seen": {
+          "name": "first_seen",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {
+        "idx_search_term_domain": {
+          "name": "idx_search_term_domain",
+          "columns": [
+            {
+              "expression": "domain",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "unique_domain_search_term": {
+          "name": "unique_domain_search_term",
+          "columns": [
+            {
+              "expression": "domain",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            },
+            {
+              "expression": "search_term",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "domain_search_terms_domain_domains_domain_fk": {
+          "name": "domain_search_terms_domain_domains_domain_fk",
+          "tableFrom": "domain_search_terms",
+          "tableTo": "domains",
+          "schemaTo": "public",
+          "columnsFrom": [
+            "domain"
+          ],
+          "columnsTo": [
+            "domain"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.seo_reports": {
+      "name": "seo_reports",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "domain": {
+          "name": "domain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "analyzed_at": {
+          "name": "analyzed_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "overall_score": {
+          "name": "overall_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lighthouse_performance": {
+          "name": "lighthouse_performance",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lighthouse_accessibility": {
+          "name": "lighthouse_accessibility",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lighthouse_best_practices": {
+          "name": "lighthouse_best_practices",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lighthouse_seo": {
+          "name": "lighthouse_seo",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lcp": {
+          "name": "lcp",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cls": {
+          "name": "cls",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "inp": {
+          "name": "inp",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fcp": {
+          "name": "fcp",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ttfb": {
+          "name": "ttfb",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "technical_seo_score": {
+          "name": "technical_seo_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_title": {
+          "name": "has_title",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "title_content": {
+          "name": "title_content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_meta_description": {
+          "name": "has_meta_description",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "meta_description_content": {
+          "name": "meta_description_content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_canonical": {
+          "name": "has_canonical",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "canonical_url": {
+          "name": "canonical_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_robots_txt": {
+          "name": "has_robots_txt",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_sitemap_xml": {
+          "name": "has_sitemap_xml",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sitemap_url": {
+          "name": "sitemap_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_hreflang": {
+          "name": "has_hreflang",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_structured_data": {
+          "name": "has_structured_data",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "structured_data_types": {
+          "name": "structured_data_types",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "security_score": {
+          "name": "security_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_https": {
+          "name": "is_https",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_valid": {
+          "name": "ssl_valid",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_expiry_days": {
+          "name": "ssl_expiry_days",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_hsts": {
+          "name": "has_hsts",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_csp": {
+          "name": "has_csp",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_x_frame_options": {
+          "name": "has_x_frame_options",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_x_content_type_options": {
+          "name": "has_x_content_type_options",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "security_headers": {
+          "name": "security_headers",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "content_quality_score": {
+          "name": "content_quality_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "word_count": {
+          "name": "word_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_h1": {
+          "name": "has_h1",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h1_count": {
+          "name": "h1_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h2_count": {
+          "name": "h2_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_count": {
+          "name": "image_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "images_with_alt": {
+          "name": "images_with_alt",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "alt_text_coverage": {
+          "name": "alt_text_coverage",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "internal_link_count": {
+          "name": "internal_link_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "external_link_count": {
+          "name": "external_link_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mobile_readiness_score": {
+          "name": "mobile_readiness_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_viewport_meta": {
+          "name": "has_viewport_meta",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "viewport_content": {
+          "name": "viewport_content",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_mobile_responsive": {
+          "name": "is_mobile_responsive",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "international_seo_score": {
+          "name": "international_seo_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "detected_language": {
+          "name": "detected_language",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_charset_declaration": {
+          "name": "has_charset_declaration",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "charset_value": {
+          "name": "charset_value",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "hreflang_tags": {
+          "name": "hreflang_tags",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_english_version": {
+          "name": "has_english_version",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "trust_signals_score": {
+          "name": "trust_signals_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_contact_page": {
+          "name": "has_contact_page",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_page_url": {
+          "name": "contact_page_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_social_links": {
+          "name": "has_social_links",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "social_links_found": {
+          "name": "social_links_found",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_certification_mentions": {
+          "name": "has_certification_mentions",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "certifications_found": {
+          "name": "certifications_found",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_privacy_policy": {
+          "name": "has_privacy_policy",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_terms_of_service": {
+          "name": "has_terms_of_service",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "markdown_report": {
+          "name": "markdown_report",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "analysis_error": {
+          "name": "analysis_error",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "analysis_successful": {
+          "name": "analysis_successful",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "social_preview_score": {
+          "name": "social_preview_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "og_title": {
+          "name": "og_title",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "og_description": {
+          "name": "og_description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "og_image": {
+          "name": "og_image",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "og_image_is_absolute": {
+          "name": "og_image_is_absolute",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "twitter_card": {
+          "name": "twitter_card",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "social_preview_issues": {
+          "name": "social_preview_issues",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "image_optimization_score": {
+          "name": "image_optimization_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_images": {
+          "name": "total_images",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "modern_format_count": {
+          "name": "modern_format_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "modern_format_percent": {
+          "name": "modern_format_percent",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lazy_loaded_count": {
+          "name": "lazy_loaded_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "missing_lazy_load": {
+          "name": "missing_lazy_load",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "above_fold_lazy_loaded": {
+          "name": "above_fold_lazy_loaded",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "missing_dimensions": {
+          "name": "missing_dimensions",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "broken_images": {
+          "name": "broken_images",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "responsive_images": {
+          "name": "responsive_images",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "link_health_score": {
+          "name": "link_health_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_internal_links": {
+          "name": "total_internal_links",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_external_links": {
+          "name": "total_external_links",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "broken_internal_links_count": {
+          "name": "broken_internal_links_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "broken_external_links_count": {
+          "name": "broken_external_links_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "broken_internal_links": {
+          "name": "broken_internal_links",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "broken_external_links": {
+          "name": "broken_external_links",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "redirect_chains_count": {
+          "name": "redirect_chains_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nofollow_links": {
+          "name": "nofollow_links",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "generic_anchors": {
+          "name": "generic_anchors",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "schema_analysis_score": {
+          "name": "schema_analysis_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "schemas_found": {
+          "name": "schemas_found",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_schemas": {
+          "name": "total_schemas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_breadcrumbs": {
+          "name": "has_breadcrumbs",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_organization": {
+          "name": "has_organization",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_faq": {
+          "name": "has_faq",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_article": {
+          "name": "has_article",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_product": {
+          "name": "has_product",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_local_business": {
+          "name": "has_local_business",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_how_to": {
+          "name": "has_how_to",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "domain_info_score": {
+          "name": "domain_info_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "domain_age": {
+          "name": "domain_age",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "domain_creation_date": {
+          "name": "domain_creation_date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "domain_expiry_date": {
+          "name": "domain_expiry_date",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "days_until_expiry": {
+          "name": "days_until_expiry",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "registrar": {
+          "name": "registrar",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_expiring_soon": {
+          "name": "is_expiring_soon",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_grade_score": {
+          "name": "ssl_grade_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_grade": {
+          "name": "ssl_grade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_protocols": {
+          "name": "ssl_protocols",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_vulnerabilities": {
+          "name": "ssl_vulnerabilities",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ssl_chain_issues": {
+          "name": "ssl_chain_issues",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "safe_browsing_score": {
+          "name": "safe_browsing_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_safe": {
+          "name": "is_safe",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "threat_types": {
+          "name": "threat_types",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "title_length": {
+          "name": "title_length",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "title_too_long": {
+          "name": "title_too_long",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description_length": {
+          "name": "description_length",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "description_too_long": {
+          "name": "description_too_long",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "meta_robots": {
+          "name": "meta_robots",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_no_index": {
+          "name": "is_no_index",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "is_no_follow": {
+          "name": "is_no_follow",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "heading_hierarchy_valid": {
+          "name": "heading_hierarchy_valid",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "heading_hierarchy_issues": {
+          "name": "heading_hierarchy_issues",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h3_count": {
+          "name": "h3_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h4_count": {
+          "name": "h4_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h5_count": {
+          "name": "h5_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "h6_count": {
+          "name": "h6_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "readability_score": {
+          "name": "readability_score",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "readability_grade": {
+          "name": "readability_grade",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "paragraph_count": {
+          "name": "paragraph_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avg_paragraph_length": {
+          "name": "avg_paragraph_length",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "sentence_count": {
+          "name": "sentence_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avg_sentence_length": {
+          "name": "avg_sentence_length",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "list_count": {
+          "name": "list_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "table_count": {
+          "name": "table_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "video_count": {
+          "name": "video_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "iframe_count": {
+          "name": "iframe_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_faq_section": {
+          "name": "has_faq_section",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "has_table_of_contents": {
+          "name": "has_table_of_contents",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "analyzer_errors": {
+          "name": "analyzer_errors",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "idx_seo_report_analyzed_at": {
+          "name": "idx_seo_report_analyzed_at",
+          "columns": [
+            {
+              "expression": "analyzed_at",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "timestamp_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "idx_seo_report_domain": {
+          "name": "idx_seo_report_domain",
+          "columns": [
+            {
+              "expression": "domain",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "idx_seo_report_overall_score": {
+          "name": "idx_seo_report_overall_score",
+          "columns": [
+            {
+              "expression": "overall_score",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "float4_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "seo_reports_domain_domains_domain_fk": {
+          "name": "seo_reports_domain_domains_domain_fk",
+          "tableFrom": "seo_reports",
+          "tableTo": "domains",
+          "schemaTo": "public",
+          "columnsFrom": [
+            "domain"
+          ],
+          "columnsTo": [
+            "domain"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.domains": {
+      "name": "domains",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "domain": {
+          "name": "domain",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "search_query_used": {
+          "name": "search_query_used",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "industry": {
+          "name": "industry",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "first_seen": {
+          "name": "first_seen",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "form_found": {
+          "name": "form_found",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "submitted": {
+          "name": "submitted",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": false,
+          "default": false
+        },
+        "message_type": {
+          "name": "message_type",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_attempt_date": {
+          "name": "contact_attempt_date",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_email": {
+          "name": "contact_email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_phone": {
+          "name": "contact_phone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {
+        "idx_domain": {
+          "name": "idx_domain",
+          "columns": [
+            {
+              "expression": "domain",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "idx_message_type": {
+          "name": "idx_message_type",
+          "columns": [
+            {
+              "expression": "message_type",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "text_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "idx_submitted": {
+          "name": "idx_submitted",
+          "columns": [
+            {
+              "expression": "submitted",
+              "asc": true,
+              "nulls": "last",
+              "opclass": "bool_ops",
+              "isExpression": false
+            }
+          ],
+          "isUnique": false,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "domains_domain_unique": {
+          "columns": [
+            "domain"
+          ],
+          "nullsNotDistinct": false,
+          "name": "domains_domain_unique"
+        }
+      },
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {}
+  }
+}
