@@ -3,8 +3,8 @@ import HeroHighlights from "../components/HeroHighlights"
 import About from "../components/About"
 import Section4 from "../components/Section4"
 import Services from "../components/Services"
-import Industries from "../components/Industries"
 import ReadyToTalk from "../components/ReadyToTalk"
+import FoundedBy from "@/components/FoundedBy"
 
 export default function Home() {
     return (
@@ -16,8 +16,7 @@ export default function Home() {
                 <Section4 />
                 <Services />
                 <ReadyToTalk />
-                {/* <Strategy /> */}
-                {/* <Industries /> */}
+                <FoundedBy />
             </main>
         </div>
     )

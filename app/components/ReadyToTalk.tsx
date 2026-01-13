@@ -33,7 +33,8 @@ export default function ReadyToTalk() {
                     {/* Left Column: Direct Contact */}
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            Ready to Talk?
+                            Ready to{" "}
+                            <span className="text-(--brand-red)">Talk?</span>
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
                             Scan the QR code and share your issue.
@@ -60,7 +61,11 @@ export default function ReadyToTalk() {
                     {/* Right Column: Contact Form */}
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            Prefer to Contact Us through Our Form?
+                            Or prefer to{" "}
+                            <span className="text-(--brand-red)">
+                                Contact Us
+                            </span>{" "}
+                            through Our Form?
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
                             Feel free to tell us about your project or just say
