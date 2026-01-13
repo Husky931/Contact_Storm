@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const approachSteps = [
     {
         number: "01",
@@ -56,10 +58,12 @@ export default function Section4() {
                                 >
                                     <div className="flex flex-col items-center">
                                         <div className="relative inline-flex h-24 items-center justify-center rounded-xl bg-white p-5 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
-                                            <img
+                                            <Image
                                                 src={step.icon}
                                                 alt={step.title}
-                                                className="h-12 w-12 object-contain"
+                                                width={48}
+                                                height={48}
+                                                className="object-contain"
                                             />
 
                                             {/* Step badge */}
@@ -103,11 +107,13 @@ export default function Section4() {
                                 className="flex flex-col items-center"
                             >
                                 {/* smaller mobile box */}
-                                <div className="relative flex h-32 w-full items-center justify-center rounded-xl bg-white p-5 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
-                                    <img
+                                <div className="relative flex h-32 items-center justify-center rounded-xl bg-white p-5 px-16 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+                                    <Image
                                         src={step.icon}
                                         alt={step.title}
-                                        className="h-12 w-12 object-contain"
+                                        width={48}
+                                        height={48}
+                                        className="object-contain"
                                     />
 
                                     <div className="absolute -right-3 -bottom-3 flex h-8 w-8 items-center justify-center rounded-full bg-black text-[11px] font-bold text-white shadow-md">
