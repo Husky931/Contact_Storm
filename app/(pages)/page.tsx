@@ -4,6 +4,7 @@ import About from "../components/About"
 import Section4 from "../components/Section4"
 import Services from "../components/Services"
 import Industries from "../components/Industries"
+import ReadyToTalk from "../components/ReadyToTalk"
 
 export default function Home() {
     return (
@@ -14,8 +15,9 @@ export default function Home() {
                 <About />
                 <Section4 />
                 <Services />
+                <ReadyToTalk />
                 {/* <Strategy /> */}
-                <Industries />
+                {/* <Industries /> */}
             </main>
         </div>
     )

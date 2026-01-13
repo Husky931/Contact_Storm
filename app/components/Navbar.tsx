@@ -22,7 +22,7 @@ export default function Navbar() {
                             href="mailto:hello@pixaventures.com"
                             className="transition hover:text-white"
                         >
-                            Email: hello@PixaVentures.com
+                            Email: hello@pixaventures.com
                         </a>
                     </div>
 

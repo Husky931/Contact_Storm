@@ -4,21 +4,19 @@ const approachSteps = [
     {
         number: "01",
         title: "Bringing Global Competence",
-        description: "Our candidate pool is diverse with international talent",
+        description: "Our talents are spread across the globe",
         icon: "/icons/1.png"
     },
     {
         number: "02",
-        title: "Emerging / Niche skills",
-        description:
-            "We are industry experts in sourcing talent in niche skills",
+        title: "Emerging technologies",
+        description: "Using latest technologies to help your business",
         icon: "/icons/2.png"
     },
     {
         number: "03",
         title: "Quality & Commitment",
-        description:
-            "Assessment is pretty rigorous so after thorough screening the candidate profile is submitted to the client",
+        description: "Happy customer is a repeat customer",
         icon: "/icons/3.png"
     }
 ]
@@ -41,7 +39,7 @@ export default function Section4() {
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
                         Our services are a smart alternative when the need is
                         limited in time. We find the skills you need, for the
-                        time period you want. Pixaventures has been offering
+                        time period you want. PixaVentures has been offering
                         services in the following line of business to their
                         clients
                     </p>
@@ -54,7 +52,7 @@ export default function Section4() {
                             {approachSteps.map((step, index) => (
                                 <div
                                     key={step.number}
-                                    className="font-heading relative flex-1"
+                                    className="relative flex-1"
                                 >
                                     <div className="flex flex-col items-center">
                                         <div className="relative inline-flex h-24 items-center justify-center rounded-xl bg-white p-5 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
@@ -73,7 +71,7 @@ export default function Section4() {
                                         </div>
 
                                         <div className="mt-8 text-center">
-                                            <h3 className="font-heading font-heading text-xl font-bold text-slate-900">
+                                            <h3 className="font-heading text-xl font-bold text-slate-900">
                                                 {step.title}
                                             </h3>
                                             <p className="mt-3 text-sm leading-relaxed text-slate-600">
