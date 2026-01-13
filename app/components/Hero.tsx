@@ -49,27 +49,30 @@ export default function Hero() {
                     </div>
 
                     <div className="rounded bg-white/95 p-6 text-slate-800 shadow-xl">
-                        <p className="text-xs font-semibold tracking-[0.3em] text-primary-red uppercase">
+                        <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
                             Project Brief
                         </p>
                         <h3 className="font-heading mt-3 text-2xl text-slate-900">
-                            Tell us about your build
+                            Tell us about your goal
                         </h3>
                         <form className="mt-5 space-y-4 text-sm">
+                            <select className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500">
+                                <option>Campaign type</option>
+                                <option>Paid Ads</option>
+                                <option>SEO Growth</option>
+                                <option>AI automation</option>
+                                <option>Development</option>
+                                <option>Other</option>
+                            </select>
                             <input
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Project goal"
+                                placeholder="Manufacturer type"
                             />
                             <input
                                 className="w-full rounded border border-slate-200 px-4 py-2"
                                 placeholder="Target launch date"
                             />
-                            <select className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500">
-                                <option>Engagement type</option>
-                                <option>Product strategy</option>
-                                <option>Design + development</option>
-                                <option>Growth optimization</option>
-                            </select>
+
                             <button className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors">
                                 Submit Brief
                             </button>
