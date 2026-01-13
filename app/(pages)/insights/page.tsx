@@ -29,13 +29,17 @@ export default function InsightsPage() {
                 <section className="bg-linear-to-b from-slate-50 to-white py-20 lg:py-28">
                     <div className="mx-auto max-w-4xl px-6 text-center">
                         <h1 className="font-heading text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
-                            Insights &{" "}
-                            <span className="text-primary-red">Blog</span>
+                            Insights for{" "}
+                            <span className="text-primary-red">
+                                China Export
+                            </span>{" "}
+                            Teams
                         </h1>
                         <p className="mt-6 text-lg text-slate-600 md:text-xl">
-                            Discover the latest insights, trends, and best
-                            practices in digital marketing, web development, and
-                            business growth.
+                            Practical guidance for Chinese manufacturers and
+                            overseas sellers to grow in global markets with
+                            localization, trust, and conversion focused
+                            strategy.
                         </p>
                     </div>
                 </section>
