@@ -10,6 +10,11 @@ export default function ReadyToTalk() {
         wechatId: "",
         message: ""
     })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<{
+        type: "success" | "error" | null
+        message: string
+    }>({ type: null, message: "" })
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -18,12 +23,60 @@ export default function ReadyToTalk() {
             ...formData,
             [e.target.name]: e.target.value
         })
+        // Clear status when user starts typing
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: "" })
+        }
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log("Form submitted:", formData)
+        setIsSubmitting(true)
+        setSubmitStatus({ type: null, message: "" })
+
+        try {
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            })
+
+            const data = await response.json()
+
+            if (!response.ok) {
+                // Show the actual error message from the server
+                const errorMsg =
+                    data.error ||
+                    `Failed to send email (Status: ${response.status})`
+                throw new Error(errorMsg)
+            }
+
+            // Success
+            setSubmitStatus({
+                type: "success",
+                message: "Thank you! Your message has been sent successfully."
+            })
+
+            // Reset form
+            setFormData({
+                name: "",
+                email: "",
+                wechatId: "",
+                message: ""
+            })
+        } catch (error) {
+            setSubmitStatus({
+                type: "error",
+                message:
+                    error instanceof Error
+                        ? error.message
+                        : "An error occurred. Please try again later."
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -48,9 +101,7 @@ export default function ReadyToTalk() {
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
                             Or prefer to{" "}
-                            <span className="text-primary-red">
-                                Contact Us
-                            </span>{" "}
+                            <span className="text-primary-red">Contact Us</span>{" "}
                             through Our Form?
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
@@ -143,11 +194,24 @@ export default function ReadyToTalk() {
                                 />
                             </div>
 
+                            {submitStatus.type && (
+                                <div
+                                    className={`rounded px-4 py-3 text-sm ${
+                                        submitStatus.type === "success"
+                                            ? "border border-green-200 bg-green-50 text-green-800"
+                                            : "border border-red-200 bg-red-50 text-red-800"
+                                    }`}
+                                >
+                                    {submitStatus.message}
+                                </div>
+                            )}
+
                             <button
                                 type="submit"
-                                className="w-full rounded bg-slate-900 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-slate-800"
+                                disabled={isSubmitting}
+                                className="w-full rounded bg-slate-900 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                                Submit
+                                {isSubmitting ? "Sending..." : "Submit"}
                             </button>
                         </form>
                     </div>

@@ -1,11 +1,7 @@
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import {
-    getBlogPostBySlug,
-    getRelatedPosts,
-    getAllBlogPosts
-} from "@/lib/blog"
+import { getBlogPostBySlug, getRelatedPosts, getAllBlogPosts } from "@/lib/blog"
 import { formatDateLong } from "@/lib/dateUtils"
 import MarkdownContent from "@/components/MarkdownContent"
 import RelatedPosts from "@/components/RelatedPosts"
@@ -65,8 +61,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                         priority
                         sizes="100vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
+                    <div className="absolute right-0 bottom-0 left-0 p-6 md:p-12">
                         <div className="mx-auto max-w-4xl">
                             <Link
                                 href="/insights"
@@ -109,7 +105,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 </div>
 
                                 {/* Article Content */}
-                                <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-primary-red prose-a:no-underline hover:prose-a:underline">
+                                <article className="prose prose-lg prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-primary-red prose-a:no-underline hover:prose-a:underline max-w-none">
                                     <MarkdownContent content={post.content} />
                                 </article>
 
