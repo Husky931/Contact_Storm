@@ -21,6 +21,7 @@ export default function About() {
                             className="h-64 w-full rounded object-cover shadow"
                         />
                     </div>
+                    {/* <Link href="/insights"></Link> */}
                     <Image
                         src="/images/about-3.jpg"
                         alt="Office collaboration"
