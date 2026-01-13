@@ -2,8 +2,11 @@
 
 import Image from "next/image"
 import WeChatQRPopup from "./WeChatQRPopup"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function About() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
     return (
         <section className="bg-white py-16">
             <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
@@ -11,14 +14,14 @@ export default function About() {
                     <div className="grid gap-4 md:grid-cols-2">
                         <Image
                             src="/images/mooncake.jpg"
-                            alt="Strategist at desk"
+                            alt={copy.about.imageAlts.strategist}
                             width={520}
                             height={520}
                             className="h-64 w-full rounded object-cover shadow"
                         />
                         <Image
                             src="/images/chinese_businessmen.webp"
-                            alt="Team meeting"
+                            alt={copy.about.imageAlts.meeting}
                             width={520}
                             height={520}
                             className="h-64 w-full rounded object-cover shadow"
@@ -27,7 +30,7 @@ export default function About() {
                     {/* <Link href="/insights"></Link> */}
                     <Image
                         src="/images/factory.webp"
-                        alt="Office collaboration"
+                        alt={copy.about.imageAlts.collaboration}
                         width={840}
                         height={560}
                         className="mt-4 h-48 w-full rounded object-cover shadow"
@@ -37,35 +40,29 @@ export default function About() {
                             150+
                         </p>
                         <p className="text-xs tracking-[0.3em] uppercase">
-                            Factories Served
+                            {copy.about.statsLabel}
                         </p>
                     </div>
                 </div>
                 <div>
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
-                        Built for Manufacturers
+                        {copy.about.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        A bilingual diverse team bridging{" "}
+                        {copy.about.title.lead}{" "}
                         <span className="text-primary-red">
-                            Chinese manufacturing
+                            {copy.about.title.highlightPrimary}
                         </span>{" "}
-                        with{" "}
-                        <span className="text-primary-red">global markets</span>
+                        {copy.about.title.middle}{" "}
+                        <span className="text-primary-red">
+                            {copy.about.title.highlightSecondary}
+                        </span>
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                        We are a bilingual, diverse team (Chinese, European,
-                        American) that understands both factory realities and
-                        Western buyer mind and expectations. That makes our ad
-                        creative, Amazon strategy, and websites convert much
-                        better.
+                        {copy.about.copy}
                     </p>
                     <div className="mt-6 space-y-3 text-sm text-slate-700">
-                        {[
-                            "Western buyer mindset applied to ads and listings",
-                            "Amazon, paid social, Shopify, and SEO execution in-house",
-                            "Conversion-focused website redesign"
-                        ].map((item) => (
+                        {copy.about.bullets.map((item) => (
                             <div key={item} className="flex items-center gap-3">
                                 <span className="bg-primary-red flex h-8 w-8 items-center justify-center rounded-full text-white">
                                     <svg
@@ -88,7 +85,7 @@ export default function About() {
                                 href="#"
                                 className="bg-primary-navy hover:bg-primary-navy/90 mt-8 inline-flex items-center gap-3 rounded px-6 py-6 text-sm font-semibold tracking-[0.3em] text-white uppercase transition-colors"
                             >
-                                Contact Us
+                                {copy.about.cta}
                             </a>
                         }
                     />

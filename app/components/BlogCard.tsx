@@ -1,14 +1,21 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { BlogPost } from "@/lib/blog"
 import { formatDateLong } from "@/lib/dateUtils"
+import { useLanguage } from "@/components/LanguageProvider"
 
 interface BlogCardProps {
     post: BlogPost
 }
 
 export default function BlogCard({ post }: BlogCardProps) {
-    const formattedDate = formatDateLong(post.date)
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+    const formattedDate = formatDateLong(post.date, language)
+    const title = post.title[language]
+    const excerpt = post.excerpt?.[language]
 
     return (
         <article className="group flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-shadow hover:shadow-lg">
@@ -16,7 +23,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
                     <Image
                         src={post.image}
-                        alt={post.title}
+                        alt={title}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -33,19 +40,19 @@ export default function BlogCard({ post }: BlogCardProps) {
                 </div>
                 <Link href={`/insights/${post.slug}`}>
                     <h2 className="mb-3 font-heading text-xl font-semibold text-slate-900 transition-colors group-hover:text-primary-red">
-                        {post.title}
+                        {title}
                     </h2>
                 </Link>
-                {post.excerpt && (
+                {excerpt && (
                     <p className="mb-4 flex-1 text-slate-600 line-clamp-3">
-                        {post.excerpt}
+                        {excerpt}
                     </p>
                 )}
                 <Link
                     href="/insights"
                     className="inline-flex items-center font-semibold text-primary-red transition-colors hover:text-primary-redDark"
                 >
-                    Read More
+                    {copy.blog.readMore}
                     <svg
                         className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
                         fill="none"

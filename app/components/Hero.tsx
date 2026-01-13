@@ -2,8 +2,11 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Hero() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
     const [formData, setFormData] = useState({
         name: "",
         serviceNeeded: "",
@@ -42,7 +45,7 @@ export default function Hero() {
         try {
             // Validate required fields
             if (!formData.name || !formData.contact) {
-                throw new Error("Name and contact information are required.")
+                throw new Error(copy.hero.form.errors.missingFields)
             }
 
             // Build message from form fields
@@ -104,8 +107,7 @@ export default function Hero() {
             // Success
             setSubmitStatus({
                 type: "success",
-                message:
-                    "Thank you! Your project brief has been submitted successfully."
+                message: copy.hero.form.success
             })
 
             // Reset form
@@ -124,7 +126,7 @@ export default function Hero() {
                 message:
                     error instanceof Error
                         ? error.message
-                        : "An error occurred. Please try again later."
+                        : copy.hero.form.errors.generic
             })
         } finally {
             setIsSubmitting(false)
@@ -135,7 +137,7 @@ export default function Hero() {
         <section className="relative overflow-hidden bg-slate-900 text-white">
             <Image
                 src="/images/industry-1.jpg"
-                alt="Digital strategy team reviewing product roadmap"
+                alt={copy.hero.imageAlt}
                 fill
                 className="object-cover"
                 priority
@@ -145,57 +147,46 @@ export default function Hero() {
                 <div className="grid gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
                     <div>
                         <p className="text-sm tracking-[0.5em] text-white/70 uppercase">
-                            Overseas Buyer Growth
+                            {copy.hero.tag}
                         </p>
                         <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-white md:text-5xl">
-                            We help Chinese manufacturers win overseas buyers.
+                            {copy.hero.title}
                         </h1>
 
                         <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg">
-                            Reach customers in Europe, North America, Middle
-                            Eastern and beyond. O
+                            {copy.hero.description}
                         </p>
 
                         <p className="mt-4 max-w-xl text-sm text-white/70">
-                            Bilingual, diverse team (Chinese, European,
-                            American) with Western buyer insight for ads, Amazon
-                            listings, and conversion-focused websites.
-                        </p>
-                        <p className="mt-3 text-sm text-white/60">
-                            帮助中国制造商获取海外客户
+                            {copy.hero.subtext}
                         </p>
                         <div className="mt-8 flex flex-wrap gap-4">
                             <a
                                 href="#services"
                                 className="bg-primary-main hover:bg-primary-navy/90 rounded px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors"
                             >
-                                Explore Services
+                                {copy.hero.ctas.primary}
                             </a>
                             <a
                                 href="#contact"
                                 className="rounded border border-white/60 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-white/10"
                             >
-                                Book a Strategy Call
+                                {copy.hero.ctas.secondary}
                             </a>
                         </div>
                         <div className="mt-10 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
-                            <span>Amazon PPC & Marketplace Growth</span>
-                            <span>Shopify</span>
-                            <span>Leads</span>
-                            <span>
-                                Paid social ads (Meta, Instagram, TikTok)
-                            </span>
-                            <span>SEO for export buyers</span>
-                            <span>Conversion-first website redesign</span>
+                            {copy.hero.highlights.map((highlight) => (
+                                <span key={highlight}>{highlight}</span>
+                            ))}
                         </div>
                     </div>
 
                     <div className="rounded bg-white/95 p-6 text-slate-800 shadow-xl">
                         <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
-                            Project Brief
+                            {copy.hero.form.badge}
                         </p>
                         <h3 className="font-heading mt-3 text-2xl text-slate-900">
-                            Tell us about your export goals
+                            {copy.hero.form.title}
                         </h3>
                         <form
                             onSubmit={handleSubmit}
@@ -208,7 +199,7 @@ export default function Hero() {
                                 value={formData.name}
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Your Name *"
+                                placeholder={copy.hero.form.placeholders.name}
                             />
                             <select
                                 name="serviceNeeded"
@@ -217,17 +208,11 @@ export default function Hero() {
                                 className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
                             >
                                 <option value="">
-                                    What do you need help with?
+                                    {copy.hero.form.placeholders.service}
                                 </option>
-                                <option>Amazon Ads & Optimization</option>
-                                <option>
-                                    Social Media Ads (Facebook, Instagram,
-                                    TikTok)
-                                </option>
-                                <option>SEO & Organic Growth</option>
-                                <option>Website Redesign</option>
-                                <option>Social Media Management</option>
-                                <option>Multiple Services</option>
+                                {copy.hero.form.serviceOptions.map((option) => (
+                                    <option key={option}>{option}</option>
+                                ))}
                             </select>
                             <input
                                 type="text"
@@ -235,7 +220,9 @@ export default function Hero() {
                                 value={formData.productCategory}
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Product category / Industry"
+                                placeholder={
+                                    copy.hero.form.placeholders.product
+                                }
                             />
                             <select
                                 name="targetMarket"
@@ -243,12 +230,12 @@ export default function Hero() {
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
                             >
-                                <option value="">Target market</option>
-                                <option>Europe</option>
-                                <option>North America</option>
-                                <option>Middle East</option>
-                                <option>Multiple Regions</option>
-                                <option>Other</option>
+                                <option value="">
+                                    {copy.hero.form.placeholders.targetMarket}
+                                </option>
+                                {copy.hero.form.targetMarkets.map((market) => (
+                                    <option key={market}>{market}</option>
+                                ))}
                             </select>
                             <input
                                 type="text"
@@ -256,7 +243,9 @@ export default function Hero() {
                                 value={formData.salesChannels}
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Current sales channels"
+                                placeholder={
+                                    copy.hero.form.placeholders.salesChannels
+                                }
                             />
                             <input
                                 type="text"
@@ -264,7 +253,9 @@ export default function Hero() {
                                 value={formData.challenge}
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Main challenge (optional)"
+                                placeholder={
+                                    copy.hero.form.placeholders.challenge
+                                }
                             />
                             <input
                                 type="text"
@@ -273,7 +264,9 @@ export default function Hero() {
                                 value={formData.contact}
                                 onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
-                                placeholder="Email / WeChat ID / Phone Number *"
+                                placeholder={
+                                    copy.hero.form.placeholders.contact
+                                }
                             />
 
                             {submitStatus.type && (
@@ -294,8 +287,8 @@ export default function Hero() {
                                 className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 {isSubmitting
-                                    ? "Submitting..."
-                                    : "Submit Brief"}
+                                    ? copy.hero.form.submit.sending
+                                    : copy.hero.form.submit.idle}
                             </button>
                         </form>
                     </div>

@@ -1,3 +1,5 @@
+"use client"
+
 import TopBar from "./TopBar"
 import Navigation from "./Navigation"
 

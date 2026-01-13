@@ -3,6 +3,7 @@ import { Oswald, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
 import Navbar from "./components/Navigation/Navbar"
 import Footer from "./components/Footer"
+import { LanguageProvider } from "./components/LanguageProvider"
 
 const headingFont = Oswald({
     variable: "--font-heading",
@@ -31,9 +32,11 @@ export default function RootLayout({
             <body
                 className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
             >
-                <Navbar />
-                {children}
-                <Footer />
+                <LanguageProvider>
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </LanguageProvider>
             </body>
         </html>
     )

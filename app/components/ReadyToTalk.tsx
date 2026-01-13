@@ -2,8 +2,11 @@
 
 import { useState } from "react"
 import WeChatQRBox from "./WeChatQRBox"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function ReadyToTalk() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -56,7 +59,7 @@ export default function ReadyToTalk() {
             // Success
             setSubmitStatus({
                 type: "success",
-                message: "Thank you! Your message has been sent successfully."
+                message: copy.readyToTalk.form.success
             })
 
             // Reset form
@@ -72,7 +75,7 @@ export default function ReadyToTalk() {
                 message:
                     error instanceof Error
                         ? error.message
-                        : "An error occurred. Please try again later."
+                        : copy.readyToTalk.form.error
             })
         } finally {
             setIsSubmitting(false)
@@ -86,14 +89,10 @@ export default function ReadyToTalk() {
                     {/* Left Column: Direct Contact */}
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            Ready to{" "}
-                            <span className="text-primary-red">Talk?</span>
+                            {copy.readyToTalk.leftTitle}
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                            Connect with us via WeChat. Our bilingual team is
-                            ready to discuss how we can help your factory reach
-                            international buyers through Amazon, social media,
-                            SEO, and modern website design.
+                            {copy.readyToTalk.leftCopy}
                         </p>
 
                         {/* QR Code Box */}
@@ -103,34 +102,26 @@ export default function ReadyToTalk() {
                     {/* Right Column: Contact Form */}
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            Or prefer to{" "}
-                            <span className="text-primary-red">Contact Us</span>{" "}
-                            through Our Form?
+                            {copy.readyToTalk.rightTitle}
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                            Tell us about your export goals, target markets,
-                            sales channels and challenges. We&apos;ll respond
-                            quickly with a strategy tailored to help you win
-                            international customers. You can also email us at{" "}
+                            {copy.readyToTalk.rightCopy}{" "}
                             <a
                                 href="mailto:hello@pixaventures.com"
-                                className="hover:text-primary-redDark text-primary-red underline"
+                                className="text-primary-red hover:text-primary-redDark underline"
                             >
                                 hello@pixaventures.com
                             </a>
-                            .
+                            {language === "zh" ? "。" : "."}
                         </p>
 
-                        <form
-                            onSubmit={handleSubmit}
-                            className="mt-8 space-y-5"
-                        >
+                        <form onSubmit={handleSubmit} className="mt-8 space-y-5">
                             <div>
                                 <label
                                     htmlFor="name"
                                     className="mb-2 block text-sm font-medium text-slate-900"
                                 >
-                                    Your Name{" "}
+                                    {copy.readyToTalk.form.name}{" "}
                                     <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -149,7 +140,7 @@ export default function ReadyToTalk() {
                                     htmlFor="email"
                                     className="mb-2 block text-sm font-medium text-slate-900"
                                 >
-                                    Email Address{" "}
+                                    {copy.readyToTalk.form.email}{" "}
                                     <span className="text-red-500">*</span>
                                 </label>
                                 <input
@@ -168,7 +159,7 @@ export default function ReadyToTalk() {
                                     htmlFor="wechatId"
                                     className="mb-2 block text-sm font-medium text-slate-900"
                                 >
-                                    WeChat ID
+                                    {copy.readyToTalk.form.wechat}
                                 </label>
                                 <input
                                     type="text"
@@ -185,7 +176,7 @@ export default function ReadyToTalk() {
                                     htmlFor="message"
                                     className="mb-2 block text-sm font-medium text-slate-900"
                                 >
-                                    Message{" "}
+                                    {copy.readyToTalk.form.message}{" "}
                                     <span className="text-red-500">*</span>
                                 </label>
                                 <textarea
@@ -216,7 +207,9 @@ export default function ReadyToTalk() {
                                 disabled={isSubmitting}
                                 className="w-full rounded bg-slate-900 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                                {isSubmitting ? "Sending..." : "Submit"}
+                                {isSubmitting
+                                    ? copy.readyToTalk.form.sending
+                                    : copy.readyToTalk.form.submit}
                             </button>
                         </form>
                     </div>

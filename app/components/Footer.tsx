@@ -1,7 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import WeChatQRPopup from "./WeChatQRPopup"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Footer() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+
     return (
         <footer className="bg-primary-main text-white">
             <div className="mx-auto px-6 py-16 lg:px-16">
@@ -12,14 +18,14 @@ export default function Footer() {
                         <div className="flex flex-col">
                             <div className="space-y-10">
                                 <h2 className="max-w-[520px] text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
-                                    Your Foreign Growth Partner in China
+                                    {copy.footer.title}
                                 </h2>
 
                                 <Link
                                     href="/contact"
                                     className="text-primary-main inline-flex w-full max-w-md items-center justify-center rounded-md bg-white px-8 py-4 text-base font-semibold transition-opacity hover:opacity-90"
                                 >
-                                    Contact Us
+                                    {copy.footer.cta}
                                 </Link>
                             </div>
                         </div>
@@ -27,16 +33,13 @@ export default function Footer() {
                         {/* Middle Section (Services) */}
                         <div className="flex flex-col items-center text-center">
                             <h3 className="text-base font-semibold underline underline-offset-8 md:text-lg">
-                                Services
+                                {copy.footer.servicesTitle}
                             </h3>
 
                             <ul className="mt-6 space-y-3 text-sm text-white/90 md:text-base">
-                                <li>AI Automation</li>
-                                <li>SEO Growth</li>
-                                <li>Paid Ads</li>
-                                <li>App development</li>
-                                <li>Consulting</li>
-                                <li>Custom Solutions</li>
+                                {copy.footer.services.map((service) => (
+                                    <li key={service}>{service}</li>
+                                ))}
                             </ul>
                         </div>
 
@@ -44,17 +47,14 @@ export default function Footer() {
                         <div className="flex flex-col justify-between">
                             <div className="max-w-[360px] space-y-6">
                                 <p className="text-sm leading-relaxed md:text-base">
-                                    Subscribe to our{" "}
-                                    <strong>Monthly Newsletter</strong> & enjoy
-                                    exclusive content about the Chinese Digital
-                                    Ecosystem.
+                                    {copy.footer.newsletter}
                                 </p>
 
                                 <a
                                     href="#"
                                     className="inline-flex items-center gap-3 text-sm font-bold transition-opacity hover:opacity-80 md:text-base"
                                 >
-                                    Subscribe Here <span aria-hidden>→</span>
+                                    {copy.footer.subscribe} <span aria-hidden>→</span>
                                 </a>
                             </div>
 

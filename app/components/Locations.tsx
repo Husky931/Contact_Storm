@@ -1,56 +1,40 @@
+"use client"
+
+import { useLanguage } from "@/components/LanguageProvider"
+
 export default function Locations() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+
     return (
         <section className="bg-gray-50 py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center">
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
-                        Our Locations
+                        {copy.locations.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                        Meet us in{" "}
-                        <span className="text-primary-red">Shanghai&nbsp;</span>
-                        and Munich
+                        {copy.locations.title}
                     </h2>
                 </div>
                 <div className="mt-14 flex flex-col justify-evenly gap-10 lg:flex-row">
-                    {/* <div className="flex flex-col text-center">
-                        <h3 className="font-heading mb-4 text-xl font-semibold text-slate-900">
-                            Meet us in Thessaloniki
-                        </h3>
-                        <p className="mb-2 text-sm leading-relaxed text-slate-700">
-                            Tsimiski Street 45, 2nd Floor
-                            <br />
-                            City Center, Thessaloniki 54623
-                            <br />
-                            Central Macedonia, Greece
-                        </p>
-                        <p className="mt-4 text-sm font-medium text-slate-900">
-                            Tel:{" "}
-                            <a
-                                href="tel:+302310123456"
-                                className="text-primary-red cursor-pointer hover:underline"
-                            >
-                                +30 2310 123456
-                            </a>
-                        </p>
-                    </div> */}
                     <div className="flex flex-col text-center">
                         <h3 className="font-heading mb-4 text-xl font-semibold text-slate-900">
-                            Meet us in Shanghai
+                            {copy.locations.shanghaiTitle}
                         </h3>
                         <p className="mb-2 text-sm leading-relaxed text-slate-700">
-                            WeWork China (West Nanjing Road Community)
+                            {copy.locations.shanghaiAddress[0]}
                             <br />
-                            West Nanjing Road, Jing&apos;an District
+                            {copy.locations.shanghaiAddress[1]}
                             <br />
-                            Shanghai, China 200040
+                            {copy.locations.shanghaiAddress[2]}
                             <br />
                             <span className="text-slate-600">
-                                WeWork中国（南京西路社区店）
+                                {copy.locations.shanghaiAddress[3]}
                             </span>
                         </p>
                         <p className="mt-4 text-sm font-medium text-slate-900">
-                            Tel:{" "}
+                            {copy.locations.tel}{" "}
                             <a
                                 href="tel:+8613162908096"
                                 className="text-primary-red cursor-pointer hover:underline"
@@ -61,17 +45,17 @@ export default function Locations() {
                     </div>
                     <div className="flex flex-col text-center">
                         <h3 className="font-heading mb-4 text-xl font-semibold text-slate-900">
-                            Meet us in Munich
+                            {copy.locations.munichTitle}
                         </h3>
                         <p className="mb-2 text-sm leading-relaxed text-slate-700">
-                            Maximilianstraße 35, 3rd Floor
+                            {copy.locations.munichAddress[0]}
                             <br />
-                            Altstadt-Lehel, Munich 80539
+                            {copy.locations.munichAddress[1]}
                             <br />
-                            Bavaria, Germany
+                            {copy.locations.munichAddress[2]}
                         </p>
                         <p className="mt-4 text-sm font-medium text-slate-900">
-                            Tel:{" "}
+                            {copy.locations.tel}{" "}
                             <a
                                 href="tel:+498912345678"
                                 className="text-primary-red cursor-pointer hover:underline"

@@ -1,6 +1,10 @@
-const heroHighlights = [
+"use client"
+
+import { useLanguage } from "@/components/LanguageProvider"
+
+const highlightIcons = [
     {
-        title: "Amazon Ads",
+        key: "amazon",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -20,7 +24,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "Social Ads and Growth",
+        key: "social",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -40,7 +44,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "SEO For export",
+        key: "seo",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -62,7 +66,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "Shopify",
+        key: "shopify",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -84,7 +88,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "Website Redesign",
+        key: "web",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -103,7 +107,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "Leads",
+        key: "leads",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -123,12 +127,15 @@ const heroHighlights = [
 ]
 
 export default function HeroHighlights() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+
     return (
         <section className="bg-[#0d121e] text-white">
             <div className="mx-auto grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
-                {heroHighlights.map((item, index) => (
+                {highlightIcons.map((item, index) => (
                     <div
-                        key={item.title}
+                        key={item.key}
                         className={`flex items-center gap-5 px-4 py-10 sm:px-6 ${
                             index > 0 ? "border-l border-[#444444]" : ""
                         }`}
@@ -138,7 +145,7 @@ export default function HeroHighlights() {
                         </div>
                         <div className="flex items-center">
                             <h2 className="text-sm leading-tight font-bold text-white sm:text-base">
-                                {item.title}
+                                {copy.heroHighlights[index]}
                             </h2>
                         </div>
                     </div>

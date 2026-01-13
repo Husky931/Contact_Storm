@@ -1,13 +1,18 @@
-import Link from "next/link"
+"use client"
 
-const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Reports", href: "/reports" },
-    { label: "Insights", href: "/insights" },
-    { label: "Contact", href: "/contact" }
-]
+import Link from "next/link"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Navigation() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+    const navItems = [
+        { label: copy.nav.home, href: "/" },
+        { label: copy.nav.reports, href: "/reports" },
+        { label: copy.nav.insights, href: "/insights" },
+        { label: copy.nav.contact, href: "/contact" }
+    ]
+
     return (
         <header className="bg-white shadow-sm">
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-5">
@@ -16,7 +21,7 @@ export default function Navigation() {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="transition hover:text-primary-red"
+                            className="hover:text-primary-red transition"
                         >
                             {item.label}
                         </Link>

@@ -1,15 +1,21 @@
+"use client"
+
 import Image from "next/image"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function FoundedBy() {
+    const { language, translations } = useLanguage()
+    const copy = translations[language]
+
     return (
         <section className="bg-white py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center">
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
-                        Meet the Founders
+                        {copy.founders.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                        Team <span className="text-primary-red">Leaders</span>
+                        {copy.founders.title}
                     </h2>
                 </div>
                 <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
@@ -27,9 +33,11 @@ export default function FoundedBy() {
                             Alex
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
-                            Based:{" "}
+                            {copy.founders.based}{" "}
                             <span className="text-primary-red">
-                                Munich, Germany
+                                {language === "zh"
+                                    ? "德国慕尼黑"
+                                    : "Munich, Germany"}
                             </span>
                         </p>
                     </div>
@@ -47,9 +55,11 @@ export default function FoundedBy() {
                             Gligor
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
-                            Based:{" "}
+                            {copy.founders.based}{" "}
                             <span className="text-primary-red">
-                                Shanghai, China
+                                {language === "zh"
+                                    ? "中国上海"
+                                    : "Shanghai, China"}
                             </span>
                         </p>
                     </div>
@@ -67,9 +77,11 @@ export default function FoundedBy() {
                             Tomislav
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
-                            Based:{" "}
+                            {copy.founders.based}{" "}
                             <span className="text-primary-red">
-                                Munich, Germany
+                                {language === "zh"
+                                    ? "德国慕尼黑"
+                                    : "Munich, Germany"}
                             </span>
                         </p>
                     </div>
