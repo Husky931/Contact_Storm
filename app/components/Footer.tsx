@@ -1,26 +1,31 @@
+import Link from "next/link"
+
 export default function Footer() {
     return (
         <footer className="bg-primary-main text-white">
             <div className="mx-auto px-6 py-16 lg:px-16">
-                {/* Make the whole footer content sit to the RIGHT, and keep columns only as wide as content */}
-                <div className="flex justify-end">
-                    <div className="grid w-fit gap-14 md:grid-cols-3">
+                {/* Full width wrapper, content aligned to the right */}
+                <div className="flex w-full justify-evenly">
+                    <div className="grid w-full max-w-6xl gap-14 md:grid-cols-3 lg:gap-12">
                         {/* Left Section */}
-                        <div className="w-fit">
+                        <div className="flex flex-col">
                             <div className="space-y-10">
                                 <h2 className="max-w-[520px] text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
                                     Your trusted Digital Transformation
                                     Consultancy in China
                                 </h2>
 
-                                <button className="text-primary-main w-full max-w-md rounded-md bg-white px-8 py-4 text-base font-semibold transition-opacity hover:opacity-90">
+                                <Link
+                                    href="/contact"
+                                    className="text-primary-main inline-flex w-full max-w-md items-center justify-center rounded-md bg-white px-8 py-4 text-base font-semibold transition-opacity hover:opacity-90"
+                                >
                                     Contact Us
-                                </button>
+                                </Link>
                             </div>
                         </div>
 
                         {/* Middle Section (Services) */}
-                        <div className="w-fit">
+                        <div className="flex flex-col items-center text-center">
                             <h3 className="text-base font-semibold underline underline-offset-8 md:text-lg">
                                 Services
                             </h3>
@@ -37,7 +42,7 @@ export default function Footer() {
                         </div>
 
                         {/* Right Section */}
-                        <div className="flex w-fit flex-col justify-between">
+                        <div className="flex flex-col justify-between">
                             <div className="max-w-[360px] space-y-6">
                                 <p className="text-sm leading-relaxed md:text-base">
                                     Subscribe to our{" "}
@@ -54,9 +59,7 @@ export default function Footer() {
                                 </a>
                             </div>
 
-                            {/* Social Media Icons */}
                             <div className="mt-12 flex items-center gap-6 md:mt-0">
-                                {/* WeChat Icon */}
                                 <a
                                     href="#"
                                     className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
@@ -71,7 +74,6 @@ export default function Footer() {
                                     </svg>
                                 </a>
 
-                                {/* LinkedIn Icon */}
                                 <a
                                     href="#"
                                     className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
@@ -82,7 +84,6 @@ export default function Footer() {
                                     </span>
                                 </a>
 
-                                {/* Facebook Icon */}
                                 <a
                                     href="#"
                                     className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
@@ -93,7 +94,6 @@ export default function Footer() {
                                     </span>
                                 </a>
 
-                                {/* YouTube Icon */}
                                 <a
                                     href="#"
                                     className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
