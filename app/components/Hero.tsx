@@ -18,7 +18,7 @@ export default function Hero() {
                             Development & Growth
                         </p>
                         <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-white md:text-5xl">
-                            Building digital products that move markets
+                            Helping companies grow
                         </h1>
                         <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg">
                             We design and engineer platforms, apps, and
@@ -40,9 +40,10 @@ export default function Hero() {
                             </a>
                         </div>
                         <div className="mt-10 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
-                            <span>Product Strategy</span>
-                            <span>Experience Design</span>
-                            <span>Engineering Delivery</span>
+                            <span>Apps Developmemnt</span>
+                            <span>System automation through AI</span>
+                            <span>Ads and online advertising</span>
+                            <span>SEO growth</span>
                         </div>
                     </div>
 
