@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function Navbar() {
     return (
         <>
@@ -9,41 +11,35 @@ export default function Navbar() {
                         <span>Email: hello@PixaVentures.com</span>
                     </div>
                     <div className="flex items-center gap-3">
-                        {["f", "t", "in"].map((label) => (
-                            <span
-                                key={label}
-                                className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 text-[10px] font-semibold text-white/80"
-                            >
-                                {label}
-                            </span>
-                        ))}
+                        <a
+                            href="#"
+                            className="flex items-center justify-center"
+                            aria-label="WeChat"
+                        >
+                            <Image
+                                src="/icons/wechat.svg"
+                                alt="WeChat"
+                                width={36}
+                                height={36}
+                                priority
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
 
             <header className="bg-white shadow-sm">
                 <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-5 lg:flex-row lg:justify-between">
-                    <div className="flex items-center gap-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded bg-(--brand-red) text-white">
+                    <div className="flex items-center gap-3">
+                        <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/30 text-white/80">
                             <svg
                                 viewBox="0 0 24 24"
-                                className="h-6 w-6"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
+                                className="h-4 w-4"
+                                fill="currentColor"
                             >
-                                <path d="M4 12h16" />
-                                <path d="M12 4v16" />
+                                <path d="M12 2C6.5 2 2 5.7 2 10.3c0 2.6 1.6 5 4.1 6.6L5 21l4.3-2.3c.9.2 1.8.3 2.7.3 5.5 0 10-3.7 10-8.3S17.5 2 12 2zm-3 7.2c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm6 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" />
                             </svg>
-                        </div>
-                        <div>
-                            <p className="font-heading text-xl font-semibold text-slate-900">
-                                PixaVentures
-                            </p>
-                            <p className="text-xs tracking-[0.3em] text-slate-500 uppercase">
-                                Development agency
-                            </p>
-                        </div>
+                        </span>
                     </div>
                     <nav className="flex flex-wrap items-center justify-center gap-6 text-sm font-semibold text-slate-700">
                         {[

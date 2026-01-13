@@ -10,12 +10,12 @@ export default function Hero() {
                 className="object-cover"
                 priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/75 to-slate-900/30" />
+            <div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-900/75 to-slate-900/30" />
             <div className="relative mx-auto max-w-6xl px-6 py-20 lg:py-28">
                 <div className="grid gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
                     <div>
                         <p className="text-sm tracking-[0.5em] text-white/70 uppercase">
-                            Development & Digital Strategy
+                            Development & Growth
                         </p>
                         <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-white md:text-5xl">
                             Building digital products that move markets
@@ -47,7 +47,7 @@ export default function Hero() {
                     </div>
 
                     <div className="rounded bg-white/95 p-6 text-slate-800 shadow-xl">
-                        <p className="text-xs font-semibold tracking-[0.3em] text-[var(--brand-red)] uppercase">
+                        <p className="text-xs font-semibold tracking-[0.3em] text-(--brand-red) uppercase">
                             Project Brief
                         </p>
                         <h3 className="font-heading mt-3 text-2xl text-slate-900">

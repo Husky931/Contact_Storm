@@ -101,11 +101,11 @@ const heroHighlights = [
 
 export default function HeroHighlights() {
     return (
-        <section className="bg-[var(--brand-navy)] text-white">
+        <section className="bg-(--brand-navy) text-white">
             <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6 px-6 py-8 text-sm sm:grid-cols-3 lg:grid-cols-6">
                 {heroHighlights.map((item) => (
                     <div key={item.title} className="flex items-center gap-3">
-                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-[var(--brand-red)]">
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-(--brand-red)">
                             {item.icon}
                         </div>
                         <div>

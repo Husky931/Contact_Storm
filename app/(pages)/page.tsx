@@ -7,7 +7,7 @@ import Industries from "../components/Industries"
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+        <div className="min-h-screen bg-(--background) text-(--foreground)">
             <main>
                 <Hero />
                 <HeroHighlights />

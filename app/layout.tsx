@@ -17,8 +17,8 @@ const bodyFont = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-    title: "PixaVentures Digital",
-    description: "Development & digital strategy agency."
+    title: "PixaVentures",
+    description: "Development & Growth agency."
 }
 
 export default function RootLayout({

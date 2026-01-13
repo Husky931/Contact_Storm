@@ -17,7 +17,7 @@ export default function Strategy() {
     return (
         <section className="bg-white py-16">
             <div className="mx-auto max-w-6xl px-6">
-                <p className="text-center text-xs font-semibold uppercase tracking-[0.4em] text-[var(--brand-red)]">
+                <p className="text-center text-xs font-semibold uppercase tracking-[0.4em] text-(--brand-red)">
                     Digital Strategy
                 </p>
                 <h2 className="font-heading mt-4 text-center text-3xl text-slate-900">
@@ -29,7 +29,7 @@ export default function Strategy() {
                             key={item.title}
                             className="rounded border border-slate-200 bg-white p-6 shadow-sm"
                         >
-                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--brand-red)] text-white">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-(--brand-red) text-white">
                                 <svg
                                     viewBox="0 0 24 24"
                                     className="h-6 w-6"

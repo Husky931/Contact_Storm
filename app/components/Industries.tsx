@@ -20,10 +20,10 @@ const industries = [
 
 export default function Industries() {
     return (
-        <section className="bg-[var(--background)] py-16">
+        <section className="bg-(--background) py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="text-center">
-                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[var(--brand-red)]">
+                    <p className="text-xs font-semibold uppercase tracking-[0.4em] text-(--brand-red)">
                         Explore by Industry
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
@@ -50,7 +50,7 @@ export default function Industries() {
                                 <p className="mt-3 text-sm text-slate-600">{industry.text}</p>
                                 <a
                                     href="#"
-                                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--brand-red)]"
+                                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-(--brand-red)"
                                 >
                                     Learn More
                                     <span className="text-base">+</span>
