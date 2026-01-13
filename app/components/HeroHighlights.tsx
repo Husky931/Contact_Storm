@@ -5,18 +5,24 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <circle cx="17" cy="6" r="2" />
-                <path d="M15 10h2a2 2 0 0 1 2 2v2" />
-                <circle cx="20" cy="17" r="1.5" />
-                <path d="M19 15.5h2" />
-                <path d="M20 14.5v2" />
+                {/* chip */}
+                <rect x="7" y="7" width="10" height="10" rx="2" />
+                <path d="M10 10h4M10 12h4M10 14h4" />
+                {/* pins */}
+                <path d="M9 3v4M12 3v4M15 3v4" />
+                <path d="M9 17v4M12 17v4M15 17v4" />
+                <path d="M3 9h4M3 12h4M3 15h4" />
+                <path d="M17 9h4M17 12h4M17 15h4" />
+                {/* automation arrow */}
+                <path d="M14.5 18.5c2 0 3.5-1.5 3.5-3.5" />
+                <path d="M18 15l-1.5 1.5M18 15l-1.5-1.5" />
             </svg>
         )
     },
@@ -26,18 +32,20 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <circle cx="17" cy="6" r="2" />
-                <path d="M15 10h2a2 2 0 0 1 2 2v2" />
-                <rect x="14" y="16" width="6" height="4" rx="0.5" />
-                <path d="M15 17h4" />
-                <path d="M15 18.5h4" />
+                {/* magnifier */}
+                <circle cx="10.5" cy="10.5" r="4.5" />
+                <path d="M14 14l4.5 4.5" />
+                {/* upward chart */}
+                <path d="M4 18v2h16" />
+                <path d="M6 16l4-4 3 3 5-6" />
+                <path d="M18 9v2h2" />
             </svg>
         )
     },
@@ -47,18 +55,18 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <circle cx="18" cy="7" r="2" />
-                <circle cx="18" cy="16" r="2.5" />
-                <path d="M16.5 16l1.5 1.5 3-3" />
-                <rect x="13" y="4" width="4" height="3" rx="0.5" />
-                <path d="M14 5h2" />
+                {/* megaphone */}
+                <path d="M4 12v3a2 2 0 0 0 2 2h1l2 4h2l-2-4h2l8-4V7l-8-4H6a2 2 0 0 0-2 2v3" />
+                <path d="M4 9h3M4 12h3M4 15h3" />
+                {/* sound lines */}
+                <path d="M19 9.5c1 .8 1.5 1.6 1.5 2.5S20 13.7 19 14.5" />
             </svg>
         )
     },
@@ -68,17 +76,21 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <rect x="13" y="4" width="6" height="8" rx="1" />
-                <path d="M14.5 6h3" />
-                <path d="M14.5 8h3" />
-                <circle cx="16.5" cy="10" r="1" />
+                {/* phone */}
+                <rect x="7" y="3" width="10" height="18" rx="2" />
+                <path d="M10 6h4" />
+                <circle cx="12" cy="18" r="0.75" />
+                {/* code */}
+                <path d="M9.5 12l-2 2 2 2" />
+                <path d="M14.5 12l2 2-2 2" />
+                <path d="M12.5 11.5l-1 5" />
             </svg>
         )
     },
@@ -88,17 +100,19 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <circle cx="17" cy="6" r="2" />
-                <path d="M15 10h2a2 2 0 0 1 2 2v2" />
-                <path d="M15 17h4" />
-                <path d="M15 19h4" />
+                {/* chat bubbles */}
+                <path d="M4 6.5A3.5 3.5 0 0 1 7.5 3h6A3.5 3.5 0 0 1 17 6.5v3A3.5 3.5 0 0 1 13.5 13H10l-3 2v-2.2A3.5 3.5 0 0 1 4 9.5z" />
+                <path d="M9 16h6a3 3 0 0 0 3-3v-1" />
+                {/* insights */}
+                <path d="M8.5 8h4" />
+                <path d="M8.5 10h3" />
             </svg>
         )
     },
@@ -108,19 +122,18 @@ const heroHighlights = [
         icon: (
             <svg
                 viewBox="0 0 24 24"
-                className="h-10 w-10"
+                className="h-12 w-12"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             >
-                <circle cx="8" cy="6" r="2.5" />
-                <path d="M2 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
-                <rect x="13" y="4" width="6" height="8" rx="1" />
-                <path d="M14.5 6h3" />
-                <path d="M14.5 8h2.5" />
-                <path d="M14.5 10h3" />
-                <path d="M15 14l2 2 4-4" />
-                <circle cx="19" cy="16" r="0.5" />
+                {/* puzzle pieces */}
+                <path d="M10 4a2 2 0 0 0-2 2v1H7a2 2 0 0 0 0 4h1v1a2 2 0 0 0 4 0v-1h1a2 2 0 0 0 0-4h-1V6a2 2 0 0 0-2-2z" />
+                <path d="M14 12h2a2 2 0 0 1 2 2v1h1a2 2 0 0 1 0 4h-1v1a2 2 0 0 1-4 0v-1h-1a2 2 0 0 1 0-4h1v-1a2 2 0 0 1 2-2z" />
+                {/* connector */}
+                <path d="M12 12l2 2" />
             </svg>
         )
     }
@@ -133,14 +146,14 @@ export default function HeroHighlights() {
                 {heroHighlights.map((item, index) => (
                     <div
                         key={item.title}
-                        className={`flex items-center justify-start gap-4 px-4 py-10 sm:px-6 ${
+                        className={`flex items-center gap-5 px-4 py-10 sm:px-6 ${
                             index > 0 ? "border-l border-[#444444]" : ""
                         }`}
                     >
-                        <div className="shrink-0 text-[#E85B4E]">
+                        <div className="flex shrink-0 items-center justify-center text-[#E85B4E]">
                             {item.icon}
                         </div>
-                        <div>
+                        <div className="flex items-center">
                             <h2 className="text-sm leading-tight font-bold text-white sm:text-base">
                                 {item.titleWithBreaks}
                             </h2>
