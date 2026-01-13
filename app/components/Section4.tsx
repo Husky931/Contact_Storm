@@ -85,10 +85,10 @@ export default function Section4() {
                                     {/* Desktop stepper between cards */}
                                     {index < approachSteps.length - 1 && (
                                         <div className="pointer-events-none absolute top-10 left-full hidden w-16 -translate-x-1/2 items-center justify-center md:flex lg:w-20">
-                                            <div className="flex items-center gap-2">
+                                            <div className="flex items-center gap-3">
                                                 <span className="h-1.5 w-1.5 rounded-full bg-gray-300" />
                                                 <span className="h-2 w-2 rounded-full bg-gray-300" />
-                                                <span className="h-2.5 w-2.5 rounded-full bg-gray-400" />
+                                                <span className="h-3 w-3 rounded-full bg-gray-400" />
                                                 <span className="h-2 w-2 rounded-full bg-gray-300" />
                                                 <span className="h-1.5 w-1.5 rounded-full bg-gray-300" />
                                             </div>
