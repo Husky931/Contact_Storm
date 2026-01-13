@@ -54,7 +54,7 @@ export default function Section4() {
                             {approachSteps.map((step, index) => (
                                 <div
                                     key={step.number}
-                                    className="relative flex-1"
+                                    className="font-heading relative flex-1"
                                 >
                                     <div className="flex flex-col items-center">
                                         <div className="relative inline-flex h-24 items-center justify-center rounded-xl bg-white p-5 shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
@@ -73,7 +73,7 @@ export default function Section4() {
                                         </div>
 
                                         <div className="mt-8 text-center">
-                                            <h3 className="font-heading text-xl font-bold text-slate-900">
+                                            <h3 className="font-heading font-heading text-xl font-bold text-slate-900">
                                                 {step.title}
                                             </h3>
                                             <p className="mt-3 text-sm leading-relaxed text-slate-600">
