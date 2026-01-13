@@ -34,7 +34,7 @@ export default function ReadyToTalk() {
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
                             Ready to{" "}
-                            <span className="text-(--brand-red)">Talk?</span>
+                            <span className="text-primary-red">Talk?</span>
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
                             Scan the QR code and share your issue.
@@ -48,7 +48,7 @@ export default function ReadyToTalk() {
                     <div>
                         <h2 className="font-heading text-3xl font-bold text-slate-900">
                             Or prefer to{" "}
-                            <span className="text-(--brand-red)">
+                            <span className="text-primary-red">
                                 Contact Us
                             </span>{" "}
                             through Our Form?
@@ -58,7 +58,7 @@ export default function ReadyToTalk() {
                             hi! You can also contact us at{" "}
                             <a
                                 href="mailto:hello@pixaventures.com"
-                                className="hover:text-primary-redDark text-(--brand-red) underline"
+                                className="hover:text-primary-redDark text-primary-red underline"
                             >
                                 hello@pixaventures.com
                             </a>

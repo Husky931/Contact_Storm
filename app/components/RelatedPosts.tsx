@@ -35,7 +35,7 @@ export default function RelatedPosts({ posts }: RelatedPostsProps) {
                                 />
                             </div>
                             <div className="flex flex-1 flex-col">
-                                <h3 className="mb-1 font-heading text-base font-semibold text-slate-900 transition-colors group-hover:text-(--brand-red) line-clamp-2">
+                                <h3 className="mb-1 font-heading text-base font-semibold text-slate-900 transition-colors group-hover:text-primary-red line-clamp-2">
                                     {post.title}
                                 </h3>
                                 <time

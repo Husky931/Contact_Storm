@@ -78,10 +78,10 @@ export default function Services() {
                 </div>
                 <div className="mt-10 flex justify-center">
                     <a
-                        href="#"
+                        href="/insights"
                         className="bg-primary-red rounded px-8 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
                     >
-                        View All Services
+                        View Our Insights
                     </a>
                 </div>
             </div>

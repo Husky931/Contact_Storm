@@ -1,7 +1,6 @@
 const heroHighlights = [
     {
         title: "AI Automation",
-        titleWithBreaks: <>AI Automation</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -28,7 +27,6 @@ const heroHighlights = [
     },
     {
         title: "SEO Growth",
-        titleWithBreaks: <>SEO Growth</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -51,7 +49,6 @@ const heroHighlights = [
     },
     {
         title: "Paid Ads",
-        titleWithBreaks: <>Paid Ads</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -72,7 +69,6 @@ const heroHighlights = [
     },
     {
         title: "App development",
-        titleWithBreaks: <>App development</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -96,7 +92,6 @@ const heroHighlights = [
     },
     {
         title: "Consulting",
-        titleWithBreaks: <>Consulting</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -118,7 +113,6 @@ const heroHighlights = [
     },
     {
         title: "Custom Solutions",
-        titleWithBreaks: <>Custom Solutions</>,
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -155,7 +149,7 @@ export default function HeroHighlights() {
                         </div>
                         <div className="flex items-center">
                             <h2 className="text-sm leading-tight font-bold text-white sm:text-base">
-                                {item.titleWithBreaks}
+                                {item.title}
                             </h2>
                         </div>
                     </div>

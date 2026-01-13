@@ -9,7 +9,7 @@ export default function FoundedBy() {
                         Meet the Founders
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                        Team <span className="text-(--brand-red)">Leaders</span>
+                        Team <span className="text-primary-red">Leaders</span>
                     </h2>
                 </div>
                 <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
@@ -28,7 +28,7 @@ export default function FoundedBy() {
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
                             Based:{" "}
-                            <span className="text-(--brand-red)">
+                            <span className="text-primary-red">
                                 Thessaloniki, Greece
                             </span>
                         </p>
@@ -48,7 +48,7 @@ export default function FoundedBy() {
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
                             Based:{" "}
-                            <span className="text-(--brand-red)">
+                            <span className="text-primary-red">
                                 Shanghai, China
                             </span>
                         </p>
@@ -68,7 +68,7 @@ export default function FoundedBy() {
                         </h3>
                         <p className="mt-2 text-sm font-medium text-slate-900">
                             Based:{" "}
-                            <span className="text-(--brand-red)">
+                            <span className="text-primary-red">
                                 Munich, Germany
                             </span>
                         </p>

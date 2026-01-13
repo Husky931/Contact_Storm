@@ -17,7 +17,7 @@ export default function ContactPage() {
                         <div className="text-center">
                             <h1 className="font-heading text-4xl font-bold text-slate-900 md:text-5xl">
                                 Get in{" "}
-                                <span className="text-(--brand-red)">
+                                <span className="text-primary-red">
                                     Touch
                                 </span>
                             </h1>

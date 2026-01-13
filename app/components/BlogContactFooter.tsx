@@ -16,7 +16,7 @@ export default function BlogContactFooter() {
                     <span className="font-semibold">Email:</span>{" "}
                     <a
                         href="mailto:hello@pixaventures.com"
-                        className="text-(--brand-red) hover:underline"
+                        className="text-primary-red hover:underline"
                     >
                         hello@pixaventures.com
                     </a>
@@ -27,7 +27,7 @@ export default function BlogContactFooter() {
                         href="https://www.pixaventures.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-(--brand-red) hover:underline"
+                        className="text-primary-red hover:underline"
                     >
                         www.pixaventures.com
                     </a>

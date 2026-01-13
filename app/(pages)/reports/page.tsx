@@ -16,7 +16,7 @@ export default function ReportsPage() {
                         <div className="text-center">
                             <h1 className="font-heading text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
                                 Search for your{" "}
-                                <span className="text-(--brand-red)">
+                                <span className="text-primary-red">
                                     company
                                 </span>
                             </h1>
@@ -33,7 +33,7 @@ export default function ReportsPage() {
                                     <input
                                         type="text"
                                         placeholder="Enter company domain (e.g., example.com)"
-                                        className="w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-4 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:border-(--brand-red) focus:ring-2 focus:ring-(--brand-red)/20 focus:outline-none"
+                                        className="w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-4 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 focus:outline-none"
                                     />
                                 </div>
                                 <button

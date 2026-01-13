@@ -32,7 +32,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                     <span>{post.author}</span>
                 </div>
                 <Link href={`/insights/${post.slug}`}>
-                    <h2 className="mb-3 font-heading text-xl font-semibold text-slate-900 transition-colors group-hover:text-(--brand-red)">
+                    <h2 className="mb-3 font-heading text-xl font-semibold text-slate-900 transition-colors group-hover:text-primary-red">
                         {post.title}
                     </h2>
                 </Link>
@@ -43,7 +43,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                 )}
                 <Link
                     href={`/insights/${post.slug}`}
-                    className="inline-flex items-center font-semibold text-(--brand-red) transition-colors hover:text-(--brand-red-dark)"
+                    className="inline-flex items-center font-semibold text-primary-red transition-colors hover:text-primary-redDark"
                 >
                     Read More
                     <svg

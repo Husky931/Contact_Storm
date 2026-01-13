@@ -8,11 +8,11 @@ export default function Locations() {
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
                         Meet us in{" "}
-                        <span className="text-(--brand-red)">
+                        <span className="text-primary-red">
                             Thessaloniki, &nbsp;
                         </span>
                         Shanghai, and &nbsp;
-                        <span className="text-(--brand-red)">Munich</span>
+                        <span className="text-primary-red">Munich</span>
                     </h2>
                 </div>
                 <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
@@ -31,7 +31,7 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+302310123456"
-                                className="cursor-pointer text-(--brand-red) hover:underline"
+                                className="cursor-pointer text-primary-red hover:underline"
                             >
                                 +30 2310 123456
                             </a>
@@ -56,7 +56,7 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+8613162908096"
-                                className="cursor-pointer text-(--brand-red) hover:underline"
+                                className="cursor-pointer text-primary-red hover:underline"
                             >
                                 +86 13162908096
                             </a>
@@ -77,7 +77,7 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+498912345678"
-                                className="cursor-pointer text-(--brand-red) hover:underline"
+                                className="cursor-pointer text-primary-red hover:underline"
                             >
                                 +49 89 12345678
                             </a>

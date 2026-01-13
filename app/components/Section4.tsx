@@ -27,12 +27,12 @@ export default function Section4() {
             <div className="mx-auto max-w-6xl px-6">
                 {/* Header */}
                 <div className="text-center">
-                    <p className="text-xs font-semibold tracking-[0.4em] text-(--brand-red) uppercase">
+                    <p className="text-xs font-semibold tracking-[0.4em] text-primary-red uppercase">
                         OUR APPROACH
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
                         We help businesses grow by using{" "}
-                        <span className="text-(--brand-red)">
+                        <span className="text-primary-red">
                             in house proven growth strategies
                         </span>
                     </h2>

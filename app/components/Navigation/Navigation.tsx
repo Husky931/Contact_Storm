@@ -16,7 +16,7 @@ export default function Navigation() {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="transition hover:text-(--brand-red)"
+                            className="transition hover:text-primary-red"
                         >
                             {item.label}
                         </Link>

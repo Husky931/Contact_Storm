@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                                 </div>
 
                                 {/* Article Content */}
-                                <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-(--brand-red) prose-a:no-underline hover:prose-a:underline">
+                                <article className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-slate-900 prose-p:text-slate-700 prose-a:text-primary-red prose-a:no-underline hover:prose-a:underline">
                                     <MarkdownContent content={post.content} />
                                 </article>
 

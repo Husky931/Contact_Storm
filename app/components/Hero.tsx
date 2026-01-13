@@ -49,7 +49,7 @@ export default function Hero() {
                     </div>
 
                     <div className="rounded bg-white/95 p-6 text-slate-800 shadow-xl">
-                        <p className="text-xs font-semibold tracking-[0.3em] text-(--brand-red) uppercase">
+                        <p className="text-xs font-semibold tracking-[0.3em] text-primary-red uppercase">
                             Project Brief
                         </p>
                         <h3 className="font-heading mt-3 text-2xl text-slate-900">

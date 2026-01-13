@@ -30,7 +30,7 @@ export default function InsightsPage() {
                     <div className="mx-auto max-w-4xl px-6 text-center">
                         <h1 className="font-heading text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
                             Insights &{" "}
-                            <span className="text-(--brand-red)">Blog</span>
+                            <span className="text-primary-red">Blog</span>
                         </h1>
                         <p className="mt-6 text-lg text-slate-600 md:text-xl">
                             Discover the latest insights, trends, and best
