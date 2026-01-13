@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className="flex flex-col">
                             <div className="space-y-10">
                                 <h2 className="max-w-[520px] text-3xl leading-tight font-bold md:text-4xl lg:text-5xl">
-                                    Your Trusted Growth Partner in China
+                                    Your Foreign Growth Partner in China
                                 </h2>
 
                                 <Link

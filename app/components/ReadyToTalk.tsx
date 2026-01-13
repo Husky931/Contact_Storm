@@ -80,7 +80,7 @@ export default function ReadyToTalk() {
     }
 
     return (
-        <section className="bg-white py-16">
+        <section id="contact" className="bg-white py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
                     {/* Left Column: Direct Contact */}
@@ -90,7 +90,10 @@ export default function ReadyToTalk() {
                             <span className="text-primary-red">Talk?</span>
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                            Scan the QR code and share your issue.
+                            Connect with us via WeChat. Our bilingual team is
+                            ready to discuss how we can help your factory reach
+                            international buyers through Amazon, social media,
+                            SEO, and modern website design.
                         </p>
 
                         {/* QR Code Box */}
@@ -105,8 +108,10 @@ export default function ReadyToTalk() {
                             through Our Form?
                         </h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                            Feel free to tell us about your project or just say
-                            hi! You can also contact us at{" "}
+                            Tell us about your export goals, target markets,
+                            sales channels and challenges. We&apos;ll respond
+                            quickly with a strategy tailored to help you win
+                            international customers. You can also email us at{" "}
                             <a
                                 href="mailto:hello@pixaventures.com"
                                 className="hover:text-primary-redDark text-primary-red underline"

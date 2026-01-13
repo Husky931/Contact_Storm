@@ -3,6 +3,7 @@ import HeroHighlights from "../components/HeroHighlights"
 import About from "../components/About"
 import Section4 from "../components/Section4"
 import Services from "../components/Services"
+import Specialization from "../components/Specialization"
 import ReadyToTalk from "../components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
@@ -14,8 +15,10 @@ export default function Home() {
                 <Hero />
                 <HeroHighlights />
                 <About />
+                <Specialization />
                 <Section4 />
                 <Services />
+
                 <ReadyToTalk />
                 <FoundedBy />
                 <Locations />

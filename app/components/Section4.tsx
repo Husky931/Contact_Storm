@@ -3,20 +3,22 @@ import Image from "next/image"
 const approachSteps = [
     {
         number: "01",
-        title: "Global Competence",
-        description: "Talents spread across the globe",
+        title: "Factory intake",
+        description: "MOQ, capacity, certifications, anexdport readiness.",
         icon: "/icons/1.png"
     },
     {
         number: "02",
-        title: "Newest technologies",
-        description: "Using latest tech to rocket your business",
+        title: "Buyer targeting",
+        description:
+            "Amazon PPC, paid social, SEO and outreach to qualified buyers.",
         icon: "/icons/2.png"
     },
     {
         number: "03",
-        title: "Quality & Commitment",
-        description: "Happy customer is a repeat customer",
+        title: "Coversion system",
+        description:
+            "Modern website redesign and bilingual assets that convert.",
         icon: "/icons/3.png"
     }
 ]
@@ -27,21 +29,19 @@ export default function Section4() {
             <div className="mx-auto max-w-6xl px-6">
                 {/* Header */}
                 <div className="text-center">
-                    <p className="text-xs font-semibold tracking-[0.4em] text-primary-red uppercase">
-                        OUR APPROACH
+                    <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
+                        HOW IT WORKS
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        We help businesses grow by using{" "}
+                        We help manufacturers win overseas buyers with a{" "}
                         <span className="text-primary-red">
-                            in house proven growth strategies
+                            focused growth system
                         </span>
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                        Our services are a smart alternative when the need is
-                        limited in time. We find the skills you need, for the
-                        time period you want. PixaVentures has been offering
-                        services in the following line of business to their
-                        clients
+                        Every step is built around factory realities and Western
+                        buyer expectations, from ad creative to conversion-ready
+                        websites.
                     </p>
                 </div>
 

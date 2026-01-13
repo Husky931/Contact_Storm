@@ -8,15 +8,12 @@ export default function Locations() {
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
                         Meet us in{" "}
-                        <span className="text-primary-red">
-                            Thessaloniki, &nbsp;
-                        </span>
-                        Shanghai, and &nbsp;
-                        <span className="text-primary-red">Munich</span>
+                        <span className="text-primary-red">Shanghai&nbsp;</span>
+                        and Munich
                     </h2>
                 </div>
-                <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">
-                    <div className="flex flex-col text-center">
+                <div className="mt-14 flex flex-col justify-evenly gap-10 lg:flex-row">
+                    {/* <div className="flex flex-col text-center">
                         <h3 className="font-heading mb-4 text-xl font-semibold text-slate-900">
                             Meet us in Thessaloniki
                         </h3>
@@ -31,12 +28,12 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+302310123456"
-                                className="cursor-pointer text-primary-red hover:underline"
+                                className="text-primary-red cursor-pointer hover:underline"
                             >
                                 +30 2310 123456
                             </a>
                         </p>
-                    </div>
+                    </div> */}
                     <div className="flex flex-col text-center">
                         <h3 className="font-heading mb-4 text-xl font-semibold text-slate-900">
                             Meet us in Shanghai
@@ -56,7 +53,7 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+8613162908096"
-                                className="cursor-pointer text-primary-red hover:underline"
+                                className="text-primary-red cursor-pointer hover:underline"
                             >
                                 +86 13162908096
                             </a>
@@ -77,7 +74,7 @@ export default function Locations() {
                             Tel:{" "}
                             <a
                                 href="tel:+498912345678"
-                                className="cursor-pointer text-primary-red hover:underline"
+                                className="text-primary-red cursor-pointer hover:underline"
                             >
                                 +49 89 12345678
                             </a>

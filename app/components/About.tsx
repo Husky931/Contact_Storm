@@ -1,4 +1,7 @@
+"use client"
+
 import Image from "next/image"
+import WeChatQRPopup from "./WeChatQRPopup"
 
 export default function About() {
     return (
@@ -7,14 +10,14 @@ export default function About() {
                 <div className="relative">
                     <div className="grid gap-4 md:grid-cols-2">
                         <Image
-                            src="/images/about-1.jpg"
+                            src="/images/mooncake.jpg"
                             alt="Strategist at desk"
                             width={520}
                             height={520}
                             className="h-64 w-full rounded object-cover shadow"
                         />
                         <Image
-                            src="/images/about-2.jpg"
+                            src="/images/chinese_businessmen.webp"
                             alt="Team meeting"
                             width={520}
                             height={520}
@@ -23,7 +26,7 @@ export default function About() {
                     </div>
                     {/* <Link href="/insights"></Link> */}
                     <Image
-                        src="/images/about-3.jpg"
+                        src="/images/factory.webp"
                         alt="Office collaboration"
                         width={840}
                         height={560}
@@ -34,28 +37,34 @@ export default function About() {
                             150+
                         </p>
                         <p className="text-xs tracking-[0.3em] uppercase">
-                            Clients Served
+                            Factories Served
                         </p>
                     </div>
                 </div>
                 <div>
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
-                        About Us
+                        Built for Manufacturers
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        Development agency based in{" "}
-                        <span className="text-primary-red">Shanghai</span> with
-                        global delivery teams
+                        A bilingual diverse team bridging{" "}
+                        <span className="text-primary-red">
+                            Chinese manufacturing
+                        </span>{" "}
+                        with{" "}
+                        <span className="text-primary-red">global markets</span>
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                        We blend product strategy, design, and engineering to
-                        help brands launch modern platforms. From roadmap to
-                        release, we stay accountable to measurable impact.
+                        We are a bilingual, diverse team (Chinese, European,
+                        American) that understands both factory realities and
+                        Western buyer mind and expectations. That makes our ad
+                        creative, Amazon strategy, and websites convert much
+                        better.
                     </p>
                     <div className="mt-6 space-y-3 text-sm text-slate-700">
                         {[
-                            "Strategic workshops and product roadmaps",
-                            "Design systems and scalable builds"
+                            "Western buyer mindset applied to ads and listings",
+                            "Amazon, paid social, Shopify, and SEO execution in-house",
+                            "Conversion-focused website redesign"
                         ].map((item) => (
                             <div key={item} className="flex items-center gap-3">
                                 <span className="bg-primary-red flex h-8 w-8 items-center justify-center rounded-full text-white">
@@ -73,13 +82,16 @@ export default function About() {
                             </div>
                         ))}
                     </div>
-                    <a
-                        href="/insights"
-                        className="bg-primary-navy mt-8 inline-flex items-center gap-3 rounded px-6 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
-                    >
-                        Learn More
-                        <span className="text-lg">+</span>
-                    </a>
+                    <WeChatQRPopup
+                        trigger={
+                            <a
+                                href="#"
+                                className="bg-primary-navy hover:bg-primary-navy/90 mt-8 inline-flex items-center gap-3 rounded px-6 py-6 text-sm font-semibold tracking-[0.3em] text-white uppercase transition-colors"
+                            >
+                                Contact Us
+                            </a>
+                        }
+                    />
                 </div>
             </div>
         </section>

@@ -1,6 +1,6 @@
 const heroHighlights = [
     {
-        title: "AI Automation",
+        title: "Amazon Ads",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -11,22 +11,36 @@ const heroHighlights = [
                 strokeLinecap="round"
                 strokeLinejoin="round"
             >
-                {/* chip */}
-                <rect x="7" y="7" width="10" height="10" rx="2" />
-                <path d="M10 10h4M10 12h4M10 14h4" />
-                {/* pins */}
-                <path d="M9 3v4M12 3v4M15 3v4" />
-                <path d="M9 17v4M12 17v4M15 17v4" />
-                <path d="M3 9h4M3 12h4M3 15h4" />
-                <path d="M17 9h4M17 12h4M17 15h4" />
-                {/* automation arrow */}
-                <path d="M14.5 18.5c2 0 3.5-1.5 3.5-3.5" />
-                <path d="M18 15l-1.5 1.5M18 15l-1.5-1.5" />
+                {/* shopping cart / box */}
+                <rect x="3" y="7" width="18" height="14" rx="2" />
+                <path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2" />
+                <path d="M9 12h6" />
+                <path d="M9 15h4" />
             </svg>
         )
     },
     {
-        title: "SEO Growth",
+        title: "Social Ads and Growth",
+        icon: (
+            <svg
+                viewBox="0 0 24 24"
+                className="h-12 w-12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            >
+                {/* megaphone */}
+                <path d="M4 12v3a2 2 0 0 0 2 2h1l2 4h2l-2-4h2l8-4V7l-8-4H6a2 2 0 0 0-2 2v3" />
+                <path d="M4 9h3M4 12h3M4 15h3" />
+                {/* sound lines */}
+                <path d="M19 9.5c1 .8 1.5 1.6 1.5 2.5S20 13.7 19 14.5" />
+            </svg>
+        )
+    },
+    {
+        title: "SEO For export",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -48,7 +62,7 @@ const heroHighlights = [
         )
     },
     {
-        title: "Paid Ads",
+        title: "Shopify",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -59,16 +73,18 @@ const heroHighlights = [
                 strokeLinecap="round"
                 strokeLinejoin="round"
             >
-                {/* megaphone */}
-                <path d="M4 12v3a2 2 0 0 0 2 2h1l2 4h2l-2-4h2l8-4V7l-8-4H6a2 2 0 0 0-2 2v3" />
-                <path d="M4 9h3M4 12h3M4 15h3" />
-                {/* sound lines */}
-                <path d="M19 9.5c1 .8 1.5 1.6 1.5 2.5S20 13.7 19 14.5" />
+                {/* network/connections */}
+                <circle cx="12" cy="12" r="3" />
+                <circle cx="6" cy="6" r="2" />
+                <circle cx="18" cy="6" r="2" />
+                <circle cx="6" cy="18" r="2" />
+                <circle cx="18" cy="18" r="2" />
+                <path d="M9 10l3-2M15 10l-3-2M9 14l3 2M15 14l-3 2" />
             </svg>
         )
     },
     {
-        title: "App development",
+        title: "Website Redesign",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -79,19 +95,15 @@ const heroHighlights = [
                 strokeLinecap="round"
                 strokeLinejoin="round"
             >
-                {/* phone */}
-                <rect x="7" y="3" width="10" height="18" rx="2" />
-                <path d="M10 6h4" />
-                <circle cx="12" cy="18" r="0.75" />
-                {/* code */}
-                <path d="M9.5 12l-2 2 2 2" />
-                <path d="M14.5 12l2 2-2 2" />
-                <path d="M12.5 11.5l-1 5" />
+                {/* monitor/screen */}
+                <rect x="3" y="4" width="18" height="12" rx="2" />
+                <path d="M7 8h10M7 12h6" />
+                <path d="M9 20h6" />
             </svg>
         )
     },
     {
-        title: "Consulting",
+        title: "Leads",
         icon: (
             <svg
                 viewBox="0 0 24 24"
@@ -102,32 +114,9 @@ const heroHighlights = [
                 strokeLinecap="round"
                 strokeLinejoin="round"
             >
-                {/* chat bubbles */}
-                <path d="M4 6.5A3.5 3.5 0 0 1 7.5 3h6A3.5 3.5 0 0 1 17 6.5v3A3.5 3.5 0 0 1 13.5 13H10l-3 2v-2.2A3.5 3.5 0 0 1 4 9.5z" />
-                <path d="M9 16h6a3 3 0 0 0 3-3v-1" />
-                {/* insights */}
-                <path d="M8.5 8h4" />
-                <path d="M8.5 10h3" />
-            </svg>
-        )
-    },
-    {
-        title: "Custom Solutions",
-        icon: (
-            <svg
-                viewBox="0 0 24 24"
-                className="h-12 w-12"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            >
-                {/* puzzle pieces */}
-                <path d="M10 4a2 2 0 0 0-2 2v1H7a2 2 0 0 0 0 4h1v1a2 2 0 0 0 4 0v-1h1a2 2 0 0 0 0-4h-1V6a2 2 0 0 0-2-2z" />
-                <path d="M14 12h2a2 2 0 0 1 2 2v1h1a2 2 0 0 1 0 4h-1v1a2 2 0 0 1-4 0v-1h-1a2 2 0 0 1 0-4h1v-1a2 2 0 0 1 2-2z" />
-                {/* connector */}
-                <path d="M12 12l2 2" />
+                {/* globe/world */}
+                <circle cx="12" cy="12" r="10" />
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
             </svg>
         )
     }

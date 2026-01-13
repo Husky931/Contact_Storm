@@ -29,7 +29,7 @@ export default function FoundedBy() {
                         <p className="mt-2 text-sm font-medium text-slate-900">
                             Based:{" "}
                             <span className="text-primary-red">
-                                Thessaloniki, Greece
+                                Munich, Germany
                             </span>
                         </p>
                     </div>
