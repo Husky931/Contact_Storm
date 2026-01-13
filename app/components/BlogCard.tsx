@@ -42,7 +42,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                     </p>
                 )}
                 <Link
-                    href={`/insights/${post.slug}`}
+                    href="/insights"
                     className="inline-flex items-center font-semibold text-primary-red transition-colors hover:text-primary-redDark"
                 >
                     Read More

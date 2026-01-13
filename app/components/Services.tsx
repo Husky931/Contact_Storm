@@ -66,7 +66,7 @@ export default function Services() {
                                     {service.text}
                                 </p>
                                 <a
-                                    href="#"
+                                    href="/insights"
                                     className="text-primary-red mt-5 inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase"
                                 >
                                     Read More

@@ -28,23 +28,23 @@ export default function About() {
                         height={560}
                         className="mt-4 h-48 w-full rounded object-cover shadow"
                     />
-                    <div className="absolute -bottom-6 left-6 rounded bg-primary-red px-6 py-5 text-white shadow-lg">
+                    <div className="bg-primary-red absolute -bottom-6 left-6 rounded px-6 py-5 text-white shadow-lg">
                         <p className="font-heading text-3xl font-semibold">
-                            20+
+                            150+
                         </p>
                         <p className="text-xs tracking-[0.3em] uppercase">
-                            Years Experience
+                            Clients Served
                         </p>
                     </div>
                 </div>
                 <div>
-                    <p className="text-xs font-semibold tracking-[0.4em] text-primary-red uppercase">
+                    <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
                         About Us
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
                         Development agency based in{" "}
-                        <span className="text-primary-red">Shanghai</span>{" "}
-                        with global delivery teams
+                        <span className="text-primary-red">Shanghai</span> with
+                        global delivery teams
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
                         We blend product strategy, design, and engineering to
@@ -57,7 +57,7 @@ export default function About() {
                             "Design systems and scalable builds"
                         ].map((item) => (
                             <div key={item} className="flex items-center gap-3">
-                                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary-red text-white">
+                                <span className="bg-primary-red flex h-8 w-8 items-center justify-center rounded-full text-white">
                                     <svg
                                         viewBox="0 0 24 24"
                                         className="h-4 w-4"
@@ -73,8 +73,8 @@ export default function About() {
                         ))}
                     </div>
                     <a
-                        href="#"
-                        className="mt-8 inline-flex items-center gap-3 rounded bg-primary-navy px-6 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
+                        href="/insights"
+                        className="bg-primary-navy mt-8 inline-flex items-center gap-3 rounded px-6 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase"
                     >
                         Learn More
                         <span className="text-lg">+</span>

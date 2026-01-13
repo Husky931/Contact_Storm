@@ -9,7 +9,7 @@ import Locations from "@/components/Locations"
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-background text-text">
+        <div className="bg-background text-text min-h-screen">
             <main>
                 <Hero />
                 <HeroHighlights />
