@@ -71,7 +71,7 @@ export default function ReadyToTalk() {
                             Feel free to tell us about your project or just say
                             hi! You can also contact us at{" "}
                             <a
-                                href="mailto:hello@ixaventures.com"
+                                href="mailto:hello@pixaventures.com"
                                 className="hover:text-primary-redDark text-(--brand-red) underline"
                             >
                                 hello@pixaventures.com

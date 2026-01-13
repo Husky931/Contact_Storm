@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { Oswald, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navigation/Navbar"
 import Footer from "./components/Footer"
 
 const headingFont = Oswald({

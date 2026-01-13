@@ -1,145 +1,52 @@
-import {
-    getAllSeoReports,
-    getSeoReportsCount,
-    getSuccessfulReportsCount,
-    getAverageOverallScore
-} from "@/db/queries"
-import Link from "next/link"
+import type { Metadata } from "next"
 
-export default async function ReportsPage() {
-    // Fetch data using the query functions
-    const reports = await getAllSeoReports(20)
-    const totalCount = await getSeoReportsCount()
-    const successfulCount = await getSuccessfulReportsCount()
-    const avgScore = await getAverageOverallScore()
+export const metadata: Metadata = {
+    title: "Reports | PixaVentures",
+    description:
+        "Search for your company and get detailed SEO reports and analytics."
+}
 
+export default function ReportsPage() {
     return (
-        <div className="min-h-screen bg-(--background) p-8 text-(--foreground)">
-            <div className="mx-auto max-w-7xl">
-                <h1 className="mb-8 text-4xl font-bold">SEO Reports</h1>
-
-                {/* Stats */}
-                <div className="mb-8 grid grid-cols-1 gap-4 md:grid-cols-3">
-                    <div className="rounded-lg bg-gray-50 p-6">
-                        <div className="text-2xl font-bold">{totalCount}</div>
-                        <div className="text-gray-600">Total Reports</div>
-                    </div>
-                    <div className="rounded-lg bg-gray-50 p-6">
-                        <div className="text-2xl font-bold">
-                            {successfulCount}
+        <div className="min-h-screen bg-white">
+            <main>
+                {/* Hero Search Section */}
+                <section className="bg-linear-to-b from-slate-50 to-white py-20 lg:py-28">
+                    <div className="mx-auto max-w-4xl px-6">
+                        <div className="text-center">
+                            <h1 className="font-heading text-4xl font-bold text-slate-900 md:text-5xl lg:text-6xl">
+                                Search for your{" "}
+                                <span className="text-(--brand-red)">
+                                    company
+                                </span>
+                            </h1>
+                            <p className="mt-6 text-lg text-slate-600 md:text-xl">
+                                Enter your company domain to get comprehensive
+                                SEO reports and analytics.
+                            </p>
                         </div>
-                        <div className="text-gray-600">Successful Analyses</div>
-                    </div>
-                    <div className="rounded-lg bg-gray-50 p-6">
-                        <div className="text-2xl font-bold">
-                            {avgScore ? Math.round(avgScore) : "N/A"}
-                        </div>
-                        <div className="text-gray-600">Average Score</div>
-                    </div>
-                </div>
 
-                {/* Reports List */}
-                {reports.length === 0 ? (
-                    <p className="text-lg">No reports found.</p>
-                ) : (
-                    <div className="grid gap-4">
-                        {reports.map((report) => (
-                            <Link
-                                key={report.id}
-                                href={`/reports/${report.id}`}
-                                className="block rounded-lg border border-gray-200 p-6 transition-colors hover:bg-gray-50"
-                            >
-                                <div className="flex items-start justify-between">
-                                    <div>
-                                        <h2 className="mb-2 text-xl font-semibold">
-                                            {report.domain}
-                                        </h2>
-                                        <p className="text-sm text-gray-600">
-                                            Analyzed:{" "}
-                                            {report.analyzedAt instanceof Date
-                                                ? report.analyzedAt.toLocaleString()
-                                                : new Date(
-                                                      report.analyzedAt as unknown as string
-                                                  ).toLocaleString()}
-                                        </p>
-                                    </div>
-                                    <div className="text-right">
-                                        {report.overallScore !== null && (
-                                            <div className="mb-1 text-2xl font-bold">
-                                                {Math.round(
-                                                    report.overallScore
-                                                )}
-                                                %
-                                            </div>
-                                        )}
-                                        <div
-                                            className={`rounded px-2 py-1 text-sm ${
-                                                report.analysisSuccessful
-                                                    ? "bg-green-100 text-green-800"
-                                                    : "bg-red-100 text-red-800"
-                                            }`}
-                                        >
-                                            {report.analysisSuccessful
-                                                ? "Success"
-                                                : "Failed"}
-                                        </div>
-                                    </div>
+                        {/* Search Form */}
+                        <div className="mt-12">
+                            <form className="space-y-6">
+                                <div>
+                                    <input
+                                        type="text"
+                                        placeholder="Enter company domain (e.g., example.com)"
+                                        className="w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-4 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:border-(--brand-red) focus:ring-2 focus:ring-(--brand-red)/20 focus:outline-none"
+                                    />
                                 </div>
-                                <div className="mt-4 grid grid-cols-2 gap-4 text-sm md:grid-cols-4">
-                                    {report.lighthousePerformance !== null && (
-                                        <div>
-                                            <span className="text-gray-600">
-                                                Performance:{" "}
-                                            </span>
-                                            <span className="font-medium">
-                                                {Math.round(
-                                                    report.lighthousePerformance
-                                                )}
-                                            </span>
-                                        </div>
-                                    )}
-                                    {report.lighthouseSeo !== null && (
-                                        <div>
-                                            <span className="text-gray-600">
-                                                SEO:{" "}
-                                            </span>
-                                            <span className="font-medium">
-                                                {Math.round(
-                                                    report.lighthouseSeo
-                                                )}
-                                            </span>
-                                        </div>
-                                    )}
-                                    {report.technicalSeoScore !== null && (
-                                        <div>
-                                            <span className="text-gray-600">
-                                                Technical:{" "}
-                                            </span>
-                                            <span className="font-medium">
-                                                {Math.round(
-                                                    report.technicalSeoScore
-                                                )}
-                                            </span>
-                                        </div>
-                                    )}
-                                    {report.securityScore !== null && (
-                                        <div>
-                                            <span className="text-gray-600">
-                                                Security:{" "}
-                                            </span>
-                                            <span className="font-medium">
-                                                {Math.round(
-                                                    report.securityScore
-                                                )}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                            </Link>
-                        ))}
+                                <button
+                                    type="submit"
+                                    className="bg-primary-main hover:bg-primary-navy/90 w-full rounded-lg px-8 py-4 text-base font-semibold tracking-[0.2em] text-white uppercase transition-colors md:text-lg"
+                                >
+                                    Find Report
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                )}
-            </div>
+                </section>
+            </main>
         </div>
     )
 }

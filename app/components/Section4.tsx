@@ -3,14 +3,14 @@ import Image from "next/image"
 const approachSteps = [
     {
         number: "01",
-        title: "Bringing Global Competence",
-        description: "Our talents are spread across the globe",
+        title: "Global Competence",
+        description: "Talents spread across the globe",
         icon: "/icons/1.png"
     },
     {
         number: "02",
-        title: "Emerging technologies",
-        description: "Using latest technologies to help your business",
+        title: "Newest technologies",
+        description: "Using latest tech to rocket your business",
         icon: "/icons/2.png"
     },
     {
