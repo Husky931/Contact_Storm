@@ -20,10 +20,11 @@ export default function Hero() {
                         <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-white md:text-5xl">
                             Helping companies grow
                         </h1>
+
                         <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg">
-                            We design and engineer platforms, apps, and
-                            experiences that turn strategy into measurable
-                            growth for modern brands.
+                            We can help yor company grow with AI automation, SEO
+                            growth, paid ads, app development or custom
+                            solutions.
                         </p>
                         <div className="mt-8 flex flex-wrap gap-4">
                             <a
