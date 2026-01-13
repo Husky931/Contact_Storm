@@ -56,7 +56,7 @@ export default function FoundedBy() {
                     <div className="flex flex-col items-center text-center">
                         <div className="relative mb-6 h-[300px] w-full max-w-[250px] overflow-hidden rounded-lg shadow-lg">
                             <Image
-                                src="/founded/tomislav.jpeg"
+                                src="/founded/tomislav.jpg"
                                 alt="Tomislav"
                                 width={250}
                                 height={300}

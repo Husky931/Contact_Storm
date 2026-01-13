@@ -17,10 +17,6 @@ export default function Footer() {
                                     Contact Us
                                 </button>
                             </div>
-
-                            <p className="mt-10 text-xs text-white/90 md:text-sm">
-                                沪ICP备12045089号-2
-                            </p>
                         </div>
 
                         {/* Middle Section (Services) */}

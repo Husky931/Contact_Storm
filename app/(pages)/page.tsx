@@ -5,6 +5,7 @@ import Section4 from "../components/Section4"
 import Services from "../components/Services"
 import ReadyToTalk from "../components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
+import Locations from "@/components/Locations"
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                 <Services />
                 <ReadyToTalk />
                 <FoundedBy />
+                <Locations />
             </main>
         </div>
     )
