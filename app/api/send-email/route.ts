@@ -23,7 +23,7 @@ function isNodemailerError(error: unknown): error is NodemailerError {
 export async function POST(request: NextRequest) {
     try {
         const body = await request.json()
-        const { name, email, wechatId, message } = body
+        const { name, email, wechatId, message, validateEmail = true } = body
 
         // Validate required fields
         if (!name || !email || !message) {
@@ -35,13 +35,17 @@ export async function POST(request: NextRequest) {
             )
         }
 
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        if (!emailRegex.test(email)) {
-            return NextResponse.json(
-                { error: "Invalid email format." },
-                { status: 400 }
-            )
+        // Validate email format only if validateEmail is true (default)
+        // This allows Hero form to send any contact info (email/WeChat/phone)
+        // while ReadyToTalk form enforces valid email format
+        if (validateEmail) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            if (!emailRegex.test(email)) {
+                return NextResponse.json(
+                    { error: "Invalid email format." },
+                    { status: 400 }
+                )
+            }
         }
 
         const formData: ContactFormData = {

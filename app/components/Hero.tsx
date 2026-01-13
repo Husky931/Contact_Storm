@@ -1,6 +1,136 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 
 export default function Hero() {
+    const [formData, setFormData] = useState({
+        name: "",
+        serviceNeeded: "",
+        productCategory: "",
+        targetMarket: "",
+        salesChannels: "",
+        challenge: "",
+        contact: ""
+    })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<{
+        type: "success" | "error" | null
+        message: string
+    }>({ type: null, message: "" })
+
+    const handleChange = (
+        e: React.ChangeEvent<
+            HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+        >
+    ) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+        // Clear status when user starts typing
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: "" })
+        }
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        setIsSubmitting(true)
+        setSubmitStatus({ type: null, message: "" })
+
+        try {
+            // Validate required fields
+            if (!formData.name || !formData.contact) {
+                throw new Error("Name and contact information are required.")
+            }
+
+            // Build message from form fields
+            const messageParts = []
+            if (formData.serviceNeeded) {
+                messageParts.push(`Service Needed: ${formData.serviceNeeded}`)
+            }
+            if (formData.productCategory) {
+                messageParts.push(
+                    `Product Category / Industry: ${formData.productCategory}`
+                )
+            }
+            if (formData.targetMarket) {
+                messageParts.push(`Target Market: ${formData.targetMarket}`)
+            }
+            if (formData.salesChannels) {
+                messageParts.push(
+                    `Current Sales Channels: ${formData.salesChannels}`
+                )
+            }
+            if (formData.challenge) {
+                messageParts.push(`Main Challenge: ${formData.challenge}`)
+            }
+
+            const message =
+                messageParts.join("\n\n") || "Project brief submission"
+
+            // Prepare data for API
+            const apiData: {
+                name: string
+                email: string
+                wechatId?: string
+                message: string
+                validateEmail: boolean
+            } = {
+                name: formData.name.trim(),
+                email: formData.contact.trim(),
+                message: message,
+                validateEmail: false // Skip email validation for Hero form
+            }
+
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(apiData)
+            })
+
+            const data = await response.json()
+
+            if (!response.ok) {
+                const errorMsg =
+                    data.error ||
+                    `Failed to send email (Status: ${response.status})`
+                throw new Error(errorMsg)
+            }
+
+            // Success
+            setSubmitStatus({
+                type: "success",
+                message:
+                    "Thank you! Your project brief has been submitted successfully."
+            })
+
+            // Reset form
+            setFormData({
+                name: "",
+                serviceNeeded: "",
+                productCategory: "",
+                targetMarket: "",
+                salesChannels: "",
+                challenge: "",
+                contact: ""
+            })
+        } catch (error) {
+            setSubmitStatus({
+                type: "error",
+                message:
+                    error instanceof Error
+                        ? error.message
+                        : "An error occurred. Please try again later."
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
+
     return (
         <section className="relative overflow-hidden bg-slate-900 text-white">
             <Image
@@ -67,9 +197,28 @@ export default function Hero() {
                         <h3 className="font-heading mt-3 text-2xl text-slate-900">
                             Tell us about your export goals
                         </h3>
-                        <form className="mt-5 space-y-4 text-sm">
-                            <select className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500">
-                                <option>What do you need help with?</option>
+                        <form
+                            onSubmit={handleSubmit}
+                            className="mt-5 space-y-4 text-sm"
+                        >
+                            <input
+                                type="text"
+                                name="name"
+                                required
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                placeholder="Your Name *"
+                            />
+                            <select
+                                name="serviceNeeded"
+                                value={formData.serviceNeeded}
+                                onChange={handleChange}
+                                className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
+                            >
+                                <option value="">
+                                    What do you need help with?
+                                </option>
                                 <option>Amazon Ads & Optimization</option>
                                 <option>
                                     Social Media Ads (Facebook, Instagram,
@@ -81,11 +230,20 @@ export default function Hero() {
                                 <option>Multiple Services</option>
                             </select>
                             <input
+                                type="text"
+                                name="productCategory"
+                                value={formData.productCategory}
+                                onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
                                 placeholder="Product category / Industry"
                             />
-                            <select className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500">
-                                <option>Target market</option>
+                            <select
+                                name="targetMarket"
+                                value={formData.targetMarket}
+                                onChange={handleChange}
+                                className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
+                            >
+                                <option value="">Target market</option>
                                 <option>Europe</option>
                                 <option>North America</option>
                                 <option>Middle East</option>
@@ -93,16 +251,51 @@ export default function Hero() {
                                 <option>Other</option>
                             </select>
                             <input
+                                type="text"
+                                name="salesChannels"
+                                value={formData.salesChannels}
+                                onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
                                 placeholder="Current sales channels"
                             />
                             <input
+                                type="text"
+                                name="challenge"
+                                value={formData.challenge}
+                                onChange={handleChange}
                                 className="w-full rounded border border-slate-200 px-4 py-2"
                                 placeholder="Main challenge (optional)"
                             />
+                            <input
+                                type="text"
+                                name="contact"
+                                required
+                                value={formData.contact}
+                                onChange={handleChange}
+                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                placeholder="Email / WeChat ID / Phone Number *"
+                            />
 
-                            <button className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors">
-                                Submit Brief
+                            {submitStatus.type && (
+                                <div
+                                    className={`rounded px-4 py-2 text-xs ${
+                                        submitStatus.type === "success"
+                                            ? "bg-green-50 text-green-700"
+                                            : "bg-red-50 text-red-700"
+                                    }`}
+                                >
+                                    {submitStatus.message}
+                                </div>
+                            )}
+
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                            >
+                                {isSubmitting
+                                    ? "Submitting..."
+                                    : "Submit Brief"}
                             </button>
                         </form>
                     </div>
