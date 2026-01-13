@@ -1,3 +1,7 @@
+"use client"
+
+import WeChatQRPopup from "../WeChatQRPopup"
+
 export default function TopBar() {
     return (
         <div className="sticky top-0 z-50 bg-(--brand-navy) text-white">
@@ -25,18 +29,20 @@ export default function TopBar() {
                     </a>
                 </div>
 
-                <div className="flex items-center justify-start gap-2 text-sm tracking-[0.2em] text-white/80 uppercase sm:justify-center">
-                    <span className="transition hover:text-white">
-                        Contact on WeChat
-                    </span>
-                    <svg
-                        viewBox="0 0 24 24"
-                        className="h-4 w-4"
-                        fill="currentColor"
-                    >
-                        <path d="M12 2C6.5 2 2 5.7 2 10.3c0 2.6 1.6 5 4.1 6.6L5 21l4.3-2.3c.9.2 1.8.3 2.7.3 5.5 0 10-3.7 10-8.3S17.5 2 12 2zm-3 7.2c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm6 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" />
-                    </svg>
-                </div>
+                <WeChatQRPopup
+                    trigger={
+                        <div className="flex items-center justify-start gap-2 text-sm tracking-[0.2em] text-white/80 uppercase transition hover:text-white sm:justify-center">
+                            <span>Contact on WeChat</span>
+                            <svg
+                                viewBox="0 0 24 24"
+                                className="h-4 w-4"
+                                fill="currentColor"
+                            >
+                                <path d="M12 2C6.5 2 2 5.7 2 10.3c0 2.6 1.6 5 4.1 6.6L5 21l4.3-2.3c.9.2 1.8.3 2.7.3 5.5 0 10-3.7 10-8.3S17.5 2 12 2zm-3 7.2c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm6 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" />
+                            </svg>
+                        </div>
+                    }
+                />
             </div>
         </div>
     )

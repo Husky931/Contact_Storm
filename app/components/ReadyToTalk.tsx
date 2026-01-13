@@ -1,7 +1,7 @@
 "use client"
 
-import Image from "next/image"
 import { useState } from "react"
+import WeChatQRBox from "./WeChatQRBox"
 
 export default function ReadyToTalk() {
     const [formData, setFormData] = useState({
@@ -41,21 +41,7 @@ export default function ReadyToTalk() {
                         </p>
 
                         {/* QR Code Box */}
-                        <div className="mt-8 rounded-lg bg-gray-100 p-6 shadow-sm">
-                            <p className="mt-4 mb-4 text-center text-lg leading-relaxed text-slate-600">
-                                For enquiries contact{" "}
-                                <span className="font-bold">Gligor</span>.
-                            </p>
-                            <div className="flex flex-col items-center justify-center">
-                                <Image
-                                    src="/qrcode.jpg"
-                                    alt="QR Code for Contact"
-                                    width={200}
-                                    height={200}
-                                    className="rounded object-contain"
-                                />
-                            </div>
-                        </div>
+                        <WeChatQRBox />
                     </div>
 
                     {/* Right Column: Contact Form */}
