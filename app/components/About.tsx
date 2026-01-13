@@ -30,7 +30,7 @@ export default function About() {
                     />
                     <div className="absolute -bottom-6 left-6 rounded bg-(--brand-red) px-6 py-5 text-white shadow-lg">
                         <p className="font-heading text-3xl font-semibold">
-                            25+
+                            20+
                         </p>
                         <p className="text-xs tracking-[0.3em] uppercase">
                             Years Experience
@@ -42,8 +42,9 @@ export default function About() {
                         About Us
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        Development agency based in Shanghai with global
-                        delivery teams
+                        Development agency based in{" "}
+                        <span className="text-(--brand-red)">Shanghai</span>{" "}
+                        with global delivery teams
                     </h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
                         We blend product strategy, design, and engineering to
