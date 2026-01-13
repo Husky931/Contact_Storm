@@ -4,7 +4,7 @@ import WeChatQRPopup from "../WeChatQRPopup"
 
 export default function TopBar() {
     return (
-        <div className="sticky top-0 z-50 bg-primary-navy text-white">
+        <div className="bg-primary-navy sticky top-0 z-50 text-white">
             <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-2 text-sm tracking-[0.2em] uppercase sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex flex-wrap items-center gap-3 text-white/80">
                     <a
@@ -12,13 +12,6 @@ export default function TopBar() {
                         className="transition hover:text-white"
                     >
                         Call us: +86 131 6290 8096
-                    </a>
-                    <span className="hidden h-3 w-px bg-white/20 sm:block" />
-                    <a
-                        href="tel:+13073026778"
-                        className="transition hover:text-white"
-                    >
-                        Call us: +1 307 302 6778
                     </a>
                     <span className="hidden h-3 w-px bg-white/20 sm:block" />
                     <a
