@@ -67,3 +67,51 @@ body {
     --tw-prose-th-borders: theme('colors.background.grey2');
     --tw-prose-td-borders: theme('colors.background.grey3');
 }
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(6px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(8px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight3 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-right {
+    animation: slideRight 0.6s ease-in-out;
+}
+
+.animate-slide-right-2 {
+    animation: slideRight2 0.6s ease-in-out;
+}
+
+.animate-slide-right-3 {
+    animation: slideRight3 0.6s ease-in-out;
+}

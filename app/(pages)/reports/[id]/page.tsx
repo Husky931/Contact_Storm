@@ -2,6 +2,8 @@ import { getSeoReportById } from "@/db/queries"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import MarkdownContent from "@/components/MarkdownContent"
+import HowWeHelp from "@/components/HowWeHelp"
+import FloatingFixButton from "@/components/FloatingFixButton"
 
 interface PageProps {
     params: Promise<{ id: string }>
@@ -22,8 +24,8 @@ export default async function ReportDetailPage({ params }: PageProps) {
     }
 
     return (
-        <div className="bg-background text-text min-h-screen p-8">
-            <div className="mx-auto max-w-7xl">
+        <div className="bg-background text-text min-h-screen">
+            <div className="mx-auto max-w-7xl p-8">
                 <Link
                     href="/reports"
                     className="mb-4 inline-block text-blue-600 hover:underline"
@@ -279,6 +281,10 @@ export default async function ReportDetailPage({ params }: PageProps) {
                     </div>
                 )}
             </div>
+            <div className="mt-12">
+                <HowWeHelp />
+            </div>
+            <FloatingFixButton domain={report.domain} />
         </div>
     )
 }

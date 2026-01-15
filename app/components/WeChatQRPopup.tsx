@@ -5,7 +5,7 @@ import WeChatQRBox from "./WeChatQRBox"
 
 interface WeChatQRPopupProps {
     trigger: React.ReactNode
-    message?: string
+    message?: string | React.ReactNode
 }
 
 export default function WeChatQRPopup({

@@ -4,7 +4,7 @@ import Image from "next/image"
 import { useLanguage } from "@/components/LanguageProvider"
 
 interface WeChatQRBoxProps {
-    message?: string
+    message?: string | React.ReactNode
 }
 
 export default function WeChatQRBox({ message }: WeChatQRBoxProps) {

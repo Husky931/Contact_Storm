@@ -273,7 +273,12 @@ export const translations = {
             contactLine: "For enquiries contact",
             heroMessage:
                 "Get a suggested fix to your problem in 5 minutes. We're available 24/7.",
-            qrAlt: "QR Code for Contact"
+            qrAlt: "QR Code for Contact",
+            floatingButton: {
+                text: "Let's fix this",
+                message: (domain: string) =>
+                    `Talk to Gligor, let's perfect your website and elevate your business by getting new overseas customers.`
+            }
         },
         founders: {
             kicker: "Meet the Founders",
@@ -626,7 +631,12 @@ export const translations = {
         wechat: {
             contactLine: "咨询请联系",
             heroMessage: "5分钟内给您建议方案，全天24/7在线。",
-            qrAlt: "联系二维码"
+            qrAlt: "联系二维码",
+            floatingButton: {
+                text: "让我们来修复",
+                message: (domain: string) =>
+                    `与Gligor聊聊，让我们完善您的网站，通过获取新的海外客户来提升您的业务。`
+            }
         },
         founders: {
             kicker: "认识创始人",
