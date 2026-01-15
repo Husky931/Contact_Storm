@@ -33,7 +33,7 @@ export default function TopBar() {
                         <button
                             type="button"
                             onClick={() => setLanguage("en")}
-                            className={`rounded px-2 py-1 transition ${
+                            className={`cursor-pointer rounded px-2 py-1 transition ${
                                 language === "en"
                                     ? "bg-white/20 text-white"
                                     : "text-white/60 hover:text-white"
@@ -46,7 +46,7 @@ export default function TopBar() {
                         <button
                             type="button"
                             onClick={() => setLanguage("zh")}
-                            className={`rounded px-2 py-1 transition ${
+                            className={`cursor-pointer rounded px-2 py-1 transition ${
                                 language === "zh"
                                     ? "bg-white/20 text-white"
                                     : "text-white/60 hover:text-white"

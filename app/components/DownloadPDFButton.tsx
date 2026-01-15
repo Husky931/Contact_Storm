@@ -9,7 +9,7 @@ export default function DownloadPDFButton() {
         <div className="fixed top-[calc(25%+80px)] right-6 z-40 md:right-8">
             <button
                 onClick={handlePrint}
-                className="no-print flex items-center gap-2 rounded-md bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none md:px-6 md:py-3 md:text-base"
+                className="no-print flex cursor-pointer items-center gap-2 rounded-md bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none md:px-6 md:py-3 md:text-base"
                 aria-label="Download PDF"
             >
                 <svg

@@ -55,7 +55,7 @@ export default function ModalPopup({
 
             {isOpen && (
                 <div
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+                    className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-black/50 p-4"
                     onClick={handleBackdropClick}
                 >
                     <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">

@@ -220,7 +220,7 @@ export default function ReadyToTalk() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full rounded bg-slate-900 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
+                                className="w-full cursor-pointer rounded bg-slate-900 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 {isSubmitting
                                     ? copy.readyToTalk.form.sending

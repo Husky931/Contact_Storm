@@ -74,7 +74,7 @@ export default function InsightsPage() {
                                     <div className="mt-12 text-center">
                                         <button
                                             onClick={loadMore}
-                                            className="bg-primary-main hover:bg-primary-navy/90 rounded-lg px-8 py-4 text-base font-semibold tracking-[0.2em] text-white uppercase transition-colors md:text-lg"
+                                            className="bg-primary-main hover:bg-primary-navy/90 cursor-pointer rounded-lg px-8 py-4 text-base font-semibold tracking-[0.2em] text-white uppercase transition-colors md:text-lg"
                                         >
                                             {copy.insights.loadMore}
                                         </button>

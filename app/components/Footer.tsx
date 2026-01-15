@@ -145,7 +145,7 @@ export default function Footer() {
 
                                 <Link
                                     href="/contact"
-                                    className="text-primary-main inline-flex w-full max-w-md items-center justify-center rounded-md bg-white px-8 py-4 text-base font-semibold transition-opacity hover:opacity-90"
+                                    className="text-primary-main inline-flex w-full max-w-md cursor-pointer items-center justify-center rounded-md bg-white px-8 py-4 text-base font-semibold transition-opacity hover:opacity-90"
                                 >
                                     {copy.footer.cta}
                                 </Link>
@@ -258,7 +258,7 @@ export default function Footer() {
                                                 disabled={
                                                     isSubmitting || isOnCooldown
                                                 }
-                                                className="bg-primary-red hover:bg-primary-red/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                                                className="bg-primary-red hover:bg-primary-red/90 w-full cursor-pointer rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                                             >
                                                 {isSubmitting
                                                     ? copy.footer.audit.sending
@@ -277,7 +277,7 @@ export default function Footer() {
                                     trigger={
                                         <a
                                             href="#"
-                                            className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                             aria-label="WeChat"
                                         >
                                             <svg
@@ -293,7 +293,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="LinkedIn"
                                 >
                                     <span className="text-primary-red-dark text-lg font-bold">
@@ -303,7 +303,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="Facebook"
                                 >
                                     <span className="text-primary-red-dark text-lg font-bold">
@@ -313,7 +313,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                    className="flex h-12 w-12 items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="YouTube"
                                 >
                                     <svg
