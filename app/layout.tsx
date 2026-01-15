@@ -18,7 +18,7 @@ const bodyFont = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-    title: "PixaVentures",
+    title: "Pixaventures",
     description: "Development & Growth agency."
 }
 

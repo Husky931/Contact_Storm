@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Reports | PixaVentures",
+    title: "Reports",
     description: "Chinese sellers website optimization and SEO services."
 }
 

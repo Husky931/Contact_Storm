@@ -3,9 +3,9 @@ import ReadyToTalk from "@/components/ReadyToTalk"
 import ContactHero from "@/components/ContactHero"
 
 export const metadata: Metadata = {
-    title: "Contact Us | PixaVentures",
+    title: "Contact Us",
     description:
-        "Get in touch with PixaVentures. Contact us through our form or scan our QR code to connect via WeChat."
+        "Get in touch with Pixaventures. Contact us through our form or scan our QR code to connect via WeChat."
 }
 
 export default function ContactPage() {

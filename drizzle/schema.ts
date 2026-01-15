@@ -10,8 +10,15 @@ import {
     boolean,
     jsonb,
     real,
-    integer
+    integer,
+    customType
 } from "drizzle-orm/pg-core"
+
+const bytea = customType<{ data: Buffer; driverData: string }>({
+    dataType() {
+        return "bytea"
+    }
+})
 
 export const domainSearchTerms = pgTable(
     "domain_search_terms",
@@ -99,8 +106,7 @@ export const contactAttempts = pgTable(
         fieldMappingJson: jsonb("field_mapping_json"),
         messageSubject: text("message_subject"),
         messageBody: text("message_body"),
-        // TODO: failed to parse database type 'bytea'
-        proofScreenshot: unknown("proof_screenshot"),
+        proofScreenshot: bytea("proof_screenshot"),
         errorMessage: text("error_message"),
         seoReportUrlHash: text("seo_report_url_hash")
     },

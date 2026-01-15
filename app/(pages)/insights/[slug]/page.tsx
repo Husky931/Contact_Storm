@@ -22,12 +22,12 @@ export async function generateMetadata({
 
     if (!post) {
         return {
-            title: "Post Not Found | PixaVentures"
+            title: "Post Not Found"
         }
     }
 
     return {
-        title: `${post.title.en} | PixaVentures Insights`,
+        title: `${post.title.en}`,
         description: post.excerpt?.en || post.title.en
     }
 }
