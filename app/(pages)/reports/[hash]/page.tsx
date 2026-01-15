@@ -4,7 +4,6 @@ import Link from "next/link"
 import MarkdownContent from "@/components/MarkdownContent"
 import HowWeHelp from "@/components/HowWeHelp"
 import FloatingFixButton from "@/components/FloatingFixButton"
-import { extractHashFromUrl } from "@/lib/reportUrl"
 
 interface PageProps {
     params: Promise<{ hash: string }>
@@ -13,13 +12,12 @@ interface PageProps {
 export default async function ReportDetailPage({ params }: PageProps) {
     const { hash } = await params
 
-    // Extract hash from URL path (format: domain-slug-hash)
-    // Example: "www-feetech-cn-mxkDJoBs78Q8" -> extract "mxkDJoBs78Q8"
-    const urlPath = `/reports/${hash}`
-    const urlHash = extractHashFromUrl(urlPath)
+    // Use the hash directly from the URL
+    // Example: "mxkDJoBs78Q8"
+    const urlHash = hash
 
     if (!urlHash) {
-        console.error("❌ Failed to extract hash from URL:", hash)
+        console.error("❌ Hash is missing from URL:", hash)
         notFound()
     }
 
