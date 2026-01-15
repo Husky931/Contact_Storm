@@ -7,6 +7,7 @@ import Specialization from "../components/Specialization"
 import ReadyToTalk from "../components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
+import HowWeHelp from "@/components/HowWeHelp"
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
                 <Specialization />
                 <Section4 />
                 <Services />
+                <HowWeHelp />
                 <ReadyToTalk />
                 <FoundedBy />
                 <Locations />

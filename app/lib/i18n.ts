@@ -177,6 +177,24 @@ export const translations = {
                 }
             ]
         },
+        howWeHelp: {
+            kicker: "How Can We Help Your Company",
+            title: "Who are we and how we can help you",
+            servicesTitle: "Our Services",
+            services: [
+                "Amazon PPC & Marketplace Growth – Optimize listings and run ads to boost visibility",
+                "Paid Social Advertising – Meta, Instagram, TikTok campaigns for qualified leads",
+                "SEO & Organic Growth – Rank higher in Google for your target export markets",
+                "Social Media Growth – Build brand presence that Western buyers trust",
+                "Modern Website Redesign – Conversion-focused sites with bilingual support",
+                "Lead Generation – Find and vet qualified buyers for your products"
+            ],
+            aboutTitle: "Who We Are",
+            aboutText1: "We are a team of foreign professionals who have lived in China for over 10 years, specializing in increasing sales, brand awareness, and generating leads for Chinese sellers and manufacturers.",
+            aboutText2: "Our professional background and extensive working experience have given us unique insights into both Chinese manufacturing excellence and Western buyer expectations. We bridge these two worlds to help your business succeed internationally.",
+            aboutText3: "We pride ourselves on delivering exceptional work, and when you work with us, success is guaranteed.",
+            cta: "Contact Us on WeChat"
+        },
         services: {
             kicker: "Growth Services",
             title: "Everything needed to reach overseas buyers",
@@ -487,6 +505,24 @@ export const translations = {
                     icon: "/icons/3.png"
                 }
             ]
+        },
+        howWeHelp: {
+            kicker: "我们如何帮助您的公司",
+            title: "我们是谁以及如何帮助您",
+            servicesTitle: "我们的服务",
+            services: [
+                "亚马逊PPC与平台招商增长 – 优化Listing并投放广告提升可见度",
+                "社交媒体广告 – Meta、Instagram、TikTok投放获取优质线索",
+                "SEO与自然增长 – 在目标出口市场的Google排名中提升",
+                "社媒增长 – 建立西方买家信任的品牌影响力",
+                "现代化网站改版 – 以转化为核心的双语网站",
+                "线索获取 – 为您的产品寻找并筛选合格买家"
+            ],
+            aboutTitle: "我们是谁",
+            aboutText1: "我们是一支在中国生活超过10年的外籍专业团队，专注于为中国卖家和制造商提升销量、品牌知名度和获取优质线索。",
+            aboutText2: "我们的专业背景和多年工作经验让我们对中国制造的优势和西方买家的期望都有独特的洞察。我们连接这两个世界，帮助您的业务在国际市场取得成功。",
+            aboutText3: "我们以优质的工作为傲，与我们合作，成功有保障。",
+            cta: "微信联系我们"
         },
         services: {
             kicker: "增长服务",
