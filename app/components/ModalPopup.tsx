@@ -1,21 +1,22 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import WeChatQRBox from "./WeChatQRBox"
 
-interface WeChatQRPopupProps {
+interface ModalPopupProps {
     trigger: React.ReactNode
-    message?: string
+    children: React.ReactNode
+    ariaLabel?: string
 }
 
-export default function WeChatQRPopup({
+export default function ModalPopup({
     trigger,
-    message
-}: WeChatQRPopupProps) {
+    children,
+    ariaLabel = "Close"
+}: ModalPopupProps) {
     const [isOpen, setIsOpen] = useState(false)
 
-    const handleTriggerClick = (e: React.MouseEvent) => {
-        e.preventDefault()
+    const handleTriggerClick = (event: React.MouseEvent) => {
+        event.preventDefault()
         setIsOpen(true)
     }
 
@@ -23,8 +24,8 @@ export default function WeChatQRPopup({
         setIsOpen(false)
     }
 
-    const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (e.target === e.currentTarget) {
+    const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (event.target === event.currentTarget) {
             handleClose()
         }
     }
@@ -57,11 +58,11 @@ export default function WeChatQRPopup({
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
                     onClick={handleBackdropClick}
                 >
-                    <div className="relative max-w-md w-full bg-white rounded-lg shadow-xl p-6">
+                    <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
                         <button
                             onClick={handleClose}
-                            className="absolute top-4 right-4 cursor-pointer text-gray-400 transition-colors hover:text-gray-600"
-                            aria-label="Close"
+                            className="absolute right-4 top-4 cursor-pointer text-slate-400 transition-colors hover:text-slate-600"
+                            aria-label={ariaLabel}
                         >
                             <svg
                                 className="h-6 w-6"
@@ -77,7 +78,7 @@ export default function WeChatQRPopup({
                                 />
                             </svg>
                         </button>
-                        <WeChatQRBox message={message} />
+                        {children}
                     </div>
                 </div>
             )}

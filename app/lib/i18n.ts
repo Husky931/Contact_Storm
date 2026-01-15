@@ -22,8 +22,30 @@ export const translations = {
             subtext:
                 "Bilingual, diverse team (Chinese, European, American) with Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
             ctas: {
-                primary: "Explore Services",
-                secondary: "Add Our WeChat"
+                primary: "Our Services",
+                secondary: "Our WeChat"
+            },
+            servicesPopup: {
+                kicker: "Full-service growth partner",
+                title: "What we do and who we help",
+                subtitle:
+                    "Focused on export-ready growth for factories, sellers, and ecommerce teams.",
+                servicesTitle: "Our services",
+                clientsTitle: "Our clients",
+                services: [
+                    "Amazon PPC & Marketplace",
+                    "Paid Social Advertising",
+                    "SEO & Organic Growth",
+                    "Social Media Growth",
+                    "Modern Website Redesign",
+                    "Lead generation"
+                ],
+                clients: [
+                    "Factories",
+                    "Sellers",
+                    "Ecommerce shop owners",
+                    "Export teams"
+                ]
             },
             highlights: [
                 "Amazon PPC & Marketplace Growth",
@@ -86,7 +108,7 @@ export const translations = {
             kicker: "Built for Manufacturers",
             title: {
                 lead: "A bilingual diverse team bridging",
-                highlightPrimary: "Chinese manufacturing",
+                highlightPrimary: "Chinese sellers",
                 middle: "with",
                 highlightSecondary: "global markets"
             },
@@ -303,8 +325,24 @@ export const translations = {
             subtext:
                 "中英双语、多元团队（中国、欧洲、美国）了解西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
             ctas: {
-                primary: "查看服务",
-                secondary: "添加我们的微信"
+                primary: "我们的服务",
+                secondary: "我们的微信"
+            },
+            servicesPopup: {
+                kicker: "全链路增长伙伴",
+                title: "我们提供什么服务，服务谁",
+                subtitle: "专注外贸增长，服务工厂、卖家与电商团队。",
+                servicesTitle: "我们的服务",
+                clientsTitle: "我们的客户",
+                services: [
+                    "亚马逊PPC与平台招商",
+                    "社交媒体广告",
+                    "SEO与自然增长",
+                    "社媒增长",
+                    "现代化网站改版",
+                    "线索获取"
+                ],
+                clients: ["工厂", "卖家", "电商店主", "出海团队"]
             },
             highlights: [
                 "亚马逊PPC与平台招商增长",
@@ -366,7 +404,7 @@ export const translations = {
             kicker: "为制造商打造",
             title: {
                 lead: "双语多元团队，连接",
-                highlightPrimary: "中国制造",
+                highlightPrimary: "中国卖家",
                 middle: "与",
                 highlightSecondary: "全球市场"
             },

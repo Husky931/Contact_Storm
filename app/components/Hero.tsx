@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { useLanguage } from "@/components/LanguageProvider"
 import WeChatQRPopup from "./WeChatQRPopup"
+import ModalPopup from "./ModalPopup"
 
 export default function Hero() {
     const { language, translations } = useLanguage()
@@ -161,13 +162,66 @@ export default function Hero() {
                         <p className="mt-4 max-w-xl text-sm text-white/70">
                             {copy.hero.subtext}
                         </p>
-                        <div className="mt-8 flex flex-wrap gap-4">
-                            <a
-                                href="#services"
-                                className="bg-primary-main hover:bg-primary-navy/90 rounded px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors"
+                        <div className="mt-8 flex flex-wrap items-center gap-4">
+                            <ModalPopup
+                                trigger={
+                                    <a
+                                        href="#services"
+                                        className="bg-primary-main hover:bg-primary-navy/90 rounded px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors"
+                                    >
+                                        {copy.hero.ctas.primary}
+                                    </a>
+                                }
                             >
-                                {copy.hero.ctas.primary}
-                            </a>
+                                <div className="bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 px-6 py-5 text-white sm:px-8">
+                                    <p className="text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
+                                        {copy.hero.servicesPopup.kicker}
+                                    </p>
+                                    <h3 className="font-heading mt-2 text-2xl">
+                                        {copy.hero.servicesPopup.title}
+                                    </h3>
+                                    <p className="mt-2 text-sm text-white/75">
+                                        {copy.hero.servicesPopup.subtitle}
+                                    </p>
+                                </div>
+                                <div className="grid gap-6 px-6 py-6 text-sm text-slate-600 sm:grid-cols-2 sm:px-8 sm:py-8">
+                                    <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm">
+                                        <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
+                                            {copy.hero.servicesPopup.servicesTitle}
+                                        </p>
+                                        <ul className="mt-4 space-y-2">
+                                            {copy.hero.servicesPopup.services.map(
+                                                (service) => (
+                                                    <li
+                                                        key={service}
+                                                        className="flex items-start gap-2 text-slate-700"
+                                                    >
+                                                        <span className="bg-primary-red mt-1 h-2 w-2 rounded-full" />
+                                                        <span>{service}</span>
+                                                    </li>
+                                                )
+                                            )}
+                                        </ul>
+                                    </div>
+                                    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                                        <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
+                                            {copy.hero.servicesPopup.clientsTitle}
+                                        </p>
+                                        <div className="mt-4 flex flex-wrap gap-2">
+                                            {copy.hero.servicesPopup.clients.map(
+                                                (client) => (
+                                                    <span
+                                                        key={client}
+                                                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600"
+                                                    >
+                                                        {client}
+                                                    </span>
+                                                )
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </ModalPopup>
                             <WeChatQRPopup
                                 message={copy.wechat.heroMessage}
                                 trigger={
