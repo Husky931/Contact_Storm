@@ -152,7 +152,14 @@ export const translations = {
         },
         section4: {
             kicker: "How It Works",
-            title: "We help manufacturers win overseas buyers with a focused growth system",
+            title: {
+                part1: "We help ",
+                highlight1: "manufacturers",
+                part2: " win ",
+                highlight2: "overseas buyers",
+                part3: " with a focused ",
+                highlight3: "growth system"
+            },
             copy: "Every step is built around factory realities and Western buyer expectations, from ad creative to conversion-ready websites.",
             steps: [
                 {
@@ -197,7 +204,11 @@ export const translations = {
         },
         services: {
             kicker: "Growth Services",
-            title: "Everything needed to reach overseas buyers",
+            title: {
+                part1: "Everything needed to ",
+                highlight1: "reach",
+                part2: " overseas buyers"
+            },
             cards: [
                 {
                     title: "Amazon PPC & Marketplace",
@@ -234,10 +245,17 @@ export const translations = {
             cta: "Add our WeChat"
         },
         readyToTalk: {
-            leftTitle: "Ready to Talk?",
+            leftTitle: {
+                part1: "Ready to ",
+                highlight1: "Talk?"
+            },
             leftCopy:
                 "Connect with us via WeChat. Our bilingual team is ready to discuss how we can help your factory reach international buyers through Amazon, social media, SEO, and modern website design.",
-            rightTitle: "Or prefer to Contact Us through Our Form?",
+            rightTitle: {
+                part1: "Or prefer to ",
+                highlight1: "Contact Us",
+                part2: " through Our Form?"
+            },
             rightCopy:
                 "Tell us about your export goals, target markets, sales channels and challenges. We'll respond quickly with a strategy tailored to help you win international customers. You can also email us at",
             form: {
@@ -259,12 +277,19 @@ export const translations = {
         },
         founders: {
             kicker: "Meet the Founders",
-            title: "Team Leaders",
+            title: {
+                part1: "Team ",
+                highlight1: "Leaders"
+            },
             based: "Based:"
         },
         locations: {
             kicker: "Our Locations",
-            title: "Meet us in Shanghai and Munich",
+            title: {
+                part1: "Meet us in ",
+                highlight1: "Shanghai",
+                part2: " and Munich"
+            },
             shanghaiTitle: "Meet us in Shanghai",
             shanghaiAddress: [
                 "WeWork China (West Nanjing Road Community)",
@@ -483,7 +508,14 @@ export const translations = {
         },
         section4: {
             kicker: "如何合作",
-            title: "我们以专注的增长系统帮助制造商赢得海外买家",
+            title: {
+                part1: "我们以专注的",
+                highlight1: "增长系统",
+                part2: "帮助",
+                highlight2: "制造商",
+                part3: "赢得",
+                highlight3: "海外买家"
+            },
             copy: "每一步都围绕工厂现实与西方买家预期，从广告创意到转化型网站。",
             steps: [
                 {
@@ -526,7 +558,11 @@ export const translations = {
         },
         services: {
             kicker: "增长服务",
-            title: "触达海外买家所需的一切",
+            title: {
+                part1: "",
+                highlight1: "触达",
+                part2: "海外买家所需的一切"
+            },
             cards: [
                 {
                     title: "亚马逊PPC与平台招商",
@@ -563,10 +599,17 @@ export const translations = {
             cta: "添加我们的微信"
         },
         readyToTalk: {
-            leftTitle: "准备好聊聊了吗？",
+            leftTitle: {
+                part1: "准备好",
+                highlight1: "聊聊"
+            },
             leftCopy:
                 "通过微信与我们联系。我们的双语团队随时准备讨论如何通过亚马逊、社媒、SEO与现代化网站帮助您触达国际买家。",
-            rightTitle: "更想通过表单联系我们？",
+            rightTitle: {
+                part1: "更想通过表单",
+                highlight1: "联系我们",
+                part2: "?"
+            },
             rightCopy:
                 "告诉我们您的出海目标、目标市场、销售渠道与挑战。我们将快速回复并提供量身定制的策略。您也可以直接邮件联系我们",
             form: {
@@ -587,12 +630,19 @@ export const translations = {
         },
         founders: {
             kicker: "认识创始人",
-            title: "团队领导",
+            title: {
+                part1: "团队",
+                highlight1: "领导"
+            },
             based: "所在地:"
         },
         locations: {
             kicker: "我们的办公地点",
-            title: "在上海和慕尼黑与我们见面",
+            title: {
+                part1: "在",
+                highlight1: "上海",
+                part2: "和慕尼黑与我们见面"
+            },
             shanghaiTitle: "上海办公室",
             shanghaiAddress: [
                 "WeWork 中国（南京西路社区店）",

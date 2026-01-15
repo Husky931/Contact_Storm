@@ -15,7 +15,14 @@ export default function FoundedBy() {
                         {copy.founders.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                        {copy.founders.title}
+                        {typeof copy.founders.title === "object" ? (
+                            <>
+                                {copy.founders.title.part1}
+                                <span className="text-primary-red">{copy.founders.title.highlight1}</span>
+                            </>
+                        ) : (
+                            copy.founders.title
+                        )}
                     </h2>
                 </div>
                 <div className="mt-10 grid gap-8 md:grid-cols-3 lg:gap-12">

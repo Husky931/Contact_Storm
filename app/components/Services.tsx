@@ -17,7 +17,15 @@ export default function Services() {
                         {copy.services.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        {copy.services.title}
+                        {typeof copy.services.title === "object" ? (
+                            <>
+                                {copy.services.title.part1}
+                                <span className="text-primary-red">{copy.services.title.highlight1}</span>
+                                {copy.services.title.part2}
+                            </>
+                        ) : (
+                            copy.services.title
+                        )}
                     </h2>
                 </div>
                 <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

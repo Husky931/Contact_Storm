@@ -14,7 +14,15 @@ export default function Locations() {
                         {copy.locations.kicker}
                     </p>
                     <h2 className="font-heading mt-4 text-3xl font-bold text-slate-900">
-                        {copy.locations.title}
+                        {typeof copy.locations.title === "object" ? (
+                            <>
+                                {copy.locations.title.part1}
+                                <span className="text-primary-red">{copy.locations.title.highlight1}</span>
+                                {copy.locations.title.part2}
+                            </>
+                        ) : (
+                            copy.locations.title
+                        )}
                     </h2>
                 </div>
                 <div className="mt-14 flex flex-col justify-evenly gap-10 lg:flex-row">

@@ -86,24 +86,39 @@ export default function ReadyToTalk() {
         <section id="contact" className="bg-white py-16">
             <div className="mx-auto max-w-6xl px-6">
                 <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
-                    {/* Left Column: Direct Contact */}
-                    <div>
-                        <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            {copy.readyToTalk.leftTitle}
-                        </h2>
-                        <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                            {copy.readyToTalk.leftCopy}
-                        </p>
+					{/* Left Column: Direct Contact */}
+					<div>
+						<h2 className="font-heading text-3xl font-bold text-slate-900">
+							{typeof copy.readyToTalk.leftTitle === "object" ? (
+								<>
+									{copy.readyToTalk.leftTitle.part1}
+									<span className="text-primary-red">{copy.readyToTalk.leftTitle.highlight1}</span>
+								</>
+							) : (
+								copy.readyToTalk.leftTitle
+							)}
+						</h2>
+						<p className="mt-4 text-sm leading-relaxed text-slate-600">
+							{copy.readyToTalk.leftCopy}
+						</p>
 
-                        {/* QR Code Box */}
-                        <WeChatQRBox />
-                    </div>
+						{/* QR Code Box */}
+						<WeChatQRBox />
+					</div>
 
-                    {/* Right Column: Contact Form */}
-                    <div>
-                        <h2 className="font-heading text-3xl font-bold text-slate-900">
-                            {copy.readyToTalk.rightTitle}
-                        </h2>
+					{/* Right Column: Contact Form */}
+					<div>
+						<h2 className="font-heading text-3xl font-bold text-slate-900">
+							{typeof copy.readyToTalk.rightTitle === "object" ? (
+								<>
+									{copy.readyToTalk.rightTitle.part1}
+									<span className="text-primary-red">{copy.readyToTalk.rightTitle.highlight1}</span>
+									{copy.readyToTalk.rightTitle.part2}
+								</>
+							) : (
+								copy.readyToTalk.rightTitle
+							)}
+						</h2>
                         <p className="mt-4 text-sm leading-relaxed text-slate-600">
                             {copy.readyToTalk.rightCopy}{" "}
                             <a

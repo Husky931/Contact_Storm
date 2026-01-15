@@ -16,9 +16,20 @@ export default function Section4() {
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
                         {copy.section4.kicker}
                     </p>
-                    <h2 className="font-heading mt-4 text-3xl text-slate-900">
-                        {copy.section4.title}
-                    </h2>
+					<h2 className="font-heading mt-4 text-3xl text-slate-900">
+						{typeof copy.section4.title === "object" ? (
+							<>
+								{copy.section4.title.part1}
+								{copy.section4.title.highlight1 && <span className="text-primary-red">{copy.section4.title.highlight1}</span>}
+								{copy.section4.title.part2}
+								{copy.section4.title.highlight2 && <span className="text-primary-red">{copy.section4.title.highlight2}</span>}
+								{copy.section4.title.part3}
+                                {copy.section4.title.highlight3 && <span className="text-primary-red">{copy.section4.title.highlight3}</span>}
+							</>
+						) : (
+							copy.section4.title
+						)}
+					</h2>
                     <p className="mt-4 text-sm leading-relaxed text-slate-600">
                         {copy.section4.copy}
                     </p>
