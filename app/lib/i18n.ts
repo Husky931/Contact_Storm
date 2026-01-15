@@ -23,7 +23,7 @@ export const translations = {
                 "Bilingual, diverse team (Chinese, European, American) with Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
             ctas: {
                 primary: "Explore Services",
-                secondary: "Book a Strategy Call"
+                secondary: "Add Our WeChat"
             },
             highlights: [
                 "Amazon PPC & Marketplace Growth",
@@ -213,6 +213,8 @@ export const translations = {
         },
         wechat: {
             contactLine: "For enquiries contact",
+            heroMessage:
+                "Get a suggested fix to your problem in 5 minutes. We're available 24/7.",
             qrAlt: "QR Code for Contact"
         },
         founders: {
@@ -302,7 +304,7 @@ export const translations = {
                 "中英双语、多元团队（中国、欧洲、美国）了解西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
             ctas: {
                 primary: "查看服务",
-                secondary: "预约策略通话"
+                secondary: "添加我们的微信"
             },
             highlights: [
                 "亚马逊PPC与平台招商增长",
@@ -489,6 +491,7 @@ export const translations = {
         },
         wechat: {
             contactLine: "咨询请联系",
+            heroMessage: "5分钟内给您建议方案，全天24/7在线。",
             qrAlt: "联系二维码"
         },
         founders: {

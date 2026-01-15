@@ -5,9 +5,13 @@ import WeChatQRBox from "./WeChatQRBox"
 
 interface WeChatQRPopupProps {
     trigger: React.ReactNode
+    message?: string
 }
 
-export default function WeChatQRPopup({ trigger }: WeChatQRPopupProps) {
+export default function WeChatQRPopup({
+    trigger,
+    message
+}: WeChatQRPopupProps) {
     const [isOpen, setIsOpen] = useState(false)
 
     const handleTriggerClick = (e: React.MouseEvent) => {
@@ -56,7 +60,7 @@ export default function WeChatQRPopup({ trigger }: WeChatQRPopupProps) {
                                 />
                             </svg>
                         </button>
-                        <WeChatQRBox />
+                        <WeChatQRBox message={message} />
                     </div>
                 </div>
             )}
