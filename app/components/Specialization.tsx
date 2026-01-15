@@ -8,7 +8,7 @@ export default function Specialization() {
     const copy = translations[language]
 
     return (
-        <section className="bg-slate-950 py-16 text-white">
+        <section className="bg-background-dark-deep py-16 text-text-dark">
             <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div>
                     <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
@@ -17,22 +17,22 @@ export default function Specialization() {
                     <h2 className="font-heading mt-4 text-3xl">
                         {copy.specialization.title}
                     </h2>
-                    <p className="mt-3 text-sm text-white/70">
+                    <p className="mt-3 text-sm text-text-dark/70">
                         {copy.specialization.subtitle}
                     </p>
-                    <p className="mt-4 text-sm leading-relaxed text-white/70">
+                    <p className="mt-4 text-sm leading-relaxed text-text-dark/70">
                         {copy.specialization.copy}
                     </p>
                     <div className="mt-8 grid gap-4 sm:grid-cols-2">
                         {copy.specialization.pillars.map((pillar) => (
                             <div
                                 key={pillar.title}
-                                className="rounded-lg border border-white/10 bg-white/5 p-5"
+                                className="rounded-lg border border-text-dark/10 bg-text-dark/5 p-5"
                             >
                                 <h3 className="font-heading text-base font-semibold">
                                     {pillar.title}
                                 </h3>
-                                <p className="mt-2 text-sm text-white/70">
+                                <p className="mt-2 text-sm text-text-dark/70">
                                     {pillar.text}
                                 </p>
                             </div>

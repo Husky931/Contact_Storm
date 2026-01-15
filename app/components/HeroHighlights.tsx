@@ -131,16 +131,16 @@ export default function HeroHighlights() {
     const copy = translations[language]
 
     return (
-        <section className="bg-[#0d121e] text-white">
+        <section className="bg-background-dark text-white">
             <div className="mx-auto grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
                 {highlightIcons.map((item, index) => (
                     <div
                         key={item.key}
                         className={`flex items-center gap-5 px-4 py-10 sm:px-6 ${
-                            index > 0 ? "border-l border-[#444444]" : ""
+                            index > 0 ? "border-l border-border-dark" : ""
                         }`}
                     >
-                        <div className="flex shrink-0 items-center justify-center text-[#E85B4E]">
+                        <div className="flex shrink-0 items-center justify-center text-primary-red">
                             {item.icon}
                         </div>
                         <div className="flex items-center">

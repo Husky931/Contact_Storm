@@ -6,9 +6,7 @@ import {
     timestamp,
     real,
     integer,
-    jsonb,
-    uniqueIndex,
-    index
+    jsonb
 } from "drizzle-orm/pg-core"
 import { relations } from "drizzle-orm"
 

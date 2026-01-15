@@ -1,6 +1,4 @@
 import { pgTable, index, uniqueIndex, foreignKey, serial, text, timestamp, real, boolean, jsonb, integer, unique } from "drizzle-orm/pg-core"
-import { sql } from "drizzle-orm"
-
 
 
 export const domainSearchTerms = pgTable("domain_search_terms", {

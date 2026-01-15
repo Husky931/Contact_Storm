@@ -136,7 +136,7 @@ export default function Hero() {
     }
 
     return (
-        <section className="relative overflow-hidden bg-slate-900 text-white">
+        <section className="relative overflow-hidden bg-background-dark-lighter text-text-dark">
             <Image
                 src="/images/industry-1.jpg"
                 alt={copy.hero.imageAlt}
@@ -144,22 +144,22 @@ export default function Hero() {
                 className="object-cover"
                 priority
             />
-            <div className="absolute inset-0 bg-linear-to-r from-slate-950/90 via-slate-900/75 to-slate-900/30" />
+            <div className="absolute inset-0 bg-linear-to-r from-background-dark-deep/90 via-background-dark-lighter/75 to-background-dark-lighter/30" />
             <div className="relative mx-auto max-w-6xl px-6 py-20 lg:py-28">
                 <div className="grid gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
                     <div>
-                        <p className="text-sm tracking-[0.5em] text-white/70 uppercase">
+                        <p className="text-sm tracking-[0.5em] text-text-dark/70 uppercase">
                             {copy.hero.tag}
                         </p>
-                        <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-white md:text-5xl">
+                        <h1 className="font-heading mt-5 text-4xl leading-tight font-semibold text-text-dark md:text-5xl">
                             {copy.hero.title}
                         </h1>
 
-                        <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg">
+                        <p className="mt-5 max-w-xl text-base text-text-dark/80 md:text-lg">
                             {copy.hero.description}
                         </p>
 
-                        <p className="mt-4 max-w-xl text-sm text-white/70">
+                        <p className="mt-4 max-w-xl text-sm text-text-dark/70">
                             {copy.hero.subtext}
                         </p>
                         <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -167,25 +167,25 @@ export default function Hero() {
                                 trigger={
                                     <a
                                         href="#services"
-                                        className="bg-primary-main hover:bg-primary-navy/90 rounded px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors"
+                                        className="bg-primary-main hover:bg-primary-navy/90 rounded px-6 py-3 text-sm font-semibold tracking-[0.2em] text-text-dark uppercase transition-colors"
                                     >
                                         {copy.hero.ctas.primary}
                                     </a>
                                 }
                             >
-                                <div className="bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 px-6 py-5 text-white sm:px-8">
-                                    <p className="text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
+                                <div className="bg-linear-to-r from-background-dark-deep via-background-dark-lighter to-primary-slate px-6 py-5 text-text-dark sm:px-8">
+                                    <p className="text-xs font-semibold tracking-[0.4em] text-text-dark/70 uppercase">
                                         {copy.hero.servicesPopup.kicker}
                                     </p>
                                     <h3 className="font-heading mt-2 text-2xl">
                                         {copy.hero.servicesPopup.title}
                                     </h3>
-                                    <p className="mt-2 text-sm text-white/75">
+                                    <p className="mt-2 text-sm text-text-dark/75">
                                         {copy.hero.servicesPopup.subtitle}
                                     </p>
                                 </div>
-                                <div className="grid gap-6 px-6 py-6 text-sm text-slate-600 sm:grid-cols-2 sm:px-8 sm:py-8">
-                                    <div className="rounded-xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm">
+                                <div className="grid gap-6 px-6 py-6 text-sm text-primary-slate sm:grid-cols-2 sm:px-8 sm:py-8">
+                                    <div className="rounded-xl border border-background-grey2 bg-background-grey1/80 p-4 shadow-sm">
                                         <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
                                             {copy.hero.servicesPopup.servicesTitle}
                                         </p>
@@ -194,7 +194,7 @@ export default function Hero() {
                                                 (service) => (
                                                     <li
                                                         key={service}
-                                                        className="flex items-start gap-2 text-slate-700"
+                                                        className="flex items-start gap-2 text-primary-slate"
                                                     >
                                                         <span className="bg-primary-red mt-1 h-2 w-2 rounded-full" />
                                                         <span>{service}</span>
@@ -203,7 +203,7 @@ export default function Hero() {
                                             )}
                                         </ul>
                                     </div>
-                                    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                                    <div className="rounded-xl border border-background-grey2 bg-background-white p-4 shadow-sm">
                                         <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
                                             {copy.hero.servicesPopup.clientsTitle}
                                         </p>
@@ -212,7 +212,7 @@ export default function Hero() {
                                                 (client) => (
                                                     <span
                                                         key={client}
-                                                        className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-600"
+                                                        className="rounded-full border border-background-grey2 bg-background-grey1 px-3 py-1 text-xs font-semibold text-primary-slate"
                                                     >
                                                         {client}
                                                     </span>
@@ -227,12 +227,12 @@ export default function Hero() {
                                 trigger={
                                     <a
                                         href="#contact"
-                                        className="inline-flex items-center gap-3 rounded border border-white/60 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-white uppercase transition-colors hover:bg-white/10"
+                                        className="inline-flex items-center gap-3 rounded border border-text-dark/60 px-6 py-3 text-sm font-semibold tracking-[0.2em] text-text-dark uppercase transition-colors hover:bg-text-dark/10"
                                     >
                                         {copy.hero.ctas.secondary}
                                         <svg
                                             viewBox="0 0 24 24"
-                                            className="h-5 w-5 fill-white"
+                                            className="h-5 w-5 fill-text-dark"
                                             xmlns="http://www.w3.org/2000/svg"
                                             aria-hidden="true"
                                         >
@@ -242,18 +242,18 @@ export default function Hero() {
                                 }
                             />
                         </div>
-                        <div className="mt-10 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
+                        <div className="mt-10 flex flex-wrap items-center gap-6 text-xs font-semibold tracking-[0.4em] text-text-dark/70 uppercase">
                             {copy.hero.highlights.map((highlight) => (
                                 <span key={highlight}>{highlight}</span>
                             ))}
                         </div>
                     </div>
 
-                    <div className="rounded bg-white/95 p-6 text-slate-800 shadow-xl">
+                    <div className="rounded bg-background-white/95 p-6 text-primary-main shadow-xl">
                         <p className="text-primary-red text-xs font-semibold tracking-[0.3em] uppercase">
                             {copy.hero.form.badge}
                         </p>
-                        <h3 className="font-heading mt-3 text-2xl text-slate-900">
+                        <h3 className="font-heading mt-3 text-2xl text-primary-main">
                             {copy.hero.form.title}
                         </h3>
                         <form
@@ -266,14 +266,14 @@ export default function Hero() {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                className="w-full rounded border border-background-grey2 px-4 py-2"
                                 placeholder={copy.hero.form.placeholders.name}
                             />
                             <select
                                 name="serviceNeeded"
                                 value={formData.serviceNeeded}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
+                                className="w-full rounded border border-background-grey2 px-4 py-2 text-primary-slate"
                             >
                                 <option value="">
                                     {copy.hero.form.placeholders.service}
@@ -287,7 +287,7 @@ export default function Hero() {
                                 name="productCategory"
                                 value={formData.productCategory}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                className="w-full rounded border border-background-grey2 px-4 py-2"
                                 placeholder={
                                     copy.hero.form.placeholders.product
                                 }
@@ -296,7 +296,7 @@ export default function Hero() {
                                 name="targetMarket"
                                 value={formData.targetMarket}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2 text-slate-500"
+                                className="w-full rounded border border-background-grey2 px-4 py-2 text-primary-slate"
                             >
                                 <option value="">
                                     {copy.hero.form.placeholders.targetMarket}
@@ -310,7 +310,7 @@ export default function Hero() {
                                 name="salesChannels"
                                 value={formData.salesChannels}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                className="w-full rounded border border-background-grey2 px-4 py-2"
                                 placeholder={
                                     copy.hero.form.placeholders.salesChannels
                                 }
@@ -320,7 +320,7 @@ export default function Hero() {
                                 name="challenge"
                                 value={formData.challenge}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                className="w-full rounded border border-background-grey2 px-4 py-2"
                                 placeholder={
                                     copy.hero.form.placeholders.challenge
                                 }
@@ -331,7 +331,7 @@ export default function Hero() {
                                 required
                                 value={formData.contact}
                                 onChange={handleChange}
-                                className="w-full rounded border border-slate-200 px-4 py-2"
+                                className="w-full rounded border border-background-grey2 px-4 py-2"
                                 placeholder={
                                     copy.hero.form.placeholders.contact
                                 }
@@ -352,7 +352,7 @@ export default function Hero() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                                className="bg-primary-main hover:bg-primary-navy/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-text-dark uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 {isSubmitting
                                     ? copy.hero.form.submit.sending

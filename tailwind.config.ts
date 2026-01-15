@@ -21,10 +21,19 @@ export default {
                     white: "#FFFFFF",
                     grey1: "#F9F9F9",
                     grey2: "#F5F5F5",
-                    grey3: "#F1F1F1"
+                    grey3: "#F1F1F1",
+                    dark: {
+                        DEFAULT: "#0d121e",
+                        deep: "#020617",
+                        lighter: "#0f172a"
+                    }
                 },
                 text: {
-                    DEFAULT: "#253047"
+                    DEFAULT: "#253047",
+                    dark: "#ffffff"
+                },
+                border: {
+                    dark: "#444444"
                 }
             },
             fontFamily: {

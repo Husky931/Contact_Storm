@@ -8,7 +8,7 @@ export default function HowWeHelp() {
     const copy = translations[language]
 
     return (
-        <section className="bg-slate-950 py-16 text-white">
+        <section className="bg-background-dark-deep py-16 text-text-dark">
             <div className="mx-auto max-w-6xl px-6">
                 {/* Section Header */}
                 <div className="mb-12 text-center">
@@ -43,7 +43,7 @@ export default function HowWeHelp() {
                                             d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                                         />
                                     </svg>
-                                    <span className="text-sm text-white/90">
+                                    <span className="text-sm text-text-dark/90">
                                         {service}
                                     </span>
                                 </li>
@@ -56,10 +56,10 @@ export default function HowWeHelp() {
                         <h3 className="font-heading mb-6 text-2xl">
                             {copy.howWeHelp.aboutTitle}
                         </h3>
-                        <div className="space-y-4 text-sm leading-relaxed text-white/80">
+                        <div className="space-y-4 text-sm leading-relaxed text-text-dark/80">
                             <p>{copy.howWeHelp.aboutText1}</p>
                             <p>{copy.howWeHelp.aboutText2}</p>
-                            <p className="font-semibold text-white">
+                            <p className="font-semibold text-text-dark">
                                 {copy.howWeHelp.aboutText3}
                             </p>
                         </div>
