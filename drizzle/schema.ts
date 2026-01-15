@@ -1,4 +1,6 @@
-import { pgTable, index, uniqueIndex, foreignKey, serial, text, timestamp, real, boolean, jsonb, integer, unique } from "drizzle-orm/pg-core"
+import { pgTable, index, uniqueIndex, foreignKey, serial, text, timestamp, unique, boolean, jsonb, real, integer } from "drizzle-orm/pg-core"
+import { sql } from "drizzle-orm"
+
 
 
 export const domainSearchTerms = pgTable("domain_search_terms", {
@@ -13,6 +15,58 @@ export const domainSearchTerms = pgTable("domain_search_terms", {
 			columns: [table.domain],
 			foreignColumns: [domains.domain],
 			name: "domain_search_terms_domain_domains_domain_fk"
+		}),
+]);
+
+export const domains = pgTable("domains", {
+	id: serial().primaryKey().notNull(),
+	domain: text().notNull(),
+	searchQueryUsed: text("search_query_used").notNull(),
+	industry: text(),
+	firstSeen: timestamp("first_seen", { mode: 'string' }).defaultNow().notNull(),
+	formFound: boolean("form_found"),
+	submitted: boolean().default(false),
+	messageType: text("message_type"),
+	contactAttemptDate: timestamp("contact_attempt_date", { mode: 'string' }),
+	contactEmail: text("contact_email"),
+	contactPhone: text("contact_phone"),
+	contactStatus: text("contact_status"),
+	lastContactAttempt: timestamp("last_contact_attempt", { mode: 'string' }),
+}, (table) => [
+	index("idx_contact_status").using("btree", table.contactStatus.asc().nullsLast().op("text_ops")),
+	index("idx_domain").using("btree", table.domain.asc().nullsLast().op("text_ops")),
+	index("idx_message_type").using("btree", table.messageType.asc().nullsLast().op("text_ops")),
+	index("idx_submitted").using("btree", table.submitted.asc().nullsLast().op("bool_ops")),
+	unique("domains_domain_unique").on(table.domain),
+]);
+
+export const contactAttempts = pgTable("contact_attempts", {
+	id: serial().primaryKey().notNull(),
+	domain: text().notNull(),
+	status: text().default('pending').notNull(),
+	attemptedAt: timestamp("attempted_at", { mode: 'string' }).defaultNow().notNull(),
+	contactPageUrl: text("contact_page_url"),
+	formDetectionMethod: text("form_detection_method"),
+	fieldMappingJson: jsonb("field_mapping_json"),
+	messageSubject: text("message_subject"),
+	messageBody: text("message_body"),
+	// TODO: failed to parse database type 'bytea'
+	proofScreenshot: unknown("proof_screenshot"),
+	errorMessage: text("error_message"),
+	seoReportUrlHash: text("seo_report_url_hash"),
+}, (table) => [
+	index("idx_contact_attempt_at").using("btree", table.attemptedAt.asc().nullsLast().op("timestamp_ops")),
+	index("idx_contact_attempt_domain").using("btree", table.domain.asc().nullsLast().op("text_ops")),
+	index("idx_contact_attempt_status").using("btree", table.status.asc().nullsLast().op("text_ops")),
+	foreignKey({
+			columns: [table.domain],
+			foreignColumns: [domains.domain],
+			name: "contact_attempts_domain_domains_domain_fk"
+		}),
+	foreignKey({
+			columns: [table.seoReportUrlHash],
+			foreignColumns: [seoReports.urlHash],
+			name: "contact_attempts_seo_report_url_hash_seo_reports_url_hash_fk"
 		}),
 ]);
 
@@ -162,6 +216,11 @@ export const seoReports = pgTable("seo_reports", {
 	hasFaqSection: boolean("has_faq_section"),
 	hasTableOfContents: boolean("has_table_of_contents"),
 	analyzerErrors: jsonb("analyzer_errors"),
+	seoReportOpened: boolean("seo_report_opened").default(false).notNull(),
+	seoReportLastOpened: timestamp("seo_report_last_opened", { mode: 'string' }),
+	seoReportTimesOpened: integer("seo_report_times_opened").default(0).notNull(),
+	reportDownloaded: boolean("report_downloaded").default(false).notNull(),
+	urlHash: text("url_hash").notNull(),
 }, (table) => [
 	index("idx_seo_report_analyzed_at").using("btree", table.analyzedAt.asc().nullsLast().op("timestamp_ops")),
 	index("idx_seo_report_domain").using("btree", table.domain.asc().nullsLast().op("text_ops")),
@@ -171,23 +230,5 @@ export const seoReports = pgTable("seo_reports", {
 			foreignColumns: [domains.domain],
 			name: "seo_reports_domain_domains_domain_fk"
 		}),
-]);
-
-export const domains = pgTable("domains", {
-	id: serial().primaryKey().notNull(),
-	domain: text().notNull(),
-	searchQueryUsed: text("search_query_used").notNull(),
-	industry: text(),
-	firstSeen: timestamp("first_seen", { mode: 'string' }).defaultNow().notNull(),
-	formFound: boolean("form_found"),
-	submitted: boolean().default(false),
-	messageType: text("message_type"),
-	contactAttemptDate: timestamp("contact_attempt_date", { mode: 'string' }),
-	contactEmail: text("contact_email"),
-	contactPhone: text("contact_phone"),
-}, (table) => [
-	index("idx_domain").using("btree", table.domain.asc().nullsLast().op("text_ops")),
-	index("idx_message_type").using("btree", table.messageType.asc().nullsLast().op("text_ops")),
-	index("idx_submitted").using("btree", table.submitted.asc().nullsLast().op("bool_ops")),
-	unique("domains_domain_unique").on(table.domain),
+	unique("seo_reports_url_hash_unique").on(table.urlHash),
 ]);
