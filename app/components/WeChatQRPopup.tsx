@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import WeChatQRBox from "./WeChatQRBox"
 
 interface WeChatQRPopupProps {
@@ -29,6 +29,23 @@ export default function WeChatQRPopup({
         }
     }
 
+    useEffect(() => {
+        if (!isOpen) {
+            return
+        }
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                handleClose()
+            }
+        }
+
+        window.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown)
+        }
+    }, [isOpen])
+
     return (
         <>
             <div onClick={handleTriggerClick} className="cursor-pointer">
@@ -43,7 +60,7 @@ export default function WeChatQRPopup({
                     <div className="relative max-w-md w-full bg-white rounded-lg shadow-xl p-6">
                         <button
                             onClick={handleClose}
-                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                            className="absolute top-4 right-4 cursor-pointer text-gray-400 transition-colors hover:text-gray-600"
                             aria-label="Close"
                         >
                             <svg
