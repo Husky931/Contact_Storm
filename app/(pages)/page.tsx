@@ -18,7 +18,6 @@ export default function Home() {
                 <Specialization />
                 <Section4 />
                 <Services />
-
                 <ReadyToTalk />
                 <FoundedBy />
                 <Locations />

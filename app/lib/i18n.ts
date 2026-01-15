@@ -82,7 +82,7 @@ export const translations = {
             "Leads"
         ],
         about: {
-            statsLabel: "Factories Served",
+            statsLabel: "Sellers Served",
             kicker: "Built for Manufacturers",
             title: {
                 lead: "A bilingual diverse team bridging",
@@ -96,7 +96,7 @@ export const translations = {
                 "Amazon, paid social, Shopify, and SEO execution in-house",
                 "Conversion-focused website redesign"
             ],
-            cta: "Contact Us",
+            cta: "WeChat",
             imageAlts: {
                 strategist: "Strategist at desk",
                 meeting: "Team meeting",
@@ -191,7 +191,7 @@ export const translations = {
                 }
             ],
             readMore: "Read More",
-            cta: "Book a Strategy Call"
+            cta: "Add our WeChat"
         },
         readyToTalk: {
             leftTitle: "Ready to Talk?",
@@ -362,7 +362,7 @@ export const translations = {
             "获客线索"
         ],
         about: {
-            statsLabel: "服务工厂",
+            statsLabel: "服务卖家",
             kicker: "为制造商打造",
             title: {
                 lead: "双语多元团队，连接",
@@ -376,7 +376,7 @@ export const translations = {
                 "亚马逊、社媒投放、Shopify与SEO全流程自执行",
                 "以转化为核心的网站改版"
             ],
-            cta: "联系我们",
+            cta: "微信",
             imageAlts: {
                 strategist: "策略师在办公",
                 meeting: "团队会议",
@@ -469,7 +469,7 @@ export const translations = {
                 }
             ],
             readMore: "了解更多",
-            cta: "预约策略通话"
+            cta: "添加我们的微信"
         },
         readyToTalk: {
             leftTitle: "准备好聊聊了吗？",
