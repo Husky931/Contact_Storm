@@ -274,9 +274,26 @@ export const translations = {
                 "Consulting",
                 "Custom Solutions"
             ],
-            newsletter:
-                "Subscribe to our Monthly Newsletter and enjoy exclusive content about the Chinese Digital Ecosystem.",
-            subscribe: "Subscribe Here"
+            audit: {
+                title: "Free Audit (SEO + Website AI Optimization)",
+                subtext:
+                    "Share your email and we’ll send a quick audit of your website’s SEO and AI optimization opportunities.",
+                cta: "Send My Audit",
+                sending: "Sending...",
+                note: "We reply within 24 hours.",
+                placeholder: "Your email",
+                websitePlaceholder: "Your website URL",
+                formName: "Footer Audit Request",
+                message:
+                    "Free audit request (SEO + Website AI Optimization).",
+                success: "Thanks! We'll send your audit to your email soon.",
+                errors: {
+                    missingEmail: "Please enter a valid email and website.",
+                    cooldown:
+                        "Please wait a few minutes before requesting another audit.",
+                    generic: "An error occurred. Please try again later."
+                }
+            }
         },
         contactPage: {
             title: "Get in Touch",
@@ -567,8 +584,24 @@ export const translations = {
                 "咨询",
                 "定制方案"
             ],
-            newsletter: "订阅我们的月度通讯，获取关于中国数字生态的独家内容。",
-            subscribe: "点击订阅"
+            audit: {
+                title: "免费审计（SEO + 网站 AI 优化）",
+                subtext:
+                    "留下邮箱，我们会发送一份网站 SEO 与 AI 优化机会的快速审计。",
+                cta: "发送我的审计",
+                sending: "发送中...",
+                note: "我们将在24小时内回复。",
+                placeholder: "邮箱",
+                websitePlaceholder: "网站链接",
+                formName: "页脚审计申请",
+                message: "页脚免费审计申请（SEO + 网站 AI 优化）。",
+                success: "感谢！我们会将审计发送到您的邮箱。",
+                errors: {
+                    missingEmail: "请输入有效的邮箱和网站。",
+                    cooldown: "请稍等几分钟再提交新的审计申请。",
+                    generic: "发送失败，请稍后再试。"
+                }
+            }
         },
         contactPage: {
             title: "取得联系",

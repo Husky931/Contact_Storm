@@ -1,12 +1,135 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import WeChatQRPopup from "./WeChatQRPopup"
+import ModalPopup from "./ModalPopup"
 import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Footer() {
     const { language, translations } = useLanguage()
     const copy = translations[language]
+    const [auditEmail, setAuditEmail] = useState("")
+    const [auditWebsite, setAuditWebsite] = useState("")
+    const [auditHoneypot, setAuditHoneypot] = useState("")
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [cooldownUntil, setCooldownUntil] = useState<number | null>(null)
+    const [submitStatus, setSubmitStatus] = useState<{
+        type: "success" | "error" | null
+        message: string
+    }>({ type: null, message: "" })
+    const cooldownMs = 5 * 60 * 1000
+    const cooldownStorageKey = "auditCooldownUntil"
+    const isOnCooldown =
+        cooldownUntil !== null && Date.now() < cooldownUntil
+
+    const handleAuditEmailChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setAuditEmail(event.target.value)
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: "" })
+        }
+    }
+
+    const handleAuditWebsiteChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setAuditWebsite(event.target.value)
+        if (submitStatus.type) {
+            setSubmitStatus({ type: null, message: "" })
+        }
+    }
+
+    const handleAuditHoneypotChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setAuditHoneypot(event.target.value)
+    }
+
+    useEffect(() => {
+        const storedCooldown =
+            typeof window !== "undefined"
+                ? window.localStorage.getItem(cooldownStorageKey)
+                : null
+        if (storedCooldown) {
+            const parsed = Number(storedCooldown)
+            if (!Number.isNaN(parsed)) {
+                setCooldownUntil(parsed)
+            }
+        }
+    }, [])
+
+    const handleAuditSubmit = async (event: React.FormEvent) => {
+        event.preventDefault()
+        setIsSubmitting(true)
+        setSubmitStatus({ type: null, message: "" })
+
+        try {
+            if (isOnCooldown) {
+                throw new Error(copy.footer.audit.errors.cooldown)
+            }
+
+            if (auditHoneypot) {
+                throw new Error(copy.footer.audit.errors.generic)
+            }
+
+            if (!auditEmail.trim() || !auditWebsite.trim()) {
+                throw new Error(copy.footer.audit.errors.missingEmail)
+            }
+
+            const normalizedWebsite = auditWebsite.trim().startsWith("http")
+                ? auditWebsite.trim()
+                : `https://${auditWebsite.trim()}`
+
+            const response = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: copy.footer.audit.formName,
+                    email: auditEmail.trim(),
+                    message: `${copy.footer.audit.message}\nWebsite: ${normalizedWebsite}`
+                })
+            })
+
+            const data = await response.json()
+
+            if (!response.ok) {
+                const errorMsg =
+                    data.error ||
+                    `Failed to send email (Status: ${response.status})`
+                throw new Error(errorMsg)
+            }
+
+            setSubmitStatus({
+                type: "success",
+                message: copy.footer.audit.success
+            })
+            setAuditEmail("")
+            setAuditWebsite("")
+            setAuditHoneypot("")
+            const nextCooldown = Date.now() + cooldownMs
+            setCooldownUntil(nextCooldown)
+            if (typeof window !== "undefined") {
+                window.localStorage.setItem(
+                    cooldownStorageKey,
+                    String(nextCooldown)
+                )
+            }
+        } catch (error) {
+            setSubmitStatus({
+                type: "error",
+                message:
+                    error instanceof Error
+                        ? error.message
+                        : copy.footer.audit.errors.generic
+            })
+        } finally {
+            setIsSubmitting(false)
+        }
+    }
 
     return (
         <footer className="bg-primary-main text-white">
@@ -46,16 +169,98 @@ export default function Footer() {
                         {/* Right Section */}
                         <div className="flex flex-col justify-between">
                             <div className="max-w-[360px] space-y-6">
-                                <p className="text-sm leading-relaxed md:text-base">
-                                    {copy.footer.newsletter}
-                                </p>
+                                <div>
+                                    <p className="text-base font-semibold md:text-lg">
+                                        {copy.footer.audit.title}
+                                    </p>
+                                    <p className="mt-2 text-sm leading-relaxed text-white/80 md:text-base">
+                                        {copy.footer.audit.subtext}
+                                    </p>
+                                </div>
 
-                                <a
-                                    href="#"
-                                    className="inline-flex items-center gap-3 text-sm font-bold transition-opacity hover:opacity-80 md:text-base"
+                                <ModalPopup
+                                    trigger={
+                                        <a
+                                            href="#"
+                                            className="inline-flex items-center gap-3 text-sm font-bold transition-opacity hover:opacity-80 md:text-base"
+                                        >
+                                            {copy.footer.audit.cta}{" "}
+                                            <span aria-hidden>→</span>
+                                        </a>
+                                    }
                                 >
-                                    {copy.footer.subscribe} <span aria-hidden>→</span>
-                                </a>
+                                    <div className="bg-linear-to-r from-slate-950 via-slate-900 to-slate-800 px-6 py-5 text-white sm:px-8">
+                                        <p className="text-xs font-semibold tracking-[0.4em] text-white/70 uppercase">
+                                            {copy.footer.audit.title}
+                                        </p>
+                                        <p className="mt-2 text-sm text-white/75">
+                                            {copy.footer.audit.subtext}
+                                        </p>
+                                    </div>
+                                    <div className="space-y-4 px-6 py-6 text-slate-700 sm:px-8">
+                                        <form
+                                            onSubmit={handleAuditSubmit}
+                                            className="space-y-3"
+                                        >
+                                            <input
+                                                type="email"
+                                                name="auditEmail"
+                                                value={auditEmail}
+                                                onChange={handleAuditEmailChange}
+                                                placeholder={
+                                                    copy.footer.audit.placeholder
+                                                }
+                                                className="w-full rounded border border-slate-200 px-4 py-2 text-sm"
+                                                required
+                                            />
+                                            <input
+                                                type="text"
+                                                name="auditWebsite"
+                                                value={auditWebsite}
+                                                onChange={handleAuditWebsiteChange}
+                                                placeholder={
+                                                    copy.footer.audit.websitePlaceholder
+                                                }
+                                                className="w-full rounded border border-slate-200 px-4 py-2 text-sm"
+                                                required
+                                                inputMode="url"
+                                            />
+                                            <input
+                                                type="text"
+                                                name="companyFax"
+                                                value={auditHoneypot}
+                                                onChange={handleAuditHoneypotChange}
+                                                className="hidden"
+                                                tabIndex={-1}
+                                                autoComplete="off"
+                                            />
+                                            {submitStatus.type && (
+                                                <div
+                                                    className={`rounded px-4 py-2 text-xs ${
+                                                        submitStatus.type ===
+                                                        "success"
+                                                            ? "bg-green-50 text-green-700"
+                                                            : "bg-red-50 text-red-700"
+                                                    }`}
+                                                >
+                                                    {submitStatus.message}
+                                                </div>
+                                            )}
+                                            <button
+                                                type="submit"
+                                                disabled={isSubmitting || isOnCooldown}
+                                                className="bg-primary-red hover:bg-primary-red/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
+                                            >
+                                                {isSubmitting
+                                                    ? copy.footer.audit.sending
+                                                    : copy.footer.audit.cta}
+                                            </button>
+                                        </form>
+                                        <p className="text-xs text-slate-500">
+                                            {copy.footer.audit.note}
+                                        </p>
+                                    </div>
+                                </ModalPopup>
                             </div>
 
                             <div className="mt-12 flex items-center gap-6 md:mt-0">
