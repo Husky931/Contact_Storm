@@ -14,7 +14,7 @@ export default function Navigation() {
     ]
 
     return (
-        <header className="bg-white shadow-sm">
+        <header className="no-print bg-white shadow-sm">
             <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-5">
                 <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-base font-semibold text-slate-700">
                     {navItems.map((item) => (

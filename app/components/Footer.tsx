@@ -20,8 +20,7 @@ export default function Footer() {
     }>({ type: null, message: "" })
     const cooldownMs = 5 * 60 * 1000
     const cooldownStorageKey = "auditCooldownUntil"
-    const isOnCooldown =
-        cooldownUntil !== null && Date.now() < cooldownUntil
+    const isOnCooldown = cooldownUntil !== null && Date.now() < cooldownUntil
 
     const handleAuditEmailChange = (
         event: React.ChangeEvent<HTMLInputElement>
@@ -132,7 +131,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="bg-primary-main text-white">
+        <footer className="bg-primary-main no-print text-white">
             <div className="mx-auto px-6 py-16 lg:px-16">
                 {/* Full width wrapper, content aligned to the right */}
                 <div className="flex w-full justify-evenly">
@@ -206,9 +205,12 @@ export default function Footer() {
                                                 type="email"
                                                 name="auditEmail"
                                                 value={auditEmail}
-                                                onChange={handleAuditEmailChange}
+                                                onChange={
+                                                    handleAuditEmailChange
+                                                }
                                                 placeholder={
-                                                    copy.footer.audit.placeholder
+                                                    copy.footer.audit
+                                                        .placeholder
                                                 }
                                                 className="w-full rounded border border-slate-200 px-4 py-2 text-sm"
                                                 required
@@ -217,9 +219,12 @@ export default function Footer() {
                                                 type="text"
                                                 name="auditWebsite"
                                                 value={auditWebsite}
-                                                onChange={handleAuditWebsiteChange}
+                                                onChange={
+                                                    handleAuditWebsiteChange
+                                                }
                                                 placeholder={
-                                                    copy.footer.audit.websitePlaceholder
+                                                    copy.footer.audit
+                                                        .websitePlaceholder
                                                 }
                                                 className="w-full rounded border border-slate-200 px-4 py-2 text-sm"
                                                 required
@@ -229,7 +234,9 @@ export default function Footer() {
                                                 type="text"
                                                 name="companyFax"
                                                 value={auditHoneypot}
-                                                onChange={handleAuditHoneypotChange}
+                                                onChange={
+                                                    handleAuditHoneypotChange
+                                                }
                                                 className="hidden"
                                                 tabIndex={-1}
                                                 autoComplete="off"
@@ -248,7 +255,9 @@ export default function Footer() {
                                             )}
                                             <button
                                                 type="submit"
-                                                disabled={isSubmitting || isOnCooldown}
+                                                disabled={
+                                                    isSubmitting || isOnCooldown
+                                                }
                                                 className="bg-primary-red hover:bg-primary-red/90 w-full rounded px-4 py-3 text-xs font-semibold tracking-[0.3em] text-white uppercase transition-colors disabled:cursor-not-allowed disabled:opacity-50"
                                             >
                                                 {isSubmitting

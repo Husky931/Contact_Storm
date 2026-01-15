@@ -48,7 +48,10 @@ export default function WeChatQRPopup({
 
     return (
         <>
-            <div onClick={handleTriggerClick} className="inline-flex cursor-pointer">
+            <div
+                onClick={handleTriggerClick}
+                className="no-print inline-flex cursor-pointer"
+            >
                 {trigger}
             </div>
 
@@ -57,7 +60,7 @@ export default function WeChatQRPopup({
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
                     onClick={handleBackdropClick}
                 >
-                    <div className="relative max-w-md w-full bg-white rounded-lg shadow-xl p-6">
+                    <div className="relative w-full max-w-md rounded-lg bg-white p-6 shadow-xl">
                         <button
                             onClick={handleClose}
                             className="absolute top-4 right-4 cursor-pointer text-gray-400 transition-colors hover:text-gray-600"
