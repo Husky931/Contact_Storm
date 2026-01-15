@@ -2,8 +2,7 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
     title: "Reports | PixaVentures",
-    description:
-        "Search for your company and get detailed SEO reports and analytics."
+    description: "Chinese sellers website optimization and SEO services."
 }
 
 export default function ReportsPage() {
@@ -33,7 +32,7 @@ export default function ReportsPage() {
                                     <input
                                         type="text"
                                         placeholder="Enter company domain (e.g., example.com)"
-                                        className="w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-4 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:border-primary-red focus:ring-2 focus:ring-primary-red/20 focus:outline-none"
+                                        className="focus:border-primary-red focus:ring-primary-red/20 w-full rounded-lg border-2 border-slate-200 bg-white px-6 py-4 text-base text-slate-900 transition-colors placeholder:text-slate-400 focus:ring-2 focus:outline-none"
                                     />
                                 </div>
                                 <button

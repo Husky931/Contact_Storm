@@ -22,7 +22,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
     }
 
     return (
-        <div className="min-h-screen bg-background p-8 text-text">
+        <div className="bg-background text-text min-h-screen p-8">
             <div className="mx-auto max-w-7xl">
                 <Link
                     href="/reports"
