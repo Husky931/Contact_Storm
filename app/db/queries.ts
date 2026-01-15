@@ -33,6 +33,17 @@ export async function getSeoReportById(id: number) {
     return result[0] || null
 }
 
+// Get a single SEO report by URL hash
+export async function getSeoReportByUrlHash(urlHash: string) {
+    const result = await db
+        .select()
+        .from(seoReports)
+        .where(eq(seoReports.urlHash, urlHash))
+        .limit(1)
+
+    return result[0] || null
+}
+
 // Get all SEO reports for a specific domain
 export async function getSeoReportsByDomain(domain: string, limit = 10) {
     return await db

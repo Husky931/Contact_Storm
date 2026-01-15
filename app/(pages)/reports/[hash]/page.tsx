@@ -1,25 +1,42 @@
-import { getSeoReportById } from "@/db/queries"
+import { getSeoReportById, getSeoReportByUrlHash } from "@/db/queries"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import MarkdownContent from "@/components/MarkdownContent"
 import HowWeHelp from "@/components/HowWeHelp"
 import FloatingFixButton from "@/components/FloatingFixButton"
+import { extractHashFromUrl } from "@/lib/reportUrl"
 
 interface PageProps {
-    params: Promise<{ id: string }>
+    params: Promise<{ hash: string }>
 }
 
 export default async function ReportDetailPage({ params }: PageProps) {
-    const { id } = await params
-    const reportId = parseInt(id)
+    const { hash } = await params
 
-    if (isNaN(reportId)) {
+    // Extract hash from URL path (format: domain-slug-hash)
+    // Example: "www-feetech-cn-mxkDJoBs78Q8" -> extract "mxkDJoBs78Q8"
+    const urlPath = `/reports/${hash}`
+    const urlHash = extractHashFromUrl(urlPath)
+
+    if (!urlHash) {
+        console.error("❌ Failed to extract hash from URL:", hash)
         notFound()
     }
 
-    const report = await getSeoReportById(reportId)
+    // Step 1: Find the report by url_hash to get its ID
+    const reportByHash = await getSeoReportByUrlHash(urlHash)
+
+    if (!reportByHash || !reportByHash.id) {
+        console.error("❌ Report not found for hash:", urlHash)
+        console.error("   Searched in database for url_hash =", urlHash)
+        notFound()
+    }
+
+    // Step 2: Get the full report by ID (like we did before)
+    const report = await getSeoReportById(reportByHash.id)
 
     if (!report) {
+        console.error("❌ Report not found for ID:", reportByHash.id)
         notFound()
     }
 

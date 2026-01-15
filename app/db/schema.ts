@@ -188,7 +188,8 @@ export const seoReports = pgTable("seo_reports", {
     iframeCount: integer("iframe_count"),
     hasFaqSection: boolean("has_faq_section"),
     hasTableOfContents: boolean("has_table_of_contents"),
-    analyzerErrors: jsonb("analyzer_errors")
+    analyzerErrors: jsonb("analyzer_errors"),
+    urlHash: text("url_hash").notNull()
 })
 
 export const domainsRelations = relations(domains, ({ many }) => ({
