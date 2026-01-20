@@ -311,7 +311,7 @@ export const translations = {
             qrAlt: "QR Code for Contact",
             floatingButton: {
                 text: "Let's fix this",
-                message: (domain: string) =>
+                message: () =>
                     `Talk to Gligor, let's perfect your website and elevate your business by getting new overseas customers.`
             }
         },
@@ -704,7 +704,7 @@ export const translations = {
             qrAlt: "联系二维码",
             floatingButton: {
                 text: "让我们来修复",
-                message: (domain: string) =>
+                message: () =>
                     `与Gligor聊聊，让我们完善您的网站，通过获取新的海外客户来提升您的业务。`
             }
         },

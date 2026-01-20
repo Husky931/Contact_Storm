@@ -29,12 +29,12 @@ export default function AiSearchOptimization() {
                                         {paragraph.highlight}
                                     </strong>
                                     {paragraph.tail}
-                                    {paragraph.highlightTail ? (
+                                    {"highlightTail" in paragraph && paragraph.highlightTail ? (
                                         <strong className="font-semibold text-primary-navy">
                                             {paragraph.highlightTail}
                                         </strong>
                                     ) : null}
-                                    {paragraph.end}
+                                    {"end" in paragraph && paragraph.end}
                                 </p>
                             )
                         })}

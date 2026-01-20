@@ -22,14 +22,11 @@ export function LanguageProvider({
 }: {
     children: React.ReactNode
 }) {
-    const [language, setLanguageState] = useState<Language>("en")
-
-    useEffect(() => {
+    const [language, setLanguageState] = useState<Language>(() => {
+        if (typeof window === "undefined") return "en"
         const stored = window.localStorage.getItem("language")
-        if (stored === "en" || stored === "zh") {
-            setLanguageState(stored)
-        }
-    }, [])
+        return (stored === "en" || stored === "zh") ? stored : "en"
+    })
 
     useEffect(() => {
         document.documentElement.lang =

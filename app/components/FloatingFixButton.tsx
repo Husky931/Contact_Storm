@@ -23,7 +23,7 @@ export default function FloatingFixButton({ domain }: FloatingFixButtonProps) {
 
     const text = copy.wechat.floatingButton.text
     const letters = text.split("")
-    const messageText = copy.wechat.floatingButton.message(domain)
+    const messageText = copy.wechat.floatingButton.message()
 
     // Format message to make Gligor bold
     const formatMessage = (msg: string) => {
