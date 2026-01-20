@@ -107,12 +107,12 @@ export const translations = {
             statsLabel: "Sellers Served",
             kicker: "Built for Manufacturers",
             title: {
-                lead: "A bilingual diverse team bridging",
+                lead: "Foreigners with native experience lead team bridging",
                 highlightPrimary: "Chinese sellers",
                 middle: "with",
                 highlightSecondary: "global markets"
             },
-            copy: "We are a bilingual, diverse team (Chinese, European, American) that understands both factory realities and Western buyer mind and expectations. That makes our ad creative, Amazon strategy, and websites convert much better.",
+            copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both factory realities and Western buyer mind and expectations. That makes our ad creative, Amazon strategy, and websites convert much better.",
             bullets: [
                 "Western buyer mindset applied to ads and listings",
                 "Amazon, paid social, Shopify, and SEO execution in-house",
@@ -164,22 +164,22 @@ export const translations = {
             steps: [
                 {
                     number: "01",
-                    title: "Factory intake",
-                    description: "MOQ, capacity, certifications, and export readiness.",
+                    title: "Seller intake",
+                    description: "Campaign goals and targets",
                     icon: "/icons/1.png"
                 },
                 {
                     number: "02",
                     title: "Buyer targeting",
                     description:
-                        "Amazon PPC, paid social, SEO, and outreach to qualified buyers.",
+                        "Amazon PPC, paid social, SEO, ai website optimization and outreach",
                     icon: "/icons/2.png"
                 },
                 {
                     number: "03",
                     title: "Conversion system",
                     description:
-                        "Modern website redesign and bilingual assets that convert.",
+                        "Ultimate goal to increase sales",
                     icon: "/icons/3.png"
                 }
             ]
@@ -468,7 +468,7 @@ export const translations = {
             statsLabel: "服务卖家",
             kicker: "为制造商打造",
             title: {
-                lead: "双语多元团队，连接",
+                lead: "具有本土经验的外籍人士领导团队，连接",
                 highlightPrimary: "中国卖家",
                 middle: "与",
                 highlightSecondary: "全球市场"
@@ -525,20 +525,20 @@ export const translations = {
             steps: [
                 {
                     number: "01",
-                    title: "工厂信息梳理",
-                    description: "MOQ、产能、认证与出海准备情况。",
+                    title: "卖家入驻",
+                    description: "竞选目标和指标",
                     icon: "/icons/1.png"
                 },
                 {
                     number: "02",
                     title: "买家定位",
-                    description: "亚马逊PPC、社媒投放、SEO与精准触达。",
+                    description: "亚马逊PPC广告、付费社交媒体推广、搜索引擎优化、人工智能网站优化和外联推广",
                     icon: "/icons/2.png"
                 },
                 {
                     number: "03",
                     title: "转化体系",
-                    description: "现代化网站改版与可转化的双语素材。",
+                    description: "最终目标是增加销售额",
                     icon: "/icons/3.png"
                 }
             ]

@@ -13,14 +13,14 @@ export default function About() {
                 <div className="relative">
                     <div className="grid gap-4 md:grid-cols-2">
                         <Image
-                            src="/images/mooncake.jpg"
+                            src="/images/about/1.PNG"
                             alt={copy.about.imageAlts.strategist}
                             width={520}
                             height={520}
                             className="h-64 w-full rounded object-cover shadow"
                         />
                         <Image
-                            src="/images/chinese_businessmen.webp"
+                            src="/images/about/2.png"
                             alt={copy.about.imageAlts.meeting}
                             width={520}
                             height={520}
@@ -29,7 +29,7 @@ export default function About() {
                     </div>
                     {/* <Link href="/insights"></Link> */}
                     <Image
-                        src="/images/factory.webp"
+                        src="/images/about/3.png"
                         alt={copy.about.imageAlts.collaboration}
                         width={840}
                         height={560}
