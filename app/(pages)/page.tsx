@@ -2,7 +2,6 @@ import Hero from "../components/Hero"
 import HeroHighlights from "../components/HeroHighlights"
 import About from "../components/About"
 import Section4 from "../components/Section4"
-// import Services from "../components/Services"
 import Specialization from "../components/Specialization"
 import ReadyToTalk from "../components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
@@ -20,10 +19,9 @@ export default function Home() {
                 <Specialization />
                 <Section4 />
                 <AiSearchOptimization />
-                {/* <Services /> */}
+                <FoundedBy />
                 <HowWeHelp />
                 <ReadyToTalk />
-                <FoundedBy />
                 <Locations />
             </main>
         </div>

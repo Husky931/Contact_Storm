@@ -187,9 +187,36 @@ export const translations = {
         },
         aiSearchOptimization: {
             title: "AI Search Website Optimization",
-            subtitle:
-                "Are you keeping up with the times?",
-            text: "People are now using AI to find results"
+            subtitle: "Are you keeping up with the times? People are now using AI to find results",
+            sellerText: {
+                paragraphs: [
+                    `The digital landscape has hit a tipping point. We are no longer just in the era of "Search Engines"; we are in the era of AU Generative Search.`,
+                    {
+                        lead: "As of early 2026, ",
+                        highlight: "57%",
+                        tail: " of consumers now intentionally use AI-powered search engines (like ",
+                        highlightTail: "ChatGPT, Perplexity, and Google Gemini",
+                        end: ") to make buying decisions."
+                    },
+                    {
+                        lead: "Statistics show that AI-driven traffic is ",
+                        highlight: "23x more valuable",
+                        tail: ". The user already feels prequalified from the AI answer and has a ",
+                        highlightTail: "23x more conversation rate",
+                        end: "."
+                    },
+                    {
+                        lead: "Be smart and ",
+                        highlight: "move ahead of the curve",
+                        tail: ". We are help to help you transition and evolve with the times."
+                    }
+                ]
+            },
+            callout: {
+                lead: "Stop relying on ",
+                strike: "Alibaba",
+                tail: " for ALL your sales and DIVERSIFY your earning channels"
+            }
         },
         howWeHelp: {
             kicker: "How Can We Help Your Company",
@@ -555,7 +582,35 @@ export const translations = {
         aiSearchOptimization: {
             title: "AI 搜索网站优化",
             subtitle: "你还跟得上时代吗？人们正在用 AI 来寻找结果",
-            text: "bla bla"
+            sellerText: {
+                paragraphs: [
+                    "数字化环境已经到达转折点。我们不再只是处于“搜索引擎”时代；我们进入了 AU 生成式搜索的时代。",
+                    {
+                        lead: "截至 2026 年初，",
+                        highlight: "57%",
+                        tail: " 的消费者现在会有意识地使用 AI 搜索引擎（如 ",
+                        highlightTail: "ChatGPT、Perplexity、Google Gemini",
+                        end: "）来做购买决策。"
+                    },
+                    {
+                        lead: "数据显示，AI 驱动的流量价值高达 ",
+                        highlight: "23 倍",
+                        tail: "。用户从 AI 答案中已经被预筛选，并拥有 ",
+                        highlightTail: "23 倍更高的咨询转化率",
+                        end: "。"
+                    },
+                    {
+                        lead: "保持聪明，",
+                        highlight: "走在曲线之前",
+                        tail: "。我们帮助你顺应时代完成转型与进化。"
+                    }
+                ]
+            },
+            callout: {
+                lead: "不要只依赖 ",
+                strike: "Alibaba",
+                tail: " 获得全部销售，去多元化你的盈利渠道"
+            }
         },
         howWeHelp: {
             kicker: "我们如何帮助您的公司",

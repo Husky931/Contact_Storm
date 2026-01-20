@@ -13,12 +13,41 @@ export default function AiSearchOptimization() {
                     <h2 className="font-heading text-3xl text-primary-navy">
                         {copy.title}
                     </h2>
-                    <p className="mt-4 text-3xl font-semibold text-primary-red md:text-lg">
+                    <p className="mt-4 text-2xl font-bold text-primary-red md:text-3xl">
                         {copy.subtitle}
                     </p>
-                    <p className="mt-4 text-2xl font-semibold text-primary-red md:text-lg">
-                        {copy.text}
-                    </p>
+                    <div className="mt-6 text-center space-y-4 text-base leading-relaxed text-primary-slate md:text-lg">
+                        {copy.sellerText.paragraphs.map((paragraph, index) => {
+                            if (typeof paragraph === "string") {
+                                return <p key={index}>{paragraph}</p>
+                            }
+
+                            return (
+                                <p key={index}>
+                                    {paragraph.lead}
+                                    <strong className="font-semibold text-primary-navy">
+                                        {paragraph.highlight}
+                                    </strong>
+                                    {paragraph.tail}
+                                    {paragraph.highlightTail ? (
+                                        <strong className="font-semibold text-primary-navy">
+                                            {paragraph.highlightTail}
+                                        </strong>
+                                    ) : null}
+                                    {paragraph.end}
+                                </p>
+                            )
+                        })}
+                    </div>
+                    <div className="mt-8 text-center">
+                        <p className="text-2xl font-bold uppercase tracking-wide text-primary-navy md:text-3xl">
+                            {copy.callout.lead}
+                            <span className="text-primary-red line-through decoration-2 decoration-primary-red">
+                                {copy.callout.strike}
+                            </span>
+                            {copy.callout.tail}
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
