@@ -51,6 +51,7 @@ export const translations = {
                 "Amazon PPC & Marketplace Growth",
                 "Shopify",
                 "Leads",
+                "Website optimization for AI search engines",
                 "Paid social ads (Meta, Instagram, TikTok)",
                 "SEO for export buyers",
                 "Conversion-first website redesign"
@@ -96,7 +97,7 @@ export const translations = {
             imageAlt: "Digital strategy team reviewing product roadmap"
         },
         heroHighlights: [
-            "Amazon Ads",
+            "AI search optimization",
             "Social Ads and Growth",
             "SEO for Export",
             "Shopify",
@@ -413,6 +414,7 @@ export const translations = {
                 "亚马逊PPC与平台招商增长",
                 "Shopify",
                 "获客线索",
+                "针对 AI 搜索引擎的的网站优化",
                 "社交媒体广告（Meta/Instagram/TikTok）",
                 "外贸SEO",
                 "转化优先的网站改版"
@@ -457,7 +459,7 @@ export const translations = {
             imageAlt: "数字策略团队查看产品路线图"
         },
         heroHighlights: [
-            "亚马逊广告",
+            "AI 搜索优化",
             "社媒广告与增长",
             "外贸SEO",
             "Shopify",
