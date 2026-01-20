@@ -185,6 +185,12 @@ export const translations = {
                 }
             ]
         },
+        aiSearchOptimization: {
+            title: "AI Search Website Optimization",
+            subtitle:
+                "Are you keeping up with the times?",
+            text: "People are now using AI to find results"
+        },
         howWeHelp: {
             kicker: "How Can We Help Your Company",
             title: "Who are we and how we can help you",
@@ -192,6 +198,7 @@ export const translations = {
             services: [
                 "Amazon PPC & Marketplace Growth – Optimize listings and run ads to boost visibility",
                 "Paid Social Advertising – Meta, Instagram, TikTok campaigns for qualified leads",
+                "Website optimization for AI search engines",
                 "SEO & Organic Growth – Rank higher in Google for your target export markets",
                 "Social Media Growth – Build brand presence that Western buyers trust",
                 "Modern Website Redesign – Conversion-focused sites with bilingual support",
@@ -545,6 +552,11 @@ export const translations = {
                 }
             ]
         },
+        aiSearchOptimization: {
+            title: "AI 搜索网站优化",
+            subtitle: "你还跟得上时代吗？人们正在用 AI 来寻找结果",
+            text: "bla bla"
+        },
         howWeHelp: {
             kicker: "我们如何帮助您的公司",
             title: "我们是谁以及如何帮助您",
@@ -552,10 +564,11 @@ export const translations = {
             services: [
                 "亚马逊PPC与平台招商增长 – 优化Listing并投放广告提升可见度",
                 "社交媒体广告 – Meta、Instagram、TikTok投放获取优质线索",
+                "针对 AI 搜索引擎的的网站优化",
                 "SEO与自然增长 – 在目标出口市场的Google排名中提升",
                 "社媒增长 – 建立西方买家信任的品牌影响力",
                 "现代化网站改版 – 以转化为核心的双语网站",
-                "线索获取 – 为您的产品寻找并筛选合格买家"
+                "线索,获取 – 为您的产品寻找并筛选合格买家"
             ],
             aboutTitle: "我们是谁",
             aboutText1: "我们是一支在中国生活超过10年的外籍专业团队，专注于为中国卖家和制造商提升销量、品牌知名度和获取优质线索。",
