@@ -4,6 +4,7 @@ import "./globals.css"
 import Navbar from "./components/Navigation/Navbar"
 import Footer from "./components/Footer"
 import { LanguageProvider } from "./components/LanguageProvider"
+import GoogleAnalytics from "./components/GoogleAnalytics"
 
 const headingFont = Oswald({
     variable: "--font-heading",
@@ -27,12 +28,16 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+
+    const gaTrackingId = process.env.GOOGLE_ANALYTICS_ID as string
+
     return (
         <html lang="en">
             <body
                 className={`${headingFont.variable} ${bodyFont.variable} antialiased`}
             >
                 <LanguageProvider>
+                    <GoogleAnalytics gaTrackingId={gaTrackingId} />
                     <Navbar />
                     {children}
                     <Footer />
