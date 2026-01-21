@@ -5,6 +5,8 @@ import MarkdownContent from "@/components/MarkdownContent"
 import HowWeHelp from "@/components/HowWeHelp"
 import FloatingFixButton from "@/components/FloatingFixButton"
 import DownloadPDFButton from "@/components/DownloadPDFButton"
+import FoundedBy from "@/components/FoundedBy"
+import ReadyToTalk from "@/components/ReadyToTalk"
 
 interface PageProps {
     params: Promise<{ hash: string }>
@@ -62,8 +64,8 @@ export default async function ReportDetailPage({ params }: PageProps) {
                     {report.analyzedAt instanceof Date
                         ? report.analyzedAt.toLocaleString()
                         : new Date(
-                              report.analyzedAt as unknown as string
-                          ).toLocaleString()}
+                            report.analyzedAt as unknown as string
+                        ).toLocaleString()}
                 </p>
 
                 {report.overallScore !== null && (
@@ -83,52 +85,52 @@ export default async function ReportDetailPage({ params }: PageProps) {
                         report.lighthouseAccessibility !== null ||
                         report.lighthouseBestPractices !== null ||
                         report.lighthouseSeo !== null) && (
-                        <div className="rounded-lg border border-gray-200 p-6">
-                            <h2 className="mb-4 text-xl font-semibold">
-                                Lighthouse Scores
-                            </h2>
-                            <div className="space-y-2">
-                                {report.lighthousePerformance !== null && (
-                                    <div className="flex justify-between">
-                                        <span>Performance:</span>
-                                        <span className="font-medium">
-                                            {Math.round(
-                                                report.lighthousePerformance
-                                            )}
-                                        </span>
-                                    </div>
-                                )}
-                                {report.lighthouseAccessibility !== null && (
-                                    <div className="flex justify-between">
-                                        <span>Accessibility:</span>
-                                        <span className="font-medium">
-                                            {Math.round(
-                                                report.lighthouseAccessibility
-                                            )}
-                                        </span>
-                                    </div>
-                                )}
-                                {report.lighthouseBestPractices !== null && (
-                                    <div className="flex justify-between">
-                                        <span>Best Practices:</span>
-                                        <span className="font-medium">
-                                            {Math.round(
-                                                report.lighthouseBestPractices
-                                            )}
-                                        </span>
-                                    </div>
-                                )}
-                                {report.lighthouseSeo !== null && (
-                                    <div className="flex justify-between">
-                                        <span>SEO:</span>
-                                        <span className="font-medium">
-                                            {Math.round(report.lighthouseSeo)}
-                                        </span>
-                                    </div>
-                                )}
+                            <div className="rounded-lg border border-gray-200 p-6">
+                                <h2 className="mb-4 text-xl font-semibold">
+                                    Lighthouse Scores
+                                </h2>
+                                <div className="space-y-2">
+                                    {report.lighthousePerformance !== null && (
+                                        <div className="flex justify-between">
+                                            <span>Performance:</span>
+                                            <span className="font-medium">
+                                                {Math.round(
+                                                    report.lighthousePerformance
+                                                )}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.lighthouseAccessibility !== null && (
+                                        <div className="flex justify-between">
+                                            <span>Accessibility:</span>
+                                            <span className="font-medium">
+                                                {Math.round(
+                                                    report.lighthouseAccessibility
+                                                )}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.lighthouseBestPractices !== null && (
+                                        <div className="flex justify-between">
+                                            <span>Best Practices:</span>
+                                            <span className="font-medium">
+                                                {Math.round(
+                                                    report.lighthouseBestPractices
+                                                )}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.lighthouseSeo !== null && (
+                                        <div className="flex justify-between">
+                                            <span>SEO:</span>
+                                            <span className="font-medium">
+                                                {Math.round(report.lighthouseSeo)}
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
 
                     {/* Core Web Vitals */}
                     {(report.lcp !== null ||
@@ -136,54 +138,54 @@ export default async function ReportDetailPage({ params }: PageProps) {
                         report.inp !== null ||
                         report.fcp !== null ||
                         report.ttfb !== null) && (
-                        <div className="rounded-lg border border-gray-200 p-6">
-                            <h2 className="mb-4 text-xl font-semibold">
-                                Core Web Vitals
-                            </h2>
-                            <div className="space-y-2">
-                                {report.lcp !== null && (
-                                    <div className="flex justify-between">
-                                        <span>LCP:</span>
-                                        <span className="font-medium">
-                                            {report.lcp.toFixed(2)}s
-                                        </span>
-                                    </div>
-                                )}
-                                {report.cls !== null && (
-                                    <div className="flex justify-between">
-                                        <span>CLS:</span>
-                                        <span className="font-medium">
-                                            {report.cls.toFixed(3)}
-                                        </span>
-                                    </div>
-                                )}
-                                {report.inp !== null && (
-                                    <div className="flex justify-between">
-                                        <span>INP:</span>
-                                        <span className="font-medium">
-                                            {report.inp.toFixed(2)}ms
-                                        </span>
-                                    </div>
-                                )}
-                                {report.fcp !== null && (
-                                    <div className="flex justify-between">
-                                        <span>FCP:</span>
-                                        <span className="font-medium">
-                                            {report.fcp.toFixed(2)}s
-                                        </span>
-                                    </div>
-                                )}
-                                {report.ttfb !== null && (
-                                    <div className="flex justify-between">
-                                        <span>TTFB:</span>
-                                        <span className="font-medium">
-                                            {report.ttfb.toFixed(2)}ms
-                                        </span>
-                                    </div>
-                                )}
+                            <div className="rounded-lg border border-gray-200 p-6">
+                                <h2 className="mb-4 text-xl font-semibold">
+                                    Core Web Vitals
+                                </h2>
+                                <div className="space-y-2">
+                                    {report.lcp !== null && (
+                                        <div className="flex justify-between">
+                                            <span>LCP:</span>
+                                            <span className="font-medium">
+                                                {report.lcp.toFixed(2)}s
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.cls !== null && (
+                                        <div className="flex justify-between">
+                                            <span>CLS:</span>
+                                            <span className="font-medium">
+                                                {report.cls.toFixed(3)}
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.inp !== null && (
+                                        <div className="flex justify-between">
+                                            <span>INP:</span>
+                                            <span className="font-medium">
+                                                {report.inp.toFixed(2)}ms
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.fcp !== null && (
+                                        <div className="flex justify-between">
+                                            <span>FCP:</span>
+                                            <span className="font-medium">
+                                                {report.fcp.toFixed(2)}s
+                                            </span>
+                                        </div>
+                                    )}
+                                    {report.ttfb !== null && (
+                                        <div className="flex justify-between">
+                                            <span>TTFB:</span>
+                                            <span className="font-medium">
+                                                {report.ttfb.toFixed(2)}ms
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
 
                     {/* Technical SEO */}
                     {report.technicalSeoScore !== null && (
@@ -311,6 +313,8 @@ export default async function ReportDetailPage({ params }: PageProps) {
             </div>
             <div className="mt-12">
                 <HowWeHelp />
+                <FoundedBy />
+                <ReadyToTalk />
             </div>
             <div className="no-print">
                 <FloatingFixButton domain={report.domain} />
