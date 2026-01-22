@@ -1,5 +1,11 @@
-import { pgTable, index, uniqueIndex, foreignKey, serial, text, timestamp, unique, boolean, jsonb, real, integer } from "drizzle-orm/pg-core"
-import { sql } from "drizzle-orm"
+import { pgTable, index, uniqueIndex, foreignKey, serial, text, timestamp, unique, boolean, jsonb, real, integer, customType } from "drizzle-orm/pg-core"
+
+// Custom bytea type for PostgreSQL binary data
+const bytea = customType<{ data: Buffer }>({
+	dataType() {
+		return "bytea"
+	}
+})
 
 
 
@@ -61,8 +67,7 @@ export const contactAttempts = pgTable("contact_attempts", {
 	fieldMappingJson: jsonb("field_mapping_json"),
 	messageSubject: text("message_subject"),
 	messageBody: text("message_body"),
-	// TODO: failed to parse database type 'bytea'
-	proofScreenshot: unknown("proof_screenshot"),
+	proofScreenshot: bytea("proof_screenshot"),
 	errorMessage: text("error_message"),
 	seoReportUrlHash: text("seo_report_url_hash"),
 }, (table) => [
