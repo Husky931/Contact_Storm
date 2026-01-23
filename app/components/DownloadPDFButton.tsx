@@ -1,7 +1,27 @@
 "use client"
 
-export default function DownloadPDFButton() {
-    const handlePrint = () => {
+interface DownloadPDFButtonProps {
+    urlHash: string
+}
+
+export default function DownloadPDFButton({ urlHash }: DownloadPDFButtonProps) {
+    const handlePrint = async () => {
+        // Track download before printing
+        if (urlHash) {
+            try {
+                await fetch(`/api/reports/${urlHash}/track-download`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                })
+            } catch (error) {
+                // Silently fail - we don't want to interrupt the user experience
+                console.error("Failed to track report download:", error)
+            }
+        }
+
+        // Trigger print dialog
         window.print()
     }
 

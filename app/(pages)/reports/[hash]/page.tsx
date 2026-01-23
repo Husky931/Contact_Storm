@@ -7,6 +7,7 @@ import FloatingFixButton from "@/components/FloatingFixButton"
 import DownloadPDFButton from "@/components/DownloadPDFButton"
 import FoundedBy from "@/components/FoundedBy"
 import ReadyToTalk from "@/components/ReadyToTalk"
+import ReportViewTracker from "@/components/ReportViewTracker"
 
 interface PageProps {
     params: Promise<{ hash: string }>
@@ -43,6 +44,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
 
     return (
         <div className="bg-background text-text min-h-screen">
+            <ReportViewTracker urlHash={urlHash} />
             <div className="mx-auto max-w-7xl p-8">
                 <div className="mb-4">
                     <Link
@@ -458,7 +460,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
             </div>
             <div className="no-print">
                 <FloatingFixButton domain={report.domain} />
-                <DownloadPDFButton />
+                <DownloadPDFButton urlHash={urlHash} />
             </div>
         </div>
     )

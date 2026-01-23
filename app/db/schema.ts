@@ -179,6 +179,14 @@ export const seoReports = pgTable("seo_reports", {
     hasFaqSection: boolean("has_faq_section"),
     hasTableOfContents: boolean("has_table_of_contents"),
     analyzerErrors: jsonb("analyzer_errors"),
+    seoReportOpened: boolean("seo_report_opened").default(false).notNull(),
+    seoReportLastOpened: timestamp("seo_report_last_opened", {
+        withTimezone: false
+    }),
+    seoReportTimesOpened: integer("seo_report_times_opened")
+        .default(0)
+        .notNull(),
+    reportDownloaded: boolean("report_downloaded").default(false).notNull(),
     urlHash: text("url_hash").notNull()
 })
 
