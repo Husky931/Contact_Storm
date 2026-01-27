@@ -1,4 +1,4 @@
-import { getSeoReportById, getSeoReportByUrlHash } from "@/db/queries"
+import { getSeoReport } from "@/lib/api"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import MarkdownContent from "@/components/MarkdownContent"
@@ -7,44 +7,40 @@ import FloatingFixButton from "@/components/FloatingFixButton"
 import DownloadPDFButton from "@/components/DownloadPDFButton"
 import FoundedBy from "@/components/FoundedBy"
 import ReadyToTalk from "@/components/ReadyToTalk"
-import ReportViewTracker from "@/components/ReportViewTracker"
 
 interface PageProps {
     params: Promise<{ hash: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
 
-export default async function ReportDetailPage({ params }: PageProps) {
+export default async function ReportDetailPage({ params, searchParams }: PageProps) {
     const { hash } = await params
+    const search = await searchParams
 
     // Use the hash directly from the URL
     // Example: "mxkDJoBs78Q8"
     const urlHash = hash
 
     if (!urlHash) {
-        console.error("❌ Hash is missing from URL:", hash)
+        console.error("Hash is missing from URL:", hash)
         notFound()
     }
 
-    // Step 1: Find the report by url_hash to get its ID
-    const reportByHash = await getSeoReportByUrlHash(urlHash)
+    // Check if this is an admin preview (don't count view)
+    const isAdmin = search.admin !== undefined
 
-    if (!reportByHash || !reportByHash.id) {
-        console.error("❌ Report not found for hash:", urlHash)
-        console.error("   Searched in database for url_hash =", urlHash)
-        notFound()
-    }
-
-    // Step 2: Get the full report by ID (like we did before)
-    const report = await getSeoReportById(reportByHash.id)
+    // Fetch report from API - view is counted automatically if not admin
+    // The API's ?countView parameter is opt-in, so we pass it for real visits
+    const report = await getSeoReport(urlHash, { countView: !isAdmin })
 
     if (!report) {
-        console.error("❌ Report not found for ID:", reportByHash.id)
+        console.error("Report not found for hash:", urlHash)
         notFound()
     }
 
     return (
         <div className="bg-background text-text min-h-screen">
-            <ReportViewTracker urlHash={urlHash} />
+            {/* View tracking is now handled by the API via ?countView parameter */}
             <div className="mx-auto max-w-7xl p-8">
                 <div className="mb-4">
                     <Link

@@ -1,5 +1,20 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment Setup
+
+Copy `.env.example` to `.env.local` and configure:
+
+```bash
+cp .env.example .env.local
+```
+
+Required environment variables:
+
+| Variable | Description |
+|----------|-------------|
+| `CONTACTSTORM_API_URL` | ContactStorm API URL (e.g., `https://api.contactstorm.com`) |
+| `CONTACTSTORM_API_KEY` | API key with `seo:read` permission |
+
 ## Getting Started
 
 First, run the development server:

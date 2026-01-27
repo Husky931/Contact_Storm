@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
-import { db, seoReports } from "@/db"
-import { eq } from "drizzle-orm"
+import { trackReportDownload } from "@/lib/api"
 
 export async function POST(
     request: NextRequest,
@@ -16,13 +15,8 @@ export async function POST(
             )
         }
 
-        // Update the report download field
-        await db
-            .update(seoReports)
-            .set({
-                reportDownloaded: true
-            })
-            .where(eq(seoReports.urlHash, hash))
+        // Track download via ContactStorm API
+        await trackReportDownload(hash)
 
         return NextResponse.json({ success: true })
     } catch (error) {
