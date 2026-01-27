@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo, useCallback } from "react"
 import Image from "next/image"
 import WeChatQRBox from "./WeChatQRBox"
 import { useLanguage } from "@/components/LanguageProvider"
@@ -12,8 +12,7 @@ interface ContactPopupProps {
 export default function ContactPopup({
     phoneNumber = "+8613162908096"
 }: ContactPopupProps) {
-    const { language, translations } = useLanguage()
-    const copy = translations[language]
+    const { language } = useLanguage()
     const [mounted, setMounted] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
     const [showWeChatPopup, setShowWeChatPopup] = useState(false)
@@ -49,19 +48,24 @@ export default function ContactPopup({
         }
     }, [isOpen])
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
-        if (submitStatus.type) {
-            setSubmitStatus({ type: null, message: "" })
-        }
-    }
+    const handleChange = useCallback(
+        (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+            const { name, value } = e.target
+            setFormData((prev) => ({
+                ...prev,
+                [name]: value
+            }))
+            setSubmitStatus((prev) => {
+                if (prev.type) {
+                    return { type: null, message: "" }
+                }
+                return prev
+            })
+        },
+        []
+    )
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = useCallback(async (e: React.FormEvent) => {
         e.preventDefault()
         setIsSubmitting(true)
         setSubmitStatus({ type: null, message: "" })
@@ -108,18 +112,20 @@ export default function ContactPopup({
         } finally {
             setIsSubmitting(false)
         }
-    }
+    }, [formData, language])
 
-    const handlePhoneClick = () => {
+    const handlePhoneClick = useCallback(() => {
         window.location.href = `tel:${phoneNumber}`
-    }
+    }, [phoneNumber])
 
-    const handleWeChatClick = () => {
+    const handleWeChatClick = useCallback(() => {
         setShowWeChatPopup(true)
-    }
+    }, [])
 
-    // Mobile drawer view
-    const MobileDrawer = () => (
+    // Mobile drawer view - memoized to prevent recreation on each render
+    const mobileDrawer = useMemo(
+        () =>
+            !mounted ? null : (
         <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
             <div className="flex items-center justify-around border-t border-gray-200 bg-white px-4 py-3 shadow-lg">
                 {/* Message Icon */}
@@ -189,10 +195,13 @@ export default function ContactPopup({
                 </button>
             </div>
         </div>
+        ),
+        [mounted, language, handlePhoneClick, handleWeChatClick, setIsOpen]
     )
 
-    // Desktop chatbot popup view
-    const DesktopChatbot = () => {
+    // Desktop chatbot popup view - memoized to prevent recreation on each render
+    const desktopChatbot = useMemo(() => {
+        if (!mounted) return null
         if (!isOpen) {
             return (
                 <button
@@ -216,7 +225,6 @@ export default function ContactPopup({
                 </button>
             )
         }
-
         return (
             <div className="fixed bottom-6 right-6 z-50 hidden w-96 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-2xl md:block">
                 {/* Header */}
@@ -373,14 +381,25 @@ export default function ContactPopup({
                 </div>
             </div>
         )
-    }
+    }, [
+        mounted,
+        isOpen,
+        language,
+        formData,
+        submitStatus,
+        isSubmitting,
+        handleChange,
+        handleSubmit,
+        handlePhoneClick,
+        handleWeChatClick,
+        setIsOpen
+    ])
 
-    // Mobile full-screen chatbot view
-    const MobileChatbot = () => {
-        if (!isOpen) return null
-
-        return (
-            <div className="fixed inset-0 z-50 bg-black/50 md:hidden">
+    // Mobile full-screen chatbot view - memoized to prevent recreation on each render
+    const mobileChatbot = useMemo(
+        () =>
+            !mounted || !isOpen ? null : (
+        <div className="fixed inset-0 z-50 bg-black/50 md:hidden">
                 <div className="flex h-full flex-col bg-white">
                     {/* Header */}
                     <div className="flex items-center justify-between border-b border-gray-200 bg-primary-navy px-4 py-3">
@@ -438,7 +457,7 @@ export default function ContactPopup({
                                     placeholder={
                                         language === "zh" ? "请填写" : "Please fill in"
                                     }
-                                    className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
+                                    className="w-full rounded border border-gray-300 px-3 py-2 text-base focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 />
                             </div>
 
@@ -460,7 +479,7 @@ export default function ContactPopup({
                                     placeholder={
                                         language === "zh" ? "请填写" : "Please fill in"
                                     }
-                                    className="w-full resize-y rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
+                                    className="w-full resize-y rounded border border-gray-300 px-3 py-2 text-base focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 />
                             </div>
 
@@ -499,27 +518,38 @@ export default function ContactPopup({
                     </div>
                 </div>
             </div>
-        )
-    }
+            ),
+        [
+            mounted,
+            isOpen,
+            language,
+            formData,
+            submitStatus,
+            isSubmitting,
+            handleChange,
+            handleSubmit,
+            setIsOpen
+        ]
+    )
 
-    // Prevent hydration mismatch by not rendering until mounted
+    // Don't render anything until mounted to prevent hydration mismatch
     if (!mounted) {
         return null
     }
 
     return (
         <>
-            {/* Desktop Chatbot - only render after mount to prevent hydration issues */}
-            {mounted && <DesktopChatbot />}
+            {/* Desktop Chatbot */}
+            {desktopChatbot}
 
             {/* Mobile Drawer */}
-            {mounted && <MobileDrawer />}
+            {mobileDrawer}
 
             {/* Mobile Full-screen Chatbot */}
-            {mounted && <MobileChatbot />}
+            {mobileChatbot}
 
             {/* WeChat Popup */}
-            {mounted && showWeChatPopup && (
+            {showWeChatPopup && (
                 <div
                     className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
                     onClick={() => setShowWeChatPopup(false)}
