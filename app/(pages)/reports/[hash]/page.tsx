@@ -112,7 +112,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
                                                     report.lighthousePerformance >= 50 ? 'bg-yellow-500' :
                                                         'bg-red-500'
                                                     }`} style={{ width: `${report.lighthousePerformance}px` }}></div>
-                                                <span className="font-semibold text-gray-900 min-w-[3rem] text-right">
+                                                <span className="font-semibold text-gray-900 min-w-12 text-right">
                                                     {Math.round(report.lighthousePerformance)}/100
                                                 </span>
                                             </div>
@@ -126,7 +126,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
                                                     report.lighthouseAccessibility >= 50 ? 'bg-yellow-500' :
                                                         'bg-red-500'
                                                     }`} style={{ width: `${report.lighthouseAccessibility}px` }}></div>
-                                                <span className="font-semibold text-gray-900 min-w-[3rem] text-right">
+                                                <span className="font-semibold text-gray-900 min-w-12 text-right">
                                                     {Math.round(report.lighthouseAccessibility)}/100
                                                 </span>
                                             </div>
@@ -140,7 +140,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
                                                     report.lighthouseBestPractices >= 50 ? 'bg-yellow-500' :
                                                         'bg-red-500'
                                                     }`} style={{ width: `${report.lighthouseBestPractices}px` }}></div>
-                                                <span className="font-semibold text-gray-900 min-w-[3rem] text-right">
+                                                <span className="font-semibold text-gray-900 min-w-12 text-right">
                                                     {Math.round(report.lighthouseBestPractices)}/100
                                                 </span>
                                             </div>
@@ -154,7 +154,7 @@ export default async function ReportDetailPage({ params }: PageProps) {
                                                     report.lighthouseSeo >= 50 ? 'bg-yellow-500' :
                                                         'bg-red-500'
                                                     }`} style={{ width: `${report.lighthouseSeo}px` }}></div>
-                                                <span className="font-semibold text-gray-900 min-w-[3rem] text-right">
+                                                <span className="font-semibold text-gray-900 min-w-12 text-right">
                                                     {Math.round(report.lighthouseSeo)}/100
                                                 </span>
                                             </div>
