@@ -266,14 +266,14 @@ export default function Hero() {
                                 required
                                 value={formData.name}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2"
+                                className="w-full rounded border border-gray-300 px-4 py-2 focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 placeholder={copy.hero.form.placeholders.name}
                             />
                             <select
                                 name="serviceNeeded"
                                 value={formData.serviceNeeded}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2 text-primary-slate"
+                                className="w-full rounded border border-gray-300 px-4 py-2 text-primary-slate focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                             >
                                 <option value="">
                                     {copy.hero.form.placeholders.service}
@@ -287,7 +287,7 @@ export default function Hero() {
                                 name="productCategory"
                                 value={formData.productCategory}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2"
+                                className="w-full rounded border border-gray-300 px-4 py-2 focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 placeholder={
                                     copy.hero.form.placeholders.product
                                 }
@@ -296,7 +296,7 @@ export default function Hero() {
                                 name="targetMarket"
                                 value={formData.targetMarket}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2 text-primary-slate"
+                                className="w-full rounded border border-gray-300 px-4 py-2 text-primary-slate focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                             >
                                 <option value="">
                                     {copy.hero.form.placeholders.targetMarket}
@@ -310,7 +310,7 @@ export default function Hero() {
                                 name="salesChannels"
                                 value={formData.salesChannels}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2"
+                                className="w-full rounded border border-gray-300 px-4 py-2 focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 placeholder={
                                     copy.hero.form.placeholders.salesChannels
                                 }
@@ -320,7 +320,7 @@ export default function Hero() {
                                 name="challenge"
                                 value={formData.challenge}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2"
+                                className="w-full rounded border border-gray-300 px-4 py-2 focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 placeholder={
                                     copy.hero.form.placeholders.challenge
                                 }
@@ -331,7 +331,7 @@ export default function Hero() {
                                 required
                                 value={formData.contact}
                                 onChange={handleChange}
-                                className="w-full rounded border border-background-grey2 px-4 py-2"
+                                className="w-full rounded border border-gray-300 px-4 py-2 focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                                 placeholder={
                                     copy.hero.form.placeholders.contact
                                 }
