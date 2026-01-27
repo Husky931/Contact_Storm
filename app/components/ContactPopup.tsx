@@ -23,7 +23,10 @@ export default function ContactPopup({
         message: ""
     })
     const [freeReportData, setFreeReportData] = useState({
-        website: ""
+        website: "",
+        phone: "",
+        email: "",
+        wechat: ""
     })
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<{
@@ -137,7 +140,17 @@ export default function ContactPopup({
 
     const handleFreeReportChange = useCallback(
         (e: React.ChangeEvent<HTMLInputElement>) => {
-            setFreeReportData({ website: e.target.value })
+            const { name, value } = e.target
+            setFreeReportData((prev) => ({
+                ...prev,
+                [name]: value
+            }))
+            setSubmitStatus((prev) => {
+                if (prev.type) {
+                    return { type: null, message: "" }
+                }
+                return prev
+            })
         },
         []
     )
@@ -149,9 +162,54 @@ export default function ContactPopup({
             setSubmitStatus({ type: null, message: "" })
 
             try {
+                // Validate that at least one contact method is provided
+                const hasContactInfo =
+                    freeReportData.phone.trim() ||
+                    freeReportData.email.trim() ||
+                    freeReportData.wechat.trim()
+
+                if (!hasContactInfo) {
+                    setSubmitStatus({
+                        type: "error",
+                        message:
+                            language === "zh"
+                                ? "请至少提供一种联系方式（电话、邮箱或微信）。"
+                                : "Please provide at least one contact method (phone, email, or WeChat)."
+                    })
+                    setIsSubmitting(false)
+                    return
+                }
+
                 const normalizedWebsite = freeReportData.website.trim().startsWith("http")
                     ? freeReportData.website.trim()
                     : `https://${freeReportData.website.trim()}`
+
+                // Use email if provided, otherwise use phone or wechat
+                const contactEmail =
+                    freeReportData.email.trim() ||
+                    freeReportData.phone.trim() ||
+                    freeReportData.wechat.trim() ||
+                    "not provided"
+
+                // Build contact info message
+                const contactInfo = []
+                if (freeReportData.phone.trim()) {
+                    contactInfo.push(
+                        language === "zh" ? `电话: ${freeReportData.phone.trim()}` : `Phone: ${freeReportData.phone.trim()}`
+                    )
+                }
+                if (freeReportData.email.trim()) {
+                    contactInfo.push(
+                        language === "zh" ? `邮箱: ${freeReportData.email.trim()}` : `Email: ${freeReportData.email.trim()}`
+                    )
+                }
+                if (freeReportData.wechat.trim()) {
+                    contactInfo.push(
+                        language === "zh" ? `微信: ${freeReportData.wechat.trim()}` : `WeChat: ${freeReportData.wechat.trim()}`
+                    )
+                }
+
+                const message = `Free Report Request\nWebsite: ${normalizedWebsite}\n\nContact Information:\n${contactInfo.join("\n")}`
 
                 const response = await fetch("/api/send-email", {
                     method: "POST",
@@ -160,8 +218,9 @@ export default function ContactPopup({
                     },
                     body: JSON.stringify({
                         name: "Free Report Request",
-                        email: "not provided",
-                        message: `Free Report Request\nWebsite: ${normalizedWebsite}`,
+                        email: contactEmail,
+                        wechatId: freeReportData.wechat.trim() || undefined,
+                        message: message,
                         validateEmail: false
                     })
                 })
@@ -180,7 +239,7 @@ export default function ContactPopup({
                             : "Request submitted! We'll contact you soon."
                 })
 
-                setFreeReportData({ website: "" })
+                setFreeReportData({ website: "", phone: "", email: "", wechat: "" })
                 setShowFreeReportForm(false)
             } catch (error) {
                 setSubmitStatus({
@@ -554,8 +613,8 @@ export default function ContactPopup({
                     </h3>
                     <p className="mb-4 text-sm text-gray-600">
                         {language === "zh"
-                            ? "请提交您的网站，我们将为您生成免费的SEO报告。"
-                            : "Submit your website and we'll generate a free SEO report for you."}
+                            ? "请提交您的网站和联系方式，我们将为您生成免费的SEO报告。"
+                            : "Submit your website and contact information, and we'll generate a free SEO report for you."}
                     </p>
                     <form onSubmit={handleFreeReportSubmit} className="space-y-4">
                         <div>
@@ -580,6 +639,81 @@ export default function ContactPopup({
                                 }
                                 className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
                             />
+                        </div>
+
+                        <div className="space-y-3">
+                            <p className="text-sm font-medium text-gray-700">
+                                {language === "zh"
+                                    ? "联系方式（至少填写一项）"
+                                    : "Contact Information (at least one required)"}{" "}
+                                <span className="text-red-500">*</span>
+                            </p>
+
+                            <div>
+                                <label
+                                    htmlFor="free-report-phone"
+                                    className="mb-1 block text-sm font-medium text-gray-700"
+                                >
+                                    {language === "zh" ? "电话" : "Phone"}
+                                </label>
+                                <input
+                                    type="text"
+                                    id="free-report-phone"
+                                    name="phone"
+                                    value={freeReportData.phone}
+                                    onChange={handleFreeReportChange}
+                                    placeholder={
+                                        language === "zh"
+                                            ? "例如: +86 131 6290 8096"
+                                            : "e.g., +86 131 6290 8096"
+                                    }
+                                    className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="free-report-email"
+                                    className="mb-1 block text-sm font-medium text-gray-700"
+                                >
+                                    {language === "zh" ? "邮箱" : "Email"}
+                                </label>
+                                <input
+                                    type="email"
+                                    id="free-report-email"
+                                    name="email"
+                                    value={freeReportData.email}
+                                    onChange={handleFreeReportChange}
+                                    placeholder={
+                                        language === "zh"
+                                            ? "例如: example@email.com"
+                                            : "e.g., example@email.com"
+                                    }
+                                    className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
+                                />
+                            </div>
+
+                            <div>
+                                <label
+                                    htmlFor="free-report-wechat"
+                                    className="mb-1 block text-sm font-medium text-gray-700"
+                                >
+                                    {language === "zh" ? "微信" : "WeChat"}
+                                </label>
+                                <input
+                                    type="text"
+                                    id="free-report-wechat"
+                                    name="wechat"
+                                    value={freeReportData.wechat}
+                                    onChange={handleFreeReportChange}
+                                    placeholder={
+                                        language === "zh"
+                                            ? "例如: your_wechat_id"
+                                            : "e.g., your_wechat_id"
+                                    }
+                                    className="w-full rounded border border-gray-300 px-3 py-2 text-sm focus:border-primary-red focus:outline-none focus:ring-1 focus:ring-primary-red"
+                                />
+                            </div>
                         </div>
 
                         {submitStatus.type && (
