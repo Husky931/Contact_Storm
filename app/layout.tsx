@@ -5,6 +5,7 @@ import Navbar from "./components/Navigation/Navbar"
 import Footer from "./components/Footer"
 import { LanguageProvider } from "./components/LanguageProvider"
 import GoogleAnalytics from "./components/GoogleAnalytics"
+import ContactPopup from "./components/ContactPopup"
 
 const headingFont = Oswald({
     variable: "--font-heading",
@@ -41,6 +42,7 @@ export default function RootLayout({
                     <Navbar />
                     {children}
                     <Footer />
+                    <ContactPopup />
                 </LanguageProvider>
             </body>
         </html>
