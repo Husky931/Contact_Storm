@@ -59,11 +59,7 @@ export default async function ReportDetailPage({ params, searchParams }: PagePro
                 <h1 className="mb-2 text-4xl font-bold text-gray-900">{report.domain}</h1>
                 <p className="mb-8 text-gray-600 text-lg">
                     Analyzed:{" "}
-                    {report.analyzedAt instanceof Date
-                        ? report.analyzedAt.toLocaleString()
-                        : new Date(
-                            report.analyzedAt as unknown as string
-                        ).toLocaleString()}
+                    {new Date(report.analyzedAt).toLocaleString()}
                 </p>
 
                 {report.overallScore !== null && (
