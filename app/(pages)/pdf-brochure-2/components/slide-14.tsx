@@ -37,23 +37,23 @@ export default function Slide14() {
                         Our Leads Generation platform is designed to scan thousdands of businesses daily and extract decision-maker contacts.
                     </p>
                     <ul className="text-base text-white/90 max-w-sm mt-10 [&>li]:list-item">
-                        <li className="mb-4 italic">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>
-                        <li className="mb-4 italic">- Analyses their digital footprints (paid ads, social media channels)</li>
-                        <li className="mb-4 italic">- Direct automated outreach via website or email</li>
-                        <li className="mb-4 italic">- Real-time tracking of response rate, interaction and success rate on our dashboard</li>
-                        <li className="mb-4 italic">- Options for toggling between customized outreach messages,  conversation logging</li>
+                        <li className="mb-4 font-semibold">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>
+                        <li className="mb-4 font-semibold">- Analyses their digital footprints (paid ads, social media channels)</li>
+                        <li className="mb-4 font-semibold">- Direct automated outreach via website or email</li>
+                        <li className="mb-4 font-semibold">- Real-time tracking of response rate, interaction and success rate on our dashboard</li>
+                        <li className="mb-4 font-semibold">- Options for toggling between customized outreach messages,  conversation logging</li>
                     </ul>
                 </div>
 
                 {/* Software image coming from right */}
                 <div className="absolute right-0 top-0 bottom-0 w-3/5 z-10">
-                    <div className="relative h-full w-full">
+                    <div className="relative h-full w-full overflow-hidden rounded-l-2xl">
                         <Image
-                            src="/brochure/lead_software/1.png"
+                            src="/brochure/lead_software/pixa_lead.png"
                             alt="Lead Generation Software Dashboard"
                             fill
-                            className="object-contain object-right"
-                            style={{ objectPosition: "right center" }}
+                            className="object-cover"
+                            style={{ objectPosition: "left center" }}
                         />
                     </div>
                 </div>
@@ -62,7 +62,7 @@ export default function Slide14() {
 
                 {/* Total Orders Card */}
                 <div className="absolute left-[45%] top-[15%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[-2deg]">
-                    <h3 className="text-sm font-semibold text-gray-700 mb-2">Total Orders</h3>
+                    <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
                     <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
                     <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
                     <div className="flex gap-1 h-12 items-end">
@@ -74,7 +74,7 @@ export default function Slide14() {
                 </div>
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[33%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
+                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
