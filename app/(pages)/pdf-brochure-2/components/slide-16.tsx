@@ -25,15 +25,32 @@ export default function Slide16() {
                     <div className="mt-8 space-y-6 text-xl">
                         <div>
                             <p className="font-semibold text-white">Visit</p>
-                            <p className="mt-1 text-white italic">www.pixaventures.com</p>
+                            <a
+                                href="https://www.pixaventures.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-1 block text-white italic underline decoration-white/60 hover:decoration-white"
+                            >
+                                www.pixaventures.com
+                            </a>
                         </div>
                         <div>
                             <p className="font-semibold text-white">Write</p>
-                            <p className="mt-1 text-white italic">hello@pixaventures.com</p>
+                            <a
+                                href="mailto:hello@pixaventures.com"
+                                className="mt-1 block text-white italic underline decoration-white/60 hover:decoration-white"
+                            >
+                                hello@pixaventures.com
+                            </a>
                         </div>
                         <div>
                             <p className="font-semibold text-white">Call</p>
-                            <p className="mt-1 text-white italic">+86 (131) 6290 8096</p>
+                            <a
+                                href="tel:+8613162908096"
+                                className="mt-1 block text-white italic underline decoration-white/60 hover:decoration-white"
+                            >
+                                +86 (131) 6290 8096
+                            </a>
                         </div>
 
                     </div>
