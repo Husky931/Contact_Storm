@@ -28,17 +28,23 @@ export default function Slide2() {
                         overseas across Europe, North America, the Middle East, and beyond.
                     </p>
                     <p className="text-text-dark/80">
-                        Our global team (Chinese, European, American) bridges factory
-                        realities with Western buyer expectations so ads, Amazon listings, and
-                        websites convert.
+                        We build and maintain in-house software to automate lead discovery, outreach, and
+                        reporting, giving you a steep competative edge over your competitors.
                     </p>
                     <p className="text-text-dark/80">
-                        We build in-house software to automate lead discovery, outreach, and
-                        reporting, giving you a technical edge competitors cannot buy.
+                        Our global team bridges sellers
+                        realities with Western buyer expectations so paid ads, Amazon listings, and
+                        websites have the highest chance of conversion.
                     </p>
+
                     <p className="text-text-dark/90">
-                        <strong className="text-primary-red">Free Export Readiness Audit</strong>{" "}
-                        to identify your fastest path to qualified overseas buyers.
+                        <a
+                            href="https://www.pixaventures.com/reports"
+                            className="text-primary-red font-semibold hover:underline"
+                        >
+                            Free SEO Report Audit
+                        </a>{" "}
+                        to identify your fastest path to getting organic traffic.
                     </p>
                 </div>
             </div>

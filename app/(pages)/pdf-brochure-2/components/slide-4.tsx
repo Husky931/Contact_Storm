@@ -33,10 +33,10 @@ export default function Slide4() {
                         </h1>
                     </div>
                 </div>
-                <div className="flex min-h-0 items-center border-l border-text-dark/30 pl-12">
-                    <p className="max-w-sm text-lg leading-relaxed text-text-dark/90">
-                        Factory-first, buyer-centric strategy aligned to your MOQ, certifications,
-                        sales cycle, and target export markets.
+                <div className="flex min-h-0 items-center border-l border-text-dark/30 pl-12 ">
+                    <p className="max-w-sm text-3xl leading-relaxed text-text-dark/90 px-8">
+                        Sellers-first, buyer-centric strategy aligned to your ideal target customer,
+                        sales cycle, budget and target export markets.
                     </p>
                 </div>
             </div>

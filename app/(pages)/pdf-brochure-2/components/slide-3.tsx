@@ -13,8 +13,8 @@ export default function Slide3() {
             <div className="mt-0 flex flex-1 items-center justify-center gap-24 py-8">
                 <div className="space-y-4 text-base text-gray-300">
                     <div className="flex justify-between gap-8">
-                        <span className="font-semibold">Strategy & Growth System</span>
-                        <span>4</span>
+                        <span className="font-semibold">Who are We</span>
+                        <span>2</span>
                     </div>
                     <div className="flex justify-between gap-8">
                         <span className="font-semibold">Execution Services</span>
@@ -56,7 +56,7 @@ export default function Slide3() {
                     </div>
                 </div>
                 <div className="brochure-serif text-right text-7xl font-normal leading-tight">
-                    <span className="text-white">export-first</span>
+                    <span className="text-white">Export-first</span>
                     <br />
                     <span style={{ color: BRAND_RED }}>growth for</span>
                     <br />

@@ -34,9 +34,9 @@ export default function Slide6() {
                     </div>
                 </div>
                 <div className="flex min-h-0 items-center border-l border-white/30 pl-12">
-                    <p className="max-w-sm text-lg leading-relaxed text-white/90">
-                        Once the strategy is defined, we execute across Amazon, paid social, SEO,
-                        websites, and lead generation to deliver measurable export growth.
+                    <p className="max-w-sm text-3xl leading-relaxed text-white/90 px-8">
+                        Once the strategy is defined, we execute across Amazon, paid social, SEO
+                        and our lead generation platform to deliver measurable export growth.
                     </p>
                 </div>
             </div>

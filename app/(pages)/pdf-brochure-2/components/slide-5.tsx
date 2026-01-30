@@ -54,7 +54,7 @@ export default function Slide5() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        We are a Strategy-led Agency
+                        We are a <span className="text-primary-red">Strategy-led</span> Agency
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
                         We advise on all aspects of your sales and recruitment funnels
