@@ -49,7 +49,7 @@ export default function Slide14() {
                 <div className="absolute right-0 top-0 bottom-0 w-3/5 z-10">
                     <div className="relative h-full w-full overflow-hidden rounded-l-2xl">
                         <Image
-                            src="/brochure/lead_software/pixa_lead.png"
+                            src="/brochure/lead_software/pixa.png"
                             alt="Lead Generation Software Dashboard"
                             fill
                             className="object-cover"
@@ -61,7 +61,7 @@ export default function Slide14() {
                 {/* Floating popup cards */}
 
                 {/* Total Orders Card */}
-                <div className="absolute left-[45%] top-[15%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[-2deg]">
+                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[-2deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
                     <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
                     <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
@@ -73,8 +73,10 @@ export default function Slide14() {
                     </div>
                 </div>
 
+                {/* <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]"> */}
+
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
+                <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
@@ -87,7 +89,7 @@ export default function Slide14() {
                 </div>
 
                 {/* Invoice Report Card */}
-                <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-72 transform rotate-[2deg]">
+                {/* <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-72 transform rotate-[2deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-1">Invoice Report</h3>
                     <div className="text-xs text-gray-500 mb-2">Aug 2023</div>
                     <div className="text-2xl font-bold text-[#1b2737] mb-1">$133,568.60</div>
@@ -102,7 +104,7 @@ export default function Slide14() {
                             />
                         </svg>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Contract Management Popup */}
                 <div className="absolute right-[47%] top-[75%] z-30 bg-white rounded-lg shadow-xl p-4 w-56 border border-gray-200">
