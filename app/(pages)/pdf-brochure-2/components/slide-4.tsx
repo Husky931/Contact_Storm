@@ -16,15 +16,15 @@ export default function Slide4() {
             <div className="mt-2 h-px w-full bg-text-dark/30" aria-hidden />
             <div className="mt-0 grid flex-1 grid-cols-[75%_1fr] gap-0 py-8">
                 <div className="relative flex min-h-0 items-center justify-center pr-4">
-                    <span
-                        className="brochure-outline-num block text-[40rem] leading-none"
-                        style={{ WebkitTextStroke: "1px rgba(255,255,255,0.35)" }}
-                        aria-hidden
-                    >
-                        01
-                    </span>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <h1 className="brochure-serif text-center text-7xl font-semibold leading-tight text-text-dark">
+                    <div className="relative flex items-center justify-center">
+                        <span
+                            className="brochure-outline-num block -translate-y-8 text-[40rem] leading-none"
+                            style={{ WebkitTextStroke: "1px rgba(255,255,255,0.35)" }}
+                            aria-hidden
+                        >
+                            01
+                        </span>
+                        <h1 className="absolute inset-0 flex items-center justify-center brochure-serif text-center text-7xl font-semibold leading-tight text-text-dark">
                             Export Growth
                             <br />
                             Strategy
