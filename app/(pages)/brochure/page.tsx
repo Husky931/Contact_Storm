@@ -1,20 +1,78 @@
-import { getMarkdownContent } from "@/lib/content"
-import MarkdownContent from "@/components/MarkdownContent"
 import type { Metadata } from "next"
+import "./brochure-2.css"
+import PageBreak from "./components/PageBreak"
+import Slide1 from "./components/slide-1"
+import Slide2 from "./components/slide-2"
+import Slide3 from "./components/slide-3"
+import Slide4 from "./components/slide-4"
+import Slide5 from "./components/slide-5"
+import Slide6 from "./components/slide-6"
+import Slide7 from "./components/slide-7"
+import Slide8 from "./components/slide-8"
+import Slide9 from "./components/slide-9"
+import Slide10 from "./components/slide-10"
+import Slide11 from "./components/slide-11"
+import Slide12 from "./components/slide-12"
+import Slide13 from "./components/slide-13"
+import Slide14 from "./components/slide-14"
+import Slide15 from "./components/slide-15"
+import Slide16 from "./components/slide-16"
 
 export const metadata: Metadata = {
     title: "Brochure | Pixaventures",
-    description: "PIXAVENTURES | B2B DIGITAL GROWTH FOR EXPORT MANUFACTURERS"
+    description:
+        "Pixaventures — Foreign-led export growth agency for Chinese manufacturers."
 }
 
-export default function BrochurePage() {
-    const content = getMarkdownContent("brochure")
-
+export default function PdfBrochure2Page() {
     return (
-        <div className="bg-background text-text min-h-screen">
-            <div className="mx-auto max-w-5xl px-6 py-12">
-                <MarkdownContent content={content} />
-            </div>
+        <div className="brochure-print min-h-screen bg-[#1b2737]">
+            <Slide1 />
+            <PageBreak />
+
+            <Slide2 />
+            <PageBreak />
+
+            <Slide3 />
+            <PageBreak />
+
+            <Slide4 />
+            <PageBreak />
+
+            <Slide5 />
+            <PageBreak />
+
+            <Slide6 />
+            <PageBreak />
+
+            <Slide7 />
+            <PageBreak />
+
+            <Slide8 />
+            <PageBreak />
+
+            <Slide9 />
+            <PageBreak />
+
+            <Slide10 />
+            <PageBreak />
+
+            <Slide11 />
+            <PageBreak />
+
+            <Slide12 />
+            <PageBreak />
+
+            <Slide13 />
+            <PageBreak />
+
+            <Slide14 />
+            <PageBreak />
+
+            <Slide15 />
+            <PageBreak />
+
+            <Slide16 />
         </div>
     )
 }
