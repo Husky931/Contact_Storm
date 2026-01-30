@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
+import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
 const STRATEGY_SERVICES = [
     {

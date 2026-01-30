@@ -1,4 +1,4 @@
-import { BRAND_NAVY, NAV_LINKS } from "../constants"
+import { NAV_LINKS } from "../constants"
 
 export default function Slide13() {
     return (

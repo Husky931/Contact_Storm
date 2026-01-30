@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { BRAND_NAVY, NAV_LINKS } from "../constants"
+import { NAV_LINKS } from "../constants"
 
 export default function Slide14() {
     return (
@@ -61,7 +61,7 @@ export default function Slide14() {
                 {/* Floating popup cards */}
 
                 {/* Total Orders Card */}
-                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[-2deg]">
+                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform -rotate-2">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
                     <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
                     <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
@@ -76,7 +76,7 @@ export default function Slide14() {
                 {/* <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]"> */}
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
+                <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-1">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
