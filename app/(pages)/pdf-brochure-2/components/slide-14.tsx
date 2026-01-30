@@ -36,6 +36,13 @@ export default function Slide14() {
                     <p className="text-xl text-white/90 max-w-md leading-relaxed">
                         Our Leads Generation platform is designed to scan thousdands of businesses daily and extract decision-maker contacts.
                     </p>
+                    <ul className="text-base text-white/90 max-w-sm mt-10 [&>li]:list-item">
+                        <li className="mb-4 italic">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>
+                        <li className="mb-4 italic">- Analyses their digital footprints (paid ads, social media channels)</li>
+                        <li className="mb-4 italic">- Direct automated outreach via website or email</li>
+                        <li className="mb-4 italic">- Real-time tracking of response rate, interaction and success rate on our dashboard</li>
+                        <li className="mb-4 italic">- Options for toggling between customized outreach messages,  conversation logging</li>
+                    </ul>
                 </div>
 
                 {/* Software image coming from right */}
@@ -67,7 +74,7 @@ export default function Slide14() {
                 </div>
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[28%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
+                <div className="absolute left-[33%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
