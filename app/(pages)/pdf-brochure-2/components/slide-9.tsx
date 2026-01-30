@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const DEMAND_SERVICES = [
-    { title: "AIO (AI Optimization)", body: "Position your content as the top answer in AI chatbot responses (ChatGPT, Perplexity, Gemini, Grok)." },
-    { title: "Classic SEO", body: "Optimization for Google, Bing, Yandex and other traditional search engines." },
-    { title: "AEO (Answer Engine Optimization)", body: "Optimize for voice and search queries like 'Who makes...?' to capture conversational searches." },
-    { title: "GEO (Geographic Targeting)", body: "Target users by location, culture, and local search intent for maximum relevance." },
-    { title: "AI Snippet Optimization", body: "Ensure your brand appears in AI-generated summaries and featured snippets." },
-    { title: "Voice Search Ready", body: "Content optimized for voice assistants and natural language queries." }
+    { title: "AIO (AI Optimization)", body: "Position your content as the top answer in AI chatbot responses (ChatGPT, Perplexity, Gemini, Grok). Be the answer when customers ask so your brand shows up where decisions are made." },
+    { title: "Classic SEO", body: "Optimization for Google, Bing, Yandex and other traditional search engines. Traditional search still drives significant traffic—we make sure you’re found on every major engine." },
+    { title: "AEO (Answer Engine Optimization)", body: "Optimize for voice and search queries like 'Who makes...?' to capture conversational searches. Capture the growing voice and question-based search market and stay ahead of the curve." },
+    { title: "GEO (Geographic Targeting)", body: "Target users by location, culture, and local search intent for maximum relevance. Reach the right people in the right place and connect with audiences where they are." },
+    { title: "AI Snippet Optimization", body: "Ensure your brand appears in AI-generated summaries and featured snippets. Show up in AI summaries and answer boxes so you get visibility in the new search landscape." },
+    { title: "Voice Search Ready", body: "Content optimized for voice assistants and natural language queries. We optimize for how people actually search today—spoken, long-tail, and conversational." }
 ]
 
 export default function Slide9() {

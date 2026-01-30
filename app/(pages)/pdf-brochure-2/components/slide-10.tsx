@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
 const VIDEO_SERVICES = [
-    { title: "Campaign Strategy", body: "Adjust ad campaigns for specific purposes with rapid iteration based on real-time performance data." },
-    { title: "Creative Development", body: "Craft modern video and sound hooks aligned with Meta, Instagram, and TikTok trends." },
-    { title: "Trend Tracking", body: "Stay ahead by monitoring trending formats and adapting campaigns accordingly." },
-    { title: "ROI Scaling", body: "Scale campaigns once we land on positive ROI, maximizing your advertising investment." },
-    { title: "Hook, Engage, Convert", body: "Super interesting and engaging ads that hook users in peak social media momentum." },
-    { title: "Multi-Platform Mastery", body: "Expert campaigns across Meta, Instagram, and TikTok for maximum reach." }
+    { title: "Campaign Strategy", body: "Adjust ad campaigns for specific purposes with rapid iteration based on real-time performance data. Test fast, double down on what works, and cut what doesn’t so every pound drives results." },
+    { title: "Creative Development", body: "Craft modern video and sound hooks aligned with Meta, Instagram, and TikTok trends. Stand out in crowded feeds with scroll-stopping creative that stops the thumb and starts the conversation." },
+    { title: "Trend Tracking", body: "Stay ahead by monitoring trending formats and adapting campaigns accordingly. Adapt quickly to what’s working now so your ads feel fresh and relevant, not dated." },
+    { title: "ROI Scaling", body: "Scale campaigns once we land on positive ROI, maximizing your advertising investment. Grow spend confidently once unit economics are positive so you can expand without guesswork." },
+    { title: "Hook, Engage, Convert", body: "Super interesting and engaging ads that hook users in peak social media momentum. From first frame to final CTA, we optimize the journey so viewers become customers." },
+    { title: "Multi-Platform Mastery", body: "Expert campaigns across Meta, Instagram, and TikTok for maximum reach. One strategy, tailored execution per platform, so your message lands wherever your audience is." }
 ]
 
 export default function Slide10() {

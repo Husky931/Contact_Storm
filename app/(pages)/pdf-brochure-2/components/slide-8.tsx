@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DEV_SERVICES = [
-    { title: "PPC Optimization & Tactics", body: "Bid optimization & management, ACoS monitoring, negative keywords, and ASIN targeting refinement." },
-    { title: "Algorithm Optimization", body: "Managing inventory, velocity, and basket metrics including 'Add to Cart' and 'Save for later' signals." },
-    { title: "Content & Keywords", body: "SEO-optimized titles, backend keyword architecture, and product page enhancements." },
-    { title: "Competitor Radar", body: "Group tracker for competitor products with alerts on price changes and ranking improvements." },
-    { title: "Conversion Rate Focus", body: "High conversion rate for your ads and maximizing conversion signals so Amazon algorithm favors your listings." },
-    { title: "Competitive Edge", body: "Strategic positioning to outperform competitors and dominate your product category." }
+    { title: "PPC Optimization & Tactics", body: "Bid optimization and management, ACoS monitoring, negative keywords, and ASIN targeting refinement. Every dollar is optimized for maximum return so you spend smarter, not more." },
+    { title: "Algorithm Optimization", body: "Managing inventory, velocity, and basket metrics including 'Add to Cart' and 'Save for later' signals. We work with Amazon's algorithm, not against it, so your listings get the visibility they deserve." },
+    { title: "Content & Keywords", body: "SEO-optimized titles, backend keyword architecture, and product page enhancements. Get found when shoppers search for products like yours and capture high-intent traffic." },
+    { title: "Competitor Radar", body: "Group tracker for competitor products with alerts on price changes and ranking improvements. Know your rivals, stay ahead, and know when to react or when to hold your position." },
+    { title: "Conversion Rate Focus", body: "High conversion rate for your ads and maximizing conversion signals so Amazon's algorithm favors your listings. More clicks that convert mean better organic visibility and long-term growth." },
+    { title: "Competitive Edge", body: "Strategic positioning to outperform competitors and dominate your product category. Win the buy box and the customer so you capture more sales and market share." }
 ]
 
 export default function Slide8() {

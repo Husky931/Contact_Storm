@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const BRANDING_SERVICES = [
-    { title: "Influencer Partnerships", body: "Strategic agreements with influencers to expand your reach and credibility." },
-    { title: "Brand Voice Development", body: "Developing a distinctive social media brand voice that resonates with your audience." },
-    { title: "UGC Creation", body: "User-generated content that builds authentic trust and engagement." },
-    { title: "Dynamic Content Strategy", body: "Mixed content output for a dynamic, brand-aligned channel that keeps followers engaged." },
-    { title: "Tech Content Factory", body: "State-of-the-art tech to automate certain content creation and scheduling." },
-    { title: "Business-Specific Strategy", body: "Each strategy is different and adjusted toward the type of business in question." },
+    { title: "Influencer Partnerships", body: "Strategic agreements with influencers to expand your reach and credibility. Leverage trusted voices to reach new audiences and turn their followers into your prospects." },
+    { title: "Brand Voice Development", body: "Developing a distinctive social media brand voice that resonates with your audience. Consistency builds recognition and loyalty so people know it’s you before they see the name." },
+    { title: "UGC Creation", body: "User-generated content that builds authentic trust and engagement. Real stories from real customers drive real results and give prospects the social proof they need to convert." },
+    { title: "Dynamic Content Strategy", body: "Mixed content output for a dynamic, brand-aligned channel that keeps followers engaged. Keep your feed fresh and your audience coming back so you stay top of mind." },
+    { title: "Tech Content Factory", body: "State-of-the-art tech to automate certain content creation and scheduling. Scale output without sacrificing quality so you post more without burning out." },
+    { title: "Business-Specific Strategy", body: "Each strategy is different and adjusted toward the type of business in question. No two brands are alike—neither are our plans, so you get a fit that works for you." },
 ]
 
 export default function Slide11() {

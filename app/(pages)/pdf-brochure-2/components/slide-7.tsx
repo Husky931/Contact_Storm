@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DESIGN_SERVICES = [
-    { title: "Modern Visual Trust", body: "Clean, professional design that signals credibility and builds instant confidence with potential clients." },
-    { title: "Frictionless UX", body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%." },
-    { title: "A/B Testing & Optimization", body: "Switch between landing page templates to identify optimal layouts for maximum user engagement." },
-    { title: "User Tracking & Retention", body: "Monitor returning visitors for retargeting marketing and personalized experiences." },
-    { title: "Social Proof Integration", body: "Stylishly integrated case studies and testimonials to give instant user trust." },
-    { title: "Strong Call To Action", body: "Strategically placed CTAs that strongly urge users to make an inquiry." },
+    { title: "Modern Visual Trust", body: "Clean, professional design that signals credibility and builds instant confidence with potential clients. Your site becomes a conversion engine that turns visitors into leads and customers." },
+    { title: "Frictionless UX", body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%. Every second counts when users decide to stay or leave—we make sure they stay." },
+    { title: "A/B Testing & Optimization", body: "Switch between landing page templates to identify optimal layouts for maximum user engagement. Data drives every decision so we double down on what works and drop what doesn’t." },
+    { title: "User Tracking & Retention", body: "Monitor returning visitors for retargeting marketing and personalized experiences. Turn anonymous visitors into repeat customers and build loyalty over time." },
+    { title: "Social Proof Integration", body: "Stylishly integrated case studies and testimonials to give instant user trust. Let your best results speak for you and show prospects why they should choose you." },
+    { title: "Strong Call To Action", body: "Strategically placed CTAs that strongly urge users to make an inquiry. Clear next steps mean more leads and a smoother path from visitor to customer." },
 ]
 
 export default function Slide7() {

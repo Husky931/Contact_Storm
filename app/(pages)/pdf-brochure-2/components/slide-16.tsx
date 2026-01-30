@@ -47,7 +47,7 @@ export default function Slide16() {
                             <p className="mt-1 text-white italic">WeWork China (West Nanjing Road Community)</p>
                         </div>
                         <div>
-                            <p className="mt-1 text-white italic">West Nanjing Road, Jing'an District</p>
+                            <p className="mt-1 text-white italic">West Nanjing Road, Jing&apos;an District</p>
                         </div>
                         <div>
                             <p className="mt-1 text-white italic">Shanghai, China 200040</p>
