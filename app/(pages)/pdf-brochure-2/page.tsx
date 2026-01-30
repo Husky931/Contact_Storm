@@ -13,8 +13,8 @@ import Slide9 from "./components/slide-9"
 import Slide10 from "./components/slide-10"
 import Slide11 from "./components/slide-11"
 import Slide12 from "./components/slide-12"
-import Slide13A from "./components/slide-13A"
-import Slide14A from "./components/slide-14A"
+import Slide13 from "./components/slide-13"
+import Slide14 from "./components/slide-14"
 // import Slide13 from "./components/slide-pre-final"
 // import Slide14 from "./components/slide-final"
 
@@ -63,10 +63,10 @@ export default function PdfBrochure2Page() {
             <Slide12 />
             <PageBreak />
 
-            <Slide13A />
+            <Slide13 />
             <PageBreak />
 
-            <Slide14A />
+            <Slide14 />
             <PageBreak />
 
             {/* <Slide13 />

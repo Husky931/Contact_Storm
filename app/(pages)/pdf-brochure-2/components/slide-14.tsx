@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
-export default function Slide14A() {
+export default function Slide14() {
     return (
         <section
             className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737] relative overflow-hidden"
@@ -31,10 +31,10 @@ export default function Slide14A() {
                 {/* Title on left */}
                 <div className="absolute left-16 top-16 z-20">
                     <h2 className="brochure-serif text-5xl font-normal leading-tight tracking-tight text-white mb-4">
-                        Our Product Ecosystem
+                        Our Core Technology
                     </h2>
                     <p className="text-xl text-white/90 max-w-md leading-relaxed">
-                        Our Suite of technology platforms are designed to rid organisations of inefficiencies and improve bottom-line.
+                        Our Leads Generation platform is designed to scan thousdands of businesses daily and extract decision-maker contacts.
                     </p>
                 </div>
 
@@ -67,7 +67,7 @@ export default function Slide14A() {
                 </div>
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[25%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
+                <div className="absolute left-[28%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
@@ -98,7 +98,7 @@ export default function Slide14A() {
                 </div>
 
                 {/* Contract Management Popup */}
-                <div className="absolute right-[35%] top-[25%] z-30 bg-white rounded-lg shadow-xl p-4 w-56 border border-gray-200">
+                <div className="absolute right-[47%] top-[75%] z-30 bg-white rounded-lg shadow-xl p-4 w-56 border border-gray-200">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,8 +112,7 @@ export default function Slide14A() {
                     </div>
                 </div>
 
-                {/* Upload Compliance Document Modal */}
-                <div className="absolute right-[30%] top-[45%] z-30 bg-gray-50 rounded-lg shadow-xl p-5 w-64 border border-gray-300">
+                {/* <div className="absolute right-[30%] top-[45%] z-30 bg-gray-50 rounded-lg shadow-xl p-5 w-64 border border-gray-300">
                     <div className="flex flex-col items-center text-center">
                         <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-3">
                             <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,10 +124,10 @@ export default function Slide14A() {
                             +
                         </button>
                     </div>
-                </div>
+                </div> */}
 
                 {/* Supplier Onboarding Progress */}
-                <div className="absolute right-[25%] bottom-[20%] z-30 bg-white rounded-lg shadow-xl p-4 w-72 border border-gray-200">
+                <div className="absolute right-[17%] bottom-[5%] z-30 bg-white rounded-lg shadow-xl p-4 w-72 border border-gray-200">
                     <div className="flex items-center gap-3 mb-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

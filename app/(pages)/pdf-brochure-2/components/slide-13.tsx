@@ -1,6 +1,6 @@
 import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
-export default function Slide13A() {
+export default function Slide13() {
     return (
         <section
             className="brochure-page flex flex-col bg-background-dark-deep px-16 pt-14 text-text-dark"
