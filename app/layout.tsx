@@ -2,10 +2,8 @@ import type { Metadata } from "next"
 import { Oswald, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
 import Navbar from "./components/Navigation/Navbar"
-import Footer from "./components/Footer"
 import { LanguageProvider } from "./components/LanguageProvider"
 import GoogleAnalytics from "./components/GoogleAnalytics"
-import ContactPopup from "./components/ContactPopup"
 
 const headingFont = Oswald({
     variable: "--font-heading",
@@ -41,8 +39,6 @@ export default function RootLayout({
                     <GoogleAnalytics gaTrackingId={gaTrackingId} />
                     <Navbar />
                     {children}
-                    <Footer />
-                    <ContactPopup />
                 </LanguageProvider>
             </body>
         </html>
