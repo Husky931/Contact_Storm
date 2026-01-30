@@ -55,8 +55,8 @@ export default function Slide5() {
 
             {/* Centered content — larger type, image, grid */}
 
-            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center px-20">
-                <div className="mx-auto w-full max-w-5xl">
+            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center">
+                <div className="mx-auto w-full w-8xl">
                     {/* Hero: title + subtitle + image */}
                     <div className="flex flex-col items-center text-center">
                         <h2
@@ -88,16 +88,13 @@ export default function Slide5() {
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}
                             </h3>
-                            <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base">
+                            <p className="mt-2 text-sm leading-relaxed font-serif text-gray-600 sm:text-base">
                                 {item.body}
                             </p>
                         </div>
                     ))}
                 </div>
             </div>
-
-
-
         </section>
     )
 }
