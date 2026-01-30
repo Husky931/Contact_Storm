@@ -1,0 +1,91 @@
+import { BRAND_RED, NAV_LINKS } from "../constants"
+
+export default function Slide13() {
+    return (
+        <section
+            className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
+            style={{ pageBreakAfter: "always" }}
+        >
+            <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+                <nav className="flex gap-6 text-xs text-gray-500">
+                    {NAV_LINKS.map((link, i) => (
+                        <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
+                            {link}
+                        </span>
+                    ))}
+                </nav>
+                <div className="h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center">
+                    <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </div>
+            </div>
+            <div className="mt-10 flex gap-16">
+                <div className="w-[320px] shrink-0">
+                    <p className="brochure-serif text-lg leading-relaxed text-[#1b2737]">
+                        See how our various implementation services span your{" "}
+                        <span style={{ color: BRAND_RED }}>full sales funnel</span> from{" "}
+                        <span style={{ color: BRAND_RED }}>awareness</span> to{" "}
+                        <span style={{ color: BRAND_RED }}>evaluation</span> and onto{" "}
+                        <span style={{ color: BRAND_RED }}>negotiation and sale</span>
+                    </p>
+                </div>
+                <div className="flex flex-1 items-center justify-center gap-8">
+                    <div className="flex flex-col items-center gap-0">
+                        <div
+                            className="flex h-24 w-48 items-center justify-center rounded-t border-2 border-gray-300 text-sm font-semibold"
+                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
+                        >
+                            Awareness Stage
+                        </div>
+                        <div
+                            className="flex h-20 w-40 items-center justify-center border-x-2 border-b-2 border-gray-300 text-sm font-semibold"
+                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
+                        >
+                            Evaluation Stage
+                        </div>
+                        <div
+                            className="flex h-16 w-32 items-center justify-center rounded-b border-2 border-gray-300 text-sm font-semibold"
+                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
+                        >
+                            Negotiation & Sale
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-8 text-sm">
+                        <div>
+                            <h3 className="font-bold text-[#1b2737]">Top of Funnel</h3>
+                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
+                                <li>Paid advertising</li>
+                                <li>Social media</li>
+                                <li>SEO</li>
+                                <li>Account-based marketing</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-[#1b2737]">Middle of Funnel</h3>
+                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
+                                <li>Website design & development</li>
+                                <li>Profile videos</li>
+                                <li>Website content creation</li>
+                                <li>Case studies</li>
+                                <li>Explainer videos</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 className="font-bold text-[#1b2737]">Bottom of Funnel</h3>
+                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
+                                <li>Slide decks</li>
+                                <li>Bid responses</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="mt-auto flex justify-end gap-2 pt-8">
+                <span className="h-px w-8 self-center bg-gray-300" />
+                <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
+                <span className="text-sm text-gray-600">13</span>
+            </div>
+        </section>
+    )
+}

@@ -1,4 +1,6 @@
-/* Brochure 2 — fixed desktop layout, exact match to reference images */
+/* Brochure 2 — fixed desktop layout, company branding
+   Brand: navy #1b2737 (backgrounds, headings, body text on white)
+   Accent/CTA: red #e03a3e (highlights, icons, links, funnel stages) */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 .brochure-page {
