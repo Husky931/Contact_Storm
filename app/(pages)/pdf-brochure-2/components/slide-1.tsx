@@ -39,7 +39,7 @@ export default function Slide1() {
                 <div>
                     <span
                         className="brochure-script text-4xl"
-                        style={{ color: BRAND_RED }}
+                        style={{ color: "#ff1493" }}
                     >
                         Pixaventures
                     </span>
