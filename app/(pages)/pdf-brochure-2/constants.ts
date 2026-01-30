@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
     "01. STRATEGY & GROWTH",
     "02. EXECUTION SERVICES",
-    "03. AI & AUTOMATION",
+    "03. LEAD GENERATION SOFTWARE",
     "04. CONTACT"
 ]
 

@@ -35,7 +35,7 @@ export default function Slide13() {
                 </div>
                 <div className="flex min-h-0 items-center border-l border-text-dark/30 pl-12 ">
                     <p className="max-w-sm text-3xl leading-relaxed text-text-dark/90 px-8">
-                        Our in-house lead generation software scans thousands of domains daily, extracts decision-maker contacts, and automates personalized outreach to generate qualified leads at scale.
+                        Our in-house lead generation software identifies high-value business in your niche, extracts decision-maker contacts, and automates personalized outreach to generate qualified leads at scale.
                     </p>
                 </div>
             </div>
