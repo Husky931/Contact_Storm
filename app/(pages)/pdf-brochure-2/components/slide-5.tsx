@@ -55,7 +55,7 @@ export default function Slide5() {
 
             {/* Centered content — larger type, image, grid */}
 
-            <div className="mt-12 flex flex-1 flex-row">
+            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center px-20">
                 <div className="mx-auto w-full max-w-5xl">
                     {/* Hero: title + subtitle + image */}
                     <div className="flex flex-col items-center text-center">
@@ -82,7 +82,7 @@ export default function Slide5() {
                     {/* Services grid — 4 + 3, centered, larger text */}
 
                 </div>
-                <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
                     {STRATEGY_SERVICES.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
@@ -96,11 +96,6 @@ export default function Slide5() {
                 </div>
             </div>
 
-            <div className="mt-auto flex justify-end gap-2 pt-8">
-                <span className="h-px w-8 self-center bg-gray-300" />
-                <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                <span className="text-sm text-gray-600">5</span>
-            </div>
 
 
         </section>
