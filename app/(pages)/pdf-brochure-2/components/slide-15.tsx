@@ -10,7 +10,7 @@ export default function Slide15() {
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
                 <nav className="flex gap-6 text-xs text-gray-500">
                     {NAV_LINKS.map((link, i) => (
-                        <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
+                        <span key={link} className={i === 2 ? "font-semibold text-gray-800" : ""}>
                             {link}
                         </span>
                     ))}
