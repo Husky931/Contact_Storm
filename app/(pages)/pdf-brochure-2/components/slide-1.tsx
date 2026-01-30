@@ -32,7 +32,7 @@ function RadiatingLines() {
 export default function Slide1() {
     return (
         <section
-            className="brochure-page flex flex-col justify-between px-16 py-14 text-white"
+            className="brochure-page flex flex-col justify-between px-8 py-14 text-white"
             style={{ backgroundColor: BRAND_NAVY, pageBreakAfter: "always" }}
         >
             <div className="flex items-start">
@@ -52,20 +52,22 @@ export default function Slide1() {
                     </span>
                 </div>
             </div>
-            <div className="relative z-10 max-w-[55%]">
-                <p className="brochure-serif text-4xl font-normal text-white">
-                    We help Chinese manufacturers
-                </p>
-                <p className="brochure-serif mt-2 text-5xl font-bold text-white">
-                    win overseas buyers
-                    <span style={{ color: BRAND_RED }}>.</span>
-                </p>
-                <p
-                    className="mt-12 text-sm font-medium tracking-[0.35em]"
-                    style={{ color: "#FFFFFF" }}
-                >
-                    FOREIGN-LED EXPORT GROWTH AGENCY
-                </p>
+            <div className="relative z-10 flex flex-1 flex-col items-center justify-center">
+                <div className="mx-auto max-w-6xl text-center">
+                    <p className="brochure-serif text-5xl font-normal leading-tight text-white md:text-6xl">
+                        We help Chinese manufacturers
+                    </p>
+                    <p className="brochure-serif mt-3 text-4xl font-bold leading-tight text-white md:text-7xl lg:text-8xl">
+                        win overseas buyers
+
+                    </p>
+                    <p
+                        className="mt-14 text-sm font-medium tracking-[0.35em]"
+                        style={{ color: "#FFFFFF" }}
+                    >
+                        DIGITAL EXPORT GROWTH AGENCY
+                    </p>
+                </div>
             </div>
             <div />
             <RadiatingLines />
