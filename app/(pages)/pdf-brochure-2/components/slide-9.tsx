@@ -2,13 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const DEMAND_SERVICES = [
-    { title: "Amazon PPC & Marketplace", body: "Optimize listings and ads for B2B buyer intent." },
-    { title: "Paid Social Advertising", body: "Meta, Instagram, and TikTok campaigns that capture leads." },
-    { title: "SEO for Export Buyers", body: "Rank for high-intent supplier searches in target markets." },
-    { title: "AI Search Optimization", body: "Position your brand as the best answer in AI search." },
-    { title: "Lead Generation & Outreach", body: "Targeted lists and campaigns to decision-makers." },
-    { title: "Social Media Growth", body: "Build trust on platforms buyers check before outreach." },
-    { title: "Email & LinkedIn Nurture", body: "Convert interest into qualified conversations." }
+    { title: "AIO (AI Optimization)", body: "Position your content as the top answer in AI chatbot responses (ChatGPT, Perplexity, Gemini, Grok)." },
+    { title: "Classic SEO", body: "Optimization for Google, Bing, Yandex and other traditional search engines." },
+    { title: "AEO (Answer Engine Optimization)", body: "Optimize for voice and search queries like 'Who makes...?' to capture conversational searches." },
+    { title: "GEO (Geographic Targeting)", body: "Target users by location, culture, and local search intent for maximum relevance." },
+    { title: "AI Snippet Optimization", body: "Ensure your brand appears in AI-generated summaries and featured snippets." },
+    { title: "Voice Search Ready", body: "Content optimized for voice assistants and natural language queries." }
 ]
 
 export default function Slide9() {
@@ -37,12 +36,12 @@ export default function Slide9() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Buyer Acquisition
+                        SEO for the AI
                         <br />
-                        Channels
+                        Era
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Multi-channel demand generation built for export buyers
+                        Optimize for AI models, voice engines, and the new reality of customer search
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image

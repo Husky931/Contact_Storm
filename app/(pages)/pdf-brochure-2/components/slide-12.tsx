@@ -2,13 +2,13 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const SUPPORT_SERVICES = [
-    { title: "Weekly Lead Delivery", body: "Qualified buyer leads with context and next steps." },
-    { title: "KPI Dashboards", body: "Clear reporting across ads, Amazon, and web." },
-    { title: "Bid & Budget Optimization", body: "Continuous improvements to ROI and ACoS." },
-    { title: "CRO Experiments", body: "Test pages and funnels to lift inquiry rates." },
-    { title: "AI Search Monitoring", body: "Track visibility in AI engines over time." },
-    { title: "Competitive Alerts", body: "Rankings, pricing, and share-of-voice updates." },
-    { title: "Dedicated Growth Support", body: "Hands-on partnership with fast iteration." }
+    { title: "AI-Powered Lead Discovery", body: "Our in-house software identifies high-value businesses in your niche, analyzing domains and digital footprints." },
+    { title: "Daily Domain Scanning", body: "Scans 5000+ foreign buyer domains daily, targeted by industry, location, and online presence." },
+    { title: "Decision-Maker Extraction", body: "Extracts important decision-makers' emails and analyzes their digital footprints (paid ads, social channels)." },
+    { title: "Automated Outreach", body: "Direct automated outreach via website or email with personalized messages to decision-makers." },
+    { title: "Real-Time Tracking Dashboard", body: "Track response rate, interaction, and success rate on our dashboard with conversation logging." },
+    { title: "Custom Automation Tools", body: "Custom software development for repetitive tasks, freeing your team for high-value work." },
+    { title: "Sales Conversation Tracking", body: "AI tools to track sales conversations on channels like Alibaba, 1688, monitoring success rates." }
 ]
 
 export default function Slide12() {
@@ -37,12 +37,12 @@ export default function Slide12() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Optimization &
+                        Lead Generation &
                         <br />
-                        Reporting
+                        Custom Software
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Ongoing performance management to keep growth on track
+                        AI-powered tools that identify, reach, and convert high-value prospects
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image

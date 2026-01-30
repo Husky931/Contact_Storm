@@ -2,14 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DEV_SERVICES = [
-    { title: "Lead Discovery Engine", body: "Scan buyer domains by industry, region, and digital presence." },
-    { title: "Decision-Maker Enrichment", body: "Identify procurement contacts and verified emails." },
-    { title: "Outreach Automation", body: "Personalized sequences via email and website." },
-    { title: "Conversation Tracking", body: "Real-time tracking of replies and engagement." },
-    { title: "Amazon BSR Alerts", body: "Monitor rankings, pricing, and competitor moves." },
-    { title: "AI Search Visibility", body: "Track brand presence in ChatGPT and Gemini." },
-    { title: "Performance Dashboards", body: "Unified reporting across ads, Amazon, and web." },
-    { title: "Workflow Automation", body: "Reduce manual tasks and speed up follow-up." }
+    { title: "PPC Optimization & Tactics", body: "Bid optimization & management, ACoS monitoring, negative keywords, and ASIN targeting refinement." },
+    { title: "Algorithm Optimization", body: "Managing inventory, velocity, and basket metrics including 'Add to Cart' and 'Save for later' signals." },
+    { title: "Content & Keywords", body: "SEO-optimized titles, backend keyword architecture, and product page enhancements." },
+    { title: "Competitor Radar", body: "Group tracker for competitor products with alerts on price changes and ranking improvements." },
+    { title: "Conversion Rate Focus", body: "High conversion rate for your ads and maximizing conversion signals so Amazon algorithm favors your listings." },
+    { title: "Competitive Edge", body: "Strategic positioning to outperform competitors and dominate your product category." }
 ]
 
 export default function Slide8() {
@@ -38,12 +36,12 @@ export default function Slide8() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Growth Software
+                        Amazon Ads &
                         <br />
-                        & Automation
+                        Optimization
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        In-house tools that automate lead discovery, outreach, and reporting
+                        Maximize conversion rates and algorithm signals to outperform competitors
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image

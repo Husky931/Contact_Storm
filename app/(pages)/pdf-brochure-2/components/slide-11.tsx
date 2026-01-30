@@ -2,16 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const BRANDING_SERVICES = [
-    {
-        title: "Amazon Listing Optimization",
-        body: "Keyword research, A+ content, and listing structure aligned to Western buyer intent."
-    },
-    { title: "Certification Showcases", body: "CE, FCC, ISO, and audit badges placed where buyers look first." },
-    { title: "MOQ & Lead-Time Sheets", body: "Clear terms that reduce back-and-forth with buyers." },
-    { title: "Factory Capability Decks", body: "Tell your manufacturing story with proof and visuals." },
-    { title: "Product Photography Direction", body: "Consistent, professional visuals that build trust." },
-    { title: "Customer Testimonials", body: "Social proof that reduces perceived risk." },
-    { title: "Trade Show Materials", body: "Booth banners, brochures, and QR lead capture." }
+    { title: "Influencer Partnerships", body: "Strategic agreements with influencers to expand your reach and credibility." },
+    { title: "Brand Voice Development", body: "Developing a distinctive social media brand voice that resonates with your audience." },
+    { title: "UGC Creation", body: "User-generated content that builds authentic trust and engagement." },
+    { title: "Dynamic Content Strategy", body: "Mixed content output for a dynamic, brand-aligned channel that keeps followers engaged." },
+    { title: "Tech Content Factory", body: "State-of-the-art tech to automate certain content creation and scheduling." },
+    { title: "Business-Specific Strategy", body: "Each strategy is different and adjusted toward the type of business in question." },
 ]
 
 export default function Slide11() {
@@ -40,12 +36,12 @@ export default function Slide11() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Marketplace & Trust
+                        Social Media
                         <br />
-                        Assets
+                        Growth
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Everything overseas buyers need to feel confident to engage
+                        Build authority and trust through strategic social media presence
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image

@@ -2,12 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DESIGN_SERVICES = [
-    { title: "Bilingual Website Redesign", body: "Modern sites that build trust fast with overseas buyers." },
-    { title: "Landing Page Systems", body: "Campaign-specific pages optimized for RFQs and lead capture." },
-    { title: "Trust & Compliance UX", body: "Highlight certifications, audits, and factory capabilities." },
-    { title: "Product & Factory Storytelling", body: "Layouts that communicate scale, quality, and reliability." },
-    { title: "A/B Testing & CRO", body: "Continuous testing to lift inquiry rates." },
-    { title: "Shopify & B2B Portals", body: "Wholesale-ready storefronts for export sales." },
+    { title: "Modern Visual Trust", body: "Clean, professional design that signals credibility and builds instant confidence with potential clients." },
+    { title: "Frictionless UX", body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%." },
+    { title: "A/B Testing & Optimization", body: "Switch between landing page templates to identify optimal layouts for maximum user engagement." },
+    { title: "User Tracking & Retention", body: "Monitor returning visitors for retargeting marketing and personalized experiences." },
+    { title: "Social Proof Integration", body: "Stylishly integrated case studies and testimonials to give instant user trust." },
+    { title: "Strong Call To Action", body: "Strategically placed CTAs that strongly urge users to make an inquiry." },
 ]
 
 export default function Slide7() {
@@ -36,12 +36,11 @@ export default function Slide7() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Website & Conversion
-                        <br />
-                        Design
+                        Website & Shopify
+
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Modern, trust-building experiences that turn buyers into inquiries
+                        Modern websites that signal professionalism and convert visitors into inquiries
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image

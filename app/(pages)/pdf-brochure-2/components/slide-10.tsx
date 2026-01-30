@@ -2,15 +2,12 @@ import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const VIDEO_SERVICES = [
-    { title: "Amazon A+ Content", body: "Visual storytelling that highlights certifications and MOQ." },
-    { title: "Product & Factory Videos", body: "Show capability, scale, and quality with confidence." },
-    { title: "Ad Creative & Hooks", body: "Scroll-stopping assets for paid social campaigns." },
-    { title: "Buyer Case Studies", body: "Proof that builds trust fast for overseas buyers." },
-    { title: "Explainer Videos", body: "Simple breakdowns of complex products and processes." },
-    { title: "Technical Datasheets", body: "Specs and compliance in buyer-ready formats." },
-    { title: "Catalogs & Line Sheets", body: "Professional product overviews for sales teams." },
-    { title: "Ad Copy & Messaging", body: "Clear value propositions tailored to buyer intent." },
-    { title: "Content Localization", body: "English-first, buyer-optimized translations." }
+    { title: "Campaign Strategy", body: "Adjust ad campaigns for specific purposes with rapid iteration based on real-time performance data." },
+    { title: "Creative Development", body: "Craft modern video and sound hooks aligned with Meta, Instagram, and TikTok trends." },
+    { title: "Trend Tracking", body: "Stay ahead by monitoring trending formats and adapting campaigns accordingly." },
+    { title: "ROI Scaling", body: "Scale campaigns once we land on positive ROI, maximizing your advertising investment." },
+    { title: "Hook, Engage, Convert", body: "Super interesting and engaging ads that hook users in peak social media momentum." },
+    { title: "Multi-Platform Mastery", body: "Expert campaigns across Meta, Instagram, and TikTok for maximum reach." }
 ]
 
 export default function Slide10() {
@@ -39,12 +36,12 @@ export default function Slide10() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Content & Creative
+                        Paid Social
                         <br />
-                        Production
+
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Make your proposition clear, credible, and buyer-friendly
+                        Hook, Engage, Convert — campaigns that capture attention in peak social media momentum
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
