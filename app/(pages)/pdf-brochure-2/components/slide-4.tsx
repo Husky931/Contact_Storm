@@ -18,7 +18,7 @@ export default function Slide4() {
                 <div className="relative flex min-h-0 flex-col pr-4">
                     <div className="relative flex flex-1 items-center justify-center">
                         <span
-                            className="brochure-outline-num block -translate-x-40 -translate-y-40 text-[40rem] leading-none"
+                            className="brochure-outline-num block -translate-x-40 -translate-y-30 text-[40rem] leading-none"
                             style={{ WebkitTextStroke: "1px rgba(255,255,255,0.35)" }}
                             aria-hidden
                         >
