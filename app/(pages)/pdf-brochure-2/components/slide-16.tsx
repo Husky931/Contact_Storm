@@ -6,7 +6,7 @@ export default function Slide16() {
             className="brochure-page relative flex items-center justify-center px-16 py-2 text-white"
             style={{ backgroundColor: BRAND_NAVY, pageBreakAfter: "always" }}
         >
-            <div className="flex items-start gap-16">
+            <div className="flex items-start gap-x-20">
                 <div className="flex items-start">
                     <div>
                         <span className="brochure-script text-5xl" style={{ color: "#ff1493" }}>
