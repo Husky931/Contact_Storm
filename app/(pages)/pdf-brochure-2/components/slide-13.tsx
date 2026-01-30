@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { BRAND_RED, NAV_LINKS } from "../constants"
 
 export default function Slide13() {
@@ -20,65 +21,53 @@ export default function Slide13() {
                     </svg>
                 </div>
             </div>
-            <div className="mt-10 flex gap-16">
-                <div className="w-[320px] shrink-0">
+            <div className="mt-10 flex flex-1 gap-12 items-center min-h-0">
+                <div className="w-[280px] shrink-0 flex flex-col justify-center">
                     <p className="brochure-serif text-lg leading-relaxed text-[#1b2737]">
-                        See how our execution spans your{" "}
-                        <span style={{ color: BRAND_RED }}>full export buyer journey</span>{" "}
-                        from <span style={{ color: BRAND_RED }}>awareness</span> to{" "}
+                        See how our various implementation services span your{" "}
+                        <span style={{ color: BRAND_RED }}>full sales funnel</span> from{" "}
+                        <span style={{ color: BRAND_RED }}>awareness</span> to{" "}
                         <span style={{ color: BRAND_RED }}>evaluation</span> and onto{" "}
-                        <span style={{ color: BRAND_RED }}>negotiation and deal</span>
+                        <span style={{ color: BRAND_RED }}>negotiation and sale</span>
                     </p>
                 </div>
-                <div className="flex flex-1 items-center justify-center gap-8">
-                    <div className="flex flex-col items-center gap-0">
-                        <div
-                            className="flex h-24 w-48 items-center justify-center rounded-t border-2 border-gray-300 text-sm font-semibold"
-                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
-                        >
-                            Awareness
-                        </div>
-                        <div
-                            className="flex h-20 w-40 items-center justify-center border-x-2 border-b-2 border-gray-300 text-sm font-semibold"
-                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
-                        >
-                            Evaluation
-                        </div>
-                        <div
-                            className="flex h-16 w-32 items-center justify-center rounded-b border-2 border-gray-300 text-sm font-semibold"
-                            style={{ backgroundColor: "#fdf2f2", color: BRAND_RED }}
-                        >
-                            Negotiation & Deal
-                        </div>
+                <div className="flex-1 flex items-center justify-center shrink-0 min-w-0">
+                    <div className="relative w-full max-w-md aspect-4/3">
+                        <Image
+                            src="/brochure/slide_13.png"
+                            alt="Sales funnel: Awareness Stage, Evaluation Stage, Negotiation & Sale"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
                     </div>
-                    <div className="grid grid-cols-3 gap-8 text-sm">
-                        <div>
-                            <h3 className="font-bold text-[#1b2737]">Top of Funnel</h3>
-                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
-                                <li>Paid social ads</li>
-                                <li>AI search optimization</li>
-                                <li>SEO for export buyers</li>
-                                <li>Amazon PPC</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="font-bold text-[#1b2737]">Middle of Funnel</h3>
-                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
-                                <li>Website & Shopify</li>
-                                <li>Amazon A+ content</li>
-                                <li>Product & factory videos</li>
-                                <li>Case studies</li>
-                                <li>Lead forms & RFQs</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="font-bold text-[#1b2737]">Bottom of Funnel</h3>
-                            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-text">
-                                <li>Sales decks & line sheets</li>
-                                <li>MOQ & pricing clarity</li>
-                                <li>Buyer outreach & follow-up</li>
-                            </ul>
-                        </div>
+                </div>
+                <div className="w-[280px] shrink-0 flex flex-col justify-center gap-6 text-sm">
+                    <div>
+                        <h3 className="font-bold text-[#1b2737]">Top of Funnel</h3>
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                            <li>Paid advertising</li>
+                            <li>Social media</li>
+                            <li>SEO</li>
+                            <li>Account-based marketing</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-bold text-[#1b2737]">Middle of Funnel</h3>
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                            <li>Website design &amp; development</li>
+                            <li>Profile videos</li>
+                            <li>Website content creation</li>
+                            <li>Case studies</li>
+                            <li>Explainer videos</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-bold text-[#1b2737]">Bottom of Funnel</h3>
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                            <li>Slide decks</li>
+                            <li>Bid responses</li>
+                        </ul>
                     </div>
                 </div>
             </div>
