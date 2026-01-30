@@ -1,29 +1,30 @@
+import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const STRATEGY_SERVICES = [
     {
-        title: "Export Market Research",
-        body: "Define priority regions, buyer personas, and competitor benchmarks."
+        title: "Value Proposition Development",
+        body: "Understanding what your value proposition is and what sets you apart from your competitors means you can easily show prospective customers why your product or service is valuable to them."
     },
     {
-        title: "Western Buyer Positioning",
-        body: "Translate MOQ, certifications, and lead times into clear buyer value."
+        title: "Sales Funnel Strategy",
+        body: "We analyse every stage of your sales funnel to identify where adjustments need to be made. In doing so we can deliver a better customer journey and help improve your conversion rate."
     },
     {
-        title: "Channel & Marketplace Roadmap",
-        body: "Select the right mix of Amazon, Google, and paid social."
+        title: "Paid Advertising Strategy",
+        body: "Using paid channels is a highly effective strategy to target specific audiences. You can define your ideal customers based on criteria that include demographics, previous purchases, location and interests."
     },
     {
-        title: "AI Search + SEO Strategy",
-        body: "Optimize for AI discovery alongside classic search engines."
+        title: "Conversion Optimisation",
+        body: "We can optimise your website to ensure it is SEO-Ready and favoured by search engines. Optimising your website to improve the user experience will positively impact your sales funnel and help drive business growth."
     },
     {
-        title: "Lead Gen KPI Planning",
-        body: "Set targets for qualified leads, CPL, and conversion rate."
+        title: "Ideal Customer Profiling",
+        body: "ICP is hugely important in sales. Being able to target the right audience means you have the most valuable leads for your product or service and a stronger chance of conversion success."
     },
     {
-        title: "Offer & Pricing Clarity",
-        body: "Package SKUs and terms to reduce buyer friction."
+        title: "Sales & Marketing Alignment",
+        body: "When sales and marketing teams work hand-in-glove to promote your product or service the opportunities for growth increase. We set ambitious goals and communicate with you every step of the way to grow your business."
     }
 ]
 
@@ -33,6 +34,7 @@ export default function Slide5() {
             className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
             style={{ pageBreakAfter: "always" }}
         >
+            {/* Nav — unchanged */}
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
                 <nav className="flex gap-6 text-xs text-gray-500">
                     {NAV_LINKS.map((link, i) => (
@@ -50,47 +52,57 @@ export default function Slide5() {
                     </svg>
                 </div>
             </div>
-            <div className="mt-12 flex gap-16">
-                <div className="w-[380px] shrink-0">
-                    <h2
-                        className="brochure-serif text-3xl font-normal leading-tight"
-                        style={{ color: BRAND_NAVY }}
-                    >
-                        We are an Export Growth Agency
-                    </h2>
-                    <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Strategy built around factory realities and Western buyer expectations
-                    </p>
-                    <div className="mt-10 flex items-start gap-4">
-                        <svg className="h-12 w-12 shrink-0 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10" strokeWidth="1" />
-                            <circle cx="12" cy="12" r="2" fill={BRAND_RED} />
-                        </svg>
-                        <div className="h-px flex-1 self-center border-t border-dashed border-gray-300" />
-                        <div className="h-3 w-3 rounded-full shrink-0" style={{ backgroundColor: BRAND_RED }} />
-                        <svg className="h-8 w-8 shrink-0 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <circle cx="11" cy="11" r="8" strokeWidth="1" />
-                            <path strokeWidth="1" d="M21 21l-4.35-4.35" />
-                        </svg>
-                        <svg className="h-10 w-14 shrink-0 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeWidth="1" d="M3 18v-6h18v6M3 12l4-6 4 4 6-8 4 4" />
-                        </svg>
+
+            {/* Centered content — larger type, image, grid */}
+
+            <div className="mt-12 flex flex-1 flex-row">
+                <div className="mx-auto w-full max-w-5xl">
+                    {/* Hero: title + subtitle + image */}
+                    <div className="flex flex-col items-center text-center">
+                        <h2
+                            className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
+                            style={{ color: BRAND_NAVY }}
+                        >
+                            We are a Strategy-led Agency
+                        </h2>
+                        <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
+                            We advise on all aspects of your sales and recruitment funnels
+                        </p>
+                        <div className="mt-8 flex justify-center">
+                            <Image
+                                src="/brochure/slide_5.png"
+                                alt=""
+                                width={480}
+                                height={200}
+                                className="h-auto w-full max-w-md object-contain"
+                            />
+                        </div>
                     </div>
+
+                    {/* Services grid — 4 + 3, centered, larger text */}
+
                 </div>
-                <div className="grid flex-1 grid-cols-3 gap-x-10 gap-y-8">
+                <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
                     {STRATEGY_SERVICES.map((item) => (
-                        <div key={item.title}>
-                            <h3 className="text-sm font-bold text-[#1b2737]">{item.title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-text">{item.body}</p>
+                        <div key={item.title} className="flex flex-col">
+                            <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
+                                {item.title}
+                            </h3>
+                            <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base">
+                                {item.body}
+                            </p>
                         </div>
                     ))}
                 </div>
             </div>
+
             <div className="mt-auto flex justify-end gap-2 pt-8">
                 <span className="h-px w-8 self-center bg-gray-300" />
                 <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
                 <span className="text-sm text-gray-600">5</span>
             </div>
+
+
         </section>
     )
 }
