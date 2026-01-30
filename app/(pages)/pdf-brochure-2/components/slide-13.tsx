@@ -21,9 +21,9 @@ export default function Slide13() {
                     </svg>
                 </div>
             </div>
-            <div className="mt-10 flex flex-1 gap-12 items-center min-h-0">
+            <div className="mt-10 flex flex-1 gap-12 items-center justify-center min-h-0">
                 <div className="w-[280px] shrink-0 flex flex-col justify-center">
-                    <p className="brochure-serif text-lg leading-relaxed text-[#1b2737]">
+                    <p className="brochure-serif text-3xl leading-relaxed text-[#1b2737]">
                         See how our various implementation services span your{" "}
                         <span style={{ color: BRAND_RED }}>full sales funnel</span> from{" "}
                         <span style={{ color: BRAND_RED }}>awareness</span> to{" "}
@@ -31,7 +31,7 @@ export default function Slide13() {
                         <span style={{ color: BRAND_RED }}>negotiation and sale</span>
                     </p>
                 </div>
-                <div className="flex-1 flex items-center justify-center shrink-0 min-w-0">
+                <div className="w-[450px] flex items-center justify-center shrink-0 min-w-0">
                     <div className="relative w-full max-w-md aspect-4/3">
                         <Image
                             src="/brochure/slide_13.png"
@@ -42,10 +42,10 @@ export default function Slide13() {
                         />
                     </div>
                 </div>
-                <div className="w-[280px] shrink-0 flex flex-col justify-center gap-6 text-sm">
+                <div className=" shrink-0 flex flex-col justify-center gap-6 text-base">
                     <div>
                         <h3 className="font-bold text-[#1b2737]">Top of Funnel</h3>
-                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-[#1b2737]">
                             <li>Paid advertising</li>
                             <li>Social media</li>
                             <li>SEO</li>
@@ -54,7 +54,7 @@ export default function Slide13() {
                     </div>
                     <div>
                         <h3 className="font-bold text-[#1b2737]">Middle of Funnel</h3>
-                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-[#1b2737]">
                             <li>Website design &amp; development</li>
                             <li>Profile videos</li>
                             <li>Website content creation</li>
@@ -64,7 +64,7 @@ export default function Slide13() {
                     </div>
                     <div>
                         <h3 className="font-bold text-[#1b2737]">Bottom of Funnel</h3>
-                        <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-[#1b2737]">
+                        <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-[#1b2737]">
                             <li>Slide decks</li>
                             <li>Bid responses</li>
                         </ul>
