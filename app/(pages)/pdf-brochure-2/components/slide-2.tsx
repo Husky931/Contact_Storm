@@ -9,7 +9,7 @@ export default function Slide2() {
             </p>
             <div className="mt-2 h-px w-full bg-text-dark/60" />
             <div className="mt-0 flex flex-1 items-center justify-center gap-24 py-8">
-                <div className="max-w-md text-4xl font-light leading-snug text-text-dark">
+                <div className="max-w-md text-5xl font-light leading-snug text-text-dark">
                     Pixaventures
                     <br />
                     is a foreign-led
@@ -22,7 +22,7 @@ export default function Slide2() {
                     <br />
                     win overseas buyers
                 </div>
-                <div className="max-w-md space-y-6 text-sm leading-relaxed">
+                <div className="max-w-md space-y-6 text-lg leading-relaxed">
                     <p className="text-text-dark/90">
                         Pixaventures is built exclusively to help Chinese manufacturers scale
                         overseas across Europe, North America, the Middle East, and beyond.
