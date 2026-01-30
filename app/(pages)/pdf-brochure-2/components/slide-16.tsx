@@ -20,7 +20,7 @@ export default function Slide16() {
                 </div>
                 <div className="text-left">
                     <p className="text-2xl font-semibold tracking-[0.2em] text-white">
-                        SPECIALIST DIGITAL AGENCY
+                        Contact
                     </p>
                     <div className="mt-8 space-y-6 text-xl">
                         <div>

@@ -17,37 +17,41 @@ export default function Slide3() {
                         <span>2</span>
                     </div>
                     <div className="flex justify-between gap-8">
+                        <span className="font-semibold">Growth Strategy</span>
+                        <span>4</span>
+                    </div>
+                    <div className="flex justify-between gap-8">
                         <span className="font-semibold">Execution Services</span>
                         <span>6</span>
                     </div>
                     <ul className="ml-4 space-y-2 text-gray-400">
                         <li className="flex justify-between gap-8">
-                            <span>Website & Conversion Design</span>
+                            <span>Website & Shopify</span>
                             <span>7</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Growth Software & Automation</span>
+                            <span>Amazon Ads & Optimization</span>
                             <span>8</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Buyer Acquisition Channels</span>
+                            <span>Seo for the AI Era</span>
                             <span>9</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Content & Creative Production</span>
+                            <span>Paid Social</span>
                             <span>10</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Marketplace & Trust Assets</span>
+                            <span>Social Media Growth</span>
                             <span>11</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Optimization & Reporting</span>
+                            <span>Custom Tools & Automation</span>
                             <span>12</span>
                         </li>
                     </ul>
                     <div className="flex justify-between gap-8 pt-2">
-                        <span className="font-semibold">Buyer Journey Framework</span>
+                        <span className="font-semibold">Lead Generation Software</span>
                         <span>13</span>
                     </div>
                     <div className="flex justify-between gap-8">
