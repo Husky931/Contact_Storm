@@ -15,8 +15,8 @@ import Slide11 from "./components/slide-11"
 import Slide12 from "./components/slide-12"
 import Slide13 from "./components/slide-13"
 import Slide14 from "./components/slide-14"
-// import Slide13 from "./components/slide-pre-final"
-// import Slide14 from "./components/slide-final"
+import Slide15 from "./components/slide-15"
+import Slide16 from "./components/slide-16"
 
 export const metadata: Metadata = {
     title: "Brochure | Pixaventures",
@@ -69,10 +69,10 @@ export default function PdfBrochure2Page() {
             <Slide14 />
             <PageBreak />
 
-            {/* <Slide13 />
+            <Slide15 />
             <PageBreak />
 
-            <Slide14 /> */}
+            <Slide16 />
         </div>
     )
 }

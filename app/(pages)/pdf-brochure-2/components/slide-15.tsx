@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { BRAND_RED, NAV_LINKS } from "../constants"
 
-export default function Slide13() {
+export default function Slide15() {
     return (
         <section
             className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
