@@ -1,0 +1,35 @@
+/* Brochure 2 — fixed desktop layout, exact match to reference images */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+.brochure-page {
+    min-height: 848px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.brochure-script {
+    font-family: "Dancing Script", "Brush Script MT", cursive;
+}
+
+.brochure-serif {
+    font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+}
+
+/* Outlined large numbers */
+.brochure-outline-num {
+    font-family: Georgia, "Times New Roman", serif;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    font-weight: 300;
+}
+
+/* Radiating lines SVG container */
+.radiating-lines {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
