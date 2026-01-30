@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const DEMAND_SERVICES = [
@@ -16,6 +17,7 @@ export default function Slide9() {
             className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
             style={{ pageBreakAfter: "always" }}
         >
+            {/* Nav — unchanged */}
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
                 <nav className="flex gap-6 text-xs text-gray-500">
                     {NAV_LINKS.map((link, i) => (
@@ -24,45 +26,56 @@ export default function Slide9() {
                         </span>
                     ))}
                 </nav>
-                <div className="h-8 w-8 rounded-full border border-gray-300" />
+                <div
+                    className="h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center"
+                    style={{ borderColor: BRAND_RED }}
+                >
+                    <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </div>
             </div>
-            <div className="mt-10 flex gap-16">
-                <div className="w-[340px] shrink-0">
-                    <h2 className="text-2xl font-bold leading-tight" style={{ color: BRAND_NAVY }}>
+
+            {/* Centered content — larger type, image, grid */}
+
+            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center">
+                {/* Left side — takes more width */}
+                <div className="flex-1 flex flex-col items-center text-center justify-center">
+                    <h2
+                        className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
+                        style={{ color: BRAND_NAVY }}
+                    >
                         Buyer Acquisition
                         <br />
                         Channels
                     </h2>
-                    <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
+                    <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
                         Multi-channel demand generation built for export buyers
                     </p>
-                    <div className="mt-10 flex items-center gap-4">
-                        <svg className="h-10 w-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeWidth="1" d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                            <circle cx="12" cy="12" r="4" strokeWidth="1" />
-                            <circle cx="12" cy="12" r="1.5" fill={BRAND_NAVY} />
-                        </svg>
-                        <div className="h-2 w-2 rounded-full" style={{ backgroundColor: BRAND_RED }} />
-                        <svg className="h-8 w-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeWidth="1" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-                            <circle cx="12" cy="8" r="2" fill="none" strokeWidth="1" />
-                            <path strokeWidth="1" d="M6 18c1.5-2 3.5-3 6-3s4.5 1 6 3" />
-                        </svg>
+                    <div className="mt-8 flex justify-center">
+                        <Image
+                            src="/brochure/slide_9.png"
+                            alt=""
+                            width={480}
+                            height={200}
+                            className="h-auto w-full max-w-md object-contain"
+                        />
                     </div>
                 </div>
-                <div className="grid flex-1 grid-cols-4 gap-x-6 gap-y-8">
+
+                {/* Right side — services grid */}
+                <div className="flex-3 mt-0 grid grid-cols-1 gap-x-12 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
                     {DEMAND_SERVICES.map((item) => (
-                        <div key={item.title}>
-                            <h3 className="text-sm font-bold text-[#1b2737]">{item.title}</h3>
-                            <p className="mt-2 text-xs leading-relaxed text-text">{item.body}</p>
+                        <div key={item.title} className="flex flex-col">
+                            <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
+                                {item.title}
+                            </h3>
+                            <p className="mt-2 text-sm leading-relaxed font-serif text-gray-600 sm:text-base">
+                                {item.body}
+                            </p>
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="mt-auto flex justify-end gap-2 pt-8">
-                <span className="h-px w-8 self-center bg-gray-300" />
-                <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                <span className="text-sm text-gray-600">9</span>
             </div>
         </section>
     )
