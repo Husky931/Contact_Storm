@@ -42,11 +42,11 @@ export default function Slide2() {
                     </p>
                 </div>
             </div>
-            <div className="mt-auto flex justify-end gap-2 pt-8">
+            {/* <div className="mt-auto flex justify-end gap-2 pt-8">
                 <span className="h-px w-8 self-center bg-text-dark/60" />
-                <span className="h-1.5 w-1.5 rounded-full bg-text-dark" />
+                <span className="h-1.5 w-1.5 rounded-full text-center flex justify-center items-center bg-text-dark" />
                 <span className="text-lg font-medium text-text-dark">2</span>
-            </div>
+            </div> */}
         </section>
     )
 }

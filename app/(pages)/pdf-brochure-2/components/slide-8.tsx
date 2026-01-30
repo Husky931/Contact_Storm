@@ -27,14 +27,6 @@ export default function Slide8() {
                         </span>
                     ))}
                 </nav>
-                <div
-                    className="h-8 w-8 rounded-full border border-gray-300 flex items-center justify-center"
-                    style={{ borderColor: BRAND_RED }}
-                >
-                    <svg className="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
-                </div>
             </div>
 
             {/* Centered content — larger type, image, grid */}

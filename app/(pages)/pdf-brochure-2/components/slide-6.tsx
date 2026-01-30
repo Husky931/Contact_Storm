@@ -40,11 +40,6 @@ export default function Slide6() {
                     </p>
                 </div>
             </div>
-            <div className="mt-auto flex justify-end gap-2 pt-8">
-                <span className="h-px w-8 self-center bg-white/20" />
-                <span className="h-1.5 w-1.5 rounded-full bg-white/40" />
-                <span className="text-sm text-white/70">6</span>
-            </div>
         </section>
     )
 }

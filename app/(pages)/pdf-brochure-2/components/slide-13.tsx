@@ -82,11 +82,6 @@ export default function Slide13() {
                     </div>
                 </div>
             </div>
-            <div className="mt-auto flex justify-end gap-2 pt-8">
-                <span className="h-px w-8 self-center bg-gray-300" />
-                <span className="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                <span className="text-sm text-gray-600">13</span>
-            </div>
         </section>
     )
 }

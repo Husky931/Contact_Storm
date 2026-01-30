@@ -40,11 +40,6 @@ export default function Slide4() {
                     </p>
                 </div>
             </div>
-            <div className="mt-auto flex justify-end gap-2 pt-8">
-                <span className="h-px w-8 self-center bg-text-dark/10" />
-                <span className="h-1.5 w-1.5 rounded-full bg-text-dark/20" />
-                <span className="text-sm text-text-dark/70">4</span>
-            </div>
         </section>
     )
 }

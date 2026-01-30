@@ -48,7 +48,7 @@ export default function Slide1() {
                         className="text-xl font-normal tracking-widest"
                         style={{ color: "#CCCCCC" }}
                     >
-                        EXPORT GROWTH AGENCY
+                        LEADS GENERATION & EXPORT GROWTH AGENCY
                     </span>
                 </div>
             </div>
@@ -61,12 +61,12 @@ export default function Slide1() {
                         win overseas buyers
 
                     </p>
-                    <p
+                    {/* <p
                         className="mt-14 text-sm font-medium tracking-[0.35em]"
                         style={{ color: "#FFFFFF" }}
                     >
-                        DIGITAL EXPORT GROWTH AGENCY
-                    </p>
+                        DIGITAL GROWTH AGENCY
+                    </p> */}
                 </div>
             </div>
             <div />
