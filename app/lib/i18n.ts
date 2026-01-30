@@ -4,6 +4,7 @@ export const translations = {
     en: {
         nav: {
             home: "Home",
+            brochure: "Brochure",
             reports: "Reports",
             insights: "Insights",
             contact: "Contact"
@@ -129,7 +130,8 @@ export const translations = {
         specialization: {
             kicker: "Why Factories Choose Us",
             title: "Built for Chinese manufacturers selling overseas",
-            subtitle: "We understand Chinese manufacturing and overseas buyers.",
+            subtitle:
+                "We understand Chinese manufacturing and overseas buyers.",
             copy: "We specialize in turning factory strengths into clear, buyer-friendly offers. Our foreign-led, mixed team builds the ad creative and storefronts that Western customers trust.",
             pillars: [
                 {
@@ -179,15 +181,15 @@ export const translations = {
                 {
                     number: "03",
                     title: "Conversion system",
-                    description:
-                        "Ultimate goal to increase sales",
+                    description: "Ultimate goal to increase sales",
                     icon: "/icons/3.png"
                 }
             ]
         },
         aiSearchOptimization: {
             title: "AI Search Website Optimization",
-            subtitle: "Are you keeping up with the times? People are now using AI to find results",
+            subtitle:
+                "Are you keeping up with the times? People are now using AI to find results",
             sellerText: {
                 paragraphs: [
                     `The digital landscape has hit a tipping point. We are no longer just in the era of "Search Engines"; we are in the era of AU Generative Search.`,
@@ -232,9 +234,12 @@ export const translations = {
                 "Lead Generation – Find and vet qualified buyers for your products"
             ],
             aboutTitle: "Who We Are",
-            aboutText1: "We are a team of foreign professionals who have lived in China for over 10 years, specializing in increasing sales, brand awareness, and generating leads for Chinese sellers and manufacturers.",
-            aboutText2: "Our professional background and extensive working experience have given us unique insights into both Chinese manufacturing excellence and Western buyer expectations. We bridge these two worlds to help your business succeed internationally.",
-            aboutText3: "We pride ourselves on delivering exceptional work, and when you work with us, success is guaranteed.",
+            aboutText1:
+                "We are a team of foreign professionals who have lived in China for over 10 years, specializing in increasing sales, brand awareness, and generating leads for Chinese sellers and manufacturers.",
+            aboutText2:
+                "Our professional background and extensive working experience have given us unique insights into both Chinese manufacturing excellence and Western buyer expectations. We bridge these two worlds to help your business succeed internationally.",
+            aboutText3:
+                "We pride ourselves on delivering exceptional work, and when you work with us, success is guaranteed.",
             cta: "Contact Us on WeChat"
         },
         services: {
@@ -367,8 +372,7 @@ export const translations = {
                 placeholder: "Your email",
                 websitePlaceholder: "Your website URL",
                 formName: "Footer Audit Request",
-                message:
-                    "Free audit request (SEO + Website AI Optimization).",
+                message: "Free audit request (SEO + Website AI Optimization).",
                 success: "Thanks! We'll send your audit to your email soon.",
                 errors: {
                     missingEmail: "Please enter a valid email and website.",
@@ -408,6 +412,7 @@ export const translations = {
     zh: {
         nav: {
             home: "首页",
+            brochure: "手册",
             reports: "报告",
             insights: "洞察",
             contact: "联系我们"
@@ -473,13 +478,7 @@ export const translations = {
                     "社媒运营",
                     "多项服务"
                 ],
-                targetMarkets: [
-                    "欧洲",
-                    "北美",
-                    "中东",
-                    "多个地区",
-                    "其他"
-                ],
+                targetMarkets: ["欧洲", "北美", "中东", "多个地区", "其他"],
                 submit: {
                     idle: "提交简报",
                     sending: "提交中..."
@@ -568,7 +567,8 @@ export const translations = {
                 {
                     number: "02",
                     title: "买家定位",
-                    description: "亚马逊PPC广告、付费社交媒体推广、搜索引擎优化、人工智能网站优化和外联推广",
+                    description:
+                        "亚马逊PPC广告、付费社交媒体推广、搜索引擎优化、人工智能网站优化和外联推广",
                     icon: "/icons/2.png"
                 },
                 {
@@ -626,8 +626,10 @@ export const translations = {
                 "线索,获取 – 为您的产品寻找并筛选合格买家"
             ],
             aboutTitle: "我们是谁",
-            aboutText1: "我们是一支在中国生活超过10年的外籍专业团队，专注于为中国卖家和制造商提升销量、品牌知名度和获取优质线索。",
-            aboutText2: "我们的专业背景和多年工作经验让我们对中国制造的优势和西方买家的期望都有独特的洞察。我们连接这两个世界，帮助您的业务在国际市场取得成功。",
+            aboutText1:
+                "我们是一支在中国生活超过10年的外籍专业团队，专注于为中国卖家和制造商提升销量、品牌知名度和获取优质线索。",
+            aboutText2:
+                "我们的专业背景和多年工作经验让我们对中国制造的优势和西方买家的期望都有独特的洞察。我们连接这两个世界，帮助您的业务在国际市场取得成功。",
             aboutText3: "我们以优质的工作为傲，与我们合作，成功有保障。",
             cta: "微信联系我们"
         },
