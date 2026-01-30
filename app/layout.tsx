@@ -39,10 +39,10 @@ export default function RootLayout({
             >
                 <LanguageProvider>
                     <GoogleAnalytics gaTrackingId={gaTrackingId} />
-                    <Navbar />
+                    {/* <Navbar /> */}
                     {children}
-                    <Footer />
-                    <ContactPopup />
+                    {/* <Footer /> */}
+                    {/* <ContactPopup /> */}
                 </LanguageProvider>
             </body>
         </html>

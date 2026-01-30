@@ -338,110 +338,109 @@ export default function ContactPopup({
     // Desktop vertical sidebar - memoized to prevent recreation on each render
     const desktopSidebar = useMemo(() => {
         if (!mounted) return null
-        return null
-        // return (
-        //     <div className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 md:block">
-        //         {/* White box with 3 icons */}
-        //         <div className="mb-3 flex flex-col items-center gap-2 rounded-l-lg bg-white p-2 shadow-lg">
-        //             {/* Free Report Button */}
-        //             <button
-        //                 onClick={handleFreeReportClick}
-        //                 className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
-        //                 aria-label="Free Report"
-        //             >
-        //                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
-        //                     <svg
-        //                         className="h-5 w-5 text-gray-700"
-        //                         fill="none"
-        //                         viewBox="0 0 24 24"
-        //                         stroke="currentColor"
-        //                     >
-        //                         <path
-        //                             strokeLinecap="round"
-        //                             strokeLinejoin="round"
-        //                             strokeWidth={2}
-        //                             d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-        //                         />
-        //                     </svg>
-        //                 </div>
-        //                 <span className="text-[10px] font-medium text-gray-700">
-        //                     {language === "zh" ? "立即体验" : "Free Report"}
-        //                 </span>
-        //             </button>
+        return (
+            <div className="fixed right-4 top-1/2 z-50 hidden -translate-y-1/2 md:block">
+                {/* White box with 3 icons */}
+                <div className="mb-3 flex flex-col items-center gap-2 rounded-l-lg bg-white p-2 shadow-lg">
+                    {/* Free Report Button */}
+                    <button
+                        onClick={handleFreeReportClick}
+                        className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
+                        aria-label="Free Report"
+                    >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+                            <svg
+                                className="h-5 w-5 text-gray-700"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                />
+                            </svg>
+                        </div>
+                        <span className="text-[10px] font-medium text-gray-700">
+                            {language === "zh" ? "立即体验" : "Free Report"}
+                        </span>
+                    </button>
 
-        //             {/* Email/Contact Button */}
-        //             <button
-        //                 onClick={handleEmailClick}
-        //                 className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
-        //                 aria-label="Contact"
-        //             >
-        //                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
-        //                     <svg
-        //                         className="h-5 w-5 text-gray-700"
-        //                         fill="none"
-        //                         viewBox="0 0 24 24"
-        //                         stroke="currentColor"
-        //                     >
-        //                         <path
-        //                             strokeLinecap="round"
-        //                             strokeLinejoin="round"
-        //                             strokeWidth={2}
-        //                             d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        //                         />
-        //                     </svg>
-        //                 </div>
-        //                 <span className="text-[10px] font-medium text-gray-700">
-        //                     {language === "zh" ? "购买咨询" : "Contact"}
-        //                 </span>
-        //             </button>
+                    {/* Email/Contact Button */}
+                    <button
+                        onClick={handleEmailClick}
+                        className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
+                        aria-label="Contact"
+                    >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+                            <svg
+                                className="h-5 w-5 text-gray-700"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                />
+                            </svg>
+                        </div>
+                        <span className="text-[10px] font-medium text-gray-700">
+                            {language === "zh" ? "购买咨询" : "Contact"}
+                        </span>
+                    </button>
 
-        //             {/* Phone Button */}
-        //             <button
-        //                 onClick={handlePhoneClick}
-        //                 className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
-        //                 aria-label="Call"
-        //             >
-        //                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
-        //                     <svg
-        //                         className="h-5 w-5 text-gray-700"
-        //                         fill="none"
-        //                         viewBox="0 0 24 24"
-        //                         stroke="currentColor"
-        //                     >
-        //                         <path
-        //                             strokeLinecap="round"
-        //                             strokeLinejoin="round"
-        //                             strokeWidth={2}
-        //                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-        //                         />
-        //                     </svg>
-        //                 </div>
-        //                 <span className="text-[10px] font-medium text-gray-700">
-        //                     {language === "zh" ? "销售热线" : "Call"}
-        //                 </span>
-        //             </button>
-        //         </div>
+                    {/* Phone Button */}
+                    <button
+                        onClick={handlePhoneClick}
+                        className="flex flex-col items-center gap-1 rounded p-2 transition-colors hover:bg-gray-50"
+                        aria-label="Call"
+                    >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+                            <svg
+                                className="h-5 w-5 text-gray-700"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                />
+                            </svg>
+                        </div>
+                        <span className="text-[10px] font-medium text-gray-700">
+                            {language === "zh" ? "销售热线" : "Call"}
+                        </span>
+                    </button>
+                </div>
 
-        //         {/* Profile Image Section - Outside the white box */}
-        //         <div className="flex flex-col items-center gap-1.5">
-        //             <button
-        //                 onClick={handleWeChatClick}
-        //                 className="relative h-12 w-12 overflow-hidden rounded-full transition-transform hover:scale-105"
-        //                 aria-label="WeChat QR"
-        //             >
-        //                 <Image
-        //                     src="/images/about/contact.jpeg"
-        //                     alt={language === "zh" ? "专属顾问" : "Exclusive Consultant"}
-        //                     fill
-        //                     className="object-cover"
-        //                 />
-        //             </button>
-        //             <span className="rounded bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-700">
-        //                 {language === "zh" ? "专属顾问" : "Consultant"}
-        //             </span>
-        //         </div>
-        //     </div>
-        // )
+                {/* Profile Image Section - Outside the white box */}
+                <div className="flex flex-col items-center gap-1.5">
+                    <button
+                        onClick={handleWeChatClick}
+                        className="relative h-12 w-12 overflow-hidden rounded-full transition-transform hover:scale-105"
+                        aria-label="WeChat QR"
+                    >
+                        <Image
+                            src="/images/about/contact.jpeg"
+                            alt={language === "zh" ? "专属顾问" : "Exclusive Consultant"}
+                            fill
+                            className="object-cover"
+                        />
+                    </button>
+                    <span className="rounded bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-700">
+                        {language === "zh" ? "专属顾问" : "Consultant"}
+                    </span>
+                </div>
+            </div>
+        )
     }, [
         mounted,
         language,
