@@ -13,25 +13,29 @@ export default function Slide4() {
                     </span>
                 ))}
             </nav>
-            <div className="mt-12 flex flex-1 items-center gap-16">
-                <div className="relative">
+            <div className="mt-2 h-px w-full bg-text-dark/30" aria-hidden />
+            <div className="mt-0 grid flex-1 grid-cols-[75%_1fr] gap-0 py-8">
+                <div className="relative flex min-h-0 items-center justify-center pr-4">
                     <span
-                        className="brochure-outline-num block text-[12rem] leading-none"
+                        className="brochure-outline-num block text-[40rem] leading-none"
                         style={{ WebkitTextStroke: "1px rgba(255,255,255,0.35)" }}
+                        aria-hidden
                     >
                         01
                     </span>
-                    <div className="absolute inset-0 flex items-center pl-4 pt-8">
-                        <h1 className="brochure-serif text-5xl font-normal leading-tight text-text-dark">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <h1 className="brochure-serif text-center text-7xl font-semibold leading-tight text-text-dark">
                             Export Growth
                             <br />
                             Strategy
                         </h1>
                     </div>
                 </div>
-                <div className="max-w-sm text-sm leading-relaxed text-text-dark/90">
-                    Factory-first, buyer-centric strategy aligned to your MOQ, certifications,
-                    sales cycle, and target export markets.
+                <div className="flex min-h-0 items-center border-l border-text-dark/30 pl-12">
+                    <p className="max-w-sm text-lg leading-relaxed text-text-dark/90">
+                        Factory-first, buyer-centric strategy aligned to your MOQ, certifications,
+                        sales cycle, and target export markets.
+                    </p>
                 </div>
             </div>
             <div className="mt-auto flex justify-end gap-2 pt-8">
