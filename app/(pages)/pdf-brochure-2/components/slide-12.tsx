@@ -1,14 +1,21 @@
-import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
-const SUPPORT_SERVICES = [
-    { title: "AI-Powered Lead Discovery", body: "Our in-house software identifies high-value businesses in your niche, analyzing domains and digital footprints." },
-    { title: "Daily Domain Scanning", body: "Scans 5000+ foreign buyer domains daily, targeted by industry, location, and online presence." },
-    { title: "Decision-Maker Extraction", body: "Extracts important decision-makers' emails and analyzes their digital footprints (paid ads, social channels)." },
-    { title: "Automated Outreach", body: "Direct automated outreach via website or email with personalized messages to decision-makers." },
-    { title: "Real-Time Tracking Dashboard", body: "Track response rate, interaction, and success rate on our dashboard with conversation logging." },
-    { title: "Custom Automation Tools", body: "Custom software development for repetitive tasks, freeing your team for high-value work." },
-    { title: "Sales Conversation Tracking", body: "AI tools to track sales conversations on channels like Alibaba, 1688, monitoring success rates." }
+const CUSTOM_AUTOMATION_EXAMPLES = [
+    {
+        num: 1,
+        title: "AI tool to keep track of your sales people conversations with leads",
+        body: "Channels like Alibaba, 1688 or others — track success rate and keep conversations in a dashboard.",
+    },
+    {
+        num: 2,
+        title: "Real-time Amazon BSR tracker",
+        body: "Alerts when competitors’ product prices drop or product page gets updated.",
+    },
+    {
+        num: 3,
+        title: "Any type of automation software for repetitive tasks",
+        body: "Freeing your team for high-value work.",
+    },
 ]
 
 export default function Slide12() {
@@ -17,7 +24,6 @@ export default function Slide12() {
             className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
             style={{ pageBreakAfter: "always" }}
         >
-            {/* Nav — unchanged */}
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
                 <nav className="flex gap-6 text-xs text-gray-500">
                     {NAV_LINKS.map((link, i) => (
@@ -28,43 +34,44 @@ export default function Slide12() {
                 </nav>
             </div>
 
-            {/* Centered content — larger type, image, grid */}
-
-            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center">
-                {/* Left side — takes more width */}
-                <div className="flex-1 flex flex-col items-center text-center justify-center">
+            <div className="mt-12 flex flex-1 items-stretch gap-24 py-8">
+                {/* Left — intro text */}
+                <div className="flex flex-1 flex-col justify-center">
                     <h2
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Lead Generation &
-                        <br />
-                        Custom Software
+                        <span style={{ color: BRAND_RED }}>Custom Automation</span>
                     </h2>
-                    <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        AI-powered tools that identify, reach, and convert high-value prospects
+                    <p className="mt-5 max-w-lg text-lg leading-relaxed text-[#1b2737] sm:text-xl">
+                        We develop custom tools and automations for repetitive tasks to save workforce time and solve specific problems.
                     </p>
-                    <div className="mt-8 flex justify-center">
-                        <Image
-                            src="/brochure/slide_12.png"
-                            alt=""
-                            width={480}
-                            height={200}
-                            className="h-auto w-full max-w-md object-contain"
-                        />
-                    </div>
                 </div>
 
-                {/* Right side — services grid */}
-                <div className="flex-3 mt-0 grid grid-cols-1 gap-x-12 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
-                    {SUPPORT_SERVICES.map((item) => (
-                        <div key={item.title} className="flex flex-col">
-                            <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
-                                {item.title}
-                            </h3>
-                            <p className="mt-2 text-sm leading-relaxed font-serif text-gray-600 sm:text-base">
-                                {item.body}
-                            </p>
+                {/* Vertical divider */}
+                <div className="w-px shrink-0 bg-gray-300" />
+
+                {/* Right — numbered examples */}
+                <div className="flex flex-[1.2] flex-col justify-center space-y-8">
+                    <p className="text-xs font-medium uppercase tracking-widest text-gray-500">
+                        Examples
+                    </p>
+                    {CUSTOM_AUTOMATION_EXAMPLES.map((item) => (
+                        <div key={item.num} className="flex gap-4">
+                            <span
+                                className="brochure-serif flex h-8 w-8 shrink-0 items-center justify-center text-lg font-semibold text-[#1b2737]"
+                                style={{ color: BRAND_RED }}
+                            >
+                                {item.num}.
+                            </span>
+                            <div>
+                                <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
+                                    {item.title}
+                                </h3>
+                                <p className="mt-1 text-sm leading-relaxed text-gray-600 sm:text-base">
+                                    {item.body}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>
