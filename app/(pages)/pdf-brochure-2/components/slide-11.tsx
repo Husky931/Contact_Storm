@@ -36,7 +36,7 @@ export default function Slide11() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Social Media
+                        Social <span style={{ color: BRAND_RED }}>Media</span>
                         <br />
                         Growth
                     </h2>

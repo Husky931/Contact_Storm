@@ -36,7 +36,7 @@ export default function Slide8() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Amazon Ads &
+                        <span style={{ color: BRAND_RED }}> Amazon Ads</span> &
                         <br />
                         Optimization
                     </h2>

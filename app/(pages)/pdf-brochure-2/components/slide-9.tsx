@@ -36,7 +36,7 @@ export default function Slide9() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        SEO for the AI
+                        SEO for <span style={{ color: BRAND_RED }}>the AI</span>
                         <br />
                         Era
                     </h2>

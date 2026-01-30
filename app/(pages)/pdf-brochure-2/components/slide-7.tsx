@@ -36,7 +36,7 @@ export default function Slide7() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Website & Shopify
+                        Website & <span style={{ color: BRAND_RED }}>Shopify</span>
 
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
