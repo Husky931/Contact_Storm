@@ -32,7 +32,7 @@ export default function Slide13() {
                     </p>
                 </div>
                 <div className="w-[450px] flex items-center justify-center shrink-0 min-w-0">
-                    <div className="relative w-full max-w-md aspect-4/3">
+                    <div className="relative w-full h-[550px]">
                         <Image
                             src="/brochure/slide_13.png"
                             alt="Sales funnel: Awareness Stage, Evaluation Stage, Negotiation & Sale"
@@ -42,6 +42,17 @@ export default function Slide13() {
                         />
                     </div>
                 </div>
+                {/* <div className="w-[450px] flex items-center justify-center shrink-0 min-w-0">
+                    <div className="relative w-full max-w-md aspect-4/3">
+                        <Image
+                            src="/brochure/slide_13.png"
+                            alt="Sales funnel: Awareness Stage, Evaluation Stage, Negotiation & Sale"
+                            fill
+                            className="object-contain"
+                            priority
+                        />
+                    </div>
+                </div> */}
                 <div className=" shrink-0 flex flex-col justify-center gap-6 text-base">
                     <div>
                         <h3 className="font-bold text-[#1b2737]">Top of Funnel</h3>
