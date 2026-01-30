@@ -1,8 +1,8 @@
 export const NAV_LINKS = [
-    "01. STRATEGY & CONSULTING",
-    "02. IMPLEMENTATION SERVICES",
-    "03. OUR WORK",
-    "04. ABOUT US"
+    "01. STRATEGY & GROWTH",
+    "02. EXECUTION SERVICES",
+    "03. AI & AUTOMATION",
+    "04. CONTACT"
 ]
 
 export const BRAND_NAVY = "#1b2737"

@@ -24,7 +24,7 @@ export default function Slide6() {
                         02
                     </span>
                     <h1 className="brochure-serif text-4xl font-normal leading-tight">
-                        Implementation
+                        Execution
                         <br />
                         Services
                     </h1>
@@ -34,9 +34,8 @@ export default function Slide6() {
                     style={{ marginTop: "3rem", marginBottom: "3rem" }}
                 />
                 <div className="flex w-[380px] shrink-0 flex-col justify-center px-12 py-12 text-sm leading-relaxed text-white/95">
-                    Once we have defined the correct strategy to address your sales & marketing
-                    challenges we offer a broad range of implementation services to deliver the
-                    agreed plan.
+                    Once the strategy is defined, we execute across Amazon, paid social, SEO,
+                    websites, and lead generation to deliver measurable export growth.
                 </div>
             </div>
             <div className="flex justify-end gap-2 px-16 pb-14 pt-8">

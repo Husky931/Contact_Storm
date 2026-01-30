@@ -2,28 +2,28 @@ import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const STRATEGY_SERVICES = [
     {
-        title: "Value Proposition Development",
-        body: "Understanding what your value proposition is and what sets you apart from your competitors means you can easily show prospective customers why your product or service is valuable to them."
+        title: "Export Market Research",
+        body: "Define priority regions, buyer personas, and competitor benchmarks."
     },
     {
-        title: "Ideal Customer Profiling",
-        body: "ICP is hugely important in sales. Being able to target the right audience means you have the most valuable leads for your product or service and a stronger chance of conversion success."
+        title: "Western Buyer Positioning",
+        body: "Translate MOQ, certifications, and lead times into clear buyer value."
     },
     {
-        title: "Sales Funnel Strategy",
-        body: "We analyse every stage of your sales funnel to identify where adjustments need to be made. In doing so we can deliver a better customer journey and help improve your conversion rate."
+        title: "Channel & Marketplace Roadmap",
+        body: "Select the right mix of Amazon, Google, and paid social."
     },
     {
-        title: "Sales & Marketing Alignment",
-        body: "When sales and marketing teams work hand-in-glove to promote your product or service the opportunities for growth increase. We set ambitious goals and communicate with you every step of the way to grow your business."
+        title: "AI Search + SEO Strategy",
+        body: "Optimize for AI discovery alongside classic search engines."
     },
     {
-        title: "Paid Advertising Strategy",
-        body: "Using paid channels is a highly effective strategy to target specific audiences. You can define your ideal customers based on criteria that include demographics, previous purchases, location and interests."
+        title: "Lead Gen KPI Planning",
+        body: "Set targets for qualified leads, CPL, and conversion rate."
     },
     {
-        title: "Content & Messaging",
-        body: "Good copywriting will help clarify your message and connect with your audience. A well-crafted compelling script or page of text can inspire people to engage with your business."
+        title: "Offer & Pricing Clarity",
+        body: "Package SKUs and terms to reduce buyer friction."
     }
 ]
 
@@ -56,10 +56,10 @@ export default function Slide5() {
                         className="brochure-serif text-3xl font-normal leading-tight"
                         style={{ color: BRAND_NAVY }}
                     >
-                        We are a Strategy-led Agency
+                        We are an Export Growth Agency
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        We advise on all aspects of your sales and recruitment funnels
+                        Strategy built around factory realities and Western buyer expectations
                     </p>
                     <div className="mt-10 flex items-start gap-4">
                         <svg className="h-12 w-12 shrink-0 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

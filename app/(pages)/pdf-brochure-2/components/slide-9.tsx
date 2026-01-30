@@ -1,13 +1,13 @@
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const DEMAND_SERVICES = [
-    { title: "Paid Advertising", body: "Paid advertising is one of the quickest ways to get results. Using a digital advertising strategy will help you reach specific demographics, increase engagement and attract traffic to your website faster than organic marketing." },
-    { title: "Account-Based Marketing", body: "In ABM, sales and marketing teams align to pursue a targeted set of high-value accounts that will be a good fit for your business. When done right ABM can deliver a higher return on investment than any other marketing strategy." },
-    { title: "Search Engine Optimisation", body: "SEO is hugely important if you want to increase your website traffic. It is also a cost-effective practice helping to build the quality and quantity of your traffic organically." },
-    { title: "Keyword Research", body: "Doing keyword research will provide you with the relevant keywords users are using to search with. Knowing the right keywords to implement in your text will make your content more visible to search engines and make it easier for users to find you." },
-    { title: "Email Marketing", body: "Email marketing is a very effective communication tool for business leaders. Sending emails allows you to maintain regular contact with customers and acquire new customers using targeted and personalised email campaigns." },
-    { title: "Video Marketing", body: "Videos are a very effective lead-generation tool. They are also a great way to explain your product or service. Search engines love video so adding a video to your website will help boost SEO and increase traffic to your site." },
-    { title: "Social Media Management", body: "We can develop a social media strategy to help you get the most from your social media marketing efforts. Getting your message to the right people, in the right way, and keeping track of your data will inform what content is really connecting with your audience." }
+    { title: "Amazon PPC & Marketplace", body: "Optimize listings and ads for B2B buyer intent." },
+    { title: "Paid Social Advertising", body: "Meta, Instagram, and TikTok campaigns that capture leads." },
+    { title: "SEO for Export Buyers", body: "Rank for high-intent supplier searches in target markets." },
+    { title: "AI Search Optimization", body: "Position your brand as the best answer in AI search." },
+    { title: "Lead Generation & Outreach", body: "Targeted lists and campaigns to decision-makers." },
+    { title: "Social Media Growth", body: "Build trust on platforms buyers check before outreach." },
+    { title: "Email & LinkedIn Nurture", body: "Convert interest into qualified conversations." }
 ]
 
 export default function Slide9() {
@@ -29,12 +29,12 @@ export default function Slide9() {
             <div className="mt-10 flex gap-16">
                 <div className="w-[340px] shrink-0">
                     <h2 className="text-2xl font-bold leading-tight" style={{ color: BRAND_NAVY }}>
-                        Demand Generation
+                        Buyer Acquisition
                         <br />
-                        Services
+                        Channels
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Drive consistent lead flows and take the volatility out of your sales pipeline
+                        Multi-channel demand generation built for export buyers
                     </p>
                     <div className="mt-10 flex items-center gap-4">
                         <svg className="h-10 w-10 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

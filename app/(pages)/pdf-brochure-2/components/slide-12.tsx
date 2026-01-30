@@ -1,13 +1,13 @@
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const SUPPORT_SERVICES = [
-    { title: "Support Desk", body: "You can contact our help desk at support@togetherdigital.ie. Our opening hours are Monday - Friday: 9:00am - 5:30pm. If your request is sent outside of regular working hours one of our team will reply to you at the next available time.", email: true },
-    { title: "CMS Updates", body: "CMS updates will help keep your website secure from hackers and improve your overall website performance. Updating your CMS will fix technical issues and bugs, enhance functionality and create a greater user experience." },
-    { title: "Pagespeed Monitoring", body: "Slow loading pages will impact your search engine rankings and affect your conversion rate. Faster loading pages will improve your SEO and user experience making it easier for your website to generate leads, attract traffic and rank higher on Google." },
-    { title: "Hosting", body: "We provide regular website maintenance check-ups and this helps ensure your site is performing optimally and that your website is secure." },
-    { title: "Penetration Testing", body: "Penetration testing is important to protect your website and increase its security profile. Simulating a cyber attack against your website's system will identify and expose vulnerabilities that an attacker could exploit." },
-    { title: "Core Web Vitals Reporting", body: "Google considers a specific set of metrics important to a website's user experience. We use specialist tools to measure Core Web Vitals and evaluate pages across the entire website so we can understand what pages require attention and need improvement." },
-    { title: "GDPR & Cookie Compliance", body: "GDPR (General Data Protection Regulation) protects the privacy of digital users. To achieve GDPR cookie compliance website owners need to be aware of the rules and regulations around tracking and monitoring user behaviour." }
+    { title: "Weekly Lead Delivery", body: "Qualified buyer leads with context and next steps." },
+    { title: "KPI Dashboards", body: "Clear reporting across ads, Amazon, and web." },
+    { title: "Bid & Budget Optimization", body: "Continuous improvements to ROI and ACoS." },
+    { title: "CRO Experiments", body: "Test pages and funnels to lift inquiry rates." },
+    { title: "AI Search Monitoring", body: "Track visibility in AI engines over time." },
+    { title: "Competitive Alerts", body: "Rankings, pricing, and share-of-voice updates." },
+    { title: "Dedicated Growth Support", body: "Hands-on partnership with fast iteration." }
 ]
 
 export default function Slide12() {
@@ -33,14 +33,12 @@ export default function Slide12() {
             <div className="mt-10 flex gap-16">
                 <div className="w-[320px] shrink-0">
                     <h2 className="text-2xl font-bold leading-tight" style={{ color: BRAND_NAVY }}>
-                        Support &
+                        Optimization &
                         <br />
-                        Maintenance
-                        <br />
-                        Services
+                        Reporting
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Our dedicated support team is on hand to ensure your site is fully secure and operating at maximum capacity
+                        Ongoing performance management to keep growth on track
                     </p>
                     <div className="mt-10 flex items-center gap-3">
                         <svg className="h-8 w-8 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,17 +60,7 @@ export default function Slide12() {
                         <div key={item.title}>
                             <h3 className="text-sm font-bold text-[#1b2737]">{item.title}</h3>
                             <p className="mt-2 text-xs leading-relaxed text-text">
-                                {item.email ? (
-                                    <>
-                                        You can contact our help desk at{" "}
-                                        <span className="underline" style={{ color: BRAND_RED }}>
-                                            support@togetherdigital.ie
-                                        </span>
-                                        . Our opening hours are Monday - Friday: 9:00am - 5:30pm. If your request is sent outside of regular working hours one of our team will reply to you at the next available time.
-                                    </>
-                                ) : (
-                                    item.body
-                                )}
+                                {item.body}
                             </p>
                         </div>
                     ))}

@@ -1,13 +1,13 @@
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DESIGN_SERVICES = [
-    { title: "Website Design", body: "How a person feels when interacting with a website will determine whether or not they return. A great website design provides a positive experience enhancing user engagement and keeping users on your site for longer." },
-    { title: "Landing Page Design", body: "A landing page will help drive traffic to your site and improve your SEO. In B2B landing pages are great for lead generation and are an effective marketing tool to encourage users to take action." },
-    { title: "Email Newsletters", body: "Nothing is more effective than direct communication with your customers. Email newsletters allow you to maintain regular contact with your clients by sending relevant information and updates straight to their inboxes." },
-    { title: "Social Media Assets", body: "We can create a dynamic range of content to distribute across your social media channels, from imagery to infographics to live-action videos that will push your campaign in the right direction." },
-    { title: "Display Advertising", body: "Display ads are a type of advertising that combine well-crafted text, eye-catching visuals and a strong CTA to help boost your brand awareness and increase visibility online." },
-    { title: "Bid Responses", body: "Putting a tender proposal together is tricky but we can implement a host of different assets from graphic design, copywriting and video content creation to make your submission more compelling and help you win that contract." },
-    { title: "Slide Decks", body: "Slide decks are simply a collection of graphic slides that are put together to support a presentation and are very effective in conveying your message to an audience. They are also often used for education and training purposes." }
+    { title: "Bilingual Website Redesign", body: "Modern sites that build trust fast with overseas buyers." },
+    { title: "Landing Page Systems", body: "Campaign-specific pages optimized for RFQs and lead capture." },
+    { title: "Trust & Compliance UX", body: "Highlight certifications, audits, and factory capabilities." },
+    { title: "Product & Factory Storytelling", body: "Layouts that communicate scale, quality, and reliability." },
+    { title: "A/B Testing & CRO", body: "Continuous testing to lift inquiry rates." },
+    { title: "Shopify & B2B Portals", body: "Wholesale-ready storefronts for export sales." },
+    { title: "Sales Enablement Assets", body: "Catalogs, line sheets, and buyer kits for your team." }
 ]
 
 export default function Slide7() {
@@ -36,12 +36,12 @@ export default function Slide7() {
                         className="text-2xl font-bold leading-tight"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Website and Digital
+                        Website & Conversion
                         <br />
-                        Design Services
+                        Design
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Impactful design that supports your sales & recruitment funnels
+                        Modern, trust-building experiences that turn buyers into inquiries
                     </p>
                     <div className="mt-10 flex items-center gap-3">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-300">

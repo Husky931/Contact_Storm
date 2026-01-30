@@ -17,9 +17,9 @@ import Slide13 from "./components/slide-13"
 import Slide14 from "./components/slide-14"
 
 export const metadata: Metadata = {
-    title: "Brochure | Together Digital",
+    title: "Brochure | Pixaventures",
     description:
-        "Together Digital — Specialist B2B digital agency. Strategy-led thinking. Transformative results."
+        "Pixaventures — Foreign-led export growth agency for Chinese manufacturers."
 }
 
 export default function PdfBrochure2Page() {

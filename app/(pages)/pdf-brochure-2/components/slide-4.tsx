@@ -23,15 +23,15 @@ export default function Slide4() {
                     </span>
                     <div className="absolute inset-0 flex items-center pl-4 pt-8">
                         <h1 className="brochure-serif text-5xl font-normal leading-tight text-text-dark">
-                            Strategy
+                            Export Growth
                             <br />
-                            & Consulting
+                            Strategy
                         </h1>
                     </div>
                 </div>
                 <div className="max-w-sm text-sm leading-relaxed text-text-dark/90">
-                    Our consulting team works with you to understand how your sales funnel works
-                    currently and how it can be optimised to drive future business success
+                    Factory-first, buyer-centric strategy aligned to your MOQ, certifications,
+                    sales cycle, and target export markets.
                 </div>
             </div>
             <div className="mt-auto flex justify-end gap-2 pt-8">

@@ -13,56 +13,56 @@ export default function Slide3() {
             <div className="mt-8 flex flex-1 items-center justify-between gap-20">
                 <div className="space-y-4 text-sm text-gray-300">
                     <div className="flex justify-between gap-8">
-                        <span className="font-semibold">Strategy & Consulting</span>
+                        <span className="font-semibold">Strategy & Growth System</span>
                         <span>4</span>
                     </div>
                     <div className="flex justify-between gap-8">
-                        <span className="font-semibold">Implementation Services</span>
+                        <span className="font-semibold">Execution Services</span>
                         <span>6</span>
                     </div>
                     <ul className="ml-4 space-y-2 text-gray-400">
                         <li className="flex justify-between gap-8">
-                            <span>Website and Digital Design</span>
+                            <span>Website & Conversion Design</span>
                             <span>7</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Website Development</span>
+                            <span>Growth Software & Automation</span>
                             <span>8</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Demand Generation</span>
+                            <span>Buyer Acquisition Channels</span>
                             <span>9</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Video & Content</span>
+                            <span>Content & Creative Production</span>
                             <span>10</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Branding & Graphic Design</span>
+                            <span>Marketplace & Trust Assets</span>
                             <span>11</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Support & Maintenance</span>
+                            <span>Optimization & Reporting</span>
                             <span>12</span>
                         </li>
                     </ul>
                     <div className="flex justify-between gap-8 pt-2">
-                        <span className="font-semibold">Our Work</span>
-                        <span>14</span>
+                        <span className="font-semibold">Buyer Journey Framework</span>
+                        <span>13</span>
                     </div>
                     <div className="flex justify-between gap-8">
-                        <span className="font-semibold">Agency Credentials</span>
-                        <span>22</span>
+                        <span className="font-semibold">Contact & Locations</span>
+                        <span>14</span>
                     </div>
                 </div>
                 <div className="brochure-serif text-right text-5xl font-normal leading-tight">
-                    <span className="text-white">delivering</span>
+                    <span className="text-white">export-first</span>
                     <br />
-                    <span style={{ color: BRAND_RED }}>high-performance</span>
+                    <span style={{ color: BRAND_RED }}>growth for</span>
                     <br />
-                    <span className="text-white">marketing</span>
+                    <span className="text-white">overseas</span>
                     <br />
-                    <span className="text-white">solutions</span>
+                    <span className="text-white">buyers</span>
                 </div>
             </div>
             <div className="mt-auto flex justify-end gap-2 pt-8">

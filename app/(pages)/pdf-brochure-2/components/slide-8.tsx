@@ -1,14 +1,14 @@
 import { BRAND_NAVY, BRAND_RED, NAV_LINKS } from "../constants"
 
 const WEB_DEV_SERVICES = [
-    { title: "Headless CMS", body: "Headless CMS technology delivers faster page load speeds enhancing the user experience. The cloud-based system also provides increased security benefits for your website." },
-    { title: "Payment System Integrations", body: "A strong, reliable payment system on your website will be of great value to your users. Integrating a payment system into your platform will make the payment process far more seamless and improve the user experience for your customers." },
-    { title: "Custom Animations", body: "Moving images will capture your audience's attention and help keep them engaged with your content. Web animation can greatly influence users' actions on your website and improve the UX journey." },
-    { title: "Ongoing Performance Monitoring", body: "We can track how your website is performing using the latest performance monitoring tools and software. Knowing how your site is performing indicates the elements of your site that are working well and those that need improving." },
-    { title: "Advanced Functionality", body: "A functional website focuses on the user journey. Creating a great user experience will keep users on your website for longer and this helps to generate leads that could eventually turn into paying customers." },
-    { title: "Website Audits", body: "A website audit is basically a routine health checkup for your site. We will carry out a full analysis and fix any errors to ensure your website performs at peak capacity and is SEO-optimised to be visible to search engines." },
-    { title: "Third-Party Integrations", body: "Leveraging third-party API can create a more impactful UX and customer-centric site. Adding features like payment integrations will boost your website's capability and streamline the user's journey." },
-    { title: "Portals", body: "Website portals are very effective for gathering information from various sources into a single user interface. This single centralised channel provides a gateway of communication for your business for employees, clients and customers." }
+    { title: "Lead Discovery Engine", body: "Scan buyer domains by industry, region, and digital presence." },
+    { title: "Decision-Maker Enrichment", body: "Identify procurement contacts and verified emails." },
+    { title: "Outreach Automation", body: "Personalized sequences via email and website." },
+    { title: "Conversation Tracking", body: "Real-time tracking of replies and engagement." },
+    { title: "Amazon BSR Alerts", body: "Monitor rankings, pricing, and competitor moves." },
+    { title: "AI Search Visibility", body: "Track brand presence in ChatGPT and Gemini." },
+    { title: "Performance Dashboards", body: "Unified reporting across ads, Amazon, and web." },
+    { title: "Workflow Automation", body: "Reduce manual tasks and speed up follow-up." }
 ]
 
 export default function Slide8() {
@@ -30,12 +30,12 @@ export default function Slide8() {
             <div className="mt-10 flex gap-16">
                 <div className="w-[340px] shrink-0">
                     <h2 className="text-2xl font-bold leading-tight" style={{ color: BRAND_NAVY }}>
-                        Website Development
+                        Growth Software
                         <br />
-                        Services
+                        & Automation
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Technically strong, superfast, future-proofed websites
+                        In-house tools that automate lead discovery, outreach, and reporting
                     </p>
                     <div className="mt-10 flex items-end gap-2">
                         <div className="rounded border border-gray-300 p-2 text-[10px] text-gray-400">

@@ -1,15 +1,15 @@
 import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
 const VIDEO_SERVICES = [
-    { title: "Website Content", body: "Write with your audience in mind. Quality content that informs and educates the user will keep them on your website for longer and help you build credibility for your business." },
-    { title: "Infographics", body: "Infographics are a dynamic mix of graphic design, imagery, data and content. They are very effective at helping users better understand complex information by breaking down difficult concepts into a clear and simple visual format." },
-    { title: "Blog Content", body: "Blogging should be a key part of your content marketing strategy. Blogs are an affordable marketing solution that will help you keep your users engaged. The more useful content you create, the more trust you will generate." },
-    { title: "Advertising Copy", body: "How do you communicate the value of your product or service to potential buyers? Choose your words carefully to convey the message you want. Good copywriting will connect with your prospective customers and persuade them to act." },
-    { title: "Explainer Videos", body: "Explainer videos are a quick and effective way to introduce and explain the value of your product or service. Videos are a powerful marketing tool and can have far more impact than a piece of text. Using video will also improve your search engine rankings." },
-    { title: "Website Content Reviews", body: "Does your website content need updating? We can review your site's content to ensure it is properly optimised for search engines, engaging for users and also outlines your value propositions in a clear and compelling way." },
-    { title: "Profile Videos", body: "A short marketing video telling the story of your company and how your product or service can help solve your customers' problems will boost your brand awareness and reach your target audience." },
-    { title: "Bid Response Videos", body: "You will add great value to your tender submission and stand out from your competitors with video. Video is one of the best ways to capture attention and done right will help you get your proposal across in a clear, engaging and memorable way." },
-    { title: "Content Editing", body: "Need help optimising your content for users and search engines? We edit all kinds of copy making sure it is SEO-Ready, on-brand, and grammatically accurate. We edit all kinds of copy, including scripts." }
+    { title: "Amazon A+ Content", body: "Visual storytelling that highlights certifications and MOQ." },
+    { title: "Product & Factory Videos", body: "Show capability, scale, and quality with confidence." },
+    { title: "Ad Creative & Hooks", body: "Scroll-stopping assets for paid social campaigns." },
+    { title: "Buyer Case Studies", body: "Proof that builds trust fast for overseas buyers." },
+    { title: "Explainer Videos", body: "Simple breakdowns of complex products and processes." },
+    { title: "Technical Datasheets", body: "Specs and compliance in buyer-ready formats." },
+    { title: "Catalogs & Line Sheets", body: "Professional product overviews for sales teams." },
+    { title: "Ad Copy & Messaging", body: "Clear value propositions tailored to buyer intent." },
+    { title: "Content Localization", body: "English-first, buyer-optimized translations." }
 ]
 
 export default function Slide10() {
@@ -31,12 +31,12 @@ export default function Slide10() {
             <div className="mt-10 flex gap-16">
                 <div className="w-[340px] shrink-0">
                     <h2 className="text-2xl font-bold leading-tight" style={{ color: BRAND_NAVY }}>
-                        Video & Content
+                        Content & Creative
                         <br />
                         Production
                     </h2>
                     <p className="mt-4 text-sm font-bold leading-snug text-[#1b2737]">
-                        Make your propositions more compelling with the most engaging content formats
+                        Make your proposition clear, credible, and buyer-friendly
                     </p>
                     <div className="mt-10 flex items-center gap-4">
                         <svg className="h-12 w-14 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

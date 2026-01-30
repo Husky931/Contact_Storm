@@ -41,30 +41,30 @@ export default function Slide1() {
                         className="brochure-script text-4xl"
                         style={{ color: BRAND_RED }}
                     >
-                        Together
+                        Pixaventures
                     </span>
                     <br />
                     <span
                         className="text-xl font-normal tracking-widest"
                         style={{ color: "#CCCCCC" }}
                     >
-                        DIGITAL
+                        EXPORT GROWTH AGENCY
                     </span>
                 </div>
             </div>
             <div className="relative z-10 max-w-[55%]">
                 <p className="brochure-serif text-4xl font-normal text-white">
-                    Strategy-led thinking.
+                    We help Chinese manufacturers
                 </p>
                 <p className="brochure-serif mt-2 text-5xl font-bold text-white">
-                    Transformative results.
+                    win overseas buyers
                     <span style={{ color: BRAND_RED }}>.</span>
                 </p>
                 <p
                     className="mt-12 text-sm font-medium tracking-[0.35em]"
                     style={{ color: "#FFFFFF" }}
                 >
-                    SPECIALIST B2B DIGITAL AGENCY
+                    FOREIGN-LED EXPORT GROWTH AGENCY
                 </p>
             </div>
             <div />
