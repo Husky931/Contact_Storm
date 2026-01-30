@@ -7,9 +7,9 @@ export default function Slide2() {
             <p className="text-xs font-medium uppercase tracking-widest text-text-dark">
                 INTRODUCTION
             </p>
-            <div className="mt-2 h-px w-24 bg-text-dark/60" />
-            <div className="mt-16 flex flex-1 gap-24">
-                <div className="max-w-md text-2xl font-light leading-snug text-text-dark">
+            <div className="mt-2 h-px w-full bg-text-dark/60" />
+            <div className="mt-0 flex flex-1 items-center justify-center gap-24 py-8">
+                <div className="max-w-md text-4xl font-light leading-snug text-text-dark">
                     Pixaventures
                     <br />
                     is a foreign-led
@@ -28,7 +28,7 @@ export default function Slide2() {
                         overseas across Europe, North America, the Middle East, and beyond.
                     </p>
                     <p className="text-text-dark/80">
-                        Our bilingual team (Chinese, European, American) bridges factory
+                        Our global team (Chinese, European, American) bridges factory
                         realities with Western buyer expectations so ads, Amazon listings, and
                         websites convert.
                     </p>
