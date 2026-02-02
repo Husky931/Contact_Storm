@@ -10,7 +10,7 @@ export default function Navigation() {
         { label: copy.nav.home, href: "/" },
         { label: copy.nav.brochure, href: "/brochure" },
         { label: copy.nav.reports, href: "/reports" },
-        { label: copy.nav.insights, href: "/insights" },
+        // { label: copy.nav.insights, href: "/insights" },
         { label: copy.nav.contact, href: "/contact" }
     ]
 
