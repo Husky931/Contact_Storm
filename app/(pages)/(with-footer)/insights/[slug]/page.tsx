@@ -40,16 +40,20 @@ export default async function BlogPostPage({ params }: PageProps) {
         notFound()
     }
 
-    const relatedPosts = getRelatedPosts(slug, 3)
+    const relatedPosts = getRelatedPosts(slug, 3).sort(
+        (a, b) => b.date.getTime() - a.date.getTime()
+    )
 
     return (
         <BlogPostClient
             post={{
                 ...post,
+                author: "Gligor Pecev",
                 date: post.date.toISOString()
             }}
             relatedPosts={relatedPosts.map((related) => ({
                 ...related,
+                author: "Gligor Pecev",
                 date: related.date.toISOString()
             }))}
         />
