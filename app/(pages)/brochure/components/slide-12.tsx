@@ -21,11 +21,11 @@ const CUSTOM_AUTOMATION_EXAMPLES = [
 export default function Slide12() {
     return (
         <section
-            className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
+            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14"
             style={{ pageBreakAfter: "always" }}
         >
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
-                <nav className="flex gap-6 text-xs text-gray-500">
+                <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
                     {NAV_LINKS.map((link, i) => (
                         <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
                             {link}
@@ -34,7 +34,7 @@ export default function Slide12() {
                 </nav>
             </div>
 
-            <div className="mt-12 flex flex-1 items-stretch gap-24 py-8">
+            <div className="mt-8 flex flex-1 flex-col items-stretch gap-8 py-6 md:flex-row md:gap-24 md:py-8 lg:mt-12">
                 {/* Left — intro text */}
                 <div className="flex flex-1 flex-col justify-center">
                     <h2
@@ -48,8 +48,8 @@ export default function Slide12() {
                     </p>
                 </div>
 
-                {/* Vertical divider */}
-                <div className="w-px shrink-0 bg-gray-300" />
+                {/* Divider — horizontal on mobile, vertical on desktop */}
+                <div className="h-px w-full shrink-0 bg-gray-300 md:h-auto md:w-px md:min-h-0 md:self-stretch" />
 
                 {/* Right — numbered examples */}
                 <div className="flex flex-[1.2] flex-col justify-center space-y-8">

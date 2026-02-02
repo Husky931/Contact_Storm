@@ -13,12 +13,12 @@ const WEB_DESIGN_SERVICES = [
 export default function Slide7() {
     return (
         <section
-            className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737]"
+            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14"
             style={{ pageBreakAfter: "always" }}
         >
             {/* Nav — unchanged */}
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
-                <nav className="flex gap-6 text-xs text-gray-500">
+                <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
                     {NAV_LINKS.map((link, i) => (
                         <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
                             {link}
@@ -29,7 +29,7 @@ export default function Slide7() {
 
             {/* Centered content — larger type, image, grid */}
 
-            <div className="mt-12 flex flex-1 flex-row gap-x-20 justify-center items-center">
+            <div className="mt-8 flex flex-1 flex-col justify-center gap-8 lg:flex-row lg:items-center lg:gap-x-20 lg:mt-12">
                 {/* Left side — takes more width */}
                 <div className="flex-1 flex flex-col items-center text-center justify-center">
                     <h2
@@ -54,7 +54,7 @@ export default function Slide7() {
                 </div>
 
                 {/* Right side — services grid */}
-                <div className="flex-3 mt-0 grid grid-cols-1 gap-x-12 gap-y-20 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
                     {WEB_DESIGN_SERVICES.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">

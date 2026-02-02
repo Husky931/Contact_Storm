@@ -4,9 +4,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
 .brochure-page {
-    min-height: 848px;
+    min-height: 100vh;
     box-sizing: border-box;
     position: relative;
+}
+
+@media (min-width: 1024px) {
+    .brochure-page {
+        min-height: 848px;
+    }
 }
 
 .brochure-script {
@@ -34,4 +40,11 @@
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+}
+
+@media (max-width: 767px) {
+    .radiating-lines {
+        width: 100%;
+        opacity: 0.5;
+    }
 }

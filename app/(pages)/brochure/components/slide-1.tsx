@@ -32,20 +32,20 @@ function RadiatingLines() {
 export default function Slide1() {
     return (
         <section
-            className="brochure-page flex flex-col justify-between px-8 py-14 text-white"
+            className="brochure-page flex flex-col justify-between px-4 py-8 text-white sm:px-8 sm:py-14"
             style={{ backgroundColor: BRAND_NAVY, pageBreakAfter: "always" }}
         >
             <div className="flex items-start">
                 <div>
                     <span
-                        className="brochure-script text-4xl"
+                        className="brochure-script text-2xl sm:text-4xl"
                         style={{ color: "#ff1493" }}
                     >
                         Pixaventures
                     </span>
                     <br />
                     <span
-                        className="text-xl font-normal tracking-widest"
+                        className="text-sm font-normal tracking-widest sm:text-xl"
                         style={{ color: "#CCCCCC" }}
                     >
                         LEADS GENERATION & EXPORT GROWTH AGENCY
@@ -53,11 +53,11 @@ export default function Slide1() {
                 </div>
             </div>
             <div className="relative z-10 flex flex-1 flex-col items-center justify-center">
-                <div className="mx-auto max-w-6xl text-center">
-                    <p className="brochure-serif text-5xl font-normal leading-tight text-white md:text-6xl">
+                <div className="mx-auto max-w-6xl px-2 text-center">
+                    <p className="brochure-serif text-3xl font-normal leading-tight text-white sm:text-5xl md:text-6xl">
                         We help Chinese manufacturers
                     </p>
-                    <p className="brochure-serif mt-3 text-4xl font-bold leading-tight text-white md:text-7xl lg:text-8xl">
+                    <p className="brochure-serif mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl md:text-7xl lg:text-8xl">
                         win overseas buyers
 
                     </p>

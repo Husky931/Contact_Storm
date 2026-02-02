@@ -3,15 +3,15 @@ import { BRAND_NAVY, BRAND_RED } from "../constants"
 export default function Slide3() {
     return (
         <section
-            className="brochure-page flex flex-col px-16 py-14 text-white"
+            className="brochure-page flex flex-col px-4 py-8 text-white sm:px-8 md:px-16 md:py-14"
             style={{ backgroundColor: BRAND_NAVY, pageBreakAfter: "always" }}
         >
             <p className="text-xs font-medium uppercase tracking-widest text-gray-300">
                 TABLE OF CONTENTS
             </p>
             <div className="mt-2 h-px w-full bg-gray-500" />
-            <div className="mt-0 flex flex-1 items-center justify-center gap-24 py-8">
-                <div className="space-y-4 text-base text-gray-300">
+            <div className="mt-0 flex flex-1 flex-col items-stretch justify-center gap-8 py-6 md:flex-row md:items-center md:gap-24 md:py-8">
+                <div className="space-y-4 text-sm text-gray-300 md:text-base">
                     <div className="flex justify-between gap-8">
                         <span className="font-semibold">Who are We</span>
                         <span>2</span>
@@ -59,7 +59,7 @@ export default function Slide3() {
                         <span>14</span>
                     </div>
                 </div>
-                <div className="brochure-serif text-right text-7xl font-normal leading-tight">
+                <div className="brochure-serif text-center text-4xl font-normal leading-tight md:text-right md:text-7xl">
                     <span className="text-white">Export-first</span>
                     <br />
                     <span style={{ color: BRAND_RED }}>growth for</span>

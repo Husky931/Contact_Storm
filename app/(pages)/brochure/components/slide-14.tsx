@@ -4,12 +4,12 @@ import { NAV_LINKS } from "../constants"
 export default function Slide14() {
     return (
         <section
-            className="brochure-page flex flex-col bg-white px-16 py-14 text-[#1b2737] relative overflow-hidden"
+            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] relative overflow-hidden sm:px-8 md:px-16 md:py-14"
             style={{ pageBreakAfter: "always" }}
         >
             {/* Nav */}
             <div className="flex items-center justify-between border-b border-gray-200 pb-4 z-10">
-                <nav className="flex gap-6 text-xs text-gray-500">
+                <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
                     {NAV_LINKS.map((link, i) => (
                         <span key={link} className={i === 2 ? "font-semibold text-gray-800" : ""}>
                             {link}
@@ -19,24 +19,24 @@ export default function Slide14() {
             </div>
 
             {/* Main content area */}
-            <div className="flex-1 relative mt-8">
-                {/* Background gradient on left */}
+            <div className="flex-1 relative mt-6 md:mt-8">
+                {/* Background gradient on left — full width on mobile */}
                 <div
-                    className="absolute left-0 top-0 bottom-0 w-2/3 z-0"
+                    className="absolute left-0 top-0 bottom-0 w-full md:w-2/3 z-0"
                     style={{
                         background: "linear-gradient(to bottom, #0d4a5f, #1a7a9a)"
                     }}
                 />
 
-                {/* Title on left */}
-                <div className="absolute left-16 top-16 z-20">
-                    <h2 className="brochure-serif text-5xl font-normal leading-tight tracking-tight text-white mb-4">
+                {/* Title on left — stacked on mobile */}
+                <div className="relative z-20 px-0 pt-0 pb-8 md:absolute md:left-16 md:top-16 md:px-0 md:pt-0 md:pb-0">
+                    <h2 className="brochure-serif text-3xl font-normal leading-tight tracking-tight text-white mb-4 md:text-5xl">
                         Our Core Technology
                     </h2>
-                    <p className="text-xl text-white/90 max-w-md leading-relaxed">
+                    <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl">
                         Our Leads Generation platform is designed to scan thousdands of businesses daily and extract decision-maker contacts.
                     </p>
-                    <ul className="text-base text-white/90 max-w-sm mt-10 [&>li]:list-item">
+                    <ul className="text-sm text-white/90 max-w-sm mt-6 [&>li]:list-item md:mt-10 md:text-base">
                         <li className="mb-4 font-semibold">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>
                         <li className="mb-4 font-semibold">- Analyses their digital footprints (paid ads, social media channels)</li>
                         <li className="mb-4 font-semibold">- Direct automated outreach via website or email</li>
@@ -45,9 +45,9 @@ export default function Slide14() {
                     </ul>
                 </div>
 
-                {/* Software image coming from right */}
-                <div className="absolute right-0 top-0 bottom-0 w-3/5 z-10">
-                    <div className="relative h-full w-full overflow-hidden rounded-l-2xl">
+                {/* Software image coming from right — below content on mobile */}
+                <div className="relative z-10 mt-6 h-[280px] w-full md:absolute md:right-0 md:top-0 md:bottom-0 md:mt-0 md:h-full md:w-3/5">
+                    <div className="relative h-full w-full overflow-hidden rounded-2xl md:rounded-l-2xl">
                         <Image
                             src="/brochure/lead_software/pixa.png"
                             alt="Lead Generation Software Dashboard"
@@ -61,7 +61,7 @@ export default function Slide14() {
                 {/* Floating popup cards */}
 
                 {/* Total Orders Card */}
-                <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform -rotate-2">
+                <div className="absolute left-4 right-4 top-[28%] z-30 bg-white rounded-xl shadow-2xl p-6 w-auto max-w-64 transform -rotate-2 md:left-[35%] md:right-auto md:top-[35%] md:w-64">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
                     <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
                     <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
@@ -76,7 +76,7 @@ export default function Slide14() {
                 {/* <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]"> */}
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-1">
+                <div className="absolute left-4 right-4 top-[48%] z-30 bg-white rounded-xl shadow-2xl p-6 w-auto max-w-64 transform rotate-1 md:left-[50%] md:right-auto md:top-[55%] md:w-64">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
@@ -107,7 +107,7 @@ export default function Slide14() {
                 </div> */}
 
                 {/* Contract Management Popup */}
-                <div className="absolute right-[47%] top-[75%] z-30 bg-white rounded-lg shadow-xl p-4 w-56 border border-gray-200">
+                <div className="absolute left-4 right-4 top-[68%] z-30 bg-white rounded-lg shadow-xl p-4 w-auto max-w-56 border border-gray-200 md:left-auto md:right-[47%] md:top-[75%] md:w-56">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ export default function Slide14() {
                 </div> */}
 
                 {/* Supplier Onboarding Progress */}
-                <div className="absolute right-[17%] bottom-[5%] z-30 bg-white rounded-lg shadow-xl p-4 w-72 border border-gray-200">
+                <div className="absolute left-4 right-4 bottom-4 z-30 bg-white rounded-lg shadow-xl p-4 w-auto max-w-72 border border-gray-200 md:left-auto md:right-[17%] md:bottom-[5%] md:w-72">
                     <div className="flex items-center gap-3 mb-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

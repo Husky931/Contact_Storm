@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./brochure-2.css"
+import DesktopOnlyWrapper from "./components/DesktopOnlyWrapper"
 import PageBreak from "./components/PageBreak"
 import Slide1 from "./components/slide-1"
 import Slide2 from "./components/slide-2"
@@ -26,53 +27,55 @@ export const metadata: Metadata = {
 
 export default function PdfBrochure2Page() {
     return (
-        <div className="brochure-print min-h-screen bg-[#1b2737]">
-            <Slide1 />
-            <PageBreak />
+        <DesktopOnlyWrapper>
+            <div className="brochure-print min-h-screen overflow-x-hidden bg-[#1b2737]">
+                <Slide1 />
+                <PageBreak />
 
-            <Slide2 />
-            <PageBreak />
+                <Slide2 />
+                <PageBreak />
 
-            <Slide3 />
-            <PageBreak />
+                <Slide3 />
+                <PageBreak />
 
-            <Slide4 />
-            <PageBreak />
+                <Slide4 />
+                <PageBreak />
 
-            <Slide5 />
-            <PageBreak />
+                <Slide5 />
+                <PageBreak />
 
-            <Slide6 />
-            <PageBreak />
+                <Slide6 />
+                <PageBreak />
 
-            <Slide7 />
-            <PageBreak />
+                <Slide7 />
+                <PageBreak />
 
-            <Slide8 />
-            <PageBreak />
+                <Slide8 />
+                <PageBreak />
 
-            <Slide9 />
-            <PageBreak />
+                <Slide9 />
+                <PageBreak />
 
-            <Slide10 />
-            <PageBreak />
+                <Slide10 />
+                <PageBreak />
 
-            <Slide11 />
-            <PageBreak />
+                <Slide11 />
+                <PageBreak />
 
-            <Slide12 />
-            <PageBreak />
+                <Slide12 />
+                <PageBreak />
 
-            <Slide13 />
-            <PageBreak />
+                <Slide13 />
+                <PageBreak />
 
-            <Slide14 />
-            <PageBreak />
+                <Slide14 />
+                <PageBreak />
 
-            <Slide15 />
-            <PageBreak />
+                <Slide15 />
+                <PageBreak />
 
-            <Slide16 />
-        </div>
+                <Slide16 />
+            </div>
+        </DesktopOnlyWrapper>
     )
 }
