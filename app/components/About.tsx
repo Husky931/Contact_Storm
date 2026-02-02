@@ -37,7 +37,7 @@ export default function About() {
                     />
                     <div className="bg-primary-red absolute -bottom-6 left-6 rounded px-6 py-5 text-white shadow-lg">
                         <p className="font-heading text-3xl font-semibold">
-                            150+
+                            30+
                         </p>
                         <p className="text-xs tracking-[0.3em] uppercase">
                             {copy.about.statsLabel}
