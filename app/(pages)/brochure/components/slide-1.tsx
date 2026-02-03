@@ -38,14 +38,14 @@ export default function Slide1() {
             <div className="flex items-start">
                 <div>
                     <span
-                        className="brochure-script text-2xl sm:text-4xl"
+                        className="brochure-script text-4xl"
                         style={{ color: "#ff1493" }}
                     >
                         Pixaventures
                     </span>
                     <br />
                     <span
-                        className="text-sm font-normal tracking-widest sm:text-xl"
+                        className="text-sm font-normal tracking-widest"
                         style={{ color: "#CCCCCC" }}
                     >
                         LEADS GENERATION & EXPORT GROWTH AGENCY

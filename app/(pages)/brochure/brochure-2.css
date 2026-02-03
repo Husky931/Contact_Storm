@@ -41,10 +41,3 @@
     overflow: hidden;
     pointer-events: none;
 }
-
-@media (max-width: 767px) {
-    .radiating-lines {
-        width: 100%;
-        opacity: 0.5;
-    }
-}
