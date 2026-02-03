@@ -3,6 +3,14 @@
    Accent/CTA: red #e03a3e (highlights, icons, links, funnel stages) */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
 
+/* Nav: visible only in brochure, hidden on landing page */
+.brochure-nav {
+    display: none;
+}
+.brochure-print .brochure-nav {
+    display: flex;
+}
+
 .brochure-page {
     min-height: 100vh;
     box-sizing: border-box;

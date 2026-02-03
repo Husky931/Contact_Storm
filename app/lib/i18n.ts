@@ -21,7 +21,7 @@ export const translations = {
             description:
                 "Reach customers in Europe, North America, the Middle East, and beyond.",
             subtext:
-                "Bilingual, diverse team (Chinese, European, American) with Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
+                "Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
             ctas: {
                 primary: "Our Services",
                 secondary: "Our WeChat"
@@ -34,12 +34,12 @@ export const translations = {
                 servicesTitle: "Our services",
                 clientsTitle: "Our clients",
                 services: [
+                    "Lead generation",
                     "Amazon PPC & Marketplace",
                     "Paid Social Advertising",
                     "SEO & Organic Growth",
                     "Social Media Growth",
-                    "Modern Website Redesign",
-                    "Lead generation"
+                    "Modern Website Redesign"
                 ],
                 clients: [
                     "Factories",
@@ -49,12 +49,12 @@ export const translations = {
                 ]
             },
             highlights: [
-                "Amazon PPC & Marketplace Growth",
+                "Lead generation",
+                "Amazon PPC & Marketplace",
                 "Shopify",
-                "Leads",
                 "Website optimization for AI search engines",
                 "Paid social ads (Meta, Instagram, TikTok)",
-                "SEO for export buyers",
+                "SEO & AEO",
                 "Conversion-first website redesign"
             ],
             form: {
@@ -98,16 +98,16 @@ export const translations = {
             imageAlt: "Digital strategy team reviewing product roadmap"
         },
         heroHighlights: [
-            "AI search optimization",
+            "Leads",
             "Social Ads and Growth",
-            "SEO for Export",
+            "SEO & AEO",
             "Shopify",
             "Website Redesign",
-            "Leads"
+            "AI search optimization"
         ],
         about: {
             statsLabel: "Sellers Served",
-            kicker: "Built for Manufacturers",
+            kicker: "Built for Sellers",
             title: {
                 lead: "Foreigners with native experience lead team bridging",
                 highlightPrimary: "Chinese sellers",
@@ -116,6 +116,7 @@ export const translations = {
             },
             copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both factory realities and Western buyer mind and expectations. That makes our ad creative, Amazon strategy, and websites convert much better.",
             bullets: [
+                "Lead Generation in-house software",
                 "Western buyer mindset applied to ads and listings",
                 "Amazon, paid social, Shopify, and SEO execution in-house",
                 "Conversion-focused website redesign"
@@ -225,7 +226,7 @@ export const translations = {
             title: "Who are we and how we can help you",
             servicesTitle: "Our Services",
             services: [
-                "Amazon PPC & Marketplace Growth – Optimize listings and run ads to boost visibility",
+                "Amazon PPC & Marketplace – Optimize listings and run ads to boost visibility",
                 "Paid Social Advertising – Meta, Instagram, TikTok campaigns for qualified leads",
                 "Website optimization for AI search engines",
                 "SEO & Organic Growth – Rank higher in Google for your target export markets",
@@ -427,8 +428,7 @@ export const translations = {
             tag: "海外买家增长",
             title: "我们帮助中国制造商赢得海外买家。",
             description: "触达欧洲、北美、中东等全球客户。",
-            subtext:
-                "中英双语、多元团队（中国、欧洲、美国）了解西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
+            subtext: "西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
             ctas: {
                 primary: "我们的服务",
                 secondary: "我们的微信"
@@ -440,22 +440,22 @@ export const translations = {
                 servicesTitle: "我们的服务",
                 clientsTitle: "我们的客户",
                 services: [
+                    "线索获取",
                     "亚马逊PPC与平台招商",
                     "社交媒体广告",
                     "SEO与自然增长",
                     "社媒增长",
-                    "现代化网站改版",
-                    "线索获取"
+                    "现代化网站改版"
                 ],
                 clients: ["工厂", "卖家", "电商店主", "出海团队"]
             },
             highlights: [
-                "亚马逊PPC与平台招商增长",
+                "线索获取",
+                "亚马逊PPC与平台招商",
                 "Shopify",
-                "获客线索",
                 "针对 AI 搜索引擎的的网站优化",
                 "社交媒体广告（Meta/Instagram/TikTok）",
-                "外贸SEO",
+                "SEO & AEO",
                 "转化优先的网站改版"
             ],
             form: {
@@ -494,7 +494,7 @@ export const translations = {
         heroHighlights: [
             "AI 搜索优化",
             "社媒广告与增长",
-            "外贸SEO",
+            "SEO & AEO",
             "Shopify",
             "网站改版",
             "获客线索"
@@ -510,6 +510,7 @@ export const translations = {
             },
             copy: "我们是中英双语、多元背景的团队（中国、欧洲、美国），理解工厂现实与西方买家思维，使我们的广告创意、亚马逊策略与网站更易转化。",
             bullets: [
+                "潜客生成自研软件",
                 "将西方买家思维应用于广告和Listing",
                 "亚马逊、社媒投放、Shopify与SEO全流程自执行",
                 "以转化为核心的网站改版"
@@ -617,7 +618,7 @@ export const translations = {
             title: "我们是谁以及如何帮助您",
             servicesTitle: "我们的服务",
             services: [
-                "亚马逊PPC与平台招商增长 – 优化Listing并投放广告提升可见度",
+                "亚马逊PPC与平台招商 – 优化Listing并投放广告提升可见度",
                 "社交媒体广告 – Meta、Instagram、TikTok投放获取优质线索",
                 "针对 AI 搜索引擎的的网站优化",
                 "SEO与自然增长 – 在目标出口市场的Google排名中提升",

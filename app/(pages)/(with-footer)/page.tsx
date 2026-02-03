@@ -8,6 +8,8 @@ import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
 import HowWeHelp from "@/components/HowWeHelp"
 import AiSearchOptimization from "@/components/AiSearchOptimization"
+import Slide14 from "@/(pages)/brochure/components/slide-14"
+import "@/(pages)/brochure/brochure-2.css"
 
 export default function Home() {
     return (
@@ -18,6 +20,7 @@ export default function Home() {
                 <About />
                 <Specialization />
                 <Section4 />
+                <Slide14 />
                 <AiSearchOptimization />
                 <FoundedBy />
                 <HowWeHelp />

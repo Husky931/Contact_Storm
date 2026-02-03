@@ -7,8 +7,8 @@ export default function Slide14() {
             className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] relative overflow-hidden sm:px-8 md:px-16 md:py-14"
             style={{ pageBreakAfter: "always" }}
         >
-            {/* Nav */}
-            <div className="flex items-center justify-between border-b border-gray-200 pb-4 z-10">
+            {/* Nav — visible only in brochure context, hidden on landing page */}
+            <div className="brochure-nav flex items-center justify-between border-b border-gray-200 pb-4 z-10">
                 <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
                     {NAV_LINKS.map((link, i) => (
                         <span key={link} className={i === 2 ? "font-semibold text-gray-800" : ""}>

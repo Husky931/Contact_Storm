@@ -339,11 +339,10 @@ export default function Hero() {
 
                             {submitStatus.type && (
                                 <div
-                                    className={`rounded px-4 py-2 text-xs ${
-                                        submitStatus.type === "success"
-                                            ? "bg-green-50 text-green-700"
-                                            : "bg-red-50 text-red-700"
-                                    }`}
+                                    className={`rounded px-4 py-2 text-xs ${submitStatus.type === "success"
+                                        ? "bg-green-50 text-green-700"
+                                        : "bg-red-50 text-red-700"
+                                        }`}
                                 >
                                     {submitStatus.message}
                                 </div>
