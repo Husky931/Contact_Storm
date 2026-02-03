@@ -34,7 +34,7 @@ export default function Slide3() {
                             <span>8</span>
                         </li>
                         <li className="flex justify-between gap-8">
-                            <span>Seo for the AI Era</span>
+                            <span>SEO for the AI Era</span>
                             <span>9</span>
                         </li>
                         <li className="flex justify-between gap-8">

@@ -34,7 +34,7 @@ export default function Slide14() {
                         Our Core Technology
                     </h2>
                     <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl">
-                        Our Leads Generation platform is designed to scan thousdands of businesses daily and extract decision-maker contacts.
+                        Our Leads Generation platform is designed to scan thousands of businesses daily and extract decision-maker contacts.
                     </p>
                     <ul className="text-sm text-white/90 max-w-sm mt-6 [&>li]:list-item md:mt-10 md:text-base">
                         <li className="mb-4 font-semibold">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>
@@ -61,7 +61,7 @@ export default function Slide14() {
                 {/* Floating popup cards */}
 
                 {/* Total Orders Card */}
-                <div className="absolute left-4 right-4 top-[28%] z-30 bg-white rounded-xl shadow-2xl p-6 w-auto max-w-64 transform -rotate-2 md:left-[35%] md:right-auto md:top-[35%] md:w-64">
+                <div className="absolute left-4 right-4 top-[28%] z-30 bg-white rounded-xl  p-6 w-auto max-w-64 transform -rotate-2 md:left-[35%] md:right-auto md:top-[35%] md:w-64">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
                     <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
                     <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
@@ -73,10 +73,10 @@ export default function Slide14() {
                     </div>
                 </div>
 
-                {/* <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl shadow-2xl p-6 w-64 transform rotate-[1deg]"> */}
+                {/* <div className="absolute left-[35%] top-[35%] z-30 bg-white rounded-xl  p-6 w-64 transform rotate-[1deg]"> */}
 
                 {/* Stock Inventory Card */}
-                <div className="absolute left-4 right-4 top-[48%] z-30 bg-white rounded-xl shadow-2xl p-6 w-auto max-w-64 transform rotate-1 md:left-[50%] md:right-auto md:top-[55%] md:w-64">
+                <div className="absolute left-4 right-4 top-[48%] z-30 bg-white rounded-xl  p-6 w-auto max-w-64 transform rotate-1 md:left-[50%] md:right-auto md:top-[55%] md:w-64">
                     <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
                     <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
                     <div className="flex justify-center">
@@ -89,7 +89,7 @@ export default function Slide14() {
                 </div>
 
                 {/* Invoice Report Card */}
-                {/* <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl shadow-2xl p-6 w-72 transform rotate-[2deg]">
+                {/* <div className="absolute left-[50%] top-[55%] z-30 bg-white rounded-xl  p-6 w-72 transform rotate-[2deg]">
                     <h3 className="text-sm font-semibold text-gray-700 mb-1">Invoice Report</h3>
                     <div className="text-xs text-gray-500 mb-2">Aug 2023</div>
                     <div className="text-2xl font-bold text-[#1b2737] mb-1">$133,568.60</div>
@@ -107,7 +107,7 @@ export default function Slide14() {
                 </div> */}
 
                 {/* Contract Management Popup */}
-                <div className="absolute left-4 right-4 top-[68%] z-30 bg-white rounded-lg shadow-xl p-4 w-auto max-w-56 border border-gray-200 md:left-auto md:right-[47%] md:top-[75%] md:w-56">
+                <div className="absolute left-4 right-4 top-[68%] z-30 bg-white rounded-lg  p-4 w-auto max-w-56 border border-gray-200 md:left-auto md:right-[47%] md:top-[75%] md:w-56">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -136,7 +136,7 @@ export default function Slide14() {
                 </div> */}
 
                 {/* Supplier Onboarding Progress */}
-                <div className="absolute left-4 right-4 bottom-4 z-30 bg-white rounded-lg shadow-xl p-4 w-auto max-w-72 border border-gray-200 md:left-auto md:right-[17%] md:bottom-[5%] md:w-72">
+                <div className="absolute left-4 right-4 bottom-4 z-30 bg-white rounded-lg  p-4 w-auto max-w-72 border border-gray-200 md:left-auto md:right-[17%] md:bottom-[5%] md:w-72">
                     <div className="flex items-center gap-3 mb-3">
                         <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
                             <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

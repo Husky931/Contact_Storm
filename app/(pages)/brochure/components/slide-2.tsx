@@ -29,7 +29,7 @@ export default function Slide2() {
                     </p>
                     <p className="text-text-dark/80">
                         We build and maintain in-house software to automate lead discovery, outreach, and
-                        reporting, giving you a steep competative edge over your competitors.
+                        reporting, giving you a steep competitive edge over your competitors.
                     </p>
                     <p className="text-text-dark/80">
                         Our global team bridges sellers
