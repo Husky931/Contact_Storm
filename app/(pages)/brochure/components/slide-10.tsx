@@ -1,3 +1,5 @@
+'use client'
+import { usePathname } from "next/navigation"
 import Image from "next/image"
 import { BRAND_NAVY, NAV_LINKS } from "../constants"
 
@@ -11,21 +13,26 @@ const VIDEO_SERVICES = [
 ]
 
 export default function Slide10() {
+    const pathname = usePathname()
+    const isBrochure = pathname.startsWith("/brochure")
     return (
         <section
             className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14"
             style={{ pageBreakAfter: "always" }}
         >
             {/* Nav — unchanged */}
-            <div className="flex items-center justify-between border-b border-gray-200 pb-4">
-                <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
-                    {NAV_LINKS.map((link, i) => (
-                        <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
-                            {link}
-                        </span>
-                    ))}
-                </nav>
-            </div>
+            {isBrochure && (
+                <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+                    <nav className="flex flex-wrap gap-3 text-xs text-gray-500 md:gap-6">
+                        {NAV_LINKS.map((link, i) => (
+                            <span key={link} className={i === 1 ? "font-semibold text-gray-800" : ""}>
+                                {link}
+                            </span>
+                        ))}
+                    </nav>
+                </div>
+            )}
+
 
             {/* Centered content — larger type, image, grid */}
 

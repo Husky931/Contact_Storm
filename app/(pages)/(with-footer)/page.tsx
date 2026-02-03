@@ -10,6 +10,11 @@ import HowWeHelp from "@/components/HowWeHelp"
 import AiSearchOptimization from "@/components/AiSearchOptimization"
 import Slide14 from "@/(pages)/brochure/components/slide-14"
 import "@/(pages)/brochure/brochure-2.css"
+import Slide7 from "@/(pages)/brochure/components/slide-7"
+import Slide8 from "@/(pages)/brochure/components/slide-8"
+import Slide9 from "@/(pages)/brochure/components/slide-9"
+import Slide10 from "@/(pages)/brochure/components/slide-10"
+import Slide11 from "@/(pages)/brochure/components/slide-11"
 
 export default function Home() {
     return (
@@ -22,6 +27,11 @@ export default function Home() {
                 <Section4 />
                 <Slide14 />
                 <AiSearchOptimization />
+                <Slide7 />
+                <Slide8 />
+                <Slide9 />
+                <Slide10 />
+                <Slide11 />
                 <FoundedBy />
                 <HowWeHelp />
                 <ReadyToTalk />
