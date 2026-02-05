@@ -66,7 +66,7 @@ export default function Slide14HomePage() {
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6 mx-auto">
                             <span className="mr-2">⚡</span>
-                            {slide14Translations.powerStatements.engine}
+                            {/* {slide14Translations.powerStatements.engine} */}
                         </div>
 
                         <h2 className="text-2xl font-bold text-gray-900 mb-5 px-2">
@@ -263,7 +263,7 @@ export default function Slide14HomePage() {
                     <div className="text-center max-w-3xl mx-auto">
                         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
                             <span className="mr-2">⚡</span>
-                            {slide14Translations.powerStatements.engine}
+                            {/* {slide14Translations.powerStatements.engine} */}
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">

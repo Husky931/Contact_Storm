@@ -358,10 +358,10 @@ export const translations = {
             cta: "Contact Us",
             servicesTitle: "Services",
             services: [
+                "Lead Generation",
                 "AI Automation",
                 "SEO Growth",
                 "Paid Ads",
-                "App development",
                 "Consulting",
                 "Custom Solutions"
             ],
@@ -413,7 +413,8 @@ export const translations = {
         },
         slide7: {
             title: "Website & Shopify",
-            subtitle: "Modern websites that signal professionalism and convert visitors into inquiries",
+            subtitle:
+                "Modern websites that signal professionalism and convert visitors into inquiries",
             services: [
                 {
                     title: "Modern Visual Trust",
@@ -443,7 +444,8 @@ export const translations = {
         },
         slide8: {
             title: "Paid Social Ads",
-            subtitle: "Paid social ads for Meta, Instagram, and TikTok that deliver qualified leads and build brand trust",
+            subtitle:
+                "Paid social ads for Meta, Instagram, and TikTok that deliver qualified leads and build brand trust",
             services: [
                 {
                     title: "Ad Creative & Copy",
@@ -473,7 +475,8 @@ export const translations = {
         },
         slide9: {
             title: "SEO & ASO",
-            subtitle: "Long-term organic growth through Search Engine Optimization and App Store Optimization that drives targeted traffic",
+            subtitle:
+                "Long-term organic growth through Search Engine Optimization and App Store Optimization that drives targeted traffic",
             services: [
                 {
                     title: "Keyword Research",
@@ -503,7 +506,8 @@ export const translations = {
         },
         slide10: {
             title: "Lead Generation Software",
-            subtitle: "Proprietary software that identifies and qualifies overseas buyers, delivering high-quality leads directly to your sales team",
+            subtitle:
+                "Proprietary software that identifies and qualifies overseas buyers, delivering high-quality leads directly to your sales team",
             services: [
                 {
                     title: "Buyer Persona Modeling",
@@ -533,7 +537,8 @@ export const translations = {
         },
         slide11: {
             title: "AI Search Optimization",
-            subtitle: "Optimize your online presence for the AI-powered search era. We help you rank in generative search engines and conversational AI platforms.",
+            subtitle:
+                "Optimize your online presence for the AI-powered search era. We help you rank in generative search engines and conversational AI platforms.",
             services: [
                 {
                     title: "Generative SEO",
@@ -563,7 +568,8 @@ export const translations = {
         },
         slide14: {
             title: "We find overseas buyers for Chinese manufacturers",
-            subtitle: "Our foreign-led team bridges the gap between your factory and Western markets, using a growth system that’s been proven to deliver results.",
+            subtitle:
+                "Our foreign-led team bridges the gap between your factory and Western markets, using a growth system that’s been proven to deliver results.",
             bullets: [
                 "In-house lead generation software for precise targeting",
                 "Ad creative and copy that speaks to Western buyers",
@@ -573,7 +579,8 @@ export const translations = {
             cta: "Get a Free Consultation",
             powerStatements: {
                 title: "Turn Prospects into Pipeline Around the Clock",
-                subtitle: "Imagine your most productive employee, supercharged. Our AI works tirelessly around the clock to generate qualified leads, fill your CRM, and accelerate growth—without coffee breaks, vacations, or quotas.",
+                subtitle:
+                    "Imagine your most productive employee, supercharged. Our AI works tirelessly around the clock to generate qualified leads, fill your CRM, and accelerate growth—without coffee breaks, vacations, or quotas.",
                 stats: [
                     { value: "10x", label: "Lead Volume" },
                     { value: "24/7", label: "Always Working" },
@@ -919,10 +926,10 @@ export const translations = {
             cta: "联系我们",
             servicesTitle: "服务",
             services: [
+                "潜在客户一代",
                 "AI自动化",
                 "SEO增长",
                 "付费广告",
-                "应用开发",
                 "咨询",
                 "定制方案"
             ],
@@ -1002,7 +1009,8 @@ export const translations = {
         },
         slide8: {
             title: "付费社交广告",
-            subtitle: "为Meta、Instagram和TikTok制作的付费社交广告，可带来合格的潜在客户并建立品牌信任",
+            subtitle:
+                "为Meta、Instagram和TikTok制作的付费社交广告，可带来合格的潜在客户并建立品牌信任",
             services: [
                 {
                     title: "广告创意与文案",
@@ -1032,7 +1040,8 @@ export const translations = {
         },
         slide9: {
             title: "SEO与ASO",
-            subtitle: "通过搜索引擎优化和应用商店优化实现长期有机增长，从而带来有针对性的流量",
+            subtitle:
+                "通过搜索引擎优化和应用商店优化实现长期有机增长，从而带来有针对性的流量",
             services: [
                 {
                     title: "关键词研究",
@@ -1062,7 +1071,8 @@ export const translations = {
         },
         slide10: {
             title: "潜在客户开发软件",
-            subtitle: "专有软件，可识别和筛选海外买家，直接为您的销售团队提供高质量的潜在客户",
+            subtitle:
+                "专有软件，可识别和筛选海外买家，直接为您的销售团队提供高质量的潜在客户",
             services: [
                 {
                     title: "买家画像建模",
@@ -1092,7 +1102,8 @@ export const translations = {
         },
         slide11: {
             title: "AI搜索优化",
-            subtitle: "为AI驱动的搜索时代优化您的在线形象。我们帮助您在生成式搜索引擎和对话式AI平台中排名。",
+            subtitle:
+                "为AI驱动的搜索时代优化您的在线形象。我们帮助您在生成式搜索引擎和对话式AI平台中排名。",
             services: [
                 {
                     title: "生成式SEO",
@@ -1122,7 +1133,8 @@ export const translations = {
         },
         slide14: {
             title: "我们为中国制造商寻找海外买家",
-            subtitle: "我们的外籍领导团队为您弥合工厂与西方市场之间的差距，采用经证明行之有效的增长体系。",
+            subtitle:
+                "我们的外籍领导团队为您弥合工厂与西方市场之间的差距，采用经证明行之有效的增长体系。",
             bullets: [
                 "内部潜在客户开发软件，实现精准定位",
                 "能与西方买家产生共鸣的广告创意和文案",
@@ -1132,7 +1144,8 @@ export const translations = {
             cta: "获得免费咨询",
             powerStatements: {
                 title: "将潜在客户转化为源源不断的业务",
-                subtitle: "想象一下，您最有效率的员工，现在能力超群。我们的人工智能夜以继日地工作，为您生成合格的潜在客户，填充您的CRM，加速增长——无需咖啡休息、度假或绩效指标。",
+                subtitle:
+                    "想象一下，您最有效率的员工，现在能力超群。我们的人工智能夜以继日地工作，为您生成合格的潜在客户，填充您的CRM，加速增长——无需咖啡休息、度假或绩效指标。",
                 stats: [
                     { value: "10倍", label: "潜在客户量" },
                     { value: "24/7", label: "全天候工作" },
