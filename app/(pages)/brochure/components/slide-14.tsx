@@ -2,9 +2,10 @@ import Image from "next/image"
 import { NAV_LINKS } from "../constants"
 
 export default function Slide14() {
+
     return (
         <section
-            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] relative overflow-hidden sm:px-8 md:px-16 md:py-14"
+            className="brochure-page flex flex-col px-4 py-8 text-[#1b2737] relative overflow-hidden sm:px-8 md:px-16 md:py-14 bg-white"
             style={{ pageBreakAfter: "always" }}
         >
             {/* Nav — visible only in brochure context, hidden on landing page */}
@@ -17,7 +18,6 @@ export default function Slide14() {
                     ))}
                 </nav>
             </div>
-
             {/* Main content area */}
             <div className="flex-1 relative mt-6 md:mt-8">
                 {/* Background gradient on left — full width on mobile */}
@@ -29,11 +29,11 @@ export default function Slide14() {
                 />
 
                 {/* Title on left — stacked on mobile */}
-                <div className="relative z-20 px-0 pt-0 pb-8 md:absolute md:left-16 md:top-16 md:px-0 md:pt-0 md:pb-0">
-                    <h2 className="brochure-serif text-3xl font-normal leading-tight tracking-tight text-white mb-4 md:text-5xl">
+                <div className="relative z-20 px-0 pt-0 pb-8 md:absolute md:left-16 md:top-16 md:px-0 md:pt-0 md:pb-0 flex justify-center items-center flex-col">
+                    {/* <h2 className="brochure-serif text-3xl font-normal leading-tight tracking-tight text-white mb-4 md:text-5xl">
                         Our Core Technology
-                    </h2>
-                    <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl">
+                    </h2> */}
+                    <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl font-semibold">
                         Our Leads Generation software is designed to scan thousands of businesses daily and extract decision-maker contacts.
                     </p>
                     <ul className="text-sm text-white/90 max-w-sm mt-6 [&>li]:list-item md:mt-10 md:text-base">
@@ -154,6 +154,7 @@ export default function Slide14() {
                     <div className="text-xs text-gray-600 mt-1 text-right">81%</div>
                 </div>
             </div>
+
         </section>
     )
 }

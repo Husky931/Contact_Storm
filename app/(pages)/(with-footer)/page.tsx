@@ -8,14 +8,13 @@ import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
 import HowWeHelp from "@/components/HowWeHelp"
 import AiSearchOptimization from "@/components/AiSearchOptimization"
-import LeadGenSoft from "@/components/LeadGenSoft"
-import Slide14 from "@/(pages)/brochure/components/slide-14"
 import "@/(pages)/brochure/brochure-2.css"
-import Slide7 from "@/(pages)/brochure/components/slide-7"
-import Slide8 from "@/(pages)/brochure/components/slide-8"
-import Slide9 from "@/(pages)/brochure/components/slide-9"
-import Slide10 from "@/(pages)/brochure/components/slide-10"
-import Slide11 from "@/(pages)/brochure/components/slide-11"
+import Slide7HomePage from "./BrochureComponents/Slide7HomePage"
+import Slide8HomePage from "./BrochureComponents/Slide8HomePage"
+import Slide9HomePage from "./BrochureComponents/Slide9HomePage"
+import Slide10HomePage from "./BrochureComponents/Slide10HomePage"
+import Slide11HomePage from "./BrochureComponents/Slide11HomePage"
+import Slide14HomePage from "./BrochureComponents/Slide14HomePage"
 
 export default function Home() {
     return (
@@ -26,17 +25,13 @@ export default function Home() {
                 <About />
                 <Specialization />
                 <Section4 />
-                <section>
-                    Our Lead Generation software
-                </section>
-                <Slide14 />
-                <LeadGenSoft />
+                <Slide14HomePage />
                 <AiSearchOptimization />
-                <Slide7 />
-                <Slide8 />
-                <Slide9 />
-                <Slide10 />
-                <Slide11 />
+                <Slide7HomePage />
+                <Slide8HomePage />
+                <Slide9HomePage />
+                <Slide10HomePage />
+                <Slide11HomePage />
                 <FoundedBy />
                 <HowWeHelp />
                 <ReadyToTalk />

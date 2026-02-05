@@ -4,7 +4,7 @@ import { BRAND_RED, NAV_LINKS } from "../constants"
 export default function Slide15() {
     return (
         <section
-            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737]"
+            className="brochure-page flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16"
             style={{ pageBreakAfter: "always" }}
         >
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">

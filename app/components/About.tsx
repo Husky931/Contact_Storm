@@ -12,7 +12,7 @@ export default function About() {
                 <div className="relative">
                     <div className="grid gap-4 md:grid-cols-2">
                         <Image
-                            src="/images/about/1_1.PNG"
+                            src="/images/about/1.PNG"
                             alt={copy.about.imageAlts.strategist}
                             width={520}
                             height={520}
