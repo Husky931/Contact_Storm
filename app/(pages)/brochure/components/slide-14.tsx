@@ -34,7 +34,7 @@ export default function Slide14() {
                         Our Core Technology
                     </h2>
                     <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl">
-                        Our Leads Generation platform is designed to scan thousands of businesses daily and extract decision-maker contacts.
+                        Our Leads Generation software is designed to scan thousands of businesses daily and extract decision-maker contacts.
                     </p>
                     <ul className="text-sm text-white/90 max-w-sm mt-6 [&>li]:list-item md:mt-10 md:text-base">
                         <li className="mb-4 font-semibold">- Scans 5000+ foreign buyer’s domains daily targeted by industry, location and online presence</li>

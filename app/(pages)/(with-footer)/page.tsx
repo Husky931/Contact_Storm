@@ -8,6 +8,7 @@ import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
 import HowWeHelp from "@/components/HowWeHelp"
 import AiSearchOptimization from "@/components/AiSearchOptimization"
+import LeadGenSoft from "@/components/LeadGenSoft"
 import Slide14 from "@/(pages)/brochure/components/slide-14"
 import "@/(pages)/brochure/brochure-2.css"
 import Slide7 from "@/(pages)/brochure/components/slide-7"
@@ -25,7 +26,11 @@ export default function Home() {
                 <About />
                 <Specialization />
                 <Section4 />
+                <section>
+                    Our Lead Generation software
+                </section>
                 <Slide14 />
+                <LeadGenSoft />
                 <AiSearchOptimization />
                 <Slide7 />
                 <Slide8 />

@@ -14,7 +14,8 @@ export default {
                     redDark: "#A12022",
                     redDarker: "#3B0607",
                     navy: "#1b2737",
-                    slate: "#2f3b52"
+                    slate: "#2f3b52",
+                    blue: "#135dfc"
                 },
                 background: {
                     DEFAULT: "#f4f6f8",
