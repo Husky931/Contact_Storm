@@ -1,16 +1,12 @@
+"use client"
+
 import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED } from "@/(pages)/brochure/constants"
-
-const BRANDING_SERVICES = [
-    { title: "Influencer Partnerships", body: "Strategic agreements with influencers to expand your reach and credibility. Leverage trusted voices to reach new audiences and turn their followers into your prospects." },
-    { title: "Brand Voice Development", body: "Developing a distinctive social media brand voice that resonates with your audience. Consistency builds recognition and loyalty so people know it’s you before they see the name." },
-    { title: "UGC Creation", body: "User-generated content that builds authentic trust and engagement. Real stories from real customers drive real results and give prospects the social proof they need to convert." },
-    { title: "Dynamic Content Strategy", body: "Mixed content output for a dynamic, brand-aligned channel that keeps followers engaged. Keep your feed fresh and your audience coming back so you stay top of mind." },
-    { title: "Tech Content Factory", body: "State-of-the-art tech to automate certain content creation and scheduling. Scale output without sacrificing quality so you post more without burning out." },
-    { title: "Business-Specific Strategy", body: "Each strategy is different and adjusted toward the type of business in question. No two brands are alike—neither are our plans, so you get a fit that works for you." },
-]
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Slide11HomePage() {
+    const { language, translations } = useLanguage()
+    const slide11Translations = translations[language].slide11
 
     return (
         <section
@@ -26,12 +22,10 @@ export default function Slide11HomePage() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Social <span style={{ color: BRAND_RED }}>Media</span>
-                        <br />
-                        Growth
+                        {slide11Translations.title}
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Build authority and trust through strategic social media presence
+                        {slide11Translations.subtitle}
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
@@ -46,7 +40,7 @@ export default function Slide11HomePage() {
 
                 {/* Right side — services grid */}
                 <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
-                    {BRANDING_SERVICES.map((item) => (
+                    {slide11Translations.services.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}

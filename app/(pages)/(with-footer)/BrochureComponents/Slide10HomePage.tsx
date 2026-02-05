@@ -1,16 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import { BRAND_NAVY } from "@/(pages)/brochure/constants"
-
-const VIDEO_SERVICES = [
-    { title: "Campaign Strategy", body: "Adjust ad campaigns for specific purposes with rapid iteration based on real-time performance data. Test fast, double down on what works, and cut what doesn’t so every dollar drives results." },
-    { title: "Creative Development", body: "Craft modern video and sound hooks aligned with Meta, Instagram, and TikTok trends. Stand out in crowded feeds with scroll-stopping creative that stops the thumb and starts the conversation." },
-    { title: "Trend Tracking", body: "Stay ahead by monitoring trending formats and adapting campaigns accordingly. Adapt quickly to what’s working now so your ads feel fresh and relevant, not dated." },
-    { title: "ROI Scaling", body: "Scale campaigns once we land on positive ROI, maximizing your advertising investment. Grow spend confidently once unit economics are positive so you can expand without guesswork." },
-    { title: "Hook, Engage, Convert", body: "Super interesting and engaging ads that hook users in peak social media momentum. From first frame to final CTA, we optimize the journey so viewers become customers." },
-    { title: "Multi-Platform Mastery", body: "Expert campaigns across Meta, Instagram, and TikTok for maximum reach. One strategy, tailored execution per platform, so your message lands wherever your audience is." }
-]
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Slide10HomePage() {
+    const { language, translations } = useLanguage()
+    const slide10Translations = translations[language].slide10
+
     return (
         <section
             className="brochure-page-2 flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14 border-b border-gray-200"
@@ -26,12 +23,10 @@ export default function Slide10HomePage() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Paid Social
-                        <br />
-
+                        {slide10Translations.title}
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Hook, Engage, Convert — campaigns that capture attention in peak social media momentum
+                        {slide10Translations.subtitle}
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
@@ -46,7 +41,7 @@ export default function Slide10HomePage() {
 
                 {/* Right side — services grid */}
                 <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
-                    {VIDEO_SERVICES.map((item) => (
+                    {slide10Translations.services.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}

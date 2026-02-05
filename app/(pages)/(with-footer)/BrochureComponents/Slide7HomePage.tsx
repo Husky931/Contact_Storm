@@ -1,17 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED } from "@/(pages)/brochure/constants"
+import { useLanguage } from "@/components/LanguageProvider"
 
-
-const WEB_DESIGN_SERVICES = [
-    { title: "Modern Visual Trust", body: "Clean, professional design that signals credibility and builds instant confidence with potential clients. Your site becomes a conversion engine that turns visitors into leads and customers." },
-    { title: "Frictionless UX", body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%. Every second counts when users decide to stay or leave—we make sure they stay." },
-    { title: "A/B Testing & Optimization", body: "Switch between landing page templates to identify optimal layouts for maximum user engagement. Data drives every decision so we double down on what works and drop what doesn’t." },
-    { title: "User Tracking & Retention", body: "Monitor returning visitors for retargeting marketing and personalized experiences. Turn anonymous visitors into repeat customers and build loyalty over time." },
-    { title: "Social Proof Integration", body: "Stylishly integrated case studies and testimonials to give instant user trust. Let your best results speak for you and show prospects why they should choose you." },
-    { title: "Strong Call To Action", body: "Strategically placed CTAs that strongly urge users to make an inquiry. Clear next steps mean more leads and a smoother path from visitor to customer." },
-]
 
 export default function Slide7HomePage() {
+    const { language, translations } = useLanguage()
+    const slide7Translations = translations[language].slide7
     return (
         <section
             className="brochure-page-2 flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14 border-b border-gray-200"
@@ -26,11 +22,10 @@ export default function Slide7HomePage() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        Website & <span style={{ color: BRAND_RED }}>Shopify</span>
-
+                        {slide7Translations.title}
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Modern websites that signal professionalism and convert visitors into inquiries
+                        {slide7Translations.subtitle}
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
@@ -45,7 +40,7 @@ export default function Slide7HomePage() {
 
                 {/* Right side — services grid */}
                 <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
-                    {WEB_DESIGN_SERVICES.map((item) => (
+                    {slide7Translations.services.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}

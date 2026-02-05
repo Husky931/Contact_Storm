@@ -1,16 +1,21 @@
-'use client'
-import { useState, useEffect } from 'react'
+"use client"
+
+import { useState, useEffect } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Slide14HomePage() {
+    const { language, translations } = useLanguage()
+    const slide14Translations = translations[language].slide14
+
     const [isMobile, setIsMobile] = useState(false)
 
     useEffect(() => {
         // Only run on client
         const checkMobile = () => setIsMobile(window.innerWidth < 768)
         checkMobile()
-        window.addEventListener('resize', checkMobile)
-        return () => window.removeEventListener('resize', checkMobile)
+        window.addEventListener("resize", checkMobile)
+        return () => window.removeEventListener("resize", checkMobile)
     }, [])
 
     // ===== MOBILE VERSION (clean, purpose-built) =====
@@ -21,7 +26,7 @@ export default function Slide14HomePage() {
                     {/* Title Section - unchanged */}
                     <section className="w-full bg-linear-to-b from-white to-blue-50/30 mb-8">
                         <h2 className="text-3xl w-full text-center font-bold text-blue-600 font-heading italic">
-                            Our Lead Generation Software
+                            {slide14Translations.title}
                         </h2>
                     </section>
 
@@ -42,16 +47,10 @@ export default function Slide14HomePage() {
                         {/* Gradient Text Card */}
                         <div className="bg-linear-to-r from-[#0d4a5f] to-[#1a7a9a] rounded-2xl p-6">
                             <p className="text-base text-white/90 leading-relaxed font-semibold text-center mb-5">
-                                Our Lead Generation software scans thousands of businesses daily to extract decision-maker contacts.
+                                {slide14Translations.subtitle}
                             </p>
                             <ul className="space-y-3 text-white/90 text-sm">
-                                {[
-                                    "Scans 5,000+ foreign buyer domains daily (filtered by industry, location, online presence)",
-                                    "Analyzes digital footprints (paid ads, social channels)",
-                                    "Direct automated outreach via website/email",
-                                    "Real-time tracking of responses & success rates",
-                                    "Custom message toggling with conversation logging"
-                                ].map((item, i) => (
+                                {slide14Translations.bullets.map((item, i) => (
                                     <li key={i} className="flex items-start">
                                         <span className="text-blue-200 mr-2 mt-1">•</span>
                                         <span>{item}</span>
@@ -59,8 +58,6 @@ export default function Slide14HomePage() {
                                 ))}
                             </ul>
                         </div>
-
-
                     </div>
                 </section>
 
@@ -73,11 +70,17 @@ export default function Slide14HomePage() {
                         </div>
 
                         <h2 className="text-2xl font-bold text-gray-900 mb-5 px-2">
-                            Turn Prospects into Pipeline <span className="text-blue-600 block mt-1">While You Sleep</span>
+                            Turn Prospects into Pipeline{" "}
+                            <span className="text-blue-600 block mt-1">
+                                While You Sleep
+                            </span>
                         </h2>
 
                         <p className="text-base text-gray-600 mb-8 leading-relaxed px-2">
-                            Imagine your most productive employee, supercharged. Our AI works tirelessly around the clock to generate qualified leads, fill your CRM, and accelerate growth—without coffee breaks, vacations, or quotas.
+                            Imagine your most productive employee, supercharged. Our AI
+                            works tirelessly around the clock to generate qualified
+                            leads, fill your CRM, and accelerate growth—without coffee
+                            breaks, vacations, or quotas.
                         </p>
 
                         <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
@@ -86,9 +89,16 @@ export default function Slide14HomePage() {
                                 { value: "24/7", label: "Always Working" },
                                 { value: "92%", label: "Qualified Leads" }
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white rounded-xl shadow p-5 border border-gray-100">
-                                    <div className="text-3xl font-bold text-blue-600 mb-1">{stat.value}</div>
-                                    <div className="text-gray-700 font-medium">{stat.label}</div>
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-xl shadow p-5 border border-gray-100"
+                                >
+                                    <div className="text-3xl font-bold text-blue-600 mb-1">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-gray-700 font-medium">
+                                        {stat.label}
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -107,7 +117,7 @@ export default function Slide14HomePage() {
             >
                 <section className="w-full  bg-linear-to-b from-white to-blue-50/30">
                     <h2 className="text-3xl md:text-6xl w-full text-center font-bold text-blue-600 font-heading italic">
-                        Our Lead Generation Software
+                        {slide14Translations.title}
                     </h2>
                 </section>
 
@@ -124,14 +134,14 @@ export default function Slide14HomePage() {
                     {/* Title on left — stacked on mobile */}
                     <div className="relative z-20 px-0 pt-0 pb-8 md:absolute md:left-16 md:top-16 md:px-0 md:pt-0 md:pb-0 flex justify-center items-center flex-col">
                         <p className="text-base text-white/90 max-w-md leading-relaxed md:text-xl font-semibold">
-                            Our Leads Generation software is designed to scan thousands of businesses daily and extract decision-maker contacts.
+                            {slide14Translations.subtitle}
                         </p>
                         <ul className="text-sm text-white/90 max-w-sm mt-6 [&>li]:list-item md:mt-10 md:text-base">
-                            <li className="mb-4 font-semibold">- Scans 5000+ foreign buyer&apos;s domains daily targeted by industry, location and online presence</li>
-                            <li className="mb-4 font-semibold">- Analyses their digital footprints (paid ads, social media channels)</li>
-                            <li className="mb-4 font-semibold">- Direct automated outreach via website or email</li>
-                            <li className="mb-4 font-semibold">- Real-time tracking of response rate, interaction and success rate on our dashboard</li>
-                            <li className="mb-4 font-semibold">- Options for toggling between customized outreach messages,  conversation logging</li>
+                            {slide14Translations.bullets.map((bullet, index) => (
+                                <li key={index} className="mb-4 font-semibold">
+                                    - {bullet}
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
@@ -150,9 +160,15 @@ export default function Slide14HomePage() {
 
                     {/* Floating popup cards */}
                     <div className="absolute left-4 right-4 top-[28%] z-30 bg-white rounded-xl  p-6 w-auto max-w-64 transform -rotate-2 md:left-[35%] md:right-auto md:top-[35%] md:w-64">
-                        <h3 className="text-sm font-semibold text-gray-700 mb-2">New Leads</h3>
-                        <div className="text-4xl font-bold text-[#1b2737] mb-1">68</div>
-                        <div className="text-sm text-green-600 font-medium mb-3">+15%</div>
+                        <h3 className="text-sm font-semibold text-gray-700 mb-2">
+                            New Leads
+                        </h3>
+                        <div className="text-4xl font-bold text-[#1b2737] mb-1">
+                            68
+                        </div>
+                        <div className="text-sm text-green-600 font-medium mb-3">
+                            +15%
+                        </div>
                         <div className="flex gap-1 h-12 items-end">
                             <div className="bg-[#1a7a9a] w-8 h-8 rounded-t"></div>
                             <div className="bg-[#1a7a9a] w-8 h-12 rounded-t"></div>
@@ -162,12 +178,26 @@ export default function Slide14HomePage() {
                     </div>
 
                     <div className="absolute left-4 right-4 top-[48%] z-30 bg-white rounded-xl  p-6 w-auto max-w-64 transform rotate-1 md:left-[50%] md:right-auto md:top-[55%] md:w-64">
-                        <h3 className="text-sm font-semibold text-gray-700 mb-2">Stock Inventory</h3>
-                        <div className="text-lg text-[#1a7a9a] font-medium mb-3">1000 Storage Bins</div>
+                        <h3 className="text-sm font-semibold text-gray-700 mb-2">
+                            Stock Inventory
+                        </h3>
+                        <div className="text-lg text-[#1a7a9a] font-medium mb-3">
+                            1000 Storage Bins
+                        </div>
                         <div className="flex justify-center">
                             <div className="w-16 h-16 bg-[#1a7a9a]/20 rounded-lg flex items-center justify-center">
-                                <svg className="w-10 h-10 text-[#1a7a9a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                <svg
+                                    className="w-10 h-10 text-[#1a7a9a]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                    />
                                 </svg>
                             </div>
                         </div>
@@ -176,13 +206,27 @@ export default function Slide14HomePage() {
                     <div className="absolute left-4 right-4 top-[68%] z-30 bg-white rounded-lg  p-4 w-auto max-w-56 border border-gray-200 md:left-auto md:right-[47%] md:top-[75%] md:w-56">
                         <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
-                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                                <svg
+                                    className="w-5 h-5 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                                    />
                                 </svg>
                             </div>
                             <div className="flex-1">
-                                <div className="text-xs font-semibold text-gray-800">Contract Management</div>
-                                <div className="text-xs text-gray-600">Send for Signatures</div>
+                                <div className="text-xs font-semibold text-gray-800">
+                                    Contract Management
+                                </div>
+                                <div className="text-xs text-gray-600">
+                                    Send for Signatures
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,11 +234,23 @@ export default function Slide14HomePage() {
                     <div className="absolute left-4 right-4 bottom-4 z-30 bg-white rounded-lg  p-4 w-auto max-w-72 border border-gray-200 md:left-auto md:right-[17%] md:bottom-[5%] md:w-72">
                         <div className="flex items-center gap-3 mb-3">
                             <div className="w-8 h-8 bg-[#1a7a9a] rounded flex items-center justify-center">
-                                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <svg
+                                    className="w-5 h-5 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
                                 </svg>
                             </div>
-                            <div className="text-sm font-semibold text-gray-800">Supplier Onboarding</div>
+                            <div className="text-sm font-semibold text-gray-800">
+                                Supplier Onboarding
+                            </div>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
@@ -202,7 +258,9 @@ export default function Slide14HomePage() {
                                 style={{ width: "81%" }}
                             />
                         </div>
-                        <div className="text-xs text-gray-600 mt-1 text-right">81%</div>
+                        <div className="text-xs text-gray-600 mt-1 text-right">
+                            81%
+                        </div>
                     </div>
                 </div>
             </section>
@@ -216,25 +274,41 @@ export default function Slide14HomePage() {
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Turn Prospects into Pipeline <span className="text-blue-600">While You Sleep</span>
+                            Turn Prospects into Pipeline{" "}
+                            <span className="text-blue-600">While You Sleep</span>
                         </h2>
 
                         <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                            Imagine your most productive employee, supercharged. Our AI works tirelessly around the clock to generate qualified leads, fill your CRM, and accelerate growth—without coffee breaks, vacations, or quotas.
+                            Imagine your most productive employee, supercharged. Our AI
+                            works tirelessly around the clock to generate qualified
+                            leads, fill your CRM, and accelerate growth—without coffee
+                            breaks, vacations, or quotas.
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">10x</div>
-                                <div className="text-gray-700 font-medium">Lead Volume</div>
+                                <div className="text-4xl font-bold text-blue-600 mb-2">
+                                    10x
+                                </div>
+                                <div className="text-gray-700 font-medium">
+                                    Lead Volume
+                                </div>
                             </div>
                             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-                                <div className="text-gray-700 font-medium">Always Working</div>
+                                <div className="text-4xl font-bold text-blue-600 mb-2">
+                                    24/7
+                                </div>
+                                <div className="text-gray-700 font-medium">
+                                    Always Working
+                                </div>
                             </div>
                             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">92%</div>
-                                <div className="text-gray-700 font-medium">Qualified Leads</div>
+                                <div className="text-4xl font-bold text-blue-600 mb-2">
+                                    92%
+                                </div>
+                                <div className="text-gray-700 font-medium">
+                                    Qualified Leads
+                                </div>
                             </div>
                         </div>
                     </div>

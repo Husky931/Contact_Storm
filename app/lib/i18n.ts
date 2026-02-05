@@ -410,6 +410,167 @@ export const translations = {
                 email: "Email",
                 web: "Web"
             }
+        },
+        slide7: {
+            title: "Website & Shopify",
+            subtitle: "Modern websites that signal professionalism and convert visitors into inquiries",
+            services: [
+                {
+                    title: "Modern Visual Trust",
+                    body: "Clean, professional design that signals credibility and builds instant confidence with potential clients. Your site becomes a conversion engine that turns visitors into leads and customers."
+                },
+                {
+                    title: "Frictionless UX",
+                    body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%. Every second counts when users decide to stay or leave—we make sure they stay."
+                },
+                {
+                    title: "A/B Testing & Optimization",
+                    body: "Switch between landing page templates to identify optimal layouts for maximum user engagement. Data drives every decision so we double down on what works and drop what doesn’t."
+                },
+                {
+                    title: "User Tracking & Retention",
+                    body: "Monitor returning visitors for retargeting marketing and personalized experiences. Turn anonymous visitors into repeat customers and build loyalty over time."
+                },
+                {
+                    title: "Social Proof Integration",
+                    body: "Stylishly integrated case studies and testimonials to give instant user trust. Let your best results speak for you and show prospects why they should choose you."
+                },
+                {
+                    title: "Strong Call To Action",
+                    body: "Strategically placed CTAs that strongly urge users to make an inquiry. Clear next steps mean more leads and a smoother path from visitor to customer."
+                }
+            ]
+        },
+        slide8: {
+            title: "Paid Social Ads",
+            subtitle: "Paid social ads for Meta, Instagram, and TikTok that deliver qualified leads and build brand trust",
+            services: [
+                {
+                    title: "Ad Creative & Copy",
+                    body: "Culturally-aware ad design that resonates with Western audiences. We craft visuals and messaging that grab attention and drive clicks from the right buyers."
+                },
+                {
+                    title: "Targeting & Optimization",
+                    body: "Precision audience targeting to maximize your ad spend. We continuously monitor and adjust campaigns to reach the most relevant and high-intent buyers."
+                },
+                {
+                    title: "Lead Filtering",
+                    body: "Smart lead forms that pre-qualify inquiries and filter out noise. Save time and focus on leads that match your ideal customer profile."
+                },
+                {
+                    title: "Content Funnels",
+                    body: "Strategic content that nurtures leads from awareness to conversion. We guide prospects through a journey that builds trust and primes them for purchase."
+                },
+                {
+                    title: "Bilingual Ad Management",
+                    body: "Seamlessly manage campaigns in both English and Chinese. Our team ensures your messaging is consistent and effective across all languages and platforms."
+                },
+                {
+                    title: "A/B Testing",
+                    body: "Data-driven testing of ad creative, copy, and targeting. We identify what works best and optimize for higher conversion rates and lower cost-per-lead."
+                }
+            ]
+        },
+        slide9: {
+            title: "SEO & ASO",
+            subtitle: "Long-term organic growth through Search Engine Optimization and App Store Optimization that drives targeted traffic",
+            services: [
+                {
+                    title: "Keyword Research",
+                    body: "In-depth keyword analysis to uncover high-intent search terms. We target keywords that your ideal customers are using to find products like yours."
+                },
+                {
+                    title: "On-Page SEO",
+                    body: "Website and content optimization that boosts search rankings. We improve your site’s structure, content, and technical SEO to attract more organic traffic."
+                },
+                {
+                    title: "Content Marketing",
+                    body: "Valuable content that attracts, engages, and converts. We create blog posts, articles, and guides that establish your authority and drive inbound leads."
+                },
+                {
+                    title: "Link Building",
+                    body: "High-quality backlinks that build your site’s authority and trust. We earn links from reputable sources to improve your search engine rankings."
+                },
+                {
+                    title: "App Store Optimization",
+                    body: "Improve your app’s visibility in the app stores. We optimize your app’s title, description, and keywords to increase downloads and user acquisition."
+                },
+                {
+                    title: "Analytics & Reporting",
+                    body: "Transparent reporting on key SEO and ASO metrics. We track your progress and provide actionable insights to continuously improve your organic performance."
+                }
+            ]
+        },
+        slide10: {
+            title: "Lead Generation Software",
+            subtitle: "Proprietary software that identifies and qualifies overseas buyers, delivering high-quality leads directly to your sales team",
+            services: [
+                {
+                    title: "Buyer Persona Modeling",
+                    body: "Define your ideal customer profile to find the most relevant leads. Our software targets buyers based on industry, company size, location, and more."
+                },
+                {
+                    title: "Lead Scoring & Grading",
+                    body: "Automatically score and grade leads to prioritize follow-up. We ensure your sales team focuses on the most promising opportunities."
+                },
+                {
+                    title: "Data Enrichment",
+                    body: "Append contact and company data to your leads. Get a complete picture of your prospects to personalize your outreach and increase conversion rates."
+                },
+                {
+                    title: "Automated Outreach",
+                    body: "Set up and manage automated email campaigns to nurture leads. We help you stay top-of-mind with prospects and move them through the sales funnel."
+                },
+                {
+                    title: "CRM Integration",
+                    body: "Seamlessly sync leads and data with your CRM. Keep your sales and marketing teams aligned and working from a single source of truth."
+                },
+                {
+                    title: "Real-Time Alerts",
+                    body: "Get notified in real-time when a lead shows buying intent. Never miss an opportunity to connect with a hot lead."
+                }
+            ]
+        },
+        slide11: {
+            title: "AI Search Optimization",
+            subtitle: "Optimize your online presence for the AI-powered search era. We help you rank in generative search engines and conversational AI platforms.",
+            services: [
+                {
+                    title: "Generative SEO",
+                    body: "Optimize your website and content for generative search engines. We help you appear in the answers that AI models provide to users."
+                },
+                {
+                    title: "Conversational AI Marketing",
+                    body: "Engage with customers through conversational AI platforms. We build chatbots and voice assistants that provide instant support and drive sales."
+                },
+                {
+                    title: "AI Content Creation",
+                    body: "Leverage AI to create high-quality content at scale. We use AI-powered tools to generate blog posts, social media updates, and more."
+                },
+                {
+                    title: "AI-Powered Analytics",
+                    body: "Gain deeper insights into your customers and campaigns. We use AI to analyze data and uncover opportunities for growth."
+                },
+                {
+                    title: "AI Ad Targeting",
+                    body: "Improve ad performance with AI-powered targeting. We use machine learning to identify and reach your ideal customers with precision."
+                },
+                {
+                    title: "AI Personalization",
+                    body: "Deliver personalized experiences that drive engagement and loyalty. We use AI to tailor your website, content, and offers to each user."
+                }
+            ]
+        },
+        slide14: {
+            title: "We find overseas buyers for Chinese manufacturers",
+            subtitle: "Our foreign-led team bridges the gap between your factory and Western markets, using a growth system that’s been proven to deliver results.",
+            bullets: [
+                "In-house lead generation software for precise targeting",
+                "Ad creative and copy that speaks to Western buyers",
+                "Full-funnel management from first click to final sale",
+                "Bilingual team for seamless communication"
+            ],
+            cta: "Get a Free Consultation"
         }
     },
     zh: {
@@ -799,6 +960,167 @@ export const translations = {
                 email: "邮箱",
                 web: "官网"
             }
+        },
+        slide7: {
+            title: "网站与Shopify",
+            subtitle: "现代化网站，彰显专业性，将访客转化为询盘",
+            services: [
+                {
+                    title: "现代视觉信任",
+                    body: "简洁专业的设计，传递信誉，瞬间建立潜在客户的信心。您的网站将成为转化引擎，将访客变为潜在客户和顾客。"
+                },
+                {
+                    title: "无摩擦用户体验",
+                    body: "闪电般的加载速度和直观的导航，可将跳出率降低高达50%。当用户决定去留时，每一秒都至关重要——我们确保他们留下。"
+                },
+                {
+                    title: "A/B测试与优化",
+                    body: "在不同着陆页模板间切换，以确定实现最大用户参与度的最佳布局。数据驱动每一项决策，因此我们加倍投入有效的方法，放弃无效的方法。"
+                },
+                {
+                    title: "用户跟踪与保留",
+                    body: "监控回访用户，进行再营销和个性化体验。将匿名访客转变为回头客，并随着时间的推移建立忠诚度。"
+                },
+                {
+                    title: "社会认同整合",
+                    body: "以时尚的方式整合案例研究和推荐，以赢得即时用户信任。让您最佳的成果为您代言，向潜在客户展示他们为什么应该选择您。"
+                },
+                {
+                    title: "强有力的行动号召",
+                    body: "策略性地放置行动号召，强烈促使用户进行查询。清晰的后续步骤意味着更多的潜在客户，以及从访客到顾客的更顺畅的路径。"
+                }
+            ]
+        },
+        slide8: {
+            title: "付费社交广告",
+            subtitle: "为Meta、Instagram和TikTok制作的付费社交广告，可带来合格的潜在客户并建立品牌信任",
+            services: [
+                {
+                    title: "广告创意与文案",
+                    body: "具有文化意识的广告设计，能与西方受众产生共鸣。我们制作的视觉效果和信息能吸引注意力，并吸引合适的买家点击。"
+                },
+                {
+                    title: "目标定位与优化",
+                    body: "精准的受众定位，最大化您的广告支出。我们持续监控和调整广告活动，以触及最相关和高意向的买家。"
+                },
+                {
+                    title: "潜在客户筛选",
+                    body: "智能潜在客户表单，可预先筛选查询并过滤掉噪音。节省时间，专注于符合您理想客户画像的潜在客户。"
+                },
+                {
+                    title: "内容漏斗",
+                    body: "战略性内容，可将潜在客户从认知阶段培养至转化阶段。我们引导潜在客户完成建立信任并促使其购买的旅程。"
+                },
+                {
+                    title: "双语广告管理",
+                    body: "无缝管理英语和中文广告活动。我们的团队确保您的信息在所有语言和平台上保持一致和有效。"
+                },
+                {
+                    title: "A/B测试",
+                    body: "对广告创意、文案和目标定位进行数据驱动的测试。我们确定最有效的方法，并进行优化，以提高转化率和降低单位潜在客户成本。"
+                }
+            ]
+        },
+        slide9: {
+            title: "SEO与ASO",
+            subtitle: "通过搜索引擎优化和应用商店优化实现长期有机增长，从而带来有针对性的流量",
+            services: [
+                {
+                    title: "关键词研究",
+                    body: "深入的关键词分析，以发现高意向的搜索词。我们针对您理想客户用来查找像您这样的产品的关键词。"
+                },
+                {
+                    title: "页面搜索引擎优化",
+                    body: "优化网站和内容，提升搜索排名。我们改善您网站的结构、内容和技术性SEO，以吸引更多自然流量。"
+                },
+                {
+                    title: "内容营销",
+                    body: "有价值的内容，能吸引、吸引并转化客户。我们创作博客文章、文章和指南，以树立您的权威并带来入站潜在客户。"
+                },
+                {
+                    title: "链接建设",
+                    body: "高质量的反向链接，可建立您网站的权威和信任。我们从信誉良好的来源获得链接，以提高您的搜索引擎排名。"
+                },
+                {
+                    title: "应用商店优化",
+                    body: "提高您的应用在应用商店中的可见度。我们优化您应用的标题、描述和关键词，以增加下载量和用户获取。"
+                },
+                {
+                    title: "分析与报告",
+                    body: "关于关键SEO和ASO指标的透明报告。我们跟踪您的进展，并提供可操作的见解，以持续改善您的自然表现。"
+                }
+            ]
+        },
+        slide10: {
+            title: "潜在客户开发软件",
+            subtitle: "专有软件，可识别和筛选海外买家，直接为您的销售团队提供高质量的潜在客户",
+            services: [
+                {
+                    title: "买家画像建模",
+                    body: "定义您的理想客户画像，以找到最相关的潜在客户。我们的软件根据行业、公司规模、地理位置等对买家进行定位。"
+                },
+                {
+                    title: "潜在客户评分和分级",
+                    body: "自动对潜在客户进行评分和分级，以确定跟进的优先顺序。我们确保您的销售团队专注于最有希望的机会。"
+                },
+                {
+                    title: "数据丰富",
+                    body: "为您的潜在客户附加联系人和公司数据。全面了解您的潜在客户，以个性化您的外联并提高转化率。"
+                },
+                {
+                    title: "自动化外联",
+                    body: "设置和管理自动化电子邮件活动，以培养潜在客户。我们帮助您在潜在客户中保持首要位置，并推动他们通过销售漏斗。"
+                },
+                {
+                    title: "CRM集成",
+                    body: "将潜在客户和数据与您的CRM无缝同步。使您的销售和营销团队保持一致，并从单一的真实来源进行工作。"
+                },
+                {
+                    title: "实时警报",
+                    body: "当潜在客户表现出购买意向时，实时获得通知。绝不错过与热门潜在客户联系的机会。"
+                }
+            ]
+        },
+        slide11: {
+            title: "AI搜索优化",
+            subtitle: "为AI驱动的搜索时代优化您的在线形象。我们帮助您在生成式搜索引擎和对话式AI平台中排名。",
+            services: [
+                {
+                    title: "生成式SEO",
+                    body: "为生成式搜索引擎优化您的网站和内容。我们帮助您出现在AI模型为用户提供的答案中。"
+                },
+                {
+                    title: "对话式AI营销",
+                    body: "通过对话式AI平台与客户互动。我们构建聊天机器人和语音助手，提供即时支持并推动销售。"
+                },
+                {
+                    title: "AI内容创作",
+                    body: "利用AI大规模创建高质量内容。我们使用AI驱动的工具生成博客文章、社交媒体更新等。"
+                },
+                {
+                    title: "AI驱动的分析",
+                    body: "更深入地了解您的客户和广告活动。我们使用AI分析数据，发现增长机会。"
+                },
+                {
+                    title: "AI广告定位",
+                    body: "利用AI驱动的定位提高广告效果。我们使用机器学习来精确识别和触及您的理想客户。"
+                },
+                {
+                    title: "AI个性化",
+                    body: "提供个性化体验，提高参与度和忠诚度。我们使用AI根据每个用户量身定制您的网站、内容和优惠。"
+                }
+            ]
+        },
+        slide14: {
+            title: "我们为中国制造商寻找海外买家",
+            subtitle: "我们的外籍领导团队为您弥合工厂与西方市场之间的差距，采用经证明行之有效的增长体系。",
+            bullets: [
+                "内部潜在客户开发软件，实现精准定位",
+                "能与西方买家产生共鸣的广告创意和文案",
+                "从首次点击到最终销售的全漏斗管理",
+                "双语团队，实现无缝沟通"
+            ],
+            cta: "获得免费咨询"
         }
     }
 } as const

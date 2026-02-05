@@ -1,16 +1,12 @@
+"use client"
+
 import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED } from "@/(pages)/brochure/constants"
-
-const DEMAND_SERVICES = [
-    { title: "AIO (AI Optimization)", body: "Position your content as the top answer in AI chatbot responses (ChatGPT, Perplexity, Gemini, Grok). Be the answer when customers ask so your brand shows up where decisions are made." },
-    { title: "Classic SEO", body: "Optimization for Google, Bing, Yandex and other traditional search engines. Traditional search still drives significant traffic—we make sure you’re found on every major engine." },
-    { title: "AEO (Answer Engine Optimization)", body: "Optimize for voice and search queries like 'Who makes...?' to capture conversational searches. Capture the growing voice and question-based search market and stay ahead of the curve." },
-    { title: "GEO (Geographic Targeting)", body: "Target users by location, culture, and local search intent for maximum relevance. Reach the right people in the right place and connect with audiences where they are." },
-    { title: "AI Snippet Optimization", body: "Ensure your brand appears in AI-generated summaries and featured snippets. Show up in AI summaries and answer boxes so you get visibility in the new search landscape." },
-    { title: "Voice Search Ready", body: "Content optimized for voice assistants and natural language queries. We optimize for how people actually search today—spoken, long-tail, and conversational." }
-]
+import { useLanguage } from "@/components/LanguageProvider"
 
 export default function Slide9HomePage() {
+    const { language, translations } = useLanguage()
+    const slide9Translations = translations[language].slide9
 
     return (
         <section
@@ -27,12 +23,10 @@ export default function Slide9HomePage() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        SEO for <span style={{ color: BRAND_RED }}>the AI</span>
-                        <br />
-                        Era
+                        {slide9Translations.title}
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Optimize for AI models, voice engines, and the new reality of customer search
+                        {slide9Translations.subtitle}
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
@@ -47,7 +41,7 @@ export default function Slide9HomePage() {
 
                 {/* Right side — services grid */}
                 <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
-                    {DEMAND_SERVICES.map((item) => (
+                    {slide9Translations.services.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}

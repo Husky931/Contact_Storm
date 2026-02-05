@@ -1,17 +1,13 @@
+"use client"
+
 import Image from "next/image"
 import { BRAND_NAVY, BRAND_RED } from "@/(pages)/brochure/constants"
+import { useLanguage } from "@/components/LanguageProvider"
 
-
-const WEB_DEV_SERVICES = [
-    { title: "PPC Optimization & Tactics", body: "Bid optimization and management, ACoS monitoring, negative keywords, and ASIN targeting refinement. Every dollar is optimized for maximum return so you spend smarter, not more." },
-    { title: "Algorithm Optimization", body: "Managing inventory, velocity, and basket metrics including 'Add to Cart' and 'Save for later' signals. We work with Amazon's algorithm, not against it, so your listings get the visibility they deserve." },
-    { title: "Content & Keywords", body: "SEO-optimized titles, backend keyword architecture, and product page enhancements. Get found when shoppers search for products like yours and capture high-intent traffic." },
-    { title: "Competitor Radar", body: "Group tracker for competitor products with alerts on price changes and ranking improvements. Know your rivals, stay ahead, and know when to react or when to hold your position." },
-    { title: "Conversion Rate Focus", body: "High conversion rate for your ads and maximizing conversion signals so Amazon's algorithm favors your listings. More clicks that convert mean better organic visibility and long-term growth." },
-    { title: "Competitive Edge", body: "Strategic positioning to outperform competitors and dominate your product category. Win the buy box and the customer so you capture more sales and market share." }
-]
 
 export default function Slide8HomePage() {
+    const { language, translations } = useLanguage()
+    const slide8Translations = translations[language].slide8
     return (
         <section
             className="brochure-page-2 flex flex-col bg-white px-4 py-8 text-[#1b2737] sm:px-8 md:px-16 md:py-14 border-b border-gray-200"
@@ -26,12 +22,12 @@ export default function Slide8HomePage() {
                         className="brochure-serif text-4xl font-normal leading-tight tracking-tight sm:text-5xl"
                         style={{ color: BRAND_NAVY }}
                     >
-                        <span style={{ color: BRAND_RED }}> Amazon Ads</span> &
+                        <span style={{ color: BRAND_RED }}> {slide8Translations.title}</span> &
                         <br />
                         Optimization
                     </h2>
                     <p className="mt-5 max-w-2xl text-lg font-bold leading-snug text-[#1b2737] sm:text-xl">
-                        Maximize conversion rates and algorithm signals to outperform competitors
+                        {slide8Translations.subtitle}
                     </p>
                     <div className="mt-8 flex justify-center">
                         <Image
@@ -46,7 +42,7 @@ export default function Slide8HomePage() {
 
                 {/* Right side — services grid */}
                 <div className="flex-3 mt-0 grid grid-cols-1 gap-y-8 gap-x-12 sm:grid-cols-2 md:gap-y-20 lg:grid-cols-3">
-                    {WEB_DEV_SERVICES.map((item) => (
+                    {slide8Translations.services.map((item) => (
                         <div key={item.title} className="flex flex-col">
                             <h3 className="text-base font-bold leading-snug text-[#1b2737] sm:text-lg">
                                 {item.title}
