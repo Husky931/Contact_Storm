@@ -567,7 +567,7 @@ export const translations = {
             ]
         },
         slide14: {
-            title: "We find overseas buyers for Chinese manufacturers",
+            title: "Our Lead Generation Software",
             subtitle:
                 "Our foreign-led team bridges the gap between your factory and Western markets, using a growth system that’s been proven to deliver results.",
             bullets: [
@@ -1132,7 +1132,7 @@ export const translations = {
             ]
         },
         slide14: {
-            title: "我们为中国制造商寻找海外买家",
+            title: "我们的潜在客户开发软件",
             subtitle:
                 "我们的外籍领导团队为您弥合工厂与西方市场之间的差距，采用经证明行之有效的增长体系。",
             bullets: [
