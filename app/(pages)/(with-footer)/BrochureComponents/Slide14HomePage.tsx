@@ -66,14 +66,11 @@ export default function Slide14HomePage() {
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6 mx-auto">
                             <span className="mr-2">⚡</span>
-                            Your 24/7 Lead Generation Engine
+                            {slide14Translations.powerStatements.engine}
                         </div>
 
                         <h2 className="text-2xl font-bold text-gray-900 mb-5 px-2">
-                            Turn Prospects into Pipeline{" "}
-                            <span className="text-blue-600 block mt-1">
-                                While You Sleep
-                            </span>
+                            {slide14Translations.powerStatements.title}
                         </h2>
 
                         <p className="text-base text-gray-600 mb-8 leading-relaxed px-2">
@@ -84,11 +81,7 @@ export default function Slide14HomePage() {
                         </p>
 
                         <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
-                            {[
-                                { value: "10x", label: "Lead Volume" },
-                                { value: "24/7", label: "Always Working" },
-                                { value: "92%", label: "Qualified Leads" }
-                            ].map((stat, i) => (
+                            {slide14Translations.powerStatements.stats.map((stat, i) => (
                                 <div
                                     key={i}
                                     className="bg-white rounded-xl shadow p-5 border border-gray-100"
@@ -270,46 +263,31 @@ export default function Slide14HomePage() {
                     <div className="text-center max-w-3xl mx-auto">
                         <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-6">
                             <span className="mr-2">⚡</span>
-                            Your 24/7 Lead Generation Engine
+                            {slide14Translations.powerStatements.engine}
                         </div>
 
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Turn Prospects into Pipeline{" "}
-                            <span className="text-blue-600">While You Sleep</span>
+                            {slide14Translations.powerStatements.title}
                         </h2>
 
                         <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                            Imagine your most productive employee, supercharged. Our AI
-                            works tirelessly around the clock to generate qualified
-                            leads, fill your CRM, and accelerate growth—without coffee
-                            breaks, vacations, or quotas.
+                            {slide14Translations.powerStatements.subtitle}
                         </p>
 
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">
-                                    10x
+                            {slide14Translations.powerStatements.stats.map((stat, i) => (
+                                <div
+                                    key={i}
+                                    className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow"
+                                >
+                                    <div className="text-4xl font-bold text-blue-600 mb-2">
+                                        {stat.value}
+                                    </div>
+                                    <div className="text-gray-700 font-medium">
+                                        {stat.label}
+                                    </div>
                                 </div>
-                                <div className="text-gray-700 font-medium">
-                                    Lead Volume
-                                </div>
-                            </div>
-                            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">
-                                    24/7
-                                </div>
-                                <div className="text-gray-700 font-medium">
-                                    Always Working
-                                </div>
-                            </div>
-                            <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 hover:shadow-lg transition-shadow">
-                                <div className="text-4xl font-bold text-blue-600 mb-2">
-                                    92%
-                                </div>
-                                <div className="text-gray-700 font-medium">
-                                    Qualified Leads
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

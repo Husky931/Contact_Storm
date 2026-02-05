@@ -570,7 +570,16 @@ export const translations = {
                 "Full-funnel management from first click to final sale",
                 "Bilingual team for seamless communication"
             ],
-            cta: "Get a Free Consultation"
+            cta: "Get a Free Consultation",
+            powerStatements: {
+                title: "Turn Prospects into Pipeline Around the Clock",
+                subtitle: "Imagine your most productive employee, supercharged. Our AI works tirelessly around the clock to generate qualified leads, fill your CRM, and accelerate growth—without coffee breaks, vacations, or quotas.",
+                stats: [
+                    { value: "10x", label: "Lead Volume" },
+                    { value: "24/7", label: "Always Working" },
+                    { value: "92%", label: "Qualified Leads" }
+                ]
+            }
         }
     },
     zh: {
@@ -1120,7 +1129,16 @@ export const translations = {
                 "从首次点击到最终销售的全漏斗管理",
                 "双语团队，实现无缝沟通"
             ],
-            cta: "获得免费咨询"
+            cta: "获得免费咨询",
+            powerStatements: {
+                title: "将潜在客户转化为源源不断的业务",
+                subtitle: "想象一下，您最有效率的员工，现在能力超群。我们的人工智能夜以继日地工作，为您生成合格的潜在客户，填充您的CRM，加速增长——无需咖啡休息、度假或绩效指标。",
+                stats: [
+                    { value: "10倍", label: "潜在客户量" },
+                    { value: "24/7", label: "全天候工作" },
+                    { value: "92%", label: "合格潜在客户" }
+                ]
+            }
         }
     }
 } as const
