@@ -8,7 +8,7 @@ interface ErrorPageProps {
     reset: () => void
 }
 
-export default function ReportDetailError({ error, reset }: ErrorPageProps) {
+export default function ReportDetailError({ error, }: ErrorPageProps) {
     useEffect(() => {
         // Log to the console for debugging and observability.
         console.error("Report detail page error:", error)

@@ -189,7 +189,7 @@ export const translations = {
         },
         aiSearchOptimization: {
             sectionTitle:
-                "Rank for the current LLMs (ChatGPT, Gemini, Grok and rest",
+                "Rank for the current LLMs (ChatGPT, Gemini, Grok and rest)",
             title: "AI Search Website Optimization",
             subtitle:
                 "Are you keeping up with the times? People are now using AI to find results",
@@ -760,7 +760,7 @@ export const translations = {
             ]
         },
         aiSearchOptimization: {
-            sectionTitle: "当前LLM（ChatGPT、Gemini、Grok及其他）的排名",
+            sectionTitle: "当前LLM（ChatGPT、Gemini、Grok及其他）的排名)",
             title: "AI 搜索网站优化",
             subtitle: "你还跟得上时代吗？人们正在用 AI 来寻找结果",
             sellerText: {
