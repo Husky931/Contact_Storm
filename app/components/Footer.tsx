@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import WeChatQRPopup from "./WeChatQRPopup"
 import ModalPopup from "./ModalPopup"
@@ -21,6 +21,24 @@ export default function Footer() {
     const cooldownMs = 5 * 60 * 1000
     const cooldownStorageKey = "auditCooldownUntil"
     const isOnCooldown = cooldownUntil !== null && Date.now() < cooldownUntil
+
+    // #region agent log
+    const loggedRender = useRef(false)
+    if (typeof window !== "undefined" && !loggedRender.current) {
+        loggedRender.current = true
+        fetch("http://127.0.0.1:7246/ingest/38583c81-b757-438c-8b6f-1daff8948ae7", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                hypothesisId: "D",
+                location: "Footer.tsx",
+                message: "Footer first client render",
+                data: { language, cooldownUntil },
+                timestamp: Date.now()
+            })
+        }).catch(() => { })
+    }
+    // #endregion
 
     const handleAuditEmailChange = (
         event: React.ChangeEvent<HTMLInputElement>
@@ -243,12 +261,11 @@ export default function Footer() {
                                             />
                                             {submitStatus.type && (
                                                 <div
-                                                    className={`rounded px-4 py-2 text-xs ${
-                                                        submitStatus.type ===
+                                                    className={`rounded px-4 py-2 text-xs ${submitStatus.type ===
                                                         "success"
-                                                            ? "bg-green-50 text-green-700"
-                                                            : "bg-red-50 text-red-700"
-                                                    }`}
+                                                        ? "bg-green-50 text-green-700"
+                                                        : "bg-red-50 text-red-700"
+                                                        }`}
                                                 >
                                                     {submitStatus.message}
                                                 </div>
@@ -277,7 +294,7 @@ export default function Footer() {
                                     trigger={
                                         <a
                                             href="#"
-                                                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                             aria-label="WeChat"
                                         >
                                             <svg
@@ -293,7 +310,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="LinkedIn"
                                 >
                                     <span className="text-primary-red-dark text-lg font-bold">
@@ -303,7 +320,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="Facebook"
                                 >
                                     <span className="text-primary-red-dark text-lg font-bold">
@@ -313,7 +330,7 @@ export default function Footer() {
 
                                 <a
                                     href="#"
-                                            className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
+                                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-white transition-opacity hover:opacity-90"
                                     aria-label="YouTube"
                                 >
                                     <svg
@@ -325,6 +342,9 @@ export default function Footer() {
                                     </svg>
                                 </a>
                             </div>
+                            <p className="mt-6 text-xs text-white/70 md:text-sm">
+                                {copy.footer.businessLicense}
+                            </p>
                         </div>
                     </div>
                 </div>

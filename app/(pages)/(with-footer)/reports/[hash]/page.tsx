@@ -7,10 +7,23 @@ import FloatingFixButton from "@/components/FloatingFixButton"
 import DownloadPDFButton from "@/components/DownloadPDFButton"
 import FoundedBy from "@/components/FoundedBy"
 import ReadyToTalk from "@/components/ReadyToTalk"
+import ReportHydrationLogger from "./ReportHydrationLogger"
 
 interface PageProps {
     params: Promise<{ hash: string }>
     searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+/** Deterministic format to avoid server/client hydration mismatch (locale/timezone). */
+function formatReportDate(isoDate: string): string {
+    return new Date(isoDate).toLocaleString("en-US", {
+        timeZone: "UTC",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+    })
 }
 
 export default async function ReportDetailPage({ params, searchParams }: PageProps) {
@@ -40,6 +53,7 @@ export default async function ReportDetailPage({ params, searchParams }: PagePro
 
     return (
         <div className="bg-background text-text min-h-screen">
+            <ReportHydrationLogger analyzedAt={report.analyzedAt} />
             {/* View tracking is now handled by the API via ?countView parameter */}
             <div className="mx-auto max-w-7xl p-8">
                 <div className="mb-4">
@@ -57,9 +71,9 @@ export default async function ReportDetailPage({ params, searchParams }: PagePro
                 </div>
 
                 <h1 className="mb-2 text-4xl font-bold text-gray-900">{report.domain}</h1>
-                <p className="mb-8 text-gray-600 text-lg">
+                <p className="mb-8 text-gray-600 text-lg" suppressHydrationWarning>
                     Analyzed:{" "}
-                    {new Date(report.analyzedAt).toLocaleString()}
+                    {formatReportDate(report.analyzedAt)}
                 </p>
 
                 {report.overallScore !== null && (

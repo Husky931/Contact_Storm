@@ -40,6 +40,19 @@ export default function ContactPopup({
     // Set mounted state and initialize desktop popup as open
     useEffect(() => {
         setMounted(true)
+        // #region agent log
+        fetch("http://127.0.0.1:7246/ingest/38583c81-b757-438c-8b6f-1daff8948ae7", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                hypothesisId: "C",
+                location: "ContactPopup.tsx",
+                message: "ContactPopup mounted",
+                data: { mountedNow: true },
+                timestamp: Date.now()
+            })
+        }).catch(() => { })
+        // #endregion
         // Check if we're on desktop and set initial state
         if (typeof window !== "undefined" && window.innerWidth >= 768) {
             setIsOpen(true)

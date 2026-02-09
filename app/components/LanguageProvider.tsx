@@ -22,11 +22,29 @@ export function LanguageProvider({
 }: {
     children: React.ReactNode
 }) {
-    const [language, setLanguageState] = useState<Language>(() => {
-        if (typeof window === "undefined") return "en"
+    const [language, setLanguageState] = useState<Language>("en")
+
+    useEffect(() => {
         const stored = window.localStorage.getItem("language")
-        return (stored === "en" || stored === "zh") ? stored : "en"
-    })
+        if (stored === "en" || stored === "zh") setLanguageState(stored)
+    }, [])
+
+    // #region agent log
+    if (typeof window !== "undefined") {
+        const stored = window.localStorage.getItem("language")
+        fetch("http://127.0.0.1:7246/ingest/38583c81-b757-438c-8b6f-1daff8948ae7", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                hypothesisId: "A",
+                location: "LanguageProvider.tsx",
+                message: "language on render",
+                data: { language, storedInLs: stored, isServer: false },
+                timestamp: Date.now()
+            })
+        }).catch(() => { })
+    }
+    // #endregion
 
     useEffect(() => {
         document.documentElement.lang =

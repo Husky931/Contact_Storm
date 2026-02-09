@@ -365,6 +365,8 @@ export const translations = {
                 "Consulting",
                 "Custom Solutions"
             ],
+            businessLicense:
+                "Shanghai Business License: Registration Number –91310000MAENT8FQ1J",
             audit: {
                 title: "Free Audit (SEO + Website AI Optimization)",
                 subtext:
@@ -933,6 +935,7 @@ export const translations = {
                 "咨询",
                 "定制方案"
             ],
+            businessLicense: "上海工商营业执照：注册号 –91310000MAENT8FQ1J",
             audit: {
                 title: "免费审计（SEO + 网站 AI 优化）",
                 subtext:
