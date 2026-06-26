@@ -68,3 +68,11 @@
 {"hypothesisId":"A","location":"LanguageProvider.tsx","message":"language on render","data":{"language":"en","storedInLs":"en","isServer":false},"timestamp":1770624435287}
 {"hypothesisId":"D","location":"Footer.tsx","message":"Footer first client render","data":{"language":"en","cooldownUntil":null},"timestamp":1770624435357}
 {"hypothesisId":"C","location":"ContactPopup.tsx","message":"ContactPopup mounted","data":{"mountedNow":true},"timestamp":1770624435365}
+{"hypothesisId":"A","location":"LanguageProvider.tsx","message":"language on render","data":{"language":"en","storedInLs":"en","isServer":false},"timestamp":1770624567754}
+{"hypothesisId":"A","location":"LanguageProvider.tsx","message":"language on render","data":{"language":"en","storedInLs":"en","isServer":false},"timestamp":1770624567754}
+{"hypothesisId":"D","location":"Footer.tsx","message":"Footer first client render","data":{"language":"en","cooldownUntil":null},"timestamp":1770624567807}
+{"hypothesisId":"C","location":"ContactPopup.tsx","message":"ContactPopup mounted","data":{"mountedNow":true},"timestamp":1770624567824}
+{"hypothesisId":"A","location":"LanguageProvider.tsx","message":"language on render","data":{"language":"en","storedInLs":"en","isServer":false},"timestamp":1770624615840}
+{"hypothesisId":"A","location":"LanguageProvider.tsx","message":"language on render","data":{"language":"en","storedInLs":"en","isServer":false},"timestamp":1770624615840}
+{"hypothesisId":"D","location":"Footer.tsx","message":"Footer first client render","data":{"language":"en","cooldownUntil":null},"timestamp":1770624615947}
+{"hypothesisId":"C","location":"ContactPopup.tsx","message":"ContactPopup mounted","data":{"mountedNow":true},"timestamp":1770624615973}

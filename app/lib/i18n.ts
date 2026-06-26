@@ -16,8 +16,7 @@ export const translations = {
             languageLabel: "Language"
         },
         hero: {
-            tag: "Overseas Buyer Growth",
-            title: "We help Chinese manufacturers win overseas buyers.",
+            title: "We help Chinese sellers win overseas buyers.",
             description:
                 "Reach customers in Europe, North America, the Middle East, and beyond.",
             subtext:
@@ -26,6 +25,7 @@ export const translations = {
                 primary: "Our Services",
                 secondary: "Our WeChat"
             },
+            services: ["ChatGPT Ads", "SEO / AEO", "Social Media Growth"],
             servicesPopup: {
                 kicker: "Full-service growth partner",
                 title: "What we do and who we help",
@@ -34,12 +34,9 @@ export const translations = {
                 servicesTitle: "Our services",
                 clientsTitle: "Our clients",
                 services: [
-                    "Lead generation",
-                    "Amazon PPC & Marketplace",
-                    "Paid Social Advertising",
-                    "SEO & Organic Growth",
-                    "Social Media Growth",
-                    "Modern Website Redesign"
+                    "ChatGPT Ads",
+                    "SEO / AEO",
+                    "Social media campaigns"
                 ],
                 clients: [
                     "Factories",
@@ -49,8 +46,8 @@ export const translations = {
                 ]
             },
             highlights: [
-                "Lead generation",
-                "Amazon PPC & Marketplace",
+                "ChatGPT Ads",
+                "SEO / AEO",
                 "Shopify",
                 "Website optimization for AI search engines",
                 "Paid social ads (Meta, Instagram, TikTok)",
@@ -97,14 +94,7 @@ export const translations = {
             },
             imageAlt: "Digital strategy team reviewing product roadmap"
         },
-        heroHighlights: [
-            "Leads",
-            "Social Ads and Growth",
-            "SEO & AEO",
-            "Shopify",
-            "Website Redesign",
-            "AI search optimization"
-        ],
+        heroHighlights: ["ChatGPT Ads", "SEO / AEO", "Social Media Growth"],
         about: {
             statsLabel: "Sellers Served",
             kicker: "Built for Sellers",
@@ -114,7 +104,7 @@ export const translations = {
                 middle: "with",
                 highlightSecondary: "global markets"
             },
-            copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both factory realities and Western buyer mind and expectations. That makes our ad creative, Amazon strategy, and websites convert much better.",
+            copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both seller's realities and Western buyer mind and expectations. Our ads are creative, and websites convert much better.",
             bullets: [
                 "Lead Generation in-house software",
                 "Western buyer mindset applied to ads and listings",
@@ -614,6 +604,7 @@ export const translations = {
                 primary: "我们的服务",
                 secondary: "我们的微信"
             },
+            services: ["ChatGPT 广告", "SEO / AEO", "社媒增长"],
             servicesPopup: {
                 kicker: "全链路增长伙伴",
                 title: "我们提供什么服务，服务谁",
@@ -672,14 +663,7 @@ export const translations = {
             },
             imageAlt: "数字策略团队查看产品路线图"
         },
-        heroHighlights: [
-            "AI 搜索优化",
-            "社媒广告与增长",
-            "SEO & AEO",
-            "Shopify",
-            "网站改版",
-            "获客线索"
-        ],
+        heroHighlights: ["ChatGPT 广告", "SEO / AEO", "社媒增长"],
         about: {
             statsLabel: "服务卖家",
             kicker: "为制造商打造",
