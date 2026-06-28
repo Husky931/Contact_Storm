@@ -25,7 +25,7 @@ function withHighlights(text: string, highlights: string[] = []) {
 }
 
 function CardIcon({ name }: { name: string }) {
-    const className = "h-9 w-9 text-primary-blue"
+    const className = "h-9 w-9 text-primary-red"
 
     if (name === "funnel") {
         return (
@@ -38,22 +38,6 @@ function CardIcon({ name }: { name: string }) {
                 <path d="M4.25 5.61C6.27 8.2 10 13 10 13v5c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-5s3.72-4.8 5.74-7.39c.51-.66.04-1.61-.79-1.61H5.04c-.83 0-1.3.95-.79 1.61z" />
                 <circle cx="18" cy="18" r="5.5" fill="currentColor" stroke="#fff" strokeWidth="1.2" />
                 <text x="18" y="21" textAnchor="middle" fontSize="7.5" fontWeight="700" fill="#fff">$</text>
-            </svg>
-        )
-    }
-
-    if (name === "bars") {
-        return (
-            <svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className={className}
-                aria-hidden="true"
-            >
-                <rect x="3" y="14" width="3.5" height="7" rx="1" />
-                <rect x="8.5" y="11" width="3.5" height="10" rx="1" />
-                <rect x="14" y="8" width="3.5" height="13" rx="1" />
-                <rect x="19.5" y="4" width="3" height="17" rx="1" />
             </svg>
         )
     }
@@ -101,10 +85,10 @@ export default function ChatGptAdsServices() {
                     {copy.cards.map((card) => (
                         <article
                             key={card.title}
-                            className="grid gap-6 overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm md:grid-cols-[0.85fr_1.05fr_1.1fr] md:gap-0"
+                            className="grid gap-6 overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-sm md:grid-cols-[0.85fr_1.05fr_1.1fr] md:gap-x-12 md:gap-y-0"
                         >
                             {/* Icon + title */}
-                            <div className="flex flex-col justify-center gap-5 bg-linear-to-r from-gray-50 to-white p-8">
+                            <div className="flex flex-col justify-center gap-5 bg-linear-to-br from-primary-red/10 to-primary-red/5 p-8">
                                 <CardIcon name={card.icon} />
                                 <h3 className="font-heading text-primary-navy text-xl font-bold leading-snug">
                                     {card.title}
@@ -112,7 +96,7 @@ export default function ChatGptAdsServices() {
                             </div>
 
                             {/* Description */}
-                            <div className="flex items-start p-8 md:py-8 md:pr-6 md:pl-0">
+                            <div className="flex items-center p-8 md:px-0 md:py-10">
                                 <p className="text-text/75 text-base leading-relaxed">
                                     {withHighlights(
                                         card.description.text,
@@ -122,7 +106,7 @@ export default function ChatGptAdsServices() {
                             </div>
 
                             {/* Bullets */}
-                            <div className="flex items-start p-8 md:py-8 md:pr-8 md:pl-0">
+                            <div className="flex items-center p-8 md:py-10 md:pr-10 md:pl-0">
                                 <ul className="text-text/75 marker:text-text/40 list-disc space-y-3 pl-5 text-base leading-relaxed">
                                     {card.bullets.map((bullet) => (
                                         <li key={bullet.text}>

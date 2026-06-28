@@ -188,28 +188,6 @@ export const translations = {
                             highlights: [] as string[]
                         }
                     ]
-                },
-                {
-                    icon: "bars",
-                    title: "Create cross-channel dominance",
-                    description: {
-                        text: "ChatGPT Ads do not operate in a digital marketing vacuum. We complement LLM Ads with proven channels, like SEO/GEO, Paid Search, Paid Social & Programmatic.",
-                        highlights: ["Paid Search"] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "High-intent SEM + paid social strategy built around “AI discovery” behaviors and topics",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Landing page and funnel optimization",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Content strategy that strengthens authority signals for both SEO and GEO",
-                            highlights: ["SEO"] as string[]
-                        }
-                    ]
                 }
             ]
         },
@@ -850,28 +828,6 @@ export const translations = {
                         {
                             text: "测试与衡量方案",
                             highlights: [] as string[]
-                        }
-                    ]
-                },
-                {
-                    icon: "bars",
-                    title: "打造跨渠道主导力",
-                    description: {
-                        text: "ChatGPT 广告并非在数字营销的真空中运行。我们用 SEO/GEO、付费搜索、付费社媒和程序化广告等成熟渠道来补充 LLM 广告。",
-                        highlights: ["付费搜索"] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "围绕“AI 发现”行为与话题构建的高意向 SEM + 付费社媒策略",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "落地页与转化漏斗优化",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "强化 SEO 与 GEO 双重权威信号的内容策略",
-                            highlights: ["SEO"] as string[]
                         }
                     ]
                 }
