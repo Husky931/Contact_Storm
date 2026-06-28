@@ -191,6 +191,18 @@ export const translations = {
                 }
             ]
         },
+        chatgptAdsProof: {
+            kicker: "Proof of concept · Live in beta",
+            title: "We're already inside the ChatGPT Ads Manager",
+            intro: "While most agencies are still reading the press releases, we already have hands-on access to OpenAI's Ads Manager — with real campaigns serving in beta. We're learning what actually converts now, so your launch day isn't your first experiment.",
+            note: "Real account. Campaign names hidden for client confidentiality.",
+            stats: [
+                { value: "$10K+", label: "Ad spend under management" },
+                { value: "212K", label: "Impressions delivered" },
+                { value: "4,000", label: "Clicks driven" },
+                { value: "2.4%", label: "Best campaign CTR" }
+            ]
+        },
         specialization: {
             kicker: "Why Factories Choose Us",
             title: "Built for Chinese manufacturers selling overseas",
@@ -831,6 +843,18 @@ export const translations = {
                         }
                     ]
                 }
+            ]
+        },
+        chatgptAdsProof: {
+            kicker: "概念验证 · 测试版已上线",
+            title: "我们已经进入 ChatGPT 广告管理后台",
+            intro: "当大多数代理商还在研读新闻稿时，我们已经获得 OpenAI 广告管理后台的实操权限——并在测试阶段投放真实的广告活动。我们正在提前摸清什么真正能带来转化，让你的上线日不再是第一次试验。",
+            note: "真实账户。为保护客户隐私，已隐藏广告活动名称。",
+            stats: [
+                { value: "$10K+", label: "管理中的广告花费" },
+                { value: "212K", label: "已触达展示量" },
+                { value: "4,000", label: "带来的点击量" },
+                { value: "2.4%", label: "最佳广告活动点击率" }
             ]
         },
         specialization: {
