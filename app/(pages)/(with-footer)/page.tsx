@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero"
 import About from "@/components/About"
+import ChatGptAds from "@/components/ChatGptAds"
 import Section4 from "@/components/Section4"
 import Specialization from "@/components/Specialization"
 import ReadyToTalk from "@/components/ReadyToTalk"
@@ -20,6 +21,7 @@ export default function Home() {
             <main>
                 <Hero />
                 <About />
+                <ChatGptAds />
                 <Specialization />
                 <Section4 />
                 <AiSearchOptimization />

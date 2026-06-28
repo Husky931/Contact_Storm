@@ -125,6 +125,21 @@ export const translations = {
                 collaboration: "Office collaboration"
             }
         },
+        chatgptAds: {
+            kicker: "ChatGPT Ads Agency Services",
+            title: "Be ready to win in ChatGPT Ads",
+            intro: {
+                highlight: "ChatGPT Ads",
+                body: " are coming. You need a forward-thinking, fast-moving, agency partner who can plan, prototype, and pre-wire performance; so when inventory rolls out, you're first to learn and first to scale."
+            },
+            bullets: [
+                "Build an informed AI Ads strategy aligned to pipeline and revenue goals",
+                "Create a launch-ready playbook for ChatGPT Ads / GEO as the ad platform becomes available",
+                "Generate measurable growth now using proven channels, like Google Ads or Paid Social, while you prep for LLM ads"
+            ],
+            cta: "Book an intro",
+            imageAlt: "ChatGPT showing a sponsored ad result"
+        },
         specialization: {
             kicker: "Why Factories Choose Us",
             title: "Built for Chinese manufacturers selling overseas",
@@ -700,6 +715,21 @@ export const translations = {
                 meeting: "团队会议",
                 collaboration: "协作讨论"
             }
+        },
+        chatgptAds: {
+            kicker: "ChatGPT 广告代理服务",
+            title: "做好准备，赢在 ChatGPT 广告",
+            intro: {
+                highlight: "ChatGPT 广告",
+                body: "即将到来。您需要一个前瞻、敏捷的代理伙伴，能够规划、原型化并提前布局成效；当广告位正式开放时，让您率先掌握、率先扩量。"
+            },
+            bullets: [
+                "制定与销售管道和营收目标一致的 AI 广告策略",
+                "在广告平台开放之际，准备好可立即落地的 ChatGPT 广告 / GEO 打法",
+                "立即通过 Google Ads、社媒投放等成熟渠道获得可衡量的增长，同时为 LLM 广告做好准备"
+            ],
+            cta: "预约咨询",
+            imageAlt: "ChatGPT 中展示的赞助广告结果"
         },
         specialization: {
             kicker: "为什么工厂选择我们",
