@@ -16,11 +16,18 @@ export const translations = {
             languageLabel: "Language"
         },
         hero: {
-            title: "We help Chinese sellers win overseas buyers.",
+            kicker: "Hi, we're your ChatGPT ads agency",
+            title: "ChatGPT ads for Chinese sellers",
             description:
                 "Reach customers in Europe, North America, the Middle East, and beyond.",
             subtext:
                 "Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
+            bullets: [
+                "Get found when overseas buyers ask ChatGPT what to buy",
+                "Real Western buyer insight, not generic translations",
+                "Built for ads, Amazon listings, and high-converting sites"
+            ],
+            cta: "Book a free intro",
             ctas: {
                 primary: "Our Services",
                 secondary: "Our WeChat"
@@ -597,9 +604,16 @@ export const translations = {
         },
         hero: {
             tag: "海外买家增长",
-            title: "我们帮助中国制造商赢得海外买家。",
+            kicker: "您好，我们是您的 ChatGPT 广告团队",
+            title: "为中国卖家打造的 ChatGPT 广告",
             description: "触达欧洲、北美、中东等全球客户。",
             subtext: "西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
+            bullets: [
+                "当海外买家向 ChatGPT 询问买什么时，让他们找到您",
+                "真正的西方买家洞察，而非生硬的翻译",
+                "为广告、亚马逊 Listing 与高转化网站而打造"
+            ],
+            cta: "预约免费咨询",
             ctas: {
                 primary: "我们的服务",
                 secondary: "我们的微信"
