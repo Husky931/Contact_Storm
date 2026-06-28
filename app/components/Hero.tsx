@@ -22,7 +22,7 @@ export default function Hero() {
                         {copy.hero.title}
                     </h1>
                     <p className="text-text/75 mt-6 text-base leading-relaxed sm:text-lg">
-                        {copy.hero.description} {copy.hero.subtext}
+                        {copy.hero.description}
                     </p>
 
                     <ul className="mt-6 space-y-3">
@@ -98,7 +98,7 @@ export default function Hero() {
                             <path d="M12 2l1.6 4.4L18 8l-4.4 1.6L12 14l-1.6-4.4L6 8l4.4-1.6L12 2zM5 14l.9 2.5L8.5 17l-2.6.9L5 20l-.9-2.1L1.5 17l2.6-.5L5 14z" />
                         </svg>
                         <span className="text-text/60 truncate text-sm">
-                            What sunglasses should I buy?
+                            Recommend aluminium manufactures from China
                         </span>
                         <span className="bg-primary-red ml-auto grid size-7 shrink-0 place-items-center rounded-full">
                             <svg

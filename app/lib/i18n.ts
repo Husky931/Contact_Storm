@@ -24,8 +24,8 @@ export const translations = {
                 "Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
             bullets: [
                 "Get found when overseas buyers ask ChatGPT what to buy",
-                "Real Western buyer insight, not generic translations",
-                "Built for ads, Amazon listings, and high-converting sites"
+                "Become the seller ChatGPT recommends",
+                "Turn AI conversations into real inquiries and orders"
             ],
             cta: "Book a free intro",
             ctas: {
@@ -610,8 +610,8 @@ export const translations = {
             subtext: "西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
             bullets: [
                 "当海外买家向 ChatGPT 询问买什么时，让他们找到您",
-                "真正的西方买家洞察，而非生硬的翻译",
-                "为广告、亚马逊 Listing 与高转化网站而打造"
+                "成为 ChatGPT 主动推荐的卖家",
+                "把 AI 对话转化为真实的询盘与订单"
             ],
             cta: "预约免费咨询",
             ctas: {
