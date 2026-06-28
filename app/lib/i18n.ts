@@ -140,6 +140,79 @@ export const translations = {
             cta: "Book an intro",
             imageAlt: "ChatGPT showing a sponsored ad result"
         },
+        chatgptAdsServices: {
+            title: "ChatGPT Ads Services",
+            intro: "Because ChatGPT Ads is still emerging, our job is to remove ambiguity and build a launch-ready growth system that works now and scales the moment the platform becomes available. We combine thought leadership, performance marketing rigor, and GEO-forward strategy so you're not starting from scratch on day one.",
+            cta: "How We Work",
+            cards: [
+                {
+                    icon: "plane",
+                    title: "Gain a competitive advantage",
+                    description: {
+                        text: "If you wait for perfect information, you'll enter late, after competitors have already learned what works.",
+                        highlights: [] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "LLM Ads & GEO opportunity mapping",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Messaging frameworks tailored for AI-assisted consideration journeys",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Competitive visibility auditing",
+                            highlights: [] as string[]
+                        }
+                    ]
+                },
+                {
+                    icon: "funnel",
+                    title: "Increase conversions from LLMs",
+                    description: {
+                        text: "We build the operational readiness so you can activate quickly and intelligently the moment ChatGPT Ads become available to the general public.",
+                        highlights: ["ChatGPT Ads"] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "Launch readiness checklist",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Continuous performance optimizations",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Testing & measurement plan",
+                            highlights: [] as string[]
+                        }
+                    ]
+                },
+                {
+                    icon: "bars",
+                    title: "Create cross-channel dominance",
+                    description: {
+                        text: "ChatGPT Ads do not operate in a digital marketing vacuum. We complement LLM Ads with proven channels, like SEO/GEO, Paid Search, Paid Social & Programmatic.",
+                        highlights: ["Paid Search"] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "High-intent SEM + paid social strategy built around “AI discovery” behaviors and topics",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Landing page and funnel optimization",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "Content strategy that strengthens authority signals for both SEO and GEO",
+                            highlights: ["SEO"] as string[]
+                        }
+                    ]
+                }
+            ]
+        },
         specialization: {
             kicker: "Why Factories Choose Us",
             title: "Built for Chinese manufacturers selling overseas",
@@ -730,6 +803,79 @@ export const translations = {
             ],
             cta: "预约咨询",
             imageAlt: "ChatGPT 中展示的赞助广告结果"
+        },
+        chatgptAdsServices: {
+            title: "ChatGPT 广告服务",
+            intro: "由于 ChatGPT 广告仍处于新兴阶段，我们的任务是消除不确定性，构建一套现在就能运行、并在平台开放的那一刻即可规模化的增长体系。我们将思想领导力、严谨的绩效营销方法与面向 GEO 的策略相结合，让你在第一天就无需从零开始。",
+            cta: "我们的做法",
+            cards: [
+                {
+                    icon: "plane",
+                    title: "建立竞争优势",
+                    description: {
+                        text: "如果你一直等待完美的信息，就会入场太晚——那时竞争对手早已摸清了什么有效。",
+                        highlights: [] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "LLM 广告与 GEO 机会地图",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "为 AI 辅助决策旅程量身定制的信息框架",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "竞争可见度审计",
+                            highlights: [] as string[]
+                        }
+                    ]
+                },
+                {
+                    icon: "funnel",
+                    title: "提升来自 LLM 的转化",
+                    description: {
+                        text: "我们帮你做好运营准备，让你能在 ChatGPT 广告向大众开放的那一刻，迅速而明智地启动。",
+                        highlights: ["ChatGPT 广告"] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "上线准备清单",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "持续的绩效优化",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "测试与衡量方案",
+                            highlights: [] as string[]
+                        }
+                    ]
+                },
+                {
+                    icon: "bars",
+                    title: "打造跨渠道主导力",
+                    description: {
+                        text: "ChatGPT 广告并非在数字营销的真空中运行。我们用 SEO/GEO、付费搜索、付费社媒和程序化广告等成熟渠道来补充 LLM 广告。",
+                        highlights: ["付费搜索"] as string[]
+                    },
+                    bullets: [
+                        {
+                            text: "围绕“AI 发现”行为与话题构建的高意向 SEM + 付费社媒策略",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "落地页与转化漏斗优化",
+                            highlights: [] as string[]
+                        },
+                        {
+                            text: "强化 SEO 与 GEO 双重权威信号的内容策略",
+                            highlights: ["SEO"] as string[]
+                        }
+                    ]
+                }
+            ]
         },
         specialization: {
             kicker: "为什么工厂选择我们",
