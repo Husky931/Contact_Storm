@@ -106,10 +106,10 @@ export const translations = {
             statsLabel: "Sellers Served",
             kicker: "Built for Sellers",
             title: {
-                lead: "Foreigners with native experience lead team bridging",
-                highlightPrimary: "Chinese sellers",
-                middle: "with",
-                highlightSecondary: "global markets"
+                lead: "Foreigners with native experience running",
+                highlightPrimary: "ChatGPT ads",
+                middle: "that win",
+                highlightSecondary: "global buyers"
             },
             copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both seller's realities and Western buyer mind and expectations. Our ads are creative, and websites convert much better.",
             bullets: [
@@ -682,10 +682,10 @@ export const translations = {
             statsLabel: "服务卖家",
             kicker: "为制造商打造",
             title: {
-                lead: "具有本土经验的外籍人士领导团队，连接",
-                highlightPrimary: "中国卖家",
-                middle: "与",
-                highlightSecondary: "全球市场"
+                lead: "具有本土经验的外籍团队，操盘",
+                highlightPrimary: "ChatGPT 广告",
+                middle: "助您赢得",
+                highlightSecondary: "全球买家"
             },
             copy: "我们是中英双语、多元背景的团队（中国、欧洲、美国），理解工厂现实与西方买家思维，使我们的广告创意、亚马逊策略与网站更易转化。",
             bullets: [
