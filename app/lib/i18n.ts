@@ -489,33 +489,33 @@ export const translations = {
             }
         },
         slide7: {
-            title: "Website & Shopify",
+            title: "PaidGPT Ads",
             subtitle:
-                "Modern websites that signal professionalism and convert visitors into inquiries",
+                "Sponsored placements inside ChatGPT answers—reach buyers at the exact moment they ask, decide, and buy",
             services: [
                 {
-                    title: "Modern Visual Trust",
-                    body: "Clean, professional design that signals credibility and builds instant confidence with potential clients. Your site becomes a conversion engine that turns visitors into leads and customers."
+                    title: "A Brand-New Ad Channel",
+                    body: "ChatGPT serves 800M+ weekly users and is opening sponsored placements. PaidGPT Ads put your brand inside the answer itself—an entirely new surface no competitor has saturated yet."
                 },
                 {
-                    title: "Frictionless UX",
-                    body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%. Every second counts when users decide to stay or leave—we make sure they stay."
+                    title: "First-Mover Advantage",
+                    body: "Early advertisers lock in the lowest costs and the steepest learning curve. Claim position and data now, before bidding heats up and CPMs climb the way they did on Google and Meta."
                 },
                 {
-                    title: "A/B Testing & Optimization",
-                    body: "Switch between landing page templates to identify optimal layouts for maximum user engagement. Data drives every decision so we double down on what works and drop what doesn’t."
+                    title: "Intent at the Point of Decision",
+                    body: "People come to ChatGPT to research, compare, and decide. Your ad appears in-context while they're actively choosing—far closer to purchase than a passive feed impression."
                 },
                 {
-                    title: "User Tracking & Retention",
-                    body: "Monitor returning visitors for retargeting marketing and personalized experiences. Turn anonymous visitors into repeat customers and build loyalty over time."
+                    title: "Conversational Targeting",
+                    body: "Placement is driven by the full intent of a prompt, not a single keyword. We match your offer to the buyer's real question, so spend lands on genuinely qualified demand."
                 },
                 {
-                    title: "Social Proof Integration",
-                    body: "Stylishly integrated case studies and testimonials to give instant user trust. Let your best results speak for you and show prospects why they should choose you."
+                    title: "Launch-Ready Playbook",
+                    body: "We pre-build creative, offers, and tracking so you scale the day inventory opens. No scrambling—your campaigns go live while competitors are still figuring out the format."
                 },
                 {
-                    title: "Strong Call To Action",
-                    body: "Strategically placed CTAs that strongly urge users to make an inquiry. Clear next steps mean more leads and a smoother path from visitor to customer."
+                    title: "Proven Channels Bridge the Gap",
+                    body: "While AI ad inventory ramps, we drive measurable growth through Google Ads and Paid Social—then shift budget into PaidGPT as it proves out. Grow now, own the new channel later."
                 }
             ]
         },
@@ -1135,32 +1135,32 @@ export const translations = {
             }
         },
         slide7: {
-            title: "网站与Shopify",
-            subtitle: "现代化网站，彰显专业性，将访客转化为询盘",
+            title: "PaidGPT 广告",
+            subtitle: "在 ChatGPT 的回答中植入赞助广告——在买家提问、决策、购买的关键时刻精准触达",
             services: [
                 {
-                    title: "现代视觉信任",
-                    body: "简洁专业的设计，传递信誉，瞬间建立潜在客户的信心。您的网站将成为转化引擎，将访客变为潜在客户和顾客。"
+                    title: "全新的广告渠道",
+                    body: "ChatGPT 每周服务超过 8 亿用户，并正在开放赞助广告位。PaidGPT 广告让您的品牌直接出现在答案之中——这是一个尚未被任何竞争对手占据的全新阵地。"
                 },
                 {
-                    title: "无摩擦用户体验",
-                    body: "闪电般的加载速度和直观的导航，可将跳出率降低高达50%。当用户决定去留时，每一秒都至关重要——我们确保他们留下。"
+                    title: "先发优势",
+                    body: "早期广告主能锁定最低成本和最陡峭的学习曲线。趁着竞价尚未升温、千次展示成本尚未像当年的 Google 和 Meta 那样攀升，现在就抢占位置与数据。"
                 },
                 {
-                    title: "A/B测试与优化",
-                    body: "在不同着陆页模板间切换，以确定实现最大用户参与度的最佳布局。数据驱动每一项决策，因此我们加倍投入有效的方法，放弃无效的方法。"
+                    title: "决策时刻的高意向触达",
+                    body: "用户来到 ChatGPT 进行调研、比较和决策。您的广告在他们主动选择时以情境化方式出现——比被动信息流曝光更接近成交。"
                 },
                 {
-                    title: "用户跟踪与保留",
-                    body: "监控回访用户，进行再营销和个性化体验。将匿名访客转变为回头客，并随着时间的推移建立忠诚度。"
+                    title: "对话式定向",
+                    body: "广告投放由完整的提问意图驱动，而非单一关键词。我们将您的产品与买家的真实问题匹配，让预算精准命中真正合格的需求。"
                 },
                 {
-                    title: "社会认同整合",
-                    body: "以时尚的方式整合案例研究和推荐，以赢得即时用户信任。让您最佳的成果为您代言，向潜在客户展示他们为什么应该选择您。"
+                    title: "即时上线的作战手册",
+                    body: "我们提前准备好创意、优惠和数据追踪，让您在广告位开放当天即可规模化投放。无需手忙脚乱——当竞争对手还在研究格式时，您的广告已经上线。"
                 },
                 {
-                    title: "强有力的行动号召",
-                    body: "策略性地放置行动号召，强烈促使用户进行查询。清晰的后续步骤意味着更多的潜在客户，以及从访客到顾客的更顺畅的路径。"
+                    title: "成熟渠道无缝衔接",
+                    body: "在 AI 广告库存逐步放量的同时，我们通过 Google 广告和付费社交带来可衡量的增长——随着 PaidGPT 得到验证，再将预算转移过去。现在就增长，未来掌控这一全新渠道。"
                 }
             ]
         },
