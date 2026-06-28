@@ -2,7 +2,6 @@ import Hero from "@/components/Hero"
 import About from "@/components/About"
 import ChatGptAds from "@/components/ChatGptAds"
 import Section4 from "@/components/Section4"
-import Specialization from "@/components/Specialization"
 import ReadyToTalk from "@/components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
@@ -22,7 +21,6 @@ export default function Home() {
                 <Hero />
                 <About />
                 <ChatGptAds />
-                <Specialization />
                 <Section4 />
                 <AiSearchOptimization />
                 <Slide7HomePage />
