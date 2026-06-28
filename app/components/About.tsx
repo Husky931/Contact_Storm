@@ -44,10 +44,7 @@ export default function About() {
                     </div>
                 </div>
                 <div>
-                    <p className="text-primary-red text-xs font-semibold tracking-[0.4em] uppercase">
-                        {copy.about.kicker}
-                    </p>
-                    <h2 className="font-heading mt-4 text-3xl text-slate-900">
+                    <h2 className="font-heading text-3xl text-slate-900">
                         {copy.about.title.lead}{" "}
                         <span className="text-primary-red">
                             {copy.about.title.highlightPrimary}
@@ -57,27 +54,9 @@ export default function About() {
                             {copy.about.title.highlightSecondary}
                         </span>
                     </h2>
-                    <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                    <p className="mt-6 text-lg leading-relaxed text-slate-600">
                         {copy.about.copy}
                     </p>
-                    <div className="mt-6 space-y-3 text-sm text-slate-700">
-                        {copy.about.bullets.map((item) => (
-                            <div key={item} className="flex items-center gap-3">
-                                <span className="bg-primary-red flex h-8 w-8 items-center justify-center rounded-full text-white">
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        className="h-4 w-4"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="3"
-                                    >
-                                        <path d="m5 13 4 4L19 7" />
-                                    </svg>
-                                </span>
-                                <span>{item}</span>
-                            </div>
-                        ))}
-                    </div>
                 </div>
             </div>
         </section>

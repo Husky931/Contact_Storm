@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero"
-import HeroHighlights from "@/components/HeroHighlights"
 import About from "@/components/About"
 import Section4 from "@/components/Section4"
 import Specialization from "@/components/Specialization"
@@ -20,7 +19,6 @@ export default function Home() {
         <div className="bg-background text-text min-h-screen">
             <main>
                 <Hero />
-                {/* <HeroHighlights /> */}
                 <About />
                 <Specialization />
                 <Section4 />
