@@ -153,7 +153,7 @@ export default function Footer() {
             <div className="mx-auto px-6 py-16 lg:px-16">
                 {/* Full width wrapper, content aligned to the right */}
                 <div className="flex w-full justify-evenly">
-                    <div className="grid w-full max-w-6xl gap-14 md:grid-cols-3 lg:gap-12">
+                    <div className="grid w-full max-w-6xl gap-16 md:grid-cols-2 md:gap-32 lg:gap-48">
                         {/* Left Section */}
                         <div className="flex flex-col">
                             <div className="space-y-10">
@@ -168,19 +168,6 @@ export default function Footer() {
                                     {copy.footer.cta}
                                 </Link>
                             </div>
-                        </div>
-
-                        {/* Middle Section (Services) */}
-                        <div className="flex flex-col items-center text-center">
-                            <h3 className="text-base font-semibold underline underline-offset-8 md:text-lg">
-                                {copy.footer.servicesTitle}
-                            </h3>
-
-                            <ul className="mt-6 space-y-3 text-sm text-white/90 md:text-base">
-                                {copy.footer.services.map((service) => (
-                                    <li key={service}>{service}</li>
-                                ))}
-                            </ul>
                         </div>
 
                         {/* Right Section */}

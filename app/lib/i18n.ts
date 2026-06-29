@@ -4,8 +4,6 @@ export const translations = {
     en: {
         nav: {
             home: "Home",
-            brochure: "Brochure",
-            reports: "Reports",
             insights: "Insights",
             contact: "Contact"
         },
@@ -463,28 +461,19 @@ export const translations = {
         footer: {
             title: "Your Foreign Growth Partner in China",
             cta: "Contact Us",
-            servicesTitle: "Services",
-            services: [
-                "Lead Generation",
-                "AI Automation",
-                "SEO Growth",
-                "Paid Ads",
-                "Consulting",
-                "Custom Solutions"
-            ],
             businessLicense:
                 "Shanghai Business License: Registration Number –91310000MAENT8FQ1J",
             audit: {
-                title: "Free Audit (SEO + Website AI Optimization)",
+                title: "Free ChatGPT Ads Audit",
                 subtext:
-                    "Share your email and we’ll send a quick audit of your website’s SEO and AI optimization opportunities.",
+                    "Share your email and website URL, and we’ll send a quick audit of your brand’s opportunity in ChatGPT’s new paid ad placements — and how to get ready before your competitors do.",
                 cta: "Send My Audit",
                 sending: "Sending...",
                 note: "We reply within 24 hours.",
                 placeholder: "Your email",
                 websitePlaceholder: "Your website URL",
                 formName: "Footer Audit Request",
-                message: "Free audit request (SEO + Website AI Optimization).",
+                message: "Free ChatGPT Ads audit request.",
                 success: "Thanks! We'll send your audit to your email soon.",
                 errors: {
                     missingEmail: "Please enter a valid email and website.",
@@ -701,8 +690,6 @@ export const translations = {
     zh: {
         nav: {
             home: "首页",
-            brochure: "手册",
-            reports: "报告",
             insights: "洞察",
             contact: "联系我们"
         },
@@ -1144,27 +1131,18 @@ export const translations = {
         footer: {
             title: "您在中国的海外增长伙伴",
             cta: "联系我们",
-            servicesTitle: "服务",
-            services: [
-                "潜在客户一代",
-                "AI自动化",
-                "SEO增长",
-                "付费广告",
-                "咨询",
-                "定制方案"
-            ],
             businessLicense: "上海工商营业执照：注册号 –91310000MAENT8FQ1J",
             audit: {
-                title: "免费审计（SEO + 网站 AI 优化）",
+                title: "免费 ChatGPT 广告审计",
                 subtext:
-                    "留下邮箱，我们会发送一份网站 SEO 与 AI 优化机会的快速审计。",
+                    "留下邮箱与网站链接，我们会发送一份快速审计：您的品牌在 ChatGPT 全新付费广告位中的机会，以及如何抢在竞争对手之前做好准备。",
                 cta: "发送我的审计",
                 sending: "发送中...",
                 note: "我们将在24小时内回复。",
                 placeholder: "邮箱",
                 websitePlaceholder: "网站链接",
                 formName: "页脚审计申请",
-                message: "页脚免费审计申请（SEO + 网站 AI 优化）。",
+                message: "ChatGPT 广告免费审计申请。",
                 success: "感谢！我们会将审计发送到您的邮箱。",
                 errors: {
                     missingEmail: "请输入有效的邮箱和网站。",

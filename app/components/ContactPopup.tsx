@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useMemo, useCallback } from "react"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
 import WeChatQRBox from "./WeChatQRBox"
 import { useLanguage } from "@/components/LanguageProvider"
 
@@ -14,8 +13,6 @@ export default function ContactPopup({
     phoneNumber = "+8613162908096"
 }: ContactPopupProps) {
     const { language } = useLanguage()
-    const pathname = usePathname()
-    const isReportDetailPage = /^\/reports\/[^/]+$/.test(pathname ?? "")
     const [mounted, setMounted] = useState(false)
     const [isOpen, setIsOpen] = useState(false) // For mobile chatbot
     const [showContactPopup, setShowContactPopup] = useState(false) // For desktop contact popup
@@ -356,11 +353,11 @@ export default function ContactPopup({
         if (!mounted) return null
         return (
             <div
-                className={`fixed top-1/2 z-50 hidden -translate-y-1/2 md:block ${isReportDetailPage ? "left-4" : "right-4"}`}
+                className="fixed top-1/2 z-50 hidden -translate-y-1/2 md:block right-4"
             >
                 {/* White box with 3 icons */}
                 <div
-                    className={`mb-3 flex flex-col items-center gap-2 bg-white p-2 shadow-lg ${isReportDetailPage ? "rounded-r-lg" : "rounded-l-lg"}`}
+                    className="mb-3 flex flex-col items-center gap-2 bg-white p-2 shadow-lg rounded-l-lg"
                 >
                     {/* Free Report Button */}
                     <button
@@ -464,7 +461,6 @@ export default function ContactPopup({
     }, [
         mounted,
         language,
-        isReportDetailPage,
         handleFreeReportClick,
         handleEmailClick,
         handlePhoneClick,
@@ -476,7 +472,7 @@ export default function ContactPopup({
         if (!mounted || !showContactPopup) return null
         return (
             <div
-                className={`fixed bottom-6 z-50 hidden w-96 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-2xl md:block ${isReportDetailPage ? "left-6" : "right-6"}`}
+                className="fixed bottom-6 z-50 hidden w-96 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-2xl md:block right-6"
             >
                 {/* Header */}
                 <div className="relative flex items-center justify-between bg-primary-navy px-4 py-3">
@@ -598,7 +594,6 @@ export default function ContactPopup({
         mounted,
         showContactPopup,
         language,
-        isReportDetailPage,
         formData,
         submitStatus,
         isSubmitting,
