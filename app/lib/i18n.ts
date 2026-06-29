@@ -191,6 +191,38 @@ export const translations = {
                 }
             ]
         },
+        pricing: {
+            title: "Pricing",
+            intro: "We're transparent with our pricing, like we are with everything else. We'd love to chat about the return you can expect from this investment. Get started with a 30-minute introductory call.",
+            main: {
+                badge: "Core offer",
+                name: "Managed ChatGPT Ads",
+                forWho: "For brands that want true AI-search expertise",
+                thenLabel: "then",
+                setup: {
+                    step: "Step 1 · Week 1",
+                    title: "Preparation week",
+                    price: "RMB 1,299",
+                    priceSuffix: "one-time",
+                    desc: "Business familiarity & strategy setup — we get to know your brand and build the plan before anything goes live.",
+                    note: "A separate one-time fee. Not included in your monthly cost."
+                },
+                monthly: {
+                    step: "Step 2 · From Week 2",
+                    title: "Ongoing management",
+                    priceLabel: "Starting at",
+                    price: "20%",
+                    priceSuffix: "of monthly spend",
+                    minNote: "Minimum $1,000 / mo · billed from Week 2 onward",
+                    features: [
+                        "Campaign build, launch & continuous optimization",
+                        "Product feed & offer optimization",
+                        "Always-on reporting + bi-weekly strategy calls"
+                    ]
+                },
+                cta: "Get Started"
+            }
+        },
         chatgptAdsProof: {
             kicker: "Proof of concept · Live in beta",
             title: "We're already inside the ChatGPT Ads Manager",
@@ -844,6 +876,38 @@ export const translations = {
                     ]
                 }
             ]
+        },
+        pricing: {
+            title: "价格",
+            intro: "我们对价格保持透明，正如我们在所有事情上一样。我们很乐意和你聊聊这笔投入能带来怎样的回报。先从一次 30 分钟的入门通话开始吧。",
+            main: {
+                badge: "核心方案",
+                name: "ChatGPT 广告托管",
+                forWho: "面向真正想要 AI 搜索专长的品牌",
+                thenLabel: "之后",
+                setup: {
+                    step: "第 1 步 · 第 1 周",
+                    title: "准备周",
+                    price: "1,299 元",
+                    priceSuffix: "一次性",
+                    desc: "业务熟悉与策略搭建——在正式上线前，我们先了解你的品牌并制定方案。",
+                    note: "单独的一次性费用，不计入每月费用。"
+                },
+                monthly: {
+                    step: "第 2 步 · 从第 2 周起",
+                    title: "持续托管",
+                    priceLabel: "起价",
+                    price: "20%",
+                    priceSuffix: "每月花费",
+                    minNote: "每月最低 $1,000 · 从第 2 周起计费",
+                    features: [
+                        "广告活动搭建、上线与持续优化",
+                        "产品信息流与卖点优化",
+                        "全程实时报告 + 每两周策略通话"
+                    ]
+                },
+                cta: "立即开始"
+            }
         },
         chatgptAdsProof: {
             kicker: "概念验证 · 测试版已上线",

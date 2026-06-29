@@ -3,6 +3,7 @@ import About from "@/components/About"
 import ChatGptAds from "@/components/ChatGptAds"
 import ChatGptAdsProof from "@/components/ChatGptAdsProof"
 import ChatGptAdsServices from "@/components/ChatGptAdsServices"
+import Pricing from "@/components/Pricing"
 import ReadyToTalk from "@/components/ReadyToTalk"
 import FoundedBy from "@/components/FoundedBy"
 import Locations from "@/components/Locations"
@@ -20,6 +21,7 @@ export default function Home() {
                 <ChatGptAdsServices />
                 <Slide7HomePage />
                 <FoundedBy />
+                <Pricing />
                 <ReadyToTalk />
                 <Locations />
             </main>
