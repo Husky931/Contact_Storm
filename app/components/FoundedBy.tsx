@@ -87,8 +87,8 @@ export default function FoundedBy() {
                             {copy.founders.based}{" "}
                             <span className="text-primary-red">
                                 {language === "zh"
-                                    ? "德国慕尼黑"
-                                    : "Munich, Germany"}
+                                    ? "美国达拉斯"
+                                    : "Dallas, USA"}
                             </span>
                         </p>
                     </div>
