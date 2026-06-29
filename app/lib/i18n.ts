@@ -464,9 +464,9 @@ export const translations = {
             businessLicense:
                 "Shanghai Business License: Registration Number –91310000MAENT8FQ1J",
             audit: {
-                title: "Free ChatGPT Ads Audit",
+                title: "Grow Where Your Customers Are Searching",
                 subtext:
-                    "Share your email and website URL, and we’ll send a quick audit of your brand’s opportunity in ChatGPT’s new paid ad placements — and how to get ready before your competitors do.",
+                    "We help global brands win in China with ChatGPT Ads — placing you inside the newest and most popular LLM, where conversion rates are statistically the highest.",
                 cta: "Send My Audit",
                 sending: "Sending...",
                 note: "We reply within 24 hours.",
@@ -1133,9 +1133,9 @@ export const translations = {
             cta: "联系我们",
             businessLicense: "上海工商营业执照：注册号 –91310000MAENT8FQ1J",
             audit: {
-                title: "免费 ChatGPT 广告审计",
+                title: "在客户搜索之处实现增长",
                 subtext:
-                    "留下邮箱与网站链接，我们会发送一份快速审计：您的品牌在 ChatGPT 全新付费广告位中的机会，以及如何抢在竞争对手之前做好准备。",
+                    "我们助力全球品牌赢在中国——通过 ChatGPT 广告，将您植入最新、最热门的大语言模型之中，这里的转化率在统计上最高。",
                 cta: "发送我的审计",
                 sending: "发送中...",
                 note: "我们将在24小时内回复。",
