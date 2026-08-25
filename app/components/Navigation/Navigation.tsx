@@ -8,6 +8,7 @@ export default function Navigation() {
     const copy = translations[language]
     const navItems = [
         { label: copy.nav.home, href: "/" },
+        { label: copy.nav.caseStudies, href: "/case-studies" },
         // { label: copy.nav.insights, href: "/insights" },
         { label: copy.nav.contact, href: "/contact" }
     ]

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 48" width="176" height="48" role="img" aria-label="NP Digital">
+  <rect x="4" y="8" width="34" height="34" rx="9" fill="#1b2737"/>
+  <text x="21" y="31" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#ffffff" letter-spacing="0.5">NP</text>
+  <rect x="30" y="34" width="8" height="8" rx="2.5" fill="#e03a3e"/>
+  <text x="46" y="31" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="19" font-weight="700" fill="#1b2737" letter-spacing="-0.3">NP Digital</text>
+</svg>

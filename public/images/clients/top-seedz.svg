@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 176 48" width="176" height="48" role="img" aria-label="Top Seedz">
+  <g transform="translate(4 6)">
+    <ellipse cx="14" cy="22" rx="7.5" ry="12.5" transform="rotate(-28 14 22)" fill="#1b2737"/>
+    <ellipse cx="26" cy="16" rx="6" ry="10" transform="rotate(24 26 16)" fill="#e03a3e"/>
+    <path d="M8 34c8-4 15-11 20-20" fill="none" stroke="#1b2737" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+  </g>
+  <text x="46" y="31" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="19" font-weight="700" fill="#1b2737" letter-spacing="-0.3">Top Seedz</text>
+</svg>

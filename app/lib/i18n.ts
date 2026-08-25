@@ -4,6 +4,7 @@ export const translations = {
     en: {
         nav: {
             home: "Home",
+            caseStudies: "Case Studies",
             insights: "Insights",
             contact: "Contact"
         },
@@ -219,6 +220,126 @@ export const translations = {
                     ]
                 },
                 cta: "Get Started"
+            }
+        },
+        caseStudies: {
+            meta: {
+                title: "Case Studies",
+                description:
+                    "Three representative ChatGPT Ads engagements across DTC, B2B SaaS, and professional services — with the numbers behind each one."
+            },
+            hero: {
+                kicker: "Case Studies",
+                title: {
+                    part1: "Numbers we",
+                    highlight1: "can defend."
+                }
+            },
+            labels: {
+                challenge: "Challenge",
+                approach: "Approach"
+            },
+            studies: [
+                {
+                    vertical: "DTC Supplements",
+                    title: "From single-channel to scaled ChatGPT acquisition",
+                    challenge:
+                        "An 8-figure supplements brand was reliant on Meta for 92% of new-customer spend. CAC had risen 38% year over year. They wanted a second compounding channel.",
+                    approach:
+                        "We launched ChatGPT Ads as a parallel channel within 11 days. Built a creative system mapped to high-intent buyer questions, instrumented server-side tracking, and migrated 18% of Meta budget into the new channel as performance proved out.",
+                    metrics: [
+                        { value: "−31%", label: "Blended CAC, 90 days" },
+                        { value: "3.4x", label: "ROAS on ChatGPT Ads" },
+                        { value: "+22%", label: "New customer growth MoM" }
+                    ],
+                    quote: "We treated ChatGPT as an experiment for six months and learned nothing. Pixaventures ran it as a P&L channel from day one.",
+                    attribution: "Head of Growth — DTC supplements brand"
+                },
+                {
+                    vertical: "B2B SaaS",
+                    title: "Pipeline from buyers researching inside ChatGPT",
+                    challenge:
+                        "A vertical SaaS company selling to operations leaders saw demo requests drop as buyers stopped clicking search ads. Their target persona was researching solutions inside ChatGPT.",
+                    approach:
+                        "Built a campaign structure targeting buying-stage prompts in the operations and supply-chain category. Paired ChatGPT placements with a tightened landing page and an updated MQL definition.",
+                    metrics: [
+                        {
+                            value: "2.7x",
+                            label: "Demo requests vs. paid search baseline"
+                        },
+                        { value: "−19%", label: "Cost per qualified lead" },
+                        {
+                            value: "11 days",
+                            label: "From kickoff to first booked demo"
+                        }
+                    ],
+                    quote: "Our buyers stopped Googling. The team helped us show up where they were actually doing the research.",
+                    attribution: "VP Marketing — vertical SaaS"
+                },
+                {
+                    vertical: "Professional Services",
+                    title: "Replacing a tired LinkedIn program with AI-led intake",
+                    challenge:
+                        "A high-ticket consulting firm was burning $40k/mo on LinkedIn Ads with declining response rates. They wanted higher-intent leads and a shorter sales cycle.",
+                    approach:
+                        "Cut LinkedIn spend by 60%, shifted budget to ChatGPT and Google branded search, and rewrote the intake form to filter for fit. Built a weekly creative pipeline anchored on founder thought leadership.",
+                    metrics: [
+                        { value: "+58%", label: "Qualified consult bookings" },
+                        { value: "−44%", label: "Cost per booked call" },
+                        {
+                            value: "23 days",
+                            label: "Avg sales cycle, down from 41"
+                        }
+                    ],
+                    quote: "We finally have a paid program our partners trust to feed the pipeline.",
+                    attribution: "Managing Partner — boutique consulting firm"
+                }
+            ],
+            named: {
+                kicker: "Named Results",
+                title: {
+                    part1: "The record before",
+                    highlight1: "the channel existed."
+                },
+                bodyBefore:
+                    "The ChatGPT engagements above are shown by vertical rather than by name. These are not — named clients, with the direction and size of the change stated. They come from ",
+                linkLabel: "Conversion.is",
+                linkHref: "https://conversion.is",
+                bodyAfter:
+                    ", our sister agency run by the same operator. Each is a full-funnel paid program in which ChatGPT Ads runs alongside Meta, Google, and TikTok — so the figures reflect the whole program, which is how we run every account.",
+                clients: [
+                    {
+                        name: "Top Seedz",
+                        results: [
+                            "+47% new customers",
+                            "+65% CTR",
+                            "−37% CPA"
+                        ]
+                    },
+                    {
+                        name: "Waking Up",
+                        results: [
+                            "+34% online sales",
+                            "+57% CTR",
+                            "−69% cost per result"
+                        ]
+                    },
+                    {
+                        name: "NP Digital",
+                        results: ["+85% CTR", "−36% CPA"]
+                    }
+                ]
+            },
+            disclaimer: [
+                "Case studies are based on live engagements. Metrics reflect measured performance during the specified engagement period. Past results do not guarantee future outcomes — performance depends on offer, margin, market dynamics, and execution.",
+                "Recommendations for Tarun Kapoor from clients and colleagues across his career, and client results from Conversion.is — Pixaventures' sister agency, founded and run by the same operator. Those engagements are full-funnel paid programs in which ChatGPT Ads runs alongside Meta, Google and TikTok, so the figures reflect the whole program rather than any single channel in isolation. Named-client results belong to Conversion.is."
+            ],
+            cta: {
+                title: {
+                    part1: "Be the next",
+                    highlight1: "case study."
+                },
+                button: "Book a discovery call"
             }
         },
         chatgptAdsProof: {
@@ -690,6 +811,7 @@ export const translations = {
     zh: {
         nav: {
             home: "首页",
+            caseStudies: "案例研究",
             insights: "洞察",
             contact: "联系我们"
         },
@@ -894,6 +1016,122 @@ export const translations = {
                     ]
                 },
                 cta: "立即开始"
+            }
+        },
+        caseStudies: {
+            meta: {
+                title: "案例研究",
+                description:
+                    "三个具有代表性的 ChatGPT 广告合作案例，覆盖 DTC、B2B SaaS 与专业服务行业，并附上背后的真实数据。"
+            },
+            hero: {
+                kicker: "案例研究",
+                title: {
+                    part1: "经得起追问的",
+                    highlight1: "数据。"
+                }
+            },
+            labels: {
+                challenge: "挑战",
+                approach: "方案"
+            },
+            studies: [
+                {
+                    vertical: "DTC 保健品",
+                    title: "从单一渠道到规模化的 ChatGPT 获客",
+                    challenge:
+                        "一个年营收八位数的保健品品牌，92% 的新客获取预算依赖 Meta，获客成本同比上升 38%。他们需要第二条能持续复利增长的渠道。",
+                    approach:
+                        "我们在 11 天内把 ChatGPT 广告作为并行渠道上线，围绕高购买意向的用户提问搭建创意体系，部署服务端追踪，并在效果得到验证后，将 18% 的 Meta 预算迁移到新渠道。",
+                    metrics: [
+                        { value: "−31%", label: "综合获客成本（90 天）" },
+                        { value: "3.4x", label: "ChatGPT 广告投放回报率" },
+                        { value: "+22%", label: "新客数量环比增长" }
+                    ],
+                    quote: "我们把 ChatGPT 当成实验做了六个月，什么也没学到。Pixaventures 从第一天起就把它当作一条真正的盈亏渠道来运营。",
+                    attribution: "增长负责人 — DTC 保健品品牌"
+                },
+                {
+                    vertical: "B2B SaaS",
+                    title: "承接在 ChatGPT 中做调研的买家",
+                    challenge:
+                        "一家面向运营负责人的垂直 SaaS 公司发现，随着买家不再点击搜索广告，产品演示申请量持续下滑。他们的目标客户正在 ChatGPT 内部研究解决方案。",
+                    approach:
+                        "围绕运营与供应链品类中处于决策阶段的提问搭建投放结构，把 ChatGPT 广告位与优化后的落地页、更新后的 MQL 定义配合使用。",
+                    metrics: [
+                        {
+                            value: "2.7x",
+                            label: "演示申请量对比付费搜索基准"
+                        },
+                        { value: "−19%", label: "单个合格线索成本" },
+                        {
+                            value: "11 天",
+                            label: "从启动到首个预约演示"
+                        }
+                    ],
+                    quote: "我们的买家不再用 Google 搜索了。这个团队帮我们出现在他们真正做调研的地方。",
+                    attribution: "市场副总裁 — 垂直 SaaS 公司"
+                },
+                {
+                    vertical: "专业服务",
+                    title: "用 AI 主导的线索筛选取代疲软的领英投放",
+                    challenge:
+                        "一家高客单价的咨询公司每月在领英广告上投入 4 万美元，回应率却持续下降。他们希望获得意向更强的线索和更短的销售周期。",
+                    approach:
+                        "把领英预算削减 60%，转投 ChatGPT 与 Google 品牌词搜索，并重写线索表单以筛选匹配度。围绕创始人的行业观点建立每周创意产出流程。",
+                    metrics: [
+                        { value: "+58%", label: "合格咨询预约量" },
+                        { value: "−44%", label: "单次预约通话成本" },
+                        {
+                            value: "23 天",
+                            label: "平均销售周期，此前为 41 天"
+                        }
+                    ],
+                    quote: "我们终于有了一个合伙人愿意信任、能持续输送商机的付费渠道。",
+                    attribution: "管理合伙人 — 精品咨询公司"
+                }
+            ],
+            named: {
+                kicker: "具名成果",
+                title: {
+                    part1: "在这个渠道出现之前",
+                    highlight1: "就已有的战绩。"
+                },
+                bodyBefore:
+                    "上面的 ChatGPT 案例按行业而非客户名称呈现，下面这些不是——都是具名客户，并标明了变化的方向与幅度。它们来自 ",
+                linkLabel: "Conversion.is",
+                linkHref: "https://conversion.is",
+                bodyAfter:
+                    "，我们由同一位操盘手运营的姊妹机构。每一个都是全漏斗付费项目，ChatGPT 广告与 Meta、Google、TikTok 并行投放——因此这些数字反映的是整个项目的表现，这也是我们运营每一个账户的方式。",
+                clients: [
+                    {
+                        name: "Top Seedz",
+                        results: ["新客 +47%", "点击率 +65%", "单次获客成本 −37%"]
+                    },
+                    {
+                        name: "Waking Up",
+                        results: [
+                            "线上销售额 +34%",
+                            "点击率 +57%",
+                            "单次转化成本 −69%"
+                        ]
+                    },
+                    {
+                        name: "NP Digital",
+                        results: ["点击率 +85%", "单次获客成本 −36%"]
+                    }
+                ]
+            },
+            disclaimer: [
+                "案例研究基于真实的合作项目。所有指标反映的是特定合作期内的实测表现。过往业绩不构成对未来结果的保证——表现取决于产品与报价、利润空间、市场环境以及执行。",
+                "Tarun Kapoor 在其职业生涯中获得的客户与同事推荐，以及来自 Conversion.is 的客户成果——Conversion.is 是 Pixaventures 的姊妹机构，由同一位操盘手创立并运营。那些项目均为全漏斗付费项目，ChatGPT 广告与 Meta、Google 和 TikTok 并行投放，因此数字反映的是整个项目的表现，而非任何单一渠道的孤立结果。具名客户成果归属于 Conversion.is。"
+            ],
+            cta: {
+                title: {
+                    part1: "成为我们的",
+                    highlight1: "下一个案例。"
+                },
+                button: "预约沟通"
             }
         },
         chatgptAdsProof: {
