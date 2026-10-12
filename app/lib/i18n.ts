@@ -4,7 +4,8 @@ export const translations = {
     en: {
         nav: {
             home: "Home",
-            caseStudies: "Case Studies",
+            brochure: "Brochure",
+            reports: "Reports",
             insights: "Insights",
             contact: "Contact"
         },
@@ -15,23 +16,16 @@ export const translations = {
             languageLabel: "Language"
         },
         hero: {
-            kicker: "Hi, we're your ChatGPT ads agency",
-            title: "ChatGPT ads for Chinese sellers",
+            tag: "Overseas Buyer Growth",
+            title: "We help Chinese manufacturers win overseas buyers.",
             description:
                 "Reach customers in Europe, North America, the Middle East, and beyond.",
             subtext:
                 "Western buyer insight for ads, Amazon listings, and conversion-focused websites.",
-            bullets: [
-                "Get found when overseas buyers ask ChatGPT what to buy",
-                "Become the seller ChatGPT recommends",
-                "Turn AI conversations into real inquiries and orders"
-            ],
-            cta: "Book a free intro",
             ctas: {
                 primary: "Our Services",
                 secondary: "Our WeChat"
             },
-            services: ["ChatGPT Ads", "SEO / AEO", "Social Media Growth"],
             servicesPopup: {
                 kicker: "Full-service growth partner",
                 title: "What we do and who we help",
@@ -40,9 +34,12 @@ export const translations = {
                 servicesTitle: "Our services",
                 clientsTitle: "Our clients",
                 services: [
-                    "ChatGPT Ads",
-                    "SEO / AEO",
-                    "Social media campaigns"
+                    "Lead generation",
+                    "Amazon PPC & Marketplace",
+                    "Paid Social Advertising",
+                    "SEO & Organic Growth",
+                    "Social Media Growth",
+                    "Modern Website Redesign"
                 ],
                 clients: [
                     "Factories",
@@ -52,8 +49,8 @@ export const translations = {
                 ]
             },
             highlights: [
-                "ChatGPT Ads",
-                "SEO / AEO",
+                "Lead generation",
+                "Amazon PPC & Marketplace",
                 "Shopify",
                 "Website optimization for AI search engines",
                 "Paid social ads (Meta, Instagram, TikTok)",
@@ -100,17 +97,24 @@ export const translations = {
             },
             imageAlt: "Digital strategy team reviewing product roadmap"
         },
-        heroHighlights: ["ChatGPT Ads", "SEO / AEO", "Social Media Growth"],
+        heroHighlights: [
+            "Leads",
+            "Social Ads and Growth",
+            "SEO & AEO",
+            "Shopify",
+            "Website Redesign",
+            "AI search optimization"
+        ],
         about: {
             statsLabel: "Sellers Served",
             kicker: "Built for Sellers",
             title: {
-                lead: "Foreigners with native experience running",
-                highlightPrimary: "ChatGPT ads",
-                middle: "that win",
-                highlightSecondary: "global buyers"
+                lead: "Foreigners with native experience lead team bridging",
+                highlightPrimary: "Chinese sellers",
+                middle: "with",
+                highlightSecondary: "global markets"
             },
-            copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both seller's realities and Western buyer mind and expectations. Our ads are creative, and websites convert much better.",
+            copy: "We are a foreigners with native experience lead team (Chinese, European, American) that understands both factory realities and Western buyer mind and expectations. That makes our ad creative, Amazon strategy, and websites convert much better.",
             bullets: [
                 "Lead Generation in-house software",
                 "Western buyer mindset applied to ads and listings",
@@ -123,236 +127,6 @@ export const translations = {
                 meeting: "Team meeting",
                 collaboration: "Office collaboration"
             }
-        },
-        chatgptAds: {
-            kicker: "ChatGPT Ads Agency Services",
-            title: "Be ready to win in ChatGPT Ads",
-            intro: {
-                highlight: "ChatGPT Ads",
-                body: " are coming. You need a forward-thinking, fast-moving, agency partner who can plan, prototype, and pre-wire performance; so when inventory rolls out, you're first to learn and first to scale."
-            },
-            bullets: [
-                "Build an informed AI Ads strategy aligned to pipeline and revenue goals",
-                "Create a launch-ready playbook for ChatGPT Ads / GEO as the ad platform becomes available",
-                "Generate measurable growth now using proven channels, like Google Ads or Paid Social, while you prep for LLM ads"
-            ],
-            cta: "Book an intro",
-            imageAlt: "ChatGPT showing a sponsored ad result"
-        },
-        chatgptAdsServices: {
-            title: "ChatGPT Ads Services",
-            intro: "Because ChatGPT Ads is still emerging, our job is to remove ambiguity and build a launch-ready growth system that works now and scales the moment the platform becomes available. We combine thought leadership, performance marketing rigor, and GEO-forward strategy so you're not starting from scratch on day one.",
-            cta: "How We Work",
-            cards: [
-                {
-                    icon: "plane",
-                    title: "Gain a competitive advantage",
-                    description: {
-                        text: "If you wait for perfect information, you'll enter late, after competitors have already learned what works.",
-                        highlights: [] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "LLM Ads & GEO opportunity mapping",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Messaging frameworks tailored for AI-assisted consideration journeys",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Competitive visibility auditing",
-                            highlights: [] as string[]
-                        }
-                    ]
-                },
-                {
-                    icon: "funnel",
-                    title: "Increase conversions from LLMs",
-                    description: {
-                        text: "We build the operational readiness so you can activate quickly and intelligently the moment ChatGPT Ads become available to the general public.",
-                        highlights: ["ChatGPT Ads"] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "Launch readiness checklist",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Continuous performance optimizations",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "Testing & measurement plan",
-                            highlights: [] as string[]
-                        }
-                    ]
-                }
-            ]
-        },
-        pricing: {
-            title: "Pricing",
-            intro: "We're transparent with our pricing, like we are with everything else. We'd love to chat about the return you can expect from this investment. Get started with a 30-minute introductory call.",
-            main: {
-                badge: "Core offer",
-                name: "Managed ChatGPT Ads",
-                forWho: "For brands that want true AI-search expertise",
-                thenLabel: "then",
-                setup: {
-                    step: "Step 1 · Week 1",
-                    title: "Preparation week",
-                    price: "RMB 1,299",
-                    priceSuffix: "one-time",
-                    desc: "Business familiarity & strategy setup — we get to know your brand and build the plan before anything goes live.",
-                    note: "A separate one-time fee. Not included in your monthly cost."
-                },
-                monthly: {
-                    step: "Step 2 · From Week 2",
-                    title: "Ongoing management",
-                    priceLabel: "Starting at",
-                    price: "20%",
-                    priceSuffix: "of monthly spend",
-                    minNote: "Minimum $1,000 / mo · billed from Week 2 onward",
-                    features: [
-                        "Campaign build, launch & continuous optimization",
-                        "Product feed & offer optimization",
-                        "Always-on reporting + bi-weekly strategy calls"
-                    ]
-                },
-                cta: "Get Started"
-            }
-        },
-        caseStudies: {
-            meta: {
-                title: "Case Studies",
-                description:
-                    "Three representative ChatGPT Ads engagements across DTC, B2B SaaS, and professional services — with the numbers behind each one."
-            },
-            hero: {
-                kicker: "Case Studies",
-                title: {
-                    part1: "Numbers we",
-                    highlight1: "can defend."
-                }
-            },
-            labels: {
-                challenge: "Challenge",
-                approach: "Approach"
-            },
-            studies: [
-                {
-                    vertical: "DTC Supplements",
-                    title: "From single-channel to scaled ChatGPT acquisition",
-                    challenge:
-                        "An 8-figure supplements brand was reliant on Meta for 92% of new-customer spend. CAC had risen 38% year over year. They wanted a second compounding channel.",
-                    approach:
-                        "We launched ChatGPT Ads as a parallel channel within 11 days. Built a creative system mapped to high-intent buyer questions, instrumented server-side tracking, and migrated 18% of Meta budget into the new channel as performance proved out.",
-                    metrics: [
-                        { value: "−31%", label: "Blended CAC, 90 days" },
-                        { value: "3.4x", label: "ROAS on ChatGPT Ads" },
-                        { value: "+22%", label: "New customer growth MoM" }
-                    ],
-                    quote: "We treated ChatGPT as an experiment for six months and learned nothing. Pixaventures ran it as a P&L channel from day one.",
-                    attribution: "Head of Growth — DTC supplements brand"
-                },
-                {
-                    vertical: "B2B SaaS",
-                    title: "Pipeline from buyers researching inside ChatGPT",
-                    challenge:
-                        "A vertical SaaS company selling to operations leaders saw demo requests drop as buyers stopped clicking search ads. Their target persona was researching solutions inside ChatGPT.",
-                    approach:
-                        "Built a campaign structure targeting buying-stage prompts in the operations and supply-chain category. Paired ChatGPT placements with a tightened landing page and an updated MQL definition.",
-                    metrics: [
-                        {
-                            value: "2.7x",
-                            label: "Demo requests vs. paid search baseline"
-                        },
-                        { value: "−19%", label: "Cost per qualified lead" },
-                        {
-                            value: "11 days",
-                            label: "From kickoff to first booked demo"
-                        }
-                    ],
-                    quote: "Our buyers stopped Googling. The team helped us show up where they were actually doing the research.",
-                    attribution: "VP Marketing — vertical SaaS"
-                },
-                {
-                    vertical: "Professional Services",
-                    title: "Replacing a tired LinkedIn program with AI-led intake",
-                    challenge:
-                        "A high-ticket consulting firm was burning $40k/mo on LinkedIn Ads with declining response rates. They wanted higher-intent leads and a shorter sales cycle.",
-                    approach:
-                        "Cut LinkedIn spend by 60%, shifted budget to ChatGPT and Google branded search, and rewrote the intake form to filter for fit. Built a weekly creative pipeline anchored on founder thought leadership.",
-                    metrics: [
-                        { value: "+58%", label: "Qualified consult bookings" },
-                        { value: "−44%", label: "Cost per booked call" },
-                        {
-                            value: "23 days",
-                            label: "Avg sales cycle, down from 41"
-                        }
-                    ],
-                    quote: "We finally have a paid program our partners trust to feed the pipeline.",
-                    attribution: "Managing Partner — boutique consulting firm"
-                }
-            ],
-            named: {
-                kicker: "Named Results",
-                title: {
-                    part1: "The record before",
-                    highlight1: "the channel existed."
-                },
-                bodyBefore:
-                    "The ChatGPT engagements above are shown by vertical rather than by name. These are not — named clients, with the direction and size of the change stated. They come from ",
-                linkLabel: "Conversion.is",
-                linkHref: "https://conversion.is",
-                bodyAfter:
-                    ", our sister agency run by the same operator. Each is a full-funnel paid program in which ChatGPT Ads runs alongside Meta, Google, and TikTok — so the figures reflect the whole program, which is how we run every account.",
-                clients: [
-                    {
-                        name: "Top Seedz",
-                        results: [
-                            "+47% new customers",
-                            "+65% CTR",
-                            "−37% CPA"
-                        ]
-                    },
-                    {
-                        name: "Waking Up",
-                        results: [
-                            "+34% online sales",
-                            "+57% CTR",
-                            "−69% cost per result"
-                        ]
-                    },
-                    {
-                        name: "NP Digital",
-                        results: ["+85% CTR", "−36% CPA"]
-                    }
-                ]
-            },
-            disclaimer: [
-                "Case studies are based on live engagements. Metrics reflect measured performance during the specified engagement period. Past results do not guarantee future outcomes — performance depends on offer, margin, market dynamics, and execution.",
-                "Recommendations for Tarun Kapoor from clients and colleagues across his career, and client results from Conversion.is — Pixaventures' sister agency, founded and run by the same operator. Those engagements are full-funnel paid programs in which ChatGPT Ads runs alongside Meta, Google and TikTok, so the figures reflect the whole program rather than any single channel in isolation. Named-client results belong to Conversion.is."
-            ],
-            cta: {
-                title: {
-                    part1: "Be the next",
-                    highlight1: "case study."
-                },
-                button: "Book a discovery call"
-            }
-        },
-        chatgptAdsProof: {
-            kicker: "Proof of concept · Live in beta",
-            title: "We're already inside the ChatGPT Ads Manager",
-            intro: "While most agencies are still reading the press releases, we already have hands-on access to OpenAI's Ads Manager — with real campaigns serving in beta. We're learning what actually converts now, so your launch day isn't your first experiment.",
-            note: "Real account. Campaign names hidden for client confidentiality.",
-            stats: [
-                { value: "$10K+", label: "Ad spend under management" },
-                { value: "212K", label: "Impressions delivered" },
-                { value: "4,000", label: "Clicks driven" },
-                { value: "2.4%", label: "Best campaign CTR" }
-            ]
         },
         specialization: {
             kicker: "Why Factories Choose Us",
@@ -582,19 +356,28 @@ export const translations = {
         footer: {
             title: "Your Foreign Growth Partner in China",
             cta: "Contact Us",
+            servicesTitle: "Services",
+            services: [
+                "Lead Generation",
+                "AI Automation",
+                "SEO Growth",
+                "Paid Ads",
+                "Consulting",
+                "Custom Solutions"
+            ],
             businessLicense:
                 "Shanghai Business License: Registration Number –91310000MAENT8FQ1J",
             audit: {
-                title: "Grow Where Your Customers Are Searching",
+                title: "Free Audit (SEO + Website AI Optimization)",
                 subtext:
-                    "We help global brands win in China with ChatGPT Ads — placing you inside the newest and most popular LLM, where conversion rates are statistically the highest.",
+                    "Share your email and we’ll send a quick audit of your website’s SEO and AI optimization opportunities.",
                 cta: "Send My Audit",
                 sending: "Sending...",
                 note: "We reply within 24 hours.",
                 placeholder: "Your email",
                 websitePlaceholder: "Your website URL",
                 formName: "Footer Audit Request",
-                message: "Free ChatGPT Ads audit request.",
+                message: "Free audit request (SEO + Website AI Optimization).",
                 success: "Thanks! We'll send your audit to your email soon.",
                 errors: {
                     missingEmail: "Please enter a valid email and website.",
@@ -631,33 +414,33 @@ export const translations = {
             }
         },
         slide7: {
-            title: "PaidGPT Ads",
+            title: "Website & Shopify",
             subtitle:
-                "Sponsored placements inside ChatGPT answers—reach buyers at the exact moment they ask, decide, and buy",
+                "Modern websites that signal professionalism and convert visitors into inquiries",
             services: [
                 {
-                    title: "A Brand-New Ad Channel",
-                    body: "ChatGPT serves 800M+ weekly users and is opening sponsored placements. PaidGPT Ads put your brand inside the answer itself—an entirely new surface no competitor has saturated yet."
+                    title: "Modern Visual Trust",
+                    body: "Clean, professional design that signals credibility and builds instant confidence with potential clients. Your site becomes a conversion engine that turns visitors into leads and customers."
                 },
                 {
-                    title: "First-Mover Advantage",
-                    body: "Early advertisers lock in the lowest costs and the steepest learning curve. Claim position and data now, before bidding heats up and CPMs climb the way they did on Google and Meta."
+                    title: "Frictionless UX",
+                    body: "Lightning-fast loading speeds and intuitive navigation that reduce bounce rates by up to 50%. Every second counts when users decide to stay or leave—we make sure they stay."
                 },
                 {
-                    title: "Intent at the Point of Decision",
-                    body: "People come to ChatGPT to research, compare, and decide. Your ad appears in-context while they're actively choosing—far closer to purchase than a passive feed impression."
+                    title: "A/B Testing & Optimization",
+                    body: "Switch between landing page templates to identify optimal layouts for maximum user engagement. Data drives every decision so we double down on what works and drop what doesn’t."
                 },
                 {
-                    title: "Conversational Targeting",
-                    body: "Placement is driven by the full intent of a prompt, not a single keyword. We match your offer to the buyer's real question, so spend lands on genuinely qualified demand."
+                    title: "User Tracking & Retention",
+                    body: "Monitor returning visitors for retargeting marketing and personalized experiences. Turn anonymous visitors into repeat customers and build loyalty over time."
                 },
                 {
-                    title: "Launch-Ready Playbook",
-                    body: "We pre-build creative, offers, and tracking so you scale the day inventory opens. No scrambling—your campaigns go live while competitors are still figuring out the format."
+                    title: "Social Proof Integration",
+                    body: "Stylishly integrated case studies and testimonials to give instant user trust. Let your best results speak for you and show prospects why they should choose you."
                 },
                 {
-                    title: "Proven Channels Bridge the Gap",
-                    body: "While AI ad inventory ramps, we drive measurable growth through Google Ads and Paid Social—then shift budget into PaidGPT as it proves out. Grow now, own the new channel later."
+                    title: "Strong Call To Action",
+                    body: "Strategically placed CTAs that strongly urge users to make an inquiry. Clear next steps mean more leads and a smoother path from visitor to customer."
                 }
             ]
         },
@@ -811,7 +594,8 @@ export const translations = {
     zh: {
         nav: {
             home: "首页",
-            caseStudies: "案例研究",
+            brochure: "手册",
+            reports: "报告",
             insights: "洞察",
             contact: "联系我们"
         },
@@ -823,21 +607,13 @@ export const translations = {
         },
         hero: {
             tag: "海外买家增长",
-            kicker: "您好，我们是您的 ChatGPT 广告团队",
-            title: "为中国卖家打造的 ChatGPT 广告",
+            title: "我们帮助中国制造商赢得海外买家。",
             description: "触达欧洲、北美、中东等全球客户。",
             subtext: "西方买家洞察，支持广告、亚马逊Listing与高转化网站。",
-            bullets: [
-                "当海外买家向 ChatGPT 询问买什么时，让他们找到您",
-                "成为 ChatGPT 主动推荐的卖家",
-                "把 AI 对话转化为真实的询盘与订单"
-            ],
-            cta: "预约免费咨询",
             ctas: {
                 primary: "我们的服务",
                 secondary: "我们的微信"
             },
-            services: ["ChatGPT 广告", "SEO / AEO", "社媒增长"],
             servicesPopup: {
                 kicker: "全链路增长伙伴",
                 title: "我们提供什么服务，服务谁",
@@ -896,15 +672,22 @@ export const translations = {
             },
             imageAlt: "数字策略团队查看产品路线图"
         },
-        heroHighlights: ["ChatGPT 广告", "SEO / AEO", "社媒增长"],
+        heroHighlights: [
+            "AI 搜索优化",
+            "社媒广告与增长",
+            "SEO & AEO",
+            "Shopify",
+            "网站改版",
+            "获客线索"
+        ],
         about: {
             statsLabel: "服务卖家",
             kicker: "为制造商打造",
             title: {
-                lead: "具有本土经验的外籍团队，操盘",
-                highlightPrimary: "ChatGPT 广告",
-                middle: "助您赢得",
-                highlightSecondary: "全球买家"
+                lead: "具有本土经验的外籍人士领导团队，连接",
+                highlightPrimary: "中国卖家",
+                middle: "与",
+                highlightSecondary: "全球市场"
             },
             copy: "我们是中英双语、多元背景的团队（中国、欧洲、美国），理解工厂现实与西方买家思维，使我们的广告创意、亚马逊策略与网站更易转化。",
             bullets: [
@@ -919,232 +702,6 @@ export const translations = {
                 meeting: "团队会议",
                 collaboration: "协作讨论"
             }
-        },
-        chatgptAds: {
-            kicker: "ChatGPT 广告代理服务",
-            title: "做好准备，赢在 ChatGPT 广告",
-            intro: {
-                highlight: "ChatGPT 广告",
-                body: "即将到来。您需要一个前瞻、敏捷的代理伙伴，能够规划、原型化并提前布局成效；当广告位正式开放时，让您率先掌握、率先扩量。"
-            },
-            bullets: [
-                "制定与销售管道和营收目标一致的 AI 广告策略",
-                "在广告平台开放之际，准备好可立即落地的 ChatGPT 广告 / GEO 打法",
-                "立即通过 Google Ads、社媒投放等成熟渠道获得可衡量的增长，同时为 LLM 广告做好准备"
-            ],
-            cta: "预约咨询",
-            imageAlt: "ChatGPT 中展示的赞助广告结果"
-        },
-        chatgptAdsServices: {
-            title: "ChatGPT 广告服务",
-            intro: "由于 ChatGPT 广告仍处于新兴阶段，我们的任务是消除不确定性，构建一套现在就能运行、并在平台开放的那一刻即可规模化的增长体系。我们将思想领导力、严谨的绩效营销方法与面向 GEO 的策略相结合，让你在第一天就无需从零开始。",
-            cta: "我们的做法",
-            cards: [
-                {
-                    icon: "plane",
-                    title: "建立竞争优势",
-                    description: {
-                        text: "如果你一直等待完美的信息，就会入场太晚——那时竞争对手早已摸清了什么有效。",
-                        highlights: [] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "LLM 广告与 GEO 机会地图",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "为 AI 辅助决策旅程量身定制的信息框架",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "竞争可见度审计",
-                            highlights: [] as string[]
-                        }
-                    ]
-                },
-                {
-                    icon: "funnel",
-                    title: "提升来自 LLM 的转化",
-                    description: {
-                        text: "我们帮你做好运营准备，让你能在 ChatGPT 广告向大众开放的那一刻，迅速而明智地启动。",
-                        highlights: ["ChatGPT 广告"] as string[]
-                    },
-                    bullets: [
-                        {
-                            text: "上线准备清单",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "持续的绩效优化",
-                            highlights: [] as string[]
-                        },
-                        {
-                            text: "测试与衡量方案",
-                            highlights: [] as string[]
-                        }
-                    ]
-                }
-            ]
-        },
-        pricing: {
-            title: "价格",
-            intro: "我们对价格保持透明，正如我们在所有事情上一样。我们很乐意和你聊聊这笔投入能带来怎样的回报。先从一次 30 分钟的入门通话开始吧。",
-            main: {
-                badge: "核心方案",
-                name: "ChatGPT 广告托管",
-                forWho: "面向真正想要 AI 搜索专长的品牌",
-                thenLabel: "之后",
-                setup: {
-                    step: "第 1 步 · 第 1 周",
-                    title: "准备周",
-                    price: "1,299 元",
-                    priceSuffix: "一次性",
-                    desc: "业务熟悉与策略搭建——在正式上线前，我们先了解你的品牌并制定方案。",
-                    note: "单独的一次性费用，不计入每月费用。"
-                },
-                monthly: {
-                    step: "第 2 步 · 从第 2 周起",
-                    title: "持续托管",
-                    priceLabel: "起价",
-                    price: "20%",
-                    priceSuffix: "每月花费",
-                    minNote: "每月最低 $1,000 · 从第 2 周起计费",
-                    features: [
-                        "广告活动搭建、上线与持续优化",
-                        "产品信息流与卖点优化",
-                        "全程实时报告 + 每两周策略通话"
-                    ]
-                },
-                cta: "立即开始"
-            }
-        },
-        caseStudies: {
-            meta: {
-                title: "案例研究",
-                description:
-                    "三个具有代表性的 ChatGPT 广告合作案例，覆盖 DTC、B2B SaaS 与专业服务行业，并附上背后的真实数据。"
-            },
-            hero: {
-                kicker: "案例研究",
-                title: {
-                    part1: "经得起追问的",
-                    highlight1: "数据。"
-                }
-            },
-            labels: {
-                challenge: "挑战",
-                approach: "方案"
-            },
-            studies: [
-                {
-                    vertical: "DTC 保健品",
-                    title: "从单一渠道到规模化的 ChatGPT 获客",
-                    challenge:
-                        "一个年营收八位数的保健品品牌，92% 的新客获取预算依赖 Meta，获客成本同比上升 38%。他们需要第二条能持续复利增长的渠道。",
-                    approach:
-                        "我们在 11 天内把 ChatGPT 广告作为并行渠道上线，围绕高购买意向的用户提问搭建创意体系，部署服务端追踪，并在效果得到验证后，将 18% 的 Meta 预算迁移到新渠道。",
-                    metrics: [
-                        { value: "−31%", label: "综合获客成本（90 天）" },
-                        { value: "3.4x", label: "ChatGPT 广告投放回报率" },
-                        { value: "+22%", label: "新客数量环比增长" }
-                    ],
-                    quote: "我们把 ChatGPT 当成实验做了六个月，什么也没学到。Pixaventures 从第一天起就把它当作一条真正的盈亏渠道来运营。",
-                    attribution: "增长负责人 — DTC 保健品品牌"
-                },
-                {
-                    vertical: "B2B SaaS",
-                    title: "承接在 ChatGPT 中做调研的买家",
-                    challenge:
-                        "一家面向运营负责人的垂直 SaaS 公司发现，随着买家不再点击搜索广告，产品演示申请量持续下滑。他们的目标客户正在 ChatGPT 内部研究解决方案。",
-                    approach:
-                        "围绕运营与供应链品类中处于决策阶段的提问搭建投放结构，把 ChatGPT 广告位与优化后的落地页、更新后的 MQL 定义配合使用。",
-                    metrics: [
-                        {
-                            value: "2.7x",
-                            label: "演示申请量对比付费搜索基准"
-                        },
-                        { value: "−19%", label: "单个合格线索成本" },
-                        {
-                            value: "11 天",
-                            label: "从启动到首个预约演示"
-                        }
-                    ],
-                    quote: "我们的买家不再用 Google 搜索了。这个团队帮我们出现在他们真正做调研的地方。",
-                    attribution: "市场副总裁 — 垂直 SaaS 公司"
-                },
-                {
-                    vertical: "专业服务",
-                    title: "用 AI 主导的线索筛选取代疲软的领英投放",
-                    challenge:
-                        "一家高客单价的咨询公司每月在领英广告上投入 4 万美元，回应率却持续下降。他们希望获得意向更强的线索和更短的销售周期。",
-                    approach:
-                        "把领英预算削减 60%，转投 ChatGPT 与 Google 品牌词搜索，并重写线索表单以筛选匹配度。围绕创始人的行业观点建立每周创意产出流程。",
-                    metrics: [
-                        { value: "+58%", label: "合格咨询预约量" },
-                        { value: "−44%", label: "单次预约通话成本" },
-                        {
-                            value: "23 天",
-                            label: "平均销售周期，此前为 41 天"
-                        }
-                    ],
-                    quote: "我们终于有了一个合伙人愿意信任、能持续输送商机的付费渠道。",
-                    attribution: "管理合伙人 — 精品咨询公司"
-                }
-            ],
-            named: {
-                kicker: "具名成果",
-                title: {
-                    part1: "在这个渠道出现之前",
-                    highlight1: "就已有的战绩。"
-                },
-                bodyBefore:
-                    "上面的 ChatGPT 案例按行业而非客户名称呈现，下面这些不是——都是具名客户，并标明了变化的方向与幅度。它们来自 ",
-                linkLabel: "Conversion.is",
-                linkHref: "https://conversion.is",
-                bodyAfter:
-                    "，我们由同一位操盘手运营的姊妹机构。每一个都是全漏斗付费项目，ChatGPT 广告与 Meta、Google、TikTok 并行投放——因此这些数字反映的是整个项目的表现，这也是我们运营每一个账户的方式。",
-                clients: [
-                    {
-                        name: "Top Seedz",
-                        results: ["新客 +47%", "点击率 +65%", "单次获客成本 −37%"]
-                    },
-                    {
-                        name: "Waking Up",
-                        results: [
-                            "线上销售额 +34%",
-                            "点击率 +57%",
-                            "单次转化成本 −69%"
-                        ]
-                    },
-                    {
-                        name: "NP Digital",
-                        results: ["点击率 +85%", "单次获客成本 −36%"]
-                    }
-                ]
-            },
-            disclaimer: [
-                "案例研究基于真实的合作项目。所有指标反映的是特定合作期内的实测表现。过往业绩不构成对未来结果的保证——表现取决于产品与报价、利润空间、市场环境以及执行。",
-                "Tarun Kapoor 在其职业生涯中获得的客户与同事推荐，以及来自 Conversion.is 的客户成果——Conversion.is 是 Pixaventures 的姊妹机构，由同一位操盘手创立并运营。那些项目均为全漏斗付费项目，ChatGPT 广告与 Meta、Google 和 TikTok 并行投放，因此数字反映的是整个项目的表现，而非任何单一渠道的孤立结果。具名客户成果归属于 Conversion.is。"
-            ],
-            cta: {
-                title: {
-                    part1: "成为我们的",
-                    highlight1: "下一个案例。"
-                },
-                button: "预约沟通"
-            }
-        },
-        chatgptAdsProof: {
-            kicker: "概念验证 · 测试版已上线",
-            title: "我们已经进入 ChatGPT 广告管理后台",
-            intro: "当大多数代理商还在研读新闻稿时，我们已经获得 OpenAI 广告管理后台的实操权限——并在测试阶段投放真实的广告活动。我们正在提前摸清什么真正能带来转化，让你的上线日不再是第一次试验。",
-            note: "真实账户。为保护客户隐私，已隐藏广告活动名称。",
-            stats: [
-                { value: "$10K+", label: "管理中的广告花费" },
-                { value: "212K", label: "已触达展示量" },
-                { value: "4,000", label: "带来的点击量" },
-                { value: "2.4%", label: "最佳广告活动点击率" }
-            ]
         },
         specialization: {
             kicker: "为什么工厂选择我们",
@@ -1369,18 +926,27 @@ export const translations = {
         footer: {
             title: "您在中国的海外增长伙伴",
             cta: "联系我们",
+            servicesTitle: "服务",
+            services: [
+                "潜在客户一代",
+                "AI自动化",
+                "SEO增长",
+                "付费广告",
+                "咨询",
+                "定制方案"
+            ],
             businessLicense: "上海工商营业执照：注册号 –91310000MAENT8FQ1J",
             audit: {
-                title: "在客户搜索之处实现增长",
+                title: "免费审计（SEO + 网站 AI 优化）",
                 subtext:
-                    "我们助力全球品牌赢在中国——通过 ChatGPT 广告，将您植入最新、最热门的大语言模型之中，这里的转化率在统计上最高。",
+                    "留下邮箱，我们会发送一份网站 SEO 与 AI 优化机会的快速审计。",
                 cta: "发送我的审计",
                 sending: "发送中...",
                 note: "我们将在24小时内回复。",
                 placeholder: "邮箱",
                 websitePlaceholder: "网站链接",
                 formName: "页脚审计申请",
-                message: "ChatGPT 广告免费审计申请。",
+                message: "页脚免费审计申请（SEO + 网站 AI 优化）。",
                 success: "感谢！我们会将审计发送到您的邮箱。",
                 errors: {
                     missingEmail: "请输入有效的邮箱和网站。",
@@ -1415,32 +981,32 @@ export const translations = {
             }
         },
         slide7: {
-            title: "PaidGPT 广告",
-            subtitle: "在 ChatGPT 的回答中植入赞助广告——在买家提问、决策、购买的关键时刻精准触达",
+            title: "网站与Shopify",
+            subtitle: "现代化网站，彰显专业性，将访客转化为询盘",
             services: [
                 {
-                    title: "全新的广告渠道",
-                    body: "ChatGPT 每周服务超过 8 亿用户，并正在开放赞助广告位。PaidGPT 广告让您的品牌直接出现在答案之中——这是一个尚未被任何竞争对手占据的全新阵地。"
+                    title: "现代视觉信任",
+                    body: "简洁专业的设计，传递信誉，瞬间建立潜在客户的信心。您的网站将成为转化引擎，将访客变为潜在客户和顾客。"
                 },
                 {
-                    title: "先发优势",
-                    body: "早期广告主能锁定最低成本和最陡峭的学习曲线。趁着竞价尚未升温、千次展示成本尚未像当年的 Google 和 Meta 那样攀升，现在就抢占位置与数据。"
+                    title: "无摩擦用户体验",
+                    body: "闪电般的加载速度和直观的导航，可将跳出率降低高达50%。当用户决定去留时，每一秒都至关重要——我们确保他们留下。"
                 },
                 {
-                    title: "决策时刻的高意向触达",
-                    body: "用户来到 ChatGPT 进行调研、比较和决策。您的广告在他们主动选择时以情境化方式出现——比被动信息流曝光更接近成交。"
+                    title: "A/B测试与优化",
+                    body: "在不同着陆页模板间切换，以确定实现最大用户参与度的最佳布局。数据驱动每一项决策，因此我们加倍投入有效的方法，放弃无效的方法。"
                 },
                 {
-                    title: "对话式定向",
-                    body: "广告投放由完整的提问意图驱动，而非单一关键词。我们将您的产品与买家的真实问题匹配，让预算精准命中真正合格的需求。"
+                    title: "用户跟踪与保留",
+                    body: "监控回访用户，进行再营销和个性化体验。将匿名访客转变为回头客，并随着时间的推移建立忠诚度。"
                 },
                 {
-                    title: "即时上线的作战手册",
-                    body: "我们提前准备好创意、优惠和数据追踪，让您在广告位开放当天即可规模化投放。无需手忙脚乱——当竞争对手还在研究格式时，您的广告已经上线。"
+                    title: "社会认同整合",
+                    body: "以时尚的方式整合案例研究和推荐，以赢得即时用户信任。让您最佳的成果为您代言，向潜在客户展示他们为什么应该选择您。"
                 },
                 {
-                    title: "成熟渠道无缝衔接",
-                    body: "在 AI 广告库存逐步放量的同时，我们通过 Google 广告和付费社交带来可衡量的增长——随着 PaidGPT 得到验证，再将预算转移过去。现在就增长，未来掌控这一全新渠道。"
+                    title: "强有力的行动号召",
+                    body: "策略性地放置行动号召，强烈促使用户进行查询。清晰的后续步骤意味着更多的潜在客户，以及从访客到顾客的更顺畅的路径。"
                 }
             ]
         },
